@@ -26,6 +26,7 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 019 | [TP/SL set as "Entire" stores a fixed size; after adding to the position the app still says "Entire", the stop-loss closes only the original part and the shown loss is half the real one](feedback/019-entire-tpsl-covers-only-the-size-at-creation.md) | major | app |
 | 020 | [When one leg of a linked TP/SL fills, the other leg's 0.15 STT is only credited to unclaimedSomi; SDK pair docs and the bot kit say refunded, and the kit never claims it](feedback/020-linked-leg-fee-is-credited-not-refunded-sdk-and-kit-say-refunded.md) | normal | SDK |
 | 021 | [The TP/SL dialog rounds the position size to 4 decimals: 0.00018 BTC shows as 0.0002, 0.00036 as 0.0004](feedback/021-tpsl-dialog-rounds-position-size-to-4-decimals.md) | normal | app |
+| 022 | [Cancelling a limit order leaves its attached TP/SL armed; the stops keep 0.30 STT locked and later act on an unrelated new position](feedback/022-cancelling-a-limit-order-leaves-its-tpsl-armed.md) | normal | app |
 
 Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, linked trading key `0x13f05c8e15cC0d7d3abff02C144fb74778018a55`. One further item was reported privately to security@dreamdex.io on 2026-10-22, as the bounty rules ask.
 
