@@ -12,5 +12,6 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 004 | [Perps testnet docs understate placeOrderFor gas and STT cost](feedback/004-docs-understate-perp-order-gas-and-stt-cost.md) | normal | docs |
 | 005 | [Funding docs omit the interest term: longs pay below the index](feedback/005-funding-docs-omit-interest-component-longs-pay-below-index.md) | normal | docs |
 | 006 | [Mark price sits below the oracle on 19 of 21 markets; mark formula undocumented](feedback/006-mark-price-sits-below-oracle-on-19-of-21-markets.md) | major | contracts |
+| 007 | [perp-starter sets TP/SL from the mark, not the entry price](feedback/007-perp-starter-sets-tp-sl-from-mark-not-entry.md) | normal | SDK |
 
 Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, linked trading key `0x13f05c8e15cC0d7d3abff02C144fb74778018a55`. Every transaction hash in the reports can be checked on the Hideki RPC or explorer.
