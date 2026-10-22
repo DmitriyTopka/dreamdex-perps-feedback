@@ -10,7 +10,7 @@ Area: SDK
 Either the docs say when a reduce-only stop can be created, or the SDK checks that before it sends anything. The SDK comment in `dist/perp/stops.js` says the call is "encoded (and validated) before the grant is sent, so bad input fails without having moved anything on chain".
 
 ## Actual
-1. The create reverts with `NoReducingPositionAtCreation()`. That error is in `contractErrorsAbi` and nowhere else: not in `PlacePerpStopOrderParams` (which only says reduce-only is the default), not in docs/PERPS.md, not in the bot kit's `stops.ts` or docs/perps.md, and the app's Errors page has no perp errors at all (report 012). A bot that arms a bracket before its entry fills, or one that re-arms after a close, gets an unexplained revert.
+1. The create reverts with `NoReducingPositionAtCreation()`. That error is in `contractErrorsAbi` and nowhere else: not in `PlacePerpStopOrderParams` (which only says reduce-only is the default), not in docs/PERPS.md, not in the bot kit's `stops.ts` or docs/perps.md, and the app's Errors page has no perp errors at all (report 012). A bot that arms a bracket before it sends its entry, or one that re-arms after a close, gets an unexplained revert.
 2. By then `placePerpStopOrder` has already sent `setOperatorApprovalGlobal` (it checks `isOperatorAuthorized` and grants if false, before the create). The grant stays on chain and its gas is spent although no stop was created. The "validated before the grant" comment covers argument encoding, not this state check, which the SDK could read first (`getPerpPosition`) or simulate.
 
 Live run on Hideki, 2026-10-22 16:23 UTC, account 0x13f05c8e15cC0d7d3abff02C144fb74778018a55 (no perp position):
