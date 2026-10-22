@@ -30,7 +30,7 @@ On-chain reads (`client.getPerpStopOrders`, BTC stop registry 0x52e2...15ef), ta
 
 Pair created in tx 0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0e30a7 (stop ids 1069911156275153999968 and 6161212520618990245985).
 
-Suggested fix: arm "Entire" brackets with `quantity: 0`, which the registry already supports; or, if a fixed size is intended, show the covered size in the dialog and the positions row, and recompute the estimates from it.
+Suggested fix: arm "Entire" brackets with `quantity: 0`, which the SDK documents as "the whole position at trigger" (not tested live here); or, if a fixed size is intended, show the covered size in the dialog and the positions row, and recompute the estimates from it.
 
 ## Evidence
 Screenshot [../evidence/019-entire-tpsl-after-adding.png](../evidence/019-entire-tpsl-after-adding.png), chain reads above. The test was cleaned up afterwards: TP cancelled, position closed, the remaining SL cancelled by the app, 0 pending stops, 0 unclaimed SOMI, owner STT back to 15.00.
