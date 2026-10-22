@@ -14,5 +14,6 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 006 | [Mark price sits below the oracle on 19 of 21 markets; mark formula undocumented](feedback/006-mark-price-sits-below-oracle-on-19-of-21-markets.md) | major | contracts |
 | 007 | [perp-starter sets TP/SL from the mark, not the entry price](feedback/007-perp-starter-sets-tp-sl-from-mark-not-entry.md) | normal | SDK |
 | 008 | [perp-guard silently skips the reduce stage on small positions](feedback/008-perp-guard-silently-skips-reduce-on-small-positions.md) | normal | SDK |
+| 009 | [Docs: position cap is a tenth of OI on most markets; true on 1 of 21](feedback/009-docs-position-cap-tenth-of-oi-holds-on-1-of-21-markets.md) | normal | docs |
 
 Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, linked trading key `0x13f05c8e15cC0d7d3abff02C144fb74778018a55`. Every transaction hash in the reports can be checked on the Hideki RPC or explorer.
