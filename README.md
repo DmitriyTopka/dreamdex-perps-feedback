@@ -23,6 +23,7 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 016 | [perp-maker says "Re-quotes next cycle" after PostOnlyWouldCross but never retries the skipped leg while the mark is still; on BTC it quotes one side only](feedback/016-perp-maker-never-retries-a-skipped-post-only-leg.md) | normal | SDK |
 | 017 | [perp-funding's default 10% entry threshold sits under the fixed 10.95% interest floor: it opens on 20 of 21 markets and its exit can never fire on 17](feedback/017-perp-funding-default-threshold-sits-under-the-interest-floor.md) | normal | SDK |
 | 018 | [Reduce-only perp stop reverts NoReducingPositionAtCreation without a position; undocumented, and the operator grant is already sent](feedback/018-reduce-only-stop-needs-a-position-undocumented-grant-sent-first.md) | normal | SDK |
+| 019 | [TP/SL set as "Entire" stores a fixed size; after adding to the position the app still says "Entire", the stop-loss closes only the original part and the shown loss is half the real one](feedback/019-entire-tpsl-covers-only-the-size-at-creation.md) | major | app |
 
 Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, linked trading key `0x13f05c8e15cC0d7d3abff02C144fb74778018a55`. One further item was reported privately to security@dreamdex.io on 2026-10-22, as the bounty rules ask.
 
