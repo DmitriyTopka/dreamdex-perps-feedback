@@ -30,6 +30,8 @@ On-chain reads (`client.getPerpStopOrders`, BTC stop registry 0x52e2...15ef), ta
 
 Pair created in tx 0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0e30a7 (stop ids 1069911156275153999968 and 6161212520618990245985).
 
+Editing does not fix it either. Reproduced again on 2026-10-22 19:18-19:35 UTC: long 0.00018, Entire TP/SL, add 0.00018, then move the stop loss from 81,260 to 81,385 with the pencil in Manage TP/SL. The app cancels the old pair and arms a new one (`cancelReason: Owner` on the old legs at 19:31:45), and the new legs are again 0.00018 BTC while the position is 0.00036. When the mark crossed 81,385 the stop closed only 0.00018 (tx 0x2db1fbb610bcc905796b47326246ea95e5b055c011ca4b907fb9b3f043825178); the other half was closed 3 seconds later by our own keeper bot (tx 0x8524c1fb944ecc7ceacfcd08087aa940e0acfc5d77f75a1dad7cbff8dc67abc2), not by the app.
+
 Suggested fix: arm "Entire" brackets with `quantity: 0`, which the SDK documents as "the whole position at trigger" (not tested live here); or, if a fixed size is intended, show the covered size in the dialog and the positions row, and recompute the estimates from it.
 
 ## Evidence
