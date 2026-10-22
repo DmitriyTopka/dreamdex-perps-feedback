@@ -20,6 +20,7 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 013 | [SDK type docs say LiquidationFee "is not in the deployed implementation" and no rows exist; the indexer returns 968 rows emitted by the live LiquidationEngine](feedback/013-sdk-says-no-liquidationfee-rows-but-968-exist.md) | normal | SDK |
 | 014 | [Perps market table lists min size but not lot size; e.g. 125 DOGE is above the documented minimum and still reverts InvalidQuantity](feedback/014-market-table-omits-lot-size.md) | normal | docs |
 | 015 | [placePerpStopOrder throws NotConfiguredError with the bundled Hideki addresses, although the registry is readable from the pool](feedback/015-perp-stop-order-throws-without-operator-registry.md) | normal | SDK |
+| 016 | [perp-maker says "Re-quotes next cycle" after PostOnlyWouldCross but never retries the skipped leg while the mark is still; on BTC it quotes one side only](feedback/016-perp-maker-never-retries-a-skipped-post-only-leg.md) | normal | SDK |
 
 Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, linked trading key `0x13f05c8e15cC0d7d3abff02C144fb74778018a55`. One further item was reported privately to security@dreamdex.io on 2026-10-22, as the bounty rules ask.
 
