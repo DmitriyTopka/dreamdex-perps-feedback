@@ -14,7 +14,7 @@ Area: app
 ## Actual
 The app stores the size at the moment of creation, 0.00018 BTC, in both legs, and keeps showing them as "Entire":
 
-- the dialog shows Size 0.0004 BTC, **Entire** selected, Estimated profit +1.51 USDso and Estimated loss -2.09 USDso (screenshot `evidence/019-entire-tpsl-after-adding.png`);
+- the dialog shows Size 0.0004 BTC, **Entire** selected, Estimated profit +1.51 USDso and Estimated loss -2.09 USDso (screenshot [../evidence/019-entire-tpsl-after-adding.png](../evidence/019-entire-tpsl-after-adding.png));
 - those estimates are for half the position: 0.00018 × (90,000 - 81,596.1) = 1.51 and 0.00018 × (81,596.1 - 70,000) = 2.09. For the real 0.00036 BTC they are 3.03 and 4.17;
 - the positions row shows "90,000 / 70,000" with no hint that the stops are partial;
 - on chain both legs read `quantity = 18000` (0.00018 BTC) after the second buy.
@@ -33,7 +33,7 @@ Pair created in tx 0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0
 Suggested fix: arm "Entire" brackets with `quantity: 0`, which the registry already supports; or, if a fixed size is intended, show the covered size in the dialog and the positions row, and recompute the estimates from it.
 
 ## Evidence
-Screenshot `evidence/019-entire-tpsl-after-adding.png`, chain reads above. The test was cleaned up afterwards: TP cancelled, position closed, the remaining SL cancelled by the app, 0 pending stops, 0 unclaimed SOMI, owner STT back to 15.00.
+Screenshot [../evidence/019-entire-tpsl-after-adding.png](../evidence/019-entire-tpsl-after-adding.png), chain reads above. The test was cleaned up afterwards: TP cancelled, position closed, the remaining SL cancelled by the app, 0 pending stops, 0 unclaimed SOMI, owner STT back to 15.00.
 
 ## Environment
 app.testnet.dreamdex.io (Perps, BTC-PERP), owner 0x84326A92162Ece92ed257A31073fDd3a6599BF21, Hideki testnet (chain 50383), Chrome, 2026-10-22 ~16:36-16:39 UTC.
