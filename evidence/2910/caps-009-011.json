@@ -1,0 +1,509 @@
+{
+  "block": 36355794,
+  "time": "2026-10-29T15:46:26.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "docsUrl": "https://app.testnet.dreamdex.io/docs/trading/perps-testnet/README.md",
+  "tenthQuote": "> These figures are read from the live markets and can be retuned at any time. The open interest cap is market-wide, across every account, and is held in the base asset. A single account is capped at a tenth of it on most markets.",
+  "summary": {
+    "markets": 21,
+    "docsOICapDiffersFromChain": 20,
+    "chainOverDocsGroups": {
+      "1": [
+        "TAO-PERP"
+      ],
+      "2": [
+        "HYPE-PERP",
+        "SOL-PERP",
+        "ETH-PERP",
+        "BTC-PERP"
+      ],
+      "4": [
+        "ZRO-PERP",
+        "LIT-PERP",
+        "VVV-PERP",
+        "1000PEPE-PERP",
+        "PUMP-PERP",
+        "ZEC-PERP",
+        "WLD-PERP",
+        "NEAR-PERP",
+        "XLM-PERP",
+        "AVAX-PERP",
+        "LINK-PERP",
+        "SUI-PERP",
+        "ADA-PERP",
+        "BNB-PERP",
+        "DOGE-PERP",
+        "XRP-PERP"
+      ]
+    },
+    "marketsWhereLiveOIAboveDocsCap": [
+      "NEAR-PERP 165.8%",
+      "XRP-PERP 391.8%",
+      "BTC-PERP 140.5%"
+    ],
+    "positionCapIsATenthOfChainOI": [
+      "TAO-PERP"
+    ],
+    "positionCapRatioGroups": {
+      "0.025": [
+        "ZRO-PERP",
+        "LIT-PERP",
+        "VVV-PERP",
+        "1000PEPE-PERP",
+        "PUMP-PERP",
+        "WLD-PERP"
+      ],
+      "0.25": [
+        "ZEC-PERP"
+      ],
+      "0.1": [
+        "TAO-PERP"
+      ],
+      "0.0499": [
+        "NEAR-PERP"
+      ],
+      "0.05": [
+        "XLM-PERP",
+        "AVAX-PERP",
+        "LINK-PERP",
+        "SUI-PERP",
+        "ADA-PERP",
+        "DOGE-PERP",
+        "XRP-PERP",
+        "HYPE-PERP",
+        "SOL-PERP",
+        "ETH-PERP"
+      ],
+      "0.0504": [
+        "BNB-PERP"
+      ],
+      "0.2026": [
+        "BTC-PERP"
+      ]
+    },
+    "controlsTickMinSizeMarginLeverageMatch": "21/21"
+  },
+  "rows": [
+    {
+      "market": "ZRO-PERP",
+      "pool": "0x2a1822b02039ddf0e293f3f7243673fc03eaf16c",
+      "docsOICap": 250599.5,
+      "chainMaxOpenInterest": 1002397.9999999999,
+      "chainOverDocs": 4,
+      "liveOI": 33328.5,
+      "liveOIOverDocsCap": 0.133,
+      "liveOIOverChainCap": 0.033,
+      "maxPositionSize": 25059.899999999998,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "LIT-PERP",
+      "pool": "0xdcb0ad226727b2ce92857f0af5751389d42b2a3f",
+      "docsOICap": 138896.6,
+      "chainMaxOpenInterest": 555586.4,
+      "chainOverDocs": 4,
+      "liveOI": 19879.3,
+      "liveOIOverDocsCap": 0.143,
+      "liveOIOverChainCap": 0.036,
+      "maxPositionSize": 13889.6,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "VVV-PERP",
+      "pool": "0x352636ab146039851ef06d6367a106d5fb4e6409",
+      "docsOICap": 21786.14,
+      "chainMaxOpenInterest": 87144.56,
+      "chainOverDocs": 4,
+      "liveOI": 1772.81,
+      "liveOIOverDocsCap": 0.081,
+      "liveOIOverChainCap": 0.02,
+      "maxPositionSize": 2178.61,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "pool": "0xfa9b9e50cc1745113d57893991af200a74c86b6f",
+      "docsOICap": 130285600,
+      "chainMaxOpenInterest": 521142400,
+      "chainOverDocs": 4,
+      "liveOI": 10070400,
+      "liveOIOverDocsCap": 0.077,
+      "liveOIOverChainCap": 0.019,
+      "maxPositionSize": 13028500,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "PUMP-PERP",
+      "pool": "0x76c981a52530cdf9497559140aafcd8cd16836e7",
+      "docsOICap": 87993700,
+      "chainMaxOpenInterest": 351974800,
+      "chainOverDocs": 4,
+      "liveOI": 9967600,
+      "liveOIOverDocsCap": 0.113,
+      "liveOIOverChainCap": 0.028,
+      "maxPositionSize": 8799300,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "ZEC-PERP",
+      "pool": "0x2a73129f26917124bd2a47a9b355c395c537f050",
+      "docsOICap": 420,
+      "chainMaxOpenInterest": 1680,
+      "chainOverDocs": 4,
+      "liveOI": 153.25,
+      "liveOIOverDocsCap": 0.365,
+      "liveOIOverChainCap": 0.091,
+      "maxPositionSize": 420,
+      "positionCapOverChainOI": 0.25,
+      "positionCapOverDocsOI": 1,
+      "docsOIover10xPositionCap": 0.1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "TAO-PERP",
+      "pool": "0xd9b6a347a3ae9fd6ba21179d3343f2c8a922f697",
+      "docsOICap": 2185.491,
+      "chainMaxOpenInterest": 2185.491,
+      "chainOverDocs": 1,
+      "liveOI": 273.278,
+      "liveOIOverDocsCap": 0.125,
+      "liveOIOverChainCap": 0.125,
+      "maxPositionSize": 218.549,
+      "positionCapOverChainOI": 0.1,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "WLD-PERP",
+      "pool": "0x0f464d57c1fd839e4d87a408bbccdab8f77e6394",
+      "docsOICap": 1264000,
+      "chainMaxOpenInterest": 5056000,
+      "chainOverDocs": 4,
+      "liveOI": 259437,
+      "liveOIOverDocsCap": 0.205,
+      "liveOIOverChainCap": 0.051,
+      "maxPositionSize": 126400,
+      "positionCapOverChainOI": 0.025,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "NEAR-PERP",
+      "pool": "0x1cd15ae8bff0fe0a7f49233be8b90734775ba454",
+      "docsOICap": 250410,
+      "chainMaxOpenInterest": 1001640.0000000001,
+      "chainOverDocs": 4,
+      "liveOI": 415152.8,
+      "liveOIOverDocsCap": 1.658,
+      "liveOIOverChainCap": 0.414,
+      "maxPositionSize": 50000,
+      "positionCapOverChainOI": 0.0499,
+      "positionCapOverDocsOI": 0.1997,
+      "docsOIover10xPositionCap": 0.5008,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "XLM-PERP",
+      "pool": "0x74b05b9b8c8f180b53b7891018f3b254b3e658c9",
+      "docsOICap": 2677780,
+      "chainMaxOpenInterest": 10711120,
+      "chainOverDocs": 4,
+      "liveOI": 335214,
+      "liveOIOverDocsCap": 0.125,
+      "liveOIOverChainCap": 0.031,
+      "maxPositionSize": 535556,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "AVAX-PERP",
+      "pool": "0xde9762b6b441133d1314c68864ae4e63a6ee45c7",
+      "docsOICap": 66672.2,
+      "chainMaxOpenInterest": 266688.8,
+      "chainOverDocs": 4,
+      "liveOI": 25762.5,
+      "liveOIOverDocsCap": 0.386,
+      "liveOIOverChainCap": 0.097,
+      "maxPositionSize": 13334.4,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "LINK-PERP",
+      "pool": "0xf71b619450bafe953f47b9b556416a3a67b443b5",
+      "docsOICap": 42643.6,
+      "chainMaxOpenInterest": 170574.4,
+      "chainOverDocs": 4,
+      "liveOI": 6366.2,
+      "liveOIOverDocsCap": 0.149,
+      "liveOIOverChainCap": 0.037,
+      "maxPositionSize": 8528.6,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "SUI-PERP",
+      "pool": "0x1be21287cfb865a7c462ff3c4f275e70bcccefe4",
+      "docsOICap": 635009,
+      "chainMaxOpenInterest": 2540036,
+      "chainOverDocs": 4,
+      "liveOI": 308865,
+      "liveOIOverDocsCap": 0.486,
+      "liveOIOverChainCap": 0.122,
+      "maxPositionSize": 127000,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "ADA-PERP",
+      "pool": "0x34fa62909f77699a7a6278d992f72ff31c7a619d",
+      "docsOICap": 2254678,
+      "chainMaxOpenInterest": 9018712,
+      "chainOverDocs": 4,
+      "liveOI": 305324,
+      "liveOIOverDocsCap": 0.135,
+      "liveOIOverChainCap": 0.034,
+      "maxPositionSize": 450934,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "BNB-PERP",
+      "pool": "0x3d2a99fe1e2bdeaa25024515a2d2202daf9531ad",
+      "docsOICap": 693.975,
+      "chainMaxOpenInterest": 2775.9,
+      "chainOverDocs": 4,
+      "liveOI": 266.339,
+      "liveOIOverDocsCap": 0.384,
+      "liveOIOverChainCap": 0.096,
+      "maxPositionSize": 140,
+      "positionCapOverChainOI": 0.0504,
+      "positionCapOverDocsOI": 0.2017,
+      "docsOIover10xPositionCap": 0.4957,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "DOGE-PERP",
+      "pool": "0xc410012e39765cd5f772e84bacb19554aec040df",
+      "docsOICap": 5613590,
+      "chainMaxOpenInterest": 22454360,
+      "chainOverDocs": 4,
+      "liveOI": 1995680,
+      "liveOIOverDocsCap": 0.356,
+      "liveOIOverChainCap": 0.089,
+      "maxPositionSize": 1122700,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "XRP-PERP",
+      "pool": "0x7058579f3248559963f79adb937c6de9f953e060",
+      "docsOICap": 344632,
+      "chainMaxOpenInterest": 1378528,
+      "chainOverDocs": 4,
+      "liveOI": 1350390.4,
+      "liveOIOverDocsCap": 3.918,
+      "liveOIOverChainCap": 0.98,
+      "maxPositionSize": 68926.4,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.2,
+      "docsOIover10xPositionCap": 0.5,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "HYPE-PERP",
+      "pool": "0x63b47ed4a7de0fde659b0d82441dd74828b7297a",
+      "docsOICap": 23812.72,
+      "chainMaxOpenInterest": 47625.44,
+      "chainOverDocs": 2,
+      "liveOI": 15490.97,
+      "liveOIOverDocsCap": 0.651,
+      "liveOIOverChainCap": 0.325,
+      "maxPositionSize": 2381.27,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "SOL-PERP",
+      "pool": "0xb483ec1fb34996638677c20ab087b16f1896fa53",
+      "docsOICap": 47654.44,
+      "chainMaxOpenInterest": 95308.88,
+      "chainOverDocs": 2,
+      "liveOI": 38698.75,
+      "liveOIOverDocsCap": 0.812,
+      "liveOIOverChainCap": 0.406,
+      "maxPositionSize": 4765.44,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "ETH-PERP",
+      "pool": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+      "docsOICap": 3995.6125,
+      "chainMaxOpenInterest": 7991.224999999999,
+      "chainOverDocs": 2,
+      "liveOI": 1134.2145,
+      "liveOIOverDocsCap": 0.284,
+      "liveOIOverChainCap": 0.142,
+      "maxPositionSize": 399.5612,
+      "positionCapOverChainOI": 0.05,
+      "positionCapOverDocsOI": 0.1,
+      "docsOIover10xPositionCap": 1,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    },
+    {
+      "market": "BTC-PERP",
+      "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+      "docsOICap": 246.81545,
+      "chainMaxOpenInterest": 493.6309,
+      "chainOverDocs": 2,
+      "liveOI": 346.86758,
+      "liveOIOverDocsCap": 1.405,
+      "liveOIOverChainCap": 0.703,
+      "maxPositionSize": 100,
+      "positionCapOverChainOI": 0.2026,
+      "positionCapOverDocsOI": 0.4052,
+      "docsOIover10xPositionCap": 0.2468,
+      "controls": {
+        "tick": true,
+        "minSize": true,
+        "initialMargin": true,
+        "maxLeverage": true
+      }
+    }
+  ]
+}

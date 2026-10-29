@@ -1,0 +1,1488 @@
+{
+  "block": 36361271,
+  "time": "2026-10-29T15:55:34.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "contracts": {
+    "PerpPool": "0x81F9EB88C95a52B4D3eA47A73ac394b8A547d443",
+    "PerpStopOrderRegistry": "0x8d7FcDfC6D043B0296Ccf84D82f9dbe2c701096E",
+    "MarginBank": "0x78c989c9c5cd2ed68b4486373c0e4b118c8f1d5c"
+  },
+  "summary": {
+    "sdkErrors": 546,
+    "perpContractErrors": 156,
+    "perpErrorsOnErrorsPage": 34,
+    "perpErrorsNamedNowhereInDocs": 120,
+    "errorsPageSections": [
+      "Decoding a revert",
+      "SpotPool errors",
+      "SpotStopOrderRegistry errors",
+      "Preflight (HTTP API) reverts"
+    ]
+  },
+  "live": [
+    {
+      "label": "BTC long 1x min size from our test account",
+      "reverted": false
+    },
+    {
+      "label": "BTC long 1000x min size from our test account",
+      "reverted": false
+    },
+    {
+      "label": "BTC long 10000x min size from our test account",
+      "reverted": true,
+      "selector": "0x08c379a0",
+      "decoded": "Error(\"ERC20: insufficient allowance\")",
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "label": "BTC long 100000x min size from our test account",
+      "reverted": true,
+      "selector": "0x08c379a0",
+      "decoded": "Error(\"ERC20: insufficient allowance\")",
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "label": "BTC long 1000000x min size from our test account",
+      "reverted": true,
+      "selector": "0x08c379a0",
+      "decoded": "Error(\"ERC20: insufficient allowance\")",
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    }
+  ],
+  "perp": [
+    {
+      "selector": "0xcfb9cfb3",
+      "error": "AccountNotFlat()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x9996b315",
+      "error": "AddressEmptyCode(address)",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x064b97ed",
+      "error": "AddressIsRegisteredBidder()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc44cabea",
+      "error": "AdlCounterpartySameSide()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x7b49b6a2",
+      "error": "AdlFlipNotAllowed()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x4a4f1689",
+      "error": "AdlSelfSettle()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xa7d9d654",
+      "error": "AdlZeroNotional()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x0781c98f",
+      "error": "AllocatorAlreadyInitialised()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x916844b7",
+      "error": "AllocatorNotAtZeroIndex()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x8b0913f0",
+      "error": "AllocatorZeroFree()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb16f4abb",
+      "error": "AmendOldOrderGone(uint128)",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xa24a13a6",
+      "error": "ArrayLengthMismatch()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb2979703",
+      "error": "BidderQuoteInProgress()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x586a5be4",
+      "error": "BuilderAddressReserved()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x41ec099f",
+      "error": "BuilderCodesNotSupported()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x528c953f",
+      "error": "BuilderFeeExceedsApproval()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xf559e808",
+      "error": "BuilderFeeExceedsCap()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xc3915b40",
+      "error": "CannotStoreZeroOrder()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5bb4b710",
+      "error": "ChainStillTriggerable()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe3ec1f50",
+      "error": "ChargeableExceedsDeficit()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xba5f8f0d",
+      "error": "CircuitBandExceedsInitialMargin()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xaaaa9911",
+      "error": "CloseOutMarginExceedsBalance()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x3c3bee4b",
+      "error": "DelistEscrowActive()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc52bc692",
+      "error": "DryRunDifference()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x4bbc54a9",
+      "error": "DynamicIMFParametersDeprecated()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc2e5347d",
+      "error": "EmptyBatch()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x043b369d",
+      "error": "EmptyFilter()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x212ed537",
+      "error": "EmptyOrderBatch()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x4c9c8ce3",
+      "error": "ERC1967InvalidImplementation(address)",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb398979f",
+      "error": "ERC1967NonPayable()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x77b923af",
+      "error": "ExceedsWithdrawableBalance()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd6bda275",
+      "error": "FailedCall()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x6dd72d47",
+      "error": "FeeRecipientNotSet()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5c768858",
+      "error": "FeeRecipientRequired()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xcd4e6167",
+      "error": "FeeTooHigh()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xc04ad919",
+      "error": "FillOrKillNotFillable()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xf3dca15b",
+      "error": "FillPriceOverflow()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x2f96346a",
+      "error": "FundedPrincipalOverflow()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc2be680c",
+      "error": "FundingCapExceedsMarginBand()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x805a02c3",
+      "error": "FundingRecipientInDebt()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xbe9179a6",
+      "error": "GasLimitExceeded()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x90ecd8f5",
+      "error": "GasLimitZero()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x59dfec04",
+      "error": "HandlerZeroAddress()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd48c4403",
+      "error": "ImmediateOrCancelNoFill()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xe94c2d7c",
+      "error": "InconsistentMinQuantityAndLotSize()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x8080c2ed",
+      "error": "IncorrectOrder()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xf5e39c1f",
+      "error": "IncorrectSender(address,address)",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xf4d678b8",
+      "error": "InsufficientBalance()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x3a23d825",
+      "error": "InsufficientCollateral()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x806109d7",
+      "error": "InsufficientMarginAtCreation()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xfa0d8bfd",
+      "error": "InsufficientSomiPayment()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x5e2de130",
+      "error": "InsuranceFundCandidateHasDebt()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x9fd0c00f",
+      "error": "InsuranceFundCannotTrade()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xff8907f9",
+      "error": "InsuranceFundNotSet()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe6c4247b",
+      "error": "InvalidAddress()",
+      "in": [
+        "PerpPool",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x6d10926b",
+      "error": "InvalidBuilder()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x55d95877",
+      "error": "InvalidCircuitBreakerParameters()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xa07b0c3a",
+      "error": "InvalidCreditGranterContract()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xa1091c11",
+      "error": "InvalidDynamicIMFParameters()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb8815cb7",
+      "error": "InvalidFundingCapDivergenceMargin()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc0b0414d",
+      "error": "InvalidFundingParameters()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x989876e3",
+      "error": "InvalidFundingPayer()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x7d71681a",
+      "error": "InvalidGasBufferBps()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb4d1a4bb",
+      "error": "InvalidGasParameters()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xf92ee8a9",
+      "error": "InvalidInitialization()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd67b1511",
+      "error": "InvalidInsuranceFundContract()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe1a845a5",
+      "error": "InvalidIntervalSeconds()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd402e605",
+      "error": "InvalidLinkedWalletRegistry()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5137faaf",
+      "error": "InvalidLinkedWalletRegistryContract()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x87cd9a0f",
+      "error": "InvalidLiquidationEngineContract()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x96a6cd0c",
+      "error": "InvalidLotSize()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x83774c2a",
+      "error": "InvalidMarginBank()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x3c4e1594",
+      "error": "InvalidMaxFeePerGas()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe4c236aa",
+      "error": "InvalidMinQuantity()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x6e116665",
+      "error": "InvalidOperatorPermissionsRegistry()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xc32ff34d",
+      "error": "InvalidOrderOwner()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xc4d37f1c",
+      "error": "InvalidPerpPool()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x36316d27",
+      "error": "InvalidPerpPoolFactoryContract()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xaf608abb",
+      "error": "InvalidPrice(uint256,uint256)",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x4f174b29",
+      "error": "InvalidQuantity(uint256,uint256)",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xe0f5228e",
+      "error": "InvalidSomiPaymentPerOrder()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x747a60fb",
+      "error": "InvalidTickSize()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xaa4fc774",
+      "error": "IsolatedMarketBlocked()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xc62a9abb",
+      "error": "IsolatedSpansMultipleMarkets()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x58b152ce",
+      "error": "LinkedWalletFundingDisabled()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd0cae293",
+      "error": "LiquidationEngineNotSet()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x659349b3",
+      "error": "LiquidationFeeRecipientCannotBeInsuranceFund()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xf76b1b9b",
+      "error": "MainFundedAccountCannotBeCredited()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x96a8f19c",
+      "error": "MarketNotEmpty(uint256)",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x50e929ad",
+      "error": "MarketSettled()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5eb24725",
+      "error": "NoActiveSubscription()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x38b13f8d",
+      "error": "NoBadDebt()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xccb52aa2",
+      "error": "NoCreditToReclaim()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xfa4bba01",
+      "error": "NoFundedPrincipal()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x556729af",
+      "error": "NoOpenPosition()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd156c90a",
+      "error": "NoReducingPositionAtCreation()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x67c84615",
+      "error": "NoSettlementScheduled()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xa28a88c1",
+      "error": "NoStateChange()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x481638c1",
+      "error": "NotALinkedChild()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x9fc37119",
+      "error": "NotASideHolder()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x969bf728",
+      "error": "NothingToClaim()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x88edfc11",
+      "error": "NothingToReturn()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd7e6bcf8",
+      "error": "NotInitializing()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xeef7f51e",
+      "error": "OnlyFundingPayer()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xdfff4acd",
+      "error": "OnlyLiquidationEngine()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xeb5cbebd",
+      "error": "OnlyMarginBank()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xad5d0577",
+      "error": "OnlyPerpPool()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x191fbb75",
+      "error": "OnlyReactivityPrecompile()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x81eb5d01",
+      "error": "OpeningOrderRequiresQuantity()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x082585f9",
+      "error": "OracleNotAContract()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x08b9f95b",
+      "error": "OraclePriceStale()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb0330763",
+      "error": "OrderAlreadyLinked()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5dcaf2d7",
+      "error": "OrderDoesNotExist()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x1e4fbdf7",
+      "error": "OwnableInvalidOwner(address)",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x118cdaa7",
+      "error": "OwnableUnauthorizedAccount(address)",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xcbd9cc79",
+      "error": "PerpPoolAlreadyRegistered()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x791356db",
+      "error": "PerpPoolHasActivePositions()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x31325b4a",
+      "error": "PerpPoolNotFromFactory()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x19951ca5",
+      "error": "PerpPoolNotRegistered()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x471735a7",
+      "error": "PerpPoolWrongMarginBank()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb1b1ba2a",
+      "error": "PerUserOrderIndexInconsistency()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x7cf05fcb",
+      "error": "PostOnlyWouldCross()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x961ac3e3",
+      "error": "PriceNotAlignedToTickSize()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xf5c787f1",
+      "error": "PriceOverflow()",
+      "in": [
+        "PerpPool",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x57b0e210",
+      "error": "PriceTooLarge()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x1e624a2f",
+      "error": "PriorFundingPayerOutstanding(address)",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x84c3adbe",
+      "error": "QuantityBelowMinimum()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xeaa68ceb",
+      "error": "QuantityBelowMinimum(uint256,uint256)",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x4c4705ca",
+      "error": "QuantityNotAlignedToLotSize()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x3ee5aeb5",
+      "error": "ReentrancyGuardReentrantCall()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry",
+        "MarginBank"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x28e0a7ba",
+      "error": "RegistryNotApprovedByOwner()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x80a120cf",
+      "error": "ReviveTooSoon()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x327269a7",
+      "error": "SafeCastOverflowedIntDowncast(uint8,int256)",
+      "in": [
+        "PerpPool",
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x5274afe7",
+      "error": "SafeERC20FailedOperation(address)",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x85859903",
+      "error": "SettlementAlreadyScheduled()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc03deffd",
+      "error": "SettlementNotReady()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe114c921",
+      "error": "SettlementWindowOpen()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x88e5ab41",
+      "error": "SideHolderIndexOutOfBounds()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x6534b062",
+      "error": "SubscriptionAlreadyActive()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xdafa2157",
+      "error": "TakeoverPriceOutOfRange()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xfe9e1842",
+      "error": "TakerFillWouldMintBadDebt()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xc43959ab",
+      "error": "TransferRecipientReserved()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xd2f3f68d",
+      "error": "TransferSourceAndDestinationSame()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xf5a46358",
+      "error": "TriggerTooCloseToEma()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0x6ee800fc",
+      "error": "UnexpectedNativeDeposit()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": true,
+      "anywhereInDocs": true
+    },
+    {
+      "selector": "0xaa1d49a4",
+      "error": "UUPSUnsupportedProxiableUUID(bytes32)",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x702f620d",
+      "error": "VoucherAccountCannotBeMainFunded()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x6485347d",
+      "error": "VoucherLeverageCapNotSet()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x649b887d",
+      "error": "VoucherMarketNotAllowed()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x1d5e4c56",
+      "error": "VwapOverflow()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x503d280d",
+      "error": "WithdrawalBelowCreditFloor()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x03426d15",
+      "error": "WithdrawalBelowFundedPrincipal()",
+      "in": [
+        "MarginBank"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0x27fcd9d1",
+      "error": "WithdrawalFailed()",
+      "in": [
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xb82df155",
+      "error": "ZeroOrder()",
+      "in": [
+        "PerpPool"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xe042deb3",
+      "error": "ZeroOrderIndex()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    },
+    {
+      "selector": "0xecbc1d47",
+      "error": "ZeroPriority()",
+      "in": [
+        "PerpPool",
+        "PerpStopOrderRegistry"
+      ],
+      "onErrorsPage": false,
+      "anywhereInDocs": false
+    }
+  ]
+}

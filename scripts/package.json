@@ -1,0 +1,13 @@
+{
+  "name": "dreamdex-feedback-repro",
+  "private": true,
+  "type": "module",
+  "description": "Read-only repro scripts for the reports in ../feedback. Each prints JSON; none needs a key unless stated.",
+  "dependencies": {
+    "@somnia-chain/markets-sdk": "0.32.1",
+    "viem": "2.57.10"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0"
+  }
+}

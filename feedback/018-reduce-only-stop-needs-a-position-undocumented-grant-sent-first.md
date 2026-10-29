@@ -24,7 +24,7 @@ ARM failed ContractRevertError: @somnia-chain/markets-sdk: createLinkedPendingOr
 
 Right after: `pool.isOperatorAuthorized(account, stopRegistry, 0x80054449)` returns `true`, so the grant went through. 0.00298 STT spent, no stop exists, no SOMI locked.
 
-Note on the exact rule: the registry is not checking for a position only. The app itself creates a linked reduce-only pair for an account with no position when a limit order is placed in the same transaction (tx 0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e, see report 022). So the condition appears to be "a position or a resting order", which is exactly why it needs to be written down rather than guessed.
+Note on the exact rule: the registry is not checking for a position only. The app itself creates a linked reduce-only pair for an account with no position when a limit order is placed in the same transaction (tx 0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e, see report 022). So my guess is the rule is "a position or a resting order". I could not find it written anywhere, and that is the point of this report.
 
 Suggested fix: document the requirement next to `intent` in `PlacePerpStopOrderParams` and in PERPS.md; in the SDK, read the position (or simulate the create) before sending the grant for a reduce-only placement and throw a named error instead.
 

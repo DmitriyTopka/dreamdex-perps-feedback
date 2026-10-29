@@ -24,7 +24,7 @@ Indexer rows: TP id 5700043918776251455591 `TRIGGERED`; SL id 343109439770997660
 
 The same account got its 0.15 STT pushed straight back an hour earlier when it cancelled a leg by hand (`cancelReason` Owner, wallet 14.70 to 14.85), so the account can receive native transfers. The difference is the LinkedFill path itself.
 
-The app handles it: it shows "0.15 STT in trigger fees is waiting for you. When one leg of a linked TP/SL executes, the other's fee is held for you to claim rather than refunded" with a Claim button. The SDK's own `cancelReason` field doc also says LinkedFill "only CREDITs unclaimedSomi". So the protocol behaviour is intended, and it is the pair docs, PERPS.md and the bot kit that contradict it.
+The app handles it: it shows "0.15 STT in trigger fees is waiting for you. When one leg of a linked TP/SL executes, the other's fee is held for you to claim rather than refunded" with a Claim button. The SDK's own `cancelReason` field doc also says LinkedFill "only CREDITs unclaimedSomi". So the protocol does this on purpose. It's the pair docs, PERPS.md and the bot kit that say something else.
 
 Effect on bots: nothing in the bot kit calls `getUnclaimedPerpStopSomi` or `claimPerpStopSomi` (searched `packages/`, `strategies/`, `advanced/`, `scripts/`). A perp-starter run that ends on a filled take profit or stop loss leaves 0.15 STT parked per bracket, and its log line "SOMI refunded" tells the operator the opposite.
 

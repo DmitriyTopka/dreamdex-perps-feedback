@@ -1,0 +1,146 @@
+{
+  "block": 36366356,
+  "time": "2026-10-29T16:04:03.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "gasPriceGwei": 6,
+  "docsLines": [
+    "**STT for gas.** The simplest route is through the app: sign in at [app.testnet.dreamdex.io](https://app.testnet.dreamdex.io/perps), then [Link a Bot](../../trading/common/link-a-bot.md) with your key's address and use **Send it … for gas** or **Top up**. Gas is billed on what a transaction uses, not on its gas limit: transactions to perp pools measured on testnet cost between 0.0003 and 0.003 STT each.",
+    "Successful `placeOrderFor` transactions on testnet used up to about 1.56M gas, and a simple resting order simulated with a 1.5M limit reverts while the same call with 3.2M succeeds. `eth_estimateGas` returned 3.2M for a resting order and 7.7M for an IOC that crossed several price levels. Gas is billed on what is used, so a generous limit costs nothing extra: the [bot kit](https://github.com/somnia-chain/dreamdex-bot-kit) sends every perp order with 10,000,000."
+  ],
+  "docsOwnMath": {
+    "gas": 1560000,
+    "atGasPriceStt": 0.00936,
+    "docsUpperStt": 0.003
+  },
+  "summary": {
+    "placements": 6,
+    "placementsAboveDocsStt": 5,
+    "placementsAboveDocsGas": 3,
+    "maxGas": 2342262,
+    "maxStt": 0.014054,
+    "ordersPer5SttAtDocsMax": 1666,
+    "ordersPer5SttAtOurMax": 355
+  },
+  "receipts": [
+    {
+      "hash": "0xaf077d282b0f9090aeb2daef21eea562908e3707c874c6d622d1e4f8cbcacfdf",
+      "call": "placeOrderFor ETH PostOnly",
+      "status": "success",
+      "block": 30193278,
+      "time": "2026-10-22T12:15:37.000Z",
+      "gasUsed": 2342262,
+      "gasPriceGwei": 6,
+      "stt": 0.014054,
+      "overDocsGas": 1.5,
+      "overDocsStt": 4.68
+    },
+    {
+      "hash": "0x8de658f97e5cc6584d3083e41bca93ed31be91c750cd9e3ec2ec0804e5a0ed44",
+      "call": "placeOrderFor ZRO PostOnly",
+      "status": "success",
+      "block": 30193938,
+      "time": "2026-10-22T12:16:43.000Z",
+      "gasUsed": 1831903,
+      "gasPriceGwei": 6,
+      "stt": 0.010991,
+      "overDocsGas": 1.17,
+      "overDocsStt": 3.66
+    },
+    {
+      "hash": "0xd55d4095c00533d9c1a20ab6c0747cfd238ffb6194e98357f43791e1dfdc9f55",
+      "call": "placeOrderFor ETH PostOnly",
+      "status": "success",
+      "block": 30193649,
+      "time": "2026-10-22T12:16:14.000Z",
+      "gasUsed": 1565831,
+      "gasPriceGwei": 6,
+      "stt": 0.009395,
+      "overDocsGas": 1,
+      "overDocsStt": 3.13
+    },
+    {
+      "hash": "0x67560ff046381b20c127afa883dcab70aecdffc8d696784f21be7dd899d4eb09",
+      "call": "placeOrderFor ETH PostOnly",
+      "status": "success",
+      "block": 30193605,
+      "time": "2026-10-22T12:16:09.000Z",
+      "gasUsed": 527361,
+      "gasPriceGwei": 6,
+      "stt": 0.003164,
+      "overDocsGas": 0.34,
+      "overDocsStt": 1.05
+    },
+    {
+      "hash": "0xff313955663434b7bc0a0c5ac02c4d56cebb1156e8b40e0f4c85c5d4a59d1101",
+      "call": "placeOrderFor ETH PostOnly",
+      "status": "success",
+      "block": 30193635,
+      "time": "2026-10-22T12:16:12.000Z",
+      "gasUsed": 511148,
+      "gasPriceGwei": 6,
+      "stt": 0.003067,
+      "overDocsGas": 0.33,
+      "overDocsStt": 1.02
+    },
+    {
+      "hash": "0x9d6586aa3bdea5ce422832d596ed04a3835b31ceace5c45c8b2f74b297f7dad0",
+      "call": "placeOrderFor ZRO PostOnly",
+      "status": "success",
+      "block": 30193967,
+      "time": "2026-10-22T12:16:46.000Z",
+      "gasUsed": 416655,
+      "gasPriceGwei": 6,
+      "stt": 0.0025,
+      "overDocsGas": 0.27,
+      "overDocsStt": 0.83
+    },
+    {
+      "hash": "0x7d3d6af752956b0a9e0d209964807db8d2b8f150a6dcb3d578316946be7eb174",
+      "call": "cancelOrderFor ETH",
+      "status": "success",
+      "block": 30193295,
+      "time": "2026-10-22T12:15:38.000Z",
+      "gasUsed": 176715,
+      "gasPriceGwei": 6,
+      "stt": 0.00106,
+      "overDocsGas": 0.11,
+      "overDocsStt": 0.35
+    },
+    {
+      "hash": "0xaa053991a9997044cbcd0d19ddb356051a00797fbb9a350de9e741b35318617a",
+      "call": "cancelOrderFor ZRO",
+      "status": "success",
+      "block": 30193987,
+      "time": "2026-10-22T12:16:48.000Z",
+      "gasUsed": 257095,
+      "gasPriceGwei": 6,
+      "stt": 0.001543,
+      "overDocsGas": 0.16,
+      "overDocsStt": 0.51
+    }
+  ],
+  "estimates": [
+    {
+      "label": "PostOnly bid at the current best bid (existing level)",
+      "price": 2363.87,
+      "gas": 2091232,
+      "stt": 0.012547,
+      "error": null
+    },
+    {
+      "label": "PostOnly bid 500 ticks under the best bid (fresh level)",
+      "price": 2358.87,
+      "gas": 2112748,
+      "stt": 0.012676,
+      "error": null
+    },
+    {
+      "label": "IOC buy at the best ask (crosses)",
+      "price": 2365.57,
+      "gas": 3467818,
+      "stt": 0.020807,
+      "error": null
+    }
+  ]
+}

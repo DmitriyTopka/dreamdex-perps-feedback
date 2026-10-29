@@ -1,0 +1,65 @@
+{
+  "block": 36363000,
+  "time": "2026-10-29T15:58:27.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "freshSigner": "0xB7b2b61093e7f73860172a29F27CF4329ec19F43",
+  "presets": {
+    "SOMNIA_HIDEKI_TESTNET_ADDRESSES": {
+      "keys": 14,
+      "operatorPermissionsRegistry": null
+    },
+    "SOMNIA_TESTNET_ADDRESSES": {
+      "keys": 16,
+      "operatorPermissionsRegistry": null
+    },
+    "SOMNIA_MAINNET_ADDRESSES": {
+      "keys": 13,
+      "operatorPermissionsRegistry": null
+    }
+  },
+  "withHidekiPreset": [
+    {
+      "label": "trader.placePerpStopOrder",
+      "ok": false,
+      "error": "NotConfiguredError: @somnia-chain/markets-sdk: a perp stop order — needs operatorRegistry or addresses.operatorPermissionsRegistry"
+    },
+    {
+      "label": "trader.buildPlacePerpStopOrder",
+      "ok": false,
+      "error": "NotConfiguredError: @somnia-chain/markets-sdk: a perp stop order — needs operatorRegistry or addresses.operatorPermissionsRegistry"
+    },
+    {
+      "label": "client.isGloballyApproved",
+      "ok": false,
+      "error": "NotConfiguredError: @somnia-chain/markets-sdk: an operator grant read — needs addresses.operatorPermissionsRegistry"
+    },
+    {
+      "label": "client.isApprovedForPool",
+      "ok": false,
+      "error": "NotConfiguredError: @somnia-chain/markets-sdk: an operator grant read — needs addresses.operatorPermissionsRegistry"
+    }
+  ],
+  "poolsAnswer": {
+    "0x6B2FbfeD328FF5F20C0BE7D3C3437613aFFE8D3a": 21
+  },
+  "control": [
+    {
+      "label": "trader.buildPlacePerpStopOrder({ operatorRegistry })",
+      "ok": true,
+      "grantFn": "setOperatorApprovalGlobal",
+      "stopFn": "createPendingOrder",
+      "stopValueWei": "150000000000000000"
+    },
+    {
+      "label": "client.isGloballyApproved, preset + operatorPermissionsRegistry",
+      "ok": true,
+      "result": true
+    },
+    {
+      "label": "client.isApprovedForPool, preset + operatorPermissionsRegistry",
+      "ok": true,
+      "result": false
+    }
+  ]
+}

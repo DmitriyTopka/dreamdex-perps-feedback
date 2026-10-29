@@ -19,7 +19,7 @@ The app stores the size at the moment of creation, 0.00018 BTC, in both legs, an
 - the positions row shows "90,000 / 70,000" with no hint that the stops are partial;
 - on chain both legs read `quantity = 18000` (0.00018 BTC) after the second buy.
 
-If BTC hits 70,000, the stop-loss closes 0.00018 BTC and leaves 0.00018 BTC open with no stop, while the trader was told the entire position was protected and the loss would be 2.09. At higher leverage the unprotected half can run into liquidation. Adding to a winning or losing position is common, so this is not an edge case.
+If BTC hits 70,000, the stop-loss closes 0.00018 BTC and leaves 0.00018 BTC open with no stop, while the trader was told the entire position was protected and the loss would be 2.09. At higher leverage the unprotected half can run into liquidation. People add to positions all the time, so a lot of traders will run into this.
 
 On-chain reads (`client.getPerpStopOrders`, BTC stop registry 0x52e2...15ef), taken after the second buy at 2026-10-22 16:37:26 UTC:
 

@@ -18,14 +18,14 @@ The skipped leg is not tried again until the mark moves 8 bps. In `strategies/pe
 
 So a skipped leg stays missing for as long as the mark is quiet, and the log claims the opposite.
 
-On BTC this is not a rare race. Quotes are centred on the mark, and on BTC the book sits well above the mark (the bias in report 006). The ask at mark + 15 bps lands under the best bid and is rejected every time:
+On BTC it happens on every cycle. Quotes are centred on the mark, and on BTC the book sits well above the mark (the bias in report 006). The ask at mark + 15 bps lands under the best bid and is rejected every time:
 
 | time (UTC) | BTC mark | best bid | best ask | book mid vs mark |
 |---|---|---|---|---|
 | 2026-10-22 16:15 | 81533.03 | 81732.2 | 81737.4 | +24.7 bps |
 | 2026-10-22 ~16:19 | 81562.23 | 81765.2 | 81772.2 | +25.0 bps |
 
-The same check on all 21 markets at 16:15 found BTC the only one where a default quote crosses. BTC is also the strategy's default market (`index.ts:82`). The result is a maker that rests one bid about 40 bps under the touch and no ask, so it neither makes a market nor gets filled.
+The same check on all 21 markets at 16:15 found BTC the only one where a default quote crosses. BTC is also the strategy's default market (`index.ts:82`). The result is a maker that rests one bid about 40 bps under the touch and no ask, so it doesn't really make a market and doesn't get filled either.
 
 Live run, 2026-10-22 ~16:17 UTC, 62 s, 4 refresh cycles:
 

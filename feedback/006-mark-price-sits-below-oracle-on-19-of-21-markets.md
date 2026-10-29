@@ -35,7 +35,7 @@ App view on BTC-PERP at unix 1792673038: MARK 81,616.4, ORACLE 81,656.4, MID 81,
 
 A live check shows the effect on a trader: a 0.00013 BTC long filled at 81,835.9 (tx 0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b) was marked at 81,615.8 straight away, -5.4% ROI on its margin before the market moved. Closed at 81,865.1 (tx 0xca85b2868fa314e1b2d1d69662eff9f242b9e014bcd1ed726b4db315e011d3ef), so the book itself had not moved against the position.
 
-Why it matters: with the mark consistently 0.04-0.08% under the oracle, every long shows less PnL and reaches maintenance margin earlier than the same long on a venue with an unbiased mark; shorts get the mirror benefit. At 20x, 0.06% of price is 1.2% of margin. Since none of the docs say how the mark is built, a trader cannot tell whether this is intended (for example a conservative haircut) or a bias in the formula.
+For a trader: with the mark consistently 0.04-0.08% under the oracle, every long shows less PnL and reaches maintenance margin earlier than the same long on a venue with an unbiased mark; shorts get the mirror benefit. At 20x, 0.06% of price is 1.2% of margin. Since none of the docs say how the mark is built, a trader cannot tell whether this is intended (for example a conservative haircut) or a bias in the formula.
 
 We do not know the formula, so we cannot say which input causes it. If it is intended, documenting it would close this report.
 

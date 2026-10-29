@@ -1,0 +1,217 @@
+{
+  "block": 36364039,
+  "time": "2026-10-29T16:00:11.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "kit": "dreamdex-bot-kit 2579866, scripts/perp-doctor.ts:44",
+  "summary": {
+    "markets": 21,
+    "digitsHidden": [
+      "ZRO-PERP",
+      "LIT-PERP",
+      "VVV-PERP",
+      "1000PEPE-PERP",
+      "ZEC-PERP",
+      "TAO-PERP",
+      "NEAR-PERP",
+      "AVAX-PERP",
+      "LINK-PERP",
+      "BNB-PERP",
+      "XRP-PERP"
+    ],
+    "realSpreadShownAsFlat": [
+      "XRP-PERP bid=1.3090 ask=1.3133 (43 ticks)"
+    ]
+  },
+  "rows": [
+    {
+      "market": "ZRO-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=1.76 ask=1.77",
+      "chainHas": "bid=1.7582 ask=1.7689",
+      "spreadTicks": 107,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "LIT-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=3.25 ask=3.27",
+      "chainHas": "bid=3.2527 ask=3.2723",
+      "spreadTicks": 196,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "VVV-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=25.72 ask=25.88",
+      "chainHas": "bid=25.722 ask=25.877",
+      "spreadTicks": 155,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "tick": 1e-7,
+      "doctorShows": "bid=0.004716 ask=0.004745",
+      "chainHas": "bid=0.0047164 ask=0.0047448",
+      "spreadTicks": 284,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "PUMP-PERP",
+      "tick": 0.000001,
+      "doctorShows": "bid=0.004515 ask=0.004543",
+      "chainHas": "bid=0.004515 ask=0.004543",
+      "spreadTicks": 28,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "ZEC-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=1415.49 ask=1424.00",
+      "chainHas": "bid=1415.494 ask=1424.001",
+      "spreadTicks": 8507,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "TAO-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=258.55 ask=259.32",
+      "chainHas": "bid=258.547 ask=259.325",
+      "spreadTicks": 778,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "WLD-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=0.4364 ask=0.4378",
+      "chainHas": "bid=0.4364 ask=0.4378",
+      "spreadTicks": 14,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "NEAR-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=4.65 ask=4.66",
+      "chainHas": "bid=4.6531 ask=4.6572",
+      "spreadTicks": 41,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "XLM-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=0.1725 ask=0.1731",
+      "chainHas": "bid=0.1725 ask=0.1731",
+      "spreadTicks": 6,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "AVAX-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=9.00 ask=9.03",
+      "chainHas": "bid=9.002 ask=9.027",
+      "spreadTicks": 25,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "LINK-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=11.94 ask=11.97",
+      "chainHas": "bid=11.943 ask=11.969",
+      "spreadTicks": 26,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "SUI-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=0.9537 ask=0.9561",
+      "chainHas": "bid=0.9537 ask=0.9561",
+      "spreadTicks": 24,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "ADA-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=0.2058 ask=0.2065",
+      "chainHas": "bid=0.2058 ask=0.2065",
+      "spreadTicks": 7,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "BNB-PERP",
+      "tick": 0.001,
+      "doctorShows": "bid=749.12 ask=751.07",
+      "chainHas": "bid=749.116 ask=751.066",
+      "spreadTicks": 1950,
+      "looksFlat": false,
+      "digitsHidden": true
+    },
+    {
+      "market": "DOGE-PERP",
+      "tick": 0.00001,
+      "doctorShows": "bid=0.08046 ask=0.08064",
+      "chainHas": "bid=0.08046 ask=0.08064",
+      "spreadTicks": 18,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "XRP-PERP",
+      "tick": 0.0001,
+      "doctorShows": "bid=1.31 ask=1.31",
+      "chainHas": "bid=1.3090 ask=1.3133",
+      "spreadTicks": 43,
+      "looksFlat": true,
+      "digitsHidden": true
+    },
+    {
+      "market": "HYPE-PERP",
+      "tick": 0.01,
+      "doctorShows": "bid=93.87 ask=94.03",
+      "chainHas": "bid=93.87 ask=94.03",
+      "spreadTicks": 16,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "SOL-PERP",
+      "tick": 0.01,
+      "doctorShows": "bid=102.61 ask=102.77",
+      "chainHas": "bid=102.61 ask=102.77",
+      "spreadTicks": 16,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "ETH-PERP",
+      "tick": 0.01,
+      "doctorShows": "bid=2366.64 ask=2368.83",
+      "chainHas": "bid=2366.64 ask=2368.83",
+      "spreadTicks": 219,
+      "looksFlat": false,
+      "digitsHidden": false
+    },
+    {
+      "market": "BTC-PERP",
+      "tick": 0.1,
+      "doctorShows": "bid=81837.40 ask=81906.80",
+      "chainHas": "bid=81837.4 ask=81906.8",
+      "spreadTicks": 694,
+      "looksFlat": false,
+      "digitsHidden": false
+    }
+  ]
+}

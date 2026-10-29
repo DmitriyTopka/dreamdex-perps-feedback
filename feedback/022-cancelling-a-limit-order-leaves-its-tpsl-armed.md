@@ -9,7 +9,7 @@ Area: app
 4. Open any new long on BTC-PERP without TP/SL.
 
 ## Expected
-The TP/SL were entered as part of the limit order, so cancelling the order cancels them too, as on most venues where attached TP/SL live and die with the parent order. At least the cancel should ask whether to keep them.
+The TP/SL were entered as part of the limit order, so cancelling the order cancels them too, like on most venues, where attached TP/SL go away with the parent order. At least the cancel should ask whether to keep them.
 
 ## Actual
 - After step 1 the app arms both legs on chain straight away, linked, `intent: reduceOnly`, fixed size 0.00018 BTC, 0.15 STT each (tx 0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e, stop ids 5331109037302060423273 and 3431094397709976606826).

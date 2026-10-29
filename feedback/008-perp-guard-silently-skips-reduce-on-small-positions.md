@@ -24,7 +24,7 @@ Largest position the 25% reduce can never touch, computed with the kit's own rou
 | WLD | 26 | 103 | 55.35 |
 | PUMP | 1800 | 7100 | 33.73 |
 
-All 21 markets fall between 33.73 and 100.31 USDso. Small accounts and first-time Arena traders are exactly the ones who open positions this size, and the bot kit is the reference implementation people copy.
+All 21 markets fall between 33.73 and 100.31 USDso. That's the size small accounts and first-time Arena traders open, and people copy the kit's strategies as they are.
 
 ## Evidence
 Source lines above; the table comes from looping `q` from `minQuantity` in `lotSize` steps and applying `alignQuantity((q * 250n) / 1000n)` exactly as `closePosition` does, with `listPerpMarkets()` for lot, min and mark.

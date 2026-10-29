@@ -13,10 +13,10 @@ Area: SDK
 Either no rows (as the SDK says), or SDK docs that describe the fee as live.
 
 ## Actual
-- `listPerpFees({ kind: "LiquidationFee" })` returns 968 rows, the oldest at 2026-09-29T12:35:30Z and the newest at 2026-10-22T15:09:21Z. `listPerpFees` with kind "Fee", "Rebate" and "BuilderFee" each returns 0 rows, so LiquidationFee is in fact the only kind that has data.
+- `listPerpFees({ kind: "LiquidationFee" })` returns 968 rows, the oldest at 2026-09-29T12:35:30Z and the newest at 2026-10-22T15:09:21Z. `listPerpFees` with kind "Fee", "Rebate" and "BuilderFee" each returns 0 rows, so LiquidationFee is the only kind with any data at all.
 - Receipt of tx 0xc528369fa573a2aae2d751dad08a5bbb0fc1c395548c51241956128913457f1f (block 30297445, status success): log 71 has topic0 0x7f65cfb17ffadd9ae9df22fa5fcf080b5a10e7371a02f623659a2c12ca299eee = keccak("LiquidationFeeCharged(address,address,uint256,uint256,uint256)") and is emitted by 0xa66d3c24ad4a389d863846905d8173e1017e9f4d, the LiquidationEngine from `getPerpSystemConfig` and the docs address table. So the event is in the deployed implementation, and it comes off LiquidationEngine, not MarginBank.
 
-Why it matters: an integrator who reads the type docs will not build liquidation fee accounting (or will filter the kind out as "not live yet"), while every liquidation on testnet is in fact paying it. The rate data also lines up with the user docs ("a fee of up to 1% of the notional it closes"): over the 968 rows `amount / fillNotional` ranges from 0.0045% to exactly 1.0000%, 905 rows at exactly 1%, none above.
+So an integrator who reads the type docs will not build liquidation fee accounting (or will filter the kind out as "not live yet"), while liquidations on testnet pay it all the time. The rate data also lines up with the user docs ("a fee of up to 1% of the notional it closes"): over the 968 rows `amount / fillNotional` ranges from 0.0045% to exactly 1.0000%, 905 rows at exactly 1%, none above.
 
 ## Evidence
 Script output:

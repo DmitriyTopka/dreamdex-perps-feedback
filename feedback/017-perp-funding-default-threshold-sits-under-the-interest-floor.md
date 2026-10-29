@@ -13,9 +13,9 @@ The README describes a carry bot that "takes the paid side when the rate clears 
 Funding on Hideki never goes under +0.0100% per 8 h while the premium stays near zero. That is the fixed interest term from report 005: rate = premium + clamp(0.01% - premium, ±0.05%). Annualised by the kit's converter, it is exactly 10.95% APR, just above the 10% default. So:
 
 - the bot qualifies to open on **20 of 21** markets;
-- on **17** of them the rate is exactly the 0.0100% floor, so the "signal" is the constant interest term and not market funding;
+- on **17** of them the rate is exactly the 0.0100% floor, so the "signal" is just the constant interest term;
 - on those 17 the rate cannot drop under the 3% exit while the premium stays inside the ±0.05% clamp, so the carry exit never fires and the short is held with full price exposure;
-- on 11 of the 17 the premium is negative, i.e. the perp already trades below the index (clearly so on VVV, ZEC, TAO, NEAR, LINK, XRP), and the bot still goes short "for funding".
+- on 11 of the 17 the premium is negative, i.e. the perp already trades below the index (most of all on VVV, ZEC, TAO, NEAR, LINK, XRP), and the bot still goes short "for funding".
 
 Snapshot 2026-10-22 16:25:54 UTC (rate per 8 h window, APR from `liveFunding`):
 
@@ -32,7 +32,7 @@ Script result: `default PERP_FUNDING_MIN_APR=0.1: enters on 20 of 21; 17 of them
 
 Suggested fix: compare the premium part (rate minus the interest term) against the threshold, or raise the default above 10.95% and say in the README why. Also worth a line in the README that the floor exists, since it decides which side "carry" is on most markets.
 
-Minor, same file: the cap check `if (held >= MAX_POSITION)` (line 127) sits inside `else if (!position && ...)` (line 126), where `held` (line 101) is always 0, so it can never be true. The "at the position cap, not adding" branch is dead code. It does no harm today only because the bot never adds to an open position.
+Minor, same file: the cap check `if (held >= MAX_POSITION)` (line 127) sits inside `else if (!position && ...)` (line 126), where `held` (line 101) is always 0, so it can never be true. The "at the position cap, not adding" branch is dead code. Today it does no harm, because the bot never adds to an open position.
 
 ## Evidence
 Output of `liveFunding()` and `client.getPerpState(pool)` for all 21 pools from `listPerpMarkets()`, as above. Same rates appear in `perp:doctor` (e.g. `BTC-PERP ... funding 160.496% (pays shorts)`).
