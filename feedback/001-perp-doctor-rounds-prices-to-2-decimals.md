@@ -24,9 +24,9 @@ const px = (v: number) => (Math.abs(v) >= 1 ? v.toFixed(2) : v.toPrecision(4));
 
 Anything 1 or above gets 2 decimals, whatever the tick. Below 1 it gets 4 significant digits, which is also short for 1000PEPE (tick 0.0000001). The tick is right there, the same script prints it on line 132.
 
-Doctor run 2026-10-29 15:59 UTC, then our script at 16:00 UTC, block 36,364,039. 11 of 21 markets lose digits:
+Our script at 2026-10-29 16:00 UTC, block 36,364,039, applies the doctor's own `px()` to the chain prices; the raw doctor run made just before it is in `perp-doctor-output.txt`, prices moved a little in between. 11 of 21 markets lose digits:
 
-| market | tick | perp:doctor shows | chain has | spread in ticks |
+| market | tick | doctor's px() shows | chain has | spread in ticks |
 |---|---|---|---|---|
 | **XRP-PERP** | 0.0001 | **bid=1.31 ask=1.31** | bid=1.3090 ask=1.3133 | 43 |
 | NEAR-PERP | 0.0001 | bid=4.65 ask=4.66 | bid=4.6531 ask=4.6572 | 41 |

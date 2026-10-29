@@ -1,0 +1,599 @@
+{
+  "block": 36510074,
+  "time": "2026-10-29T20:03:39.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "docsRule": [
+    "- **Perp above the index** (positive funding): longs pay shorts.",
+    "- **Perp below the index** (negative funding): shorts pay longs."
+  ],
+  "summary": {
+    "formulaMatchesLive": "21/21",
+    "liveMarketsWherePayerDiffersFromDocs": [
+      "LIT-PERP premium -0.0004% rate 0.01%",
+      "PUMP-PERP premium -0.0001% rate 0.01%",
+      "TAO-PERP premium 0% rate 0.01%",
+      "WLD-PERP premium 0% rate 0.01%",
+      "XLM-PERP premium 0% rate 0.01%",
+      "LINK-PERP premium -0.0004% rate 0.01%",
+      "ADA-PERP premium 0% rate 0.01%",
+      "DOGE-PERP premium -0.0012% rate 0.01%",
+      "HYPE-PERP premium -0.0191% rate 0.01%"
+    ],
+    "settlementsChecked": 4200,
+    "settlementsMarkBelowIndex": 3650,
+    "settlementsMarkBelowIndexLongsStillPay": 3416,
+    "settlementsAtExactInterestFloor": 3333
+  },
+  "live": [
+    {
+      "market": "ZRO-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "LIT-PERP",
+      "emaPremiumPct": -0.0004,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "VVV-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "emaPremiumPct": -3.0554,
+      "fundingRatePct": -3.0054,
+      "formulaPct": -3.0054,
+      "formulaMatches": true,
+      "payer": "shorts",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "PUMP-PERP",
+      "emaPremiumPct": -0.0001,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "ZEC-PERP",
+      "emaPremiumPct": 3.6044,
+      "fundingRatePct": 3.5544,
+      "formulaPct": 3.5544,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "TAO-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "WLD-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "NEAR-PERP",
+      "emaPremiumPct": 0.0053,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "XLM-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "AVAX-PERP",
+      "emaPremiumPct": 0.0009,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "LINK-PERP",
+      "emaPremiumPct": -0.0004,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "SUI-PERP",
+      "emaPremiumPct": 0.0003,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "ADA-PERP",
+      "emaPremiumPct": 0,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "BNB-PERP",
+      "emaPremiumPct": 0.0017,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "DOGE-PERP",
+      "emaPremiumPct": -0.0012,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "XRP-PERP",
+      "emaPremiumPct": 0.0075,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "HYPE-PERP",
+      "emaPremiumPct": -0.0191,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "shorts",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "SOL-PERP",
+      "emaPremiumPct": 0.0079,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "ETH-PERP",
+      "emaPremiumPct": 0.0005,
+      "fundingRatePct": 0.01,
+      "formulaPct": 0.01,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    },
+    {
+      "market": "BTC-PERP",
+      "emaPremiumPct": 0.1068,
+      "fundingRatePct": 0.0568,
+      "formulaPct": 0.0568,
+      "formulaMatches": true,
+      "payer": "longs",
+      "docsPayer": "longs",
+      "windowSec": 28800,
+      "intervalSec": 3600
+    }
+  ],
+  "history": [
+    {
+      "market": "ZRO-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:55:26.000Z",
+      "markBelowIndex": 23,
+      "markBelowIndexAndLongsPay": 23,
+      "atInterestFloor": 192,
+      "example": {
+        "txHash": "0x82c6f2ca05e419367b3394ee9c8d64a152b94cf619cef9631f3bf349138b9ec2",
+        "block": "35929286",
+        "time": "2026-10-29T03:55:22.000Z",
+        "mark": 1.618619286446,
+        "index": 1.618624007416,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "LIT-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:55:27.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 138,
+      "atInterestFloor": 131,
+      "example": {
+        "txHash": "0xd5456ab4c112b6072fc1835eb15b05e6e60a7e38acbb44591602769f5c885c35",
+        "block": "36508950",
+        "time": "2026-10-29T20:01:47.000Z",
+        "mark": 3.052972573597,
+        "index": 3.05366002275,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "VVV-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:55:21.000Z",
+      "markBelowIndex": 117,
+      "markBelowIndexAndLongsPay": 117,
+      "atInterestFloor": 200,
+      "example": {
+        "txHash": "0x26f6d2fe3f28249585f297e26969147d894eeca640cbd2663c554f0ed06c0487",
+        "block": "36506491",
+        "time": "2026-10-29T19:57:41.000Z",
+        "mark": 24.809992532852,
+        "index": 24.818518234272,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T11:55:23.000Z",
+      "markBelowIndex": 184,
+      "markBelowIndexAndLongsPay": 181,
+      "atInterestFloor": 194,
+      "example": {
+        "txHash": "0x56d2d0c202b0c7921236057bdc3a9103466b7cf02a5284d751af6ea326491562",
+        "block": "36325204",
+        "time": "2026-10-29T14:55:26.000Z",
+        "mark": 0.005025125754,
+        "index": 0.005028647355,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "PUMP-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T11:55:22.000Z",
+      "markBelowIndex": 189,
+      "markBelowIndexAndLongsPay": 189,
+      "atInterestFloor": 200,
+      "example": {
+        "txHash": "0x7a5d2fc2bd501d1a9b57eab81a723efeea53a958bc442c8a75d3dee03ec354d6",
+        "block": "36487637",
+        "time": "2026-10-29T19:26:15.000Z",
+        "mark": 0.004422144188,
+        "index": 0.004427042991,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "ZEC-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T11:55:23.000Z",
+      "markBelowIndex": 88,
+      "markBelowIndexAndLongsPay": 87,
+      "atInterestFloor": 184,
+      "example": {
+        "txHash": "0xa523374cd150c2265fefec766663cabc9eb4ba6c9eeffca612cf73f2bd27341e",
+        "block": "36181197",
+        "time": "2026-10-29T10:55:21.000Z",
+        "mark": 1269.227503216204,
+        "index": 1269.2424886054491,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "TAO-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 166,
+      "markBelowIndexAndLongsPay": 166,
+      "atInterestFloor": 200,
+      "example": {
+        "txHash": "0x90ed5411363fb9736b9b87772fa7a4ec83626c6e96527884adffea65559dd862",
+        "block": "36480709",
+        "time": "2026-10-29T19:14:42.000Z",
+        "mark": 251.6978167574495,
+        "index": 251.70068995949302,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "WLD-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 187,
+      "atInterestFloor": 175,
+      "example": {
+        "txHash": "0xd1f3a8b10f8898fe1939164c71fc002ac008864611660934fced219cd2fc7689",
+        "block": "36480721",
+        "time": "2026-10-29T19:14:43.000Z",
+        "mark": 0.4156431960405,
+        "index": 0.416005534514,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "NEAR-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 190,
+      "atInterestFloor": 149,
+      "example": {
+        "txHash": "0xec432bab7282f5ff4ee6d15bc87603138e3b25500bd9d3e21cffe8167fcf7bb0",
+        "block": "36480709",
+        "time": "2026-10-29T19:14:42.000Z",
+        "mark": 4.3860678976614995,
+        "index": 4.3884946084915,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "XLM-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:51.000Z",
+      "markBelowIndex": 199,
+      "markBelowIndexAndLongsPay": 199,
+      "atInterestFloor": 200,
+      "example": {
+        "txHash": "0xbd82e943f40de0ca387854cdaf00e7ea250b89409e43a8538a532deca0e76ba2",
+        "block": "36480713",
+        "time": "2026-10-29T19:14:42.000Z",
+        "mark": 0.1689834489265,
+        "index": 0.169023995805,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "AVAX-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:45.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 198,
+      "atInterestFloor": 198,
+      "example": {
+        "txHash": "0x50dcfc63155708bf0614c948407b4c9cf37931a152c0208a1a6ccbf9be7ad6be",
+        "block": "36480731",
+        "time": "2026-10-29T19:14:44.000Z",
+        "mark": 8.796373867193,
+        "index": 8.8021211336635,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "LINK-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:50.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 200,
+      "atInterestFloor": 199,
+      "example": {
+        "txHash": "0x733656de0f60aa151e52eeb63646edddbc64204a309a6212bda91ff8aa3cea56",
+        "block": "36480730",
+        "time": "2026-10-29T19:14:44.000Z",
+        "mark": 11.6265902295545,
+        "index": 11.634633166758501,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "SUI-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 200,
+      "atInterestFloor": 189,
+      "example": {
+        "txHash": "0x3629aca9cab550b04f1082be70348f19f002592680024ddd8f4a7fd07f1bdee0",
+        "block": "36480773",
+        "time": "2026-10-29T19:14:48.000Z",
+        "mark": 0.92713865471,
+        "index": 0.9276634559075,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "ADA-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:15:51.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 200,
+      "atInterestFloor": 200,
+      "example": {
+        "txHash": "0x18d3f34020221db13007ac82b3628f11ca005151e364e0f6a431cb98461b28c5",
+        "block": "36481439",
+        "time": "2026-10-29T19:15:55.000Z",
+        "mark": 0.201449778855,
+        "index": 0.201649679454,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "BNB-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:43.000Z",
+      "markBelowIndex": 88,
+      "markBelowIndexAndLongsPay": 88,
+      "atInterestFloor": 96,
+      "example": {
+        "txHash": "0xbb5a6487695f41f04e25afd8bcb9ebe3e399069f4a749505d0913a5d6e539ae7",
+        "block": "36120828",
+        "time": "2026-10-29T09:14:42.000Z",
+        "mark": 750.8855664037585,
+        "index": 751.4683357808931,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "DOGE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 194,
+      "atInterestFloor": 193,
+      "example": {
+        "txHash": "0xe95fed05a71e8035d55e4b7f729f7f34614ea7eaeefa9a07705cd7595de344af",
+        "block": "36480771",
+        "time": "2026-10-29T19:14:48.000Z",
+        "mark": 0.0789856992955,
+        "index": 0.0790256843855,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "XRP-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 199,
+      "markBelowIndexAndLongsPay": 128,
+      "atInterestFloor": 102,
+      "example": {
+        "txHash": "0x9aad4e73d5524de9d8cc9db7a81ac3eec02bde88a441d1611cda391a9578caef",
+        "block": "36480723",
+        "time": "2026-10-29T19:14:43.000Z",
+        "mark": 1.280755321644,
+        "index": 1.2813625159855,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "HYPE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:14:42.000Z",
+      "markBelowIndex": 199,
+      "markBelowIndexAndLongsPay": 156,
+      "atInterestFloor": 105,
+      "example": {
+        "txHash": "0x00d4213282693259f50bd2ce0af288fd3b1596fd62dfc67ef2a1e6eaa2059587",
+        "block": "36480724",
+        "time": "2026-10-29T19:14:43.000Z",
+        "mark": 94.1211803490235,
+        "index": 94.126710952324,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "SOL-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:54:13.000Z",
+      "markBelowIndex": 199,
+      "markBelowIndexAndLongsPay": 184,
+      "atInterestFloor": 43,
+      "example": {
+        "txHash": "0xbda344d6191832312b646764d14a4ec4c2accd8266b72ddb8728db15fd3fc054",
+        "block": "36504427",
+        "time": "2026-10-29T19:54:14.000Z",
+        "mark": 99.921789287091,
+        "index": 99.956770005698,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "ETH-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:19:20.000Z",
+      "markBelowIndex": 199,
+      "markBelowIndexAndLongsPay": 191,
+      "atInterestFloor": 183,
+      "example": {
+        "txHash": "0x5494372d51850d9f407dbf4669d52dcb383a62b61900d6d6a629ee4191a3ea73",
+        "block": "36483470",
+        "time": "2026-10-29T19:19:18.000Z",
+        "mark": 2326.375168186858,
+        "index": 2327.3914805680993,
+        "fundingRatePct": 0.01
+      }
+    },
+    {
+      "market": "BTC-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T12:11:43.000Z",
+      "markBelowIndex": 200,
+      "markBelowIndexAndLongsPay": 200,
+      "atInterestFloor": 0,
+      "example": {
+        "txHash": "0x02d40d8d28976c2f6e0852e876d4227aeddbe94da99186e13d5c08db32206405",
+        "block": "36478935",
+        "time": "2026-10-29T19:11:44.000Z",
+        "mark": 80730.79027914975,
+        "index": 80760.25011865099,
+        "fundingRatePct": 0.0568
+      }
+    }
+  ]
+}

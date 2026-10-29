@@ -15,7 +15,7 @@ One issue per file in [`feedback/`](feedback), in the format the bounty asks for
 | 007 | [perp-starter sets TP/SL from the mark, not the entry price](feedback/007-perp-starter-sets-tp-sl-from-mark-not-entry.md) | normal | SDK |
 | 008 | [perp-guard silently skips the reduce stage on small positions](feedback/008-perp-guard-silently-skips-reduce-on-small-positions.md) | normal | SDK |
 | 009 | [Docs say the per-account position cap is "a tenth" of the open interest cap on most markets; it is a tenth on 1 of 21](feedback/009-docs-position-cap-tenth-of-oi-holds-on-1-of-21-markets.md) | normal | docs |
-| 011 | [Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 4x over](feedback/011-docs-oi-cap-column-is-quarter-of-onchain-cap.md) | normal | docs |
+| 011 | [Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 3.9x over](feedback/011-docs-oi-cap-column-is-quarter-of-onchain-cap.md) | normal | docs |
 | 012 | [The perps dev page sends you to the Errors page for "the full list of order errors", but that page has no perp errors. 120 errors the perp contracts can revert with are not named anywhere in the docs](feedback/012-errors-page-has-no-perp-errors.md) | major | docs |
 | 013 | [SDK type docs say LiquidationFee "is not in the deployed implementation" and no rows exist; the indexer returns 968 rows emitted by the live LiquidationEngine](feedback/013-sdk-says-no-liquidationfee-rows-but-968-exist.md) | normal | SDK |
 | 014 | [Perps market table lists min size but not lot size; e.g. 125 DOGE is above the documented minimum and still reverts InvalidQuantity](feedback/014-market-table-omits-lot-size.md) | normal | docs |
@@ -42,4 +42,4 @@ npm install
 npx tsx caps-009-011.ts   # or funding-005.ts, errors-012.ts, stops-015.ts, doctor-001.ts, gas-004.ts, cancel-002.ts
 ```
 
-Each one prints JSON with the block number and time it ran at. Our own runs from 2026-10-29 are in [`evidence/2910/`](evidence/2910), so you can compare.
+Each one prints JSON with the block number and time it ran at. Our own runs from 2026-10-29 are in [`evidence/2910/`](evidence/2910), so you can compare. The block is read when the script finishes. Prices, funding and order slots on the chain keep moving, so a fresh run gives slightly different counts. When we re-ran all seven scripts at 20:04 UTC, every conclusion held: for example 002 still got IncorrectSender on all 34 orders, now split 24/10 instead of 27/7. That run is in [`evidence/2910-rerun/`](evidence/2910-rerun).

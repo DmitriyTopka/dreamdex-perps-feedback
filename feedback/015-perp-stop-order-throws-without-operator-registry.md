@@ -20,7 +20,7 @@ It makes a client the way the SDK README does (`new SomniaMarkets({ chain: hidek
 So with the bundled preset I expected it to work, or at least the SDK to look the address up from the `pool` it already gets.
 
 ## Actual
-Run 2026-10-29 15:57 UTC, block 36,362,641, SDK 0.32.1.
+Run 2026-10-29 15:58 UTC, block 36,363,000, SDK 0.32.1.
 
 **None of the three presets has the key:**
 

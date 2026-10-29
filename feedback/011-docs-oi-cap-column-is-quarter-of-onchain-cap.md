@@ -1,4 +1,4 @@
-# Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 4x over
+# Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 3.9x over
 Severity: normal
 Area: docs
 
@@ -52,9 +52,9 @@ All 21 markets:
 What this does to someone reading the table:
 - **XRP is 98.0% full** against the real cap while the docs make it look 3.9x over a cap that does not exist. A bot that reads the table has no way to see that the next large XRP order may revert on the real cap.
 - **BTC (140.5%) and NEAR (165.8%) already trade above the documented cap**, so the column is visibly not the enforced limit.
-- On the other 18 markets the docs overstate how full the market is by 2x or 4x (HYPE looks 65% full, it is 33%).
+- On 17 of the other 18 markets the docs overstate how full the market is by 2x or 4x; only TAO matches (HYPE looks 65% full, it is 33%).
 
-**It's not an old snapshot.** The same columns of the same table are right: price tick, min size, initial margin and max leverage match the chain on 21/21 markets (`controls` in the script output). Only the two columns derived from risk params are off, and they were off by the same factors on 2026-10-22 and on 2026-10-29.
+**It's not an old snapshot.** The same columns of the same table are right: price tick, min size, initial margin and max leverage match the chain on 21/21 markets (`controls` in the script output). Only the open interest cap column is off, and it was off by the same factors on 2026-10-22 and on 2026-10-29.
 
 **My guess where the number comes from** (from the data only, not confirmed): on 10 markets (ZRO, LIT, VVV, 1000PEPE, PUMP, TAO, WLD, HYPE, SOL, ETH) the docs figure is exactly 10 x `maxPositionSize`, the per-account cap. That matches the page's own rule that an account is capped at "a tenth" of OI (report 009), applied backwards. On 9 more it is about 5 x `maxPositionSize`; ZEC and BTC fit neither.
 
@@ -69,4 +69,4 @@ What this does to someone reading the table:
 - First run 2026-10-22 ~15:10 UTC gave the same ratios on all 21 markets.
 
 ## Environment
-@somnia-chain/markets-sdk 0.32.1, Hideki testnet (chain 50383), RPC https://api.hideki2.infra.testnet.somnia.network, indexer https://hideki-dev.smk.somnia.host/v1/graphql, Node 20. Docs fetched 2026-10-29.
+@somnia-chain/markets-sdk 0.32.1, Hideki testnet (chain 50383), RPC https://api.hideki2.infra.testnet.somnia.network, indexer https://hideki-dev.smk.somnia.host/v1/graphql, Node 24. Docs fetched 2026-10-29.

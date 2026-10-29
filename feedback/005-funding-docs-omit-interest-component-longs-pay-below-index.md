@@ -42,8 +42,8 @@ Example settlement, LINK-PERP, 2026-10-29 15:14:42 UTC, block 36,336,754, tx `0x
 | PUMP-PERP | -0.0002% | +0.0100% | longs | shorts | 189 | 189 |
 | LINK-PERP | -0.0002% | +0.0100% | longs | shorts | 200 | 200 |
 | SUI-PERP | -0.0001% | +0.0100% | longs | shorts | 200 | 200 |
-| TAO-PERP | +0.0000% | +0.0100% | longs | shorts | 168 | 168 |
-| XLM-PERP | +0.0000% | +0.0100% | longs | shorts | 199 | 199 |
+| TAO-PERP | -0.0000% | +0.0100% | longs | shorts | 168 | 168 |
+| XLM-PERP | -0.0000% | +0.0100% | longs | shorts | 199 | 199 |
 | 1000PEPE-PERP | +0.0001% | +0.0100% | longs | longs | 185 | 185 |
 | VVV-PERP | +0.0002% | +0.0100% | longs | longs | 119 | 119 |
 | ZRO-PERP | +0.0003% | +0.0100% | longs | longs | 24 | 24 |
@@ -62,7 +62,7 @@ The premium is measured on the order book (`timeWeightedPremium` in the SDK: "th
 ## Suggested fix
 Replace the "Who pays whom" list with:
 
-> Funding = premium + clamp(0.01% − premium, −0.05%, +0.05%), per 8-hour window. The premium is the time-weighted gap between the order book and the index. The 0.01% interest term means longs pay +0.01% per 8 h whenever the premium is between −0.04% and +0.06%, so longs can pay while the perp trades below the index. Shorts are paid only when the premium is below −0.04%.
+> Funding = premium + clamp(0.01% − premium, −0.05%, +0.05%), per 8-hour window. The premium is the time-weighted gap between the order book and the index. The 0.01% interest term means longs pay +0.01% per 8 h whenever the premium is between −0.04% and +0.06%, so longs can pay while the perp trades below the index. Shorts are paid only when the premium is below −0.05%.
 
 and add a worked example at the floor (1 BTC at 100,000 USDso pays 100,000 × 0.0001 / 8 = 1.25 USDso per hour).
 

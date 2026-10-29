@@ -74,4 +74,4 @@ Or add a "Position cap" column to the market table, generated from `maxPositionS
 - `getMaxPerpOrderSize(...).maxPositionSize` returns the same per-account cap as `getPerpRiskParams` (checked on all 21 markets on 2026-10-22).
 
 ## Environment
-@somnia-chain/markets-sdk 0.32.1, Hideki testnet (chain 50383), Node 20. Docs fetched 2026-10-29.
+@somnia-chain/markets-sdk 0.32.1, Hideki testnet (chain 50383), Node 24. Docs fetched 2026-10-29.

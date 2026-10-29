@@ -24,14 +24,14 @@ So I expected a PerpPool / MarginBank / PerpStopOrderRegistry section there, lik
 ## Actual
 The Errors page has four sections: Decoding a revert, SpotPool errors, SpotStopOrderRegistry errors, Preflight (HTTP API) reverts. Nothing for perps.
 
-Run on 2026-10-29 15:54 UTC, block 36,360,645:
+Run on 2026-10-29 15:55 UTC, block 36,361,271:
 
 | | count |
 |---|---|
 | errors in the SDK table | 546 |
 | of them, selector present in the perp bytecode | **156** (PerpPool 59, MarginBank 71, PerpStopOrderRegistry 51, some shared) |
-| of the 156, listed on the Errors page | 34, all under "SpotPool errors" (shared ones like `IncorrectSender`, `InvalidPrice`, `PostOnlyWouldCross`) |
-| of the 156, named somewhere else in the docs | 2 (`InsufficientCollateral`, `IsolatedMarketBlocked`, both on the perps dev page as a side note) |
+| of the 156, listed on the Errors page | 34, all in the spot sections: 26 under "SpotPool errors", 8 under "SpotStopOrderRegistry errors" (shared ones like `IncorrectSender`, `InvalidPrice`, `TriggerTooCloseToEma`) |
+| of the 156, named somewhere else in the docs | 2 (`InsufficientCollateral`, `IsolatedMarketBlocked`, both mentioned in passing on the "Perps on Testnet for Developers" page) |
 | of the 156, **not named anywhere in the docs** | **120** (MarginBank 68, PerpPool 36, stop registry 32) |
 
 156 is a floor. `MaxPositionSizeExceeded()` (0x714b36d6), `OpenInterestCapExceeded()` (0xd8ca61d6) and `InsufficientMarginForOrder()` (0x7ea61260) are in the SDK table but their selectors are not in these three bytecodes, so they are raised by some other contract the pool calls. The first one is mentioned on the dev page, the other two nowhere.
