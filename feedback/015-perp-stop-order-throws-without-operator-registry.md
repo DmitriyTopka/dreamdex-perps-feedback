@@ -1,5 +1,6 @@
 # Perp TP/SL from the SDK throws NotConfiguredError with every bundled preset, though each pool tells you the registry address
 Severity: major
+
 Area: SDK
 
 Short version: with the addresses the SDK ships, you can't place a perp TP/SL, can't even build one unsigned, and can't read a grant back. The address is one call away on the pool, the SDK just never asks.
@@ -30,7 +31,7 @@ Run 2026-10-29 15:58 UTC, block 36,363,000, SDK 0.32.1.
 | SOMNIA_TESTNET_ADDRESSES | 16 | missing |
 | SOMNIA_MAINNET_ADDRESSES | 13 | missing |
 
-**Four calls fail before anything is signed:**
+**Four calls fail before anything is signed** (messages shortened, full text in the evidence file):
 
 | call | result |
 |---|---|
@@ -54,8 +55,8 @@ Where it comes from: `dist/perp/stops.js:490`, `operatorGrantCall()` does `p.ope
 One more small thing: the JSDoc of `getOperatorPermissionsRegistry` calls it "The OperatorPermissionsRegistry this SpotPool gates operator calls through". It works on perp pools too, but a perp dev reading that would not think to try it.
 
 ## Suggested fix
-Any one of these is enough, the first two together are best:
-1. Add `operatorPermissionsRegistry: 0x6B2FbfeD328FF5F20C0BE7D3C3437613aFFE8D3a` to `SOMNIA_HIDEKI_TESTNET_ADDRESSES` (the bot kit already uses `0x15C7e8CE38F021c5b45d098AaD788f63090bF20A` for testnet, `config.ts:82`).
+1 fixes Hideki today. 2 also keeps working if the registry is ever redeployed. 3 is the fallback if neither ships soon:
+1. Add `operatorPermissionsRegistry: 0x6B2FbfeD328FF5F20C0BE7D3C3437613aFFE8D3a` (what all 21 Hideki pools return) to `SOMNIA_HIDEKI_TESTNET_ADDRESSES`. The bot kit hardcodes this same address for its `hideki` network in `config.ts:81`, and `0x15C7e8CE38F021c5b45d098AaD788f63090bF20A` for its other network, `testnet`, on line 82, so `SOMNIA_TESTNET_ADDRESSES` needs that one.
 2. In `operatorGrantCall` and the two grant reads, fall back to `getOperatorPermissionsRegistry(pool)` before throwing.
 3. If neither, make the error say how to get it, e.g. "pass operatorRegistry, you can read it with client.getOperatorPermissionsRegistry(pool)", and fix the JSDoc that promises a default.
 

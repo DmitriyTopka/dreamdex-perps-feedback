@@ -1,5 +1,6 @@
-# Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 3.9x over
+# Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; XRP shows 392% of the docs cap but is at 98% of the real one
 Severity: normal
+
 Area: docs
 
 ## Steps to reproduce
@@ -9,7 +10,7 @@ One command, read-only, no key ([`scripts/caps-009-011.ts`](../scripts/caps-009-
 cd scripts && npm install && npx tsx caps-009-011.ts > out.json   # exit code 1 while the docs disagree with the chain
 ```
 
-The script fetches the docs table as Markdown (`https://app.testnet.dreamdex.io/docs/trading/perps-testnet/README.md`), then for every market from `client.listPerpMarkets()` reads `client.getPerpRiskParams(pool).maxOpenInterest` and the market row's `openInterest`, and divides by `10 ** baseDecimals`.
+The script fetches the docs table as Markdown (`https://app.testnet.dreamdex.io/docs/trading/perps-testnet/README.md`), then for every market from `client.listPerpMarkets()` reads `client.getPerpRiskParams(pool).maxOpenInterest` and the market row's `openInterest` (live OI below), and divides both by `10 ** baseDecimals`.
 
 ## Expected
 The page says, right under the table: "These figures are read from the live markets and can be retuned at any time. The open interest cap is market-wide, across every account, and is held in the base asset." So the "Open interest cap" column should equal `maxOpenInterest`.
@@ -50,18 +51,18 @@ All 21 markets:
 | TAO-PERP | 2,185.491 | 2,185.491 | 1x | 273.278 | 12.5% | 12.5% |
 
 What this does to someone reading the table:
-- **XRP is 98.0% full** against the real cap while the docs make it look 3.9x over a cap that does not exist. A bot that reads the table has no way to see that the next large XRP order may revert on the real cap.
+- **XRP is 98.0% full** against the real cap while the docs make it look like nearly 4x its cap, a cap that does not exist. A bot that reads the table has no way to see that the next large XRP order may revert on the real cap.
 - **BTC (140.5%) and NEAR (165.8%) already trade above the documented cap**, so the column is visibly not the enforced limit.
 - On 17 of the other 18 markets the docs overstate how full the market is by 2x or 4x; only TAO matches (HYPE looks 65% full, it is 33%).
 
-**It's not an old snapshot.** The same columns of the same table are right: price tick, min size, initial margin and max leverage match the chain on 21/21 markets (`controls` in the script output). Only the open interest cap column is off, and it was off by the same factors on 2026-10-22 and on 2026-10-29.
+**It's not an old snapshot.** The other columns of the same table are right: price tick, min size, initial margin and max leverage match the chain on 21/21 markets (`controls` in the script output). Only the open interest cap column is off, and it was off by the same factors on 2026-10-22 and on 2026-10-29.
 
 **My guess where the number comes from** (from the data only, not confirmed): on 10 markets (ZRO, LIT, VVV, 1000PEPE, PUMP, TAO, WLD, HYPE, SOL, ETH) the docs figure is exactly 10 x `maxPositionSize`, the per-account cap. That matches the page's own rule that an account is capped at "a tenth" of OI (report 009), applied backwards. On 9 more it is about 5 x `maxPositionSize`; ZEC and BTC fit neither.
 
 ## Suggested fix
 - Generate the column from `getPerpRiskParams(pool).maxOpenInterest` (or `PerpPool.getRiskParams()`), the value the pool enforces, in the same build step that already gets tick and min size right.
 - If the docs mean to show something else (a soft or per-account figure), rename the column and say so; today it is labelled and described as the market-wide cap.
-- Remove or correct the "a tenth of it on most markets" sentence under the table (report 009).
+- The "a tenth of it on most markets" sentence under the same table is wrong too, that is report 009 (per-account cap, separate fix).
 
 ## Evidence
 - Full script output with block, time and every raw value: [`evidence/2910/caps-009-011.json`](../evidence/2910/caps-009-011.json).

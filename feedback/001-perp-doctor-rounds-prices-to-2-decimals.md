@@ -1,5 +1,6 @@
-# perp:doctor rounds every price above 1 to 2 decimals, so on XRP a 43-tick spread prints as bid=1.31 ask=1.31
+# perp:doctor prints every price of 1 or more with 2 decimals, so on XRP a 43-tick spread shows as bid=1.31 ask=1.31
 Severity: normal
+
 Area: bot kit
 
 ## Steps to reproduce
@@ -13,7 +14,7 @@ cd scripts && npm install && npx tsx doctor-001.ts > out.json
 It reads the best bid and ask from the chain with `client.getBookTopsOnchain` and prints each price twice: through the doctor's own `px()` copied as is, and with as many decimals as the tick has.
 
 ## Expected
-`docs/perps.md` in the kit, line 15: "Run `npm run perp:doctor` first. It lists the markets, their live marks and books..." The comment right above `px()` says it gives "a price with enough digits to read, whether it is 83,000 or 0.0058". So I expected prices at tick precision.
+The comment right above `px()` in `scripts/perp-doctor.ts` says it gives "a price with enough digits to read, whether it is 83,000 or 0.0058". And `docs/perps.md` in the kit, line 15, tells you to start with it: "Run `npm run perp:doctor` first. It lists the markets, their live marks and books..." So I expected prices at tick precision.
 
 ## Actual
 `scripts/perp-doctor.ts:44`:
@@ -24,7 +25,7 @@ const px = (v: number) => (Math.abs(v) >= 1 ? v.toFixed(2) : v.toPrecision(4));
 
 Anything 1 or above gets 2 decimals, whatever the tick. Below 1 it gets 4 significant digits, which is also short for 1000PEPE (tick 0.0000001). The tick is right there, the same script prints it on line 132.
 
-Our script at 2026-10-29 16:00 UTC, block 36,364,039, applies the doctor's own `px()` to the chain prices; the raw doctor run made just before it is in `perp-doctor-output.txt`, prices moved a little in between. 11 of 21 markets lose digits:
+At 2026-10-29 16:00 UTC (block 36,364,039) our script passed the live chain prices through the doctor's own `px()`. 11 of 21 markets lose digits. The raw doctor output from the run just before is in `perp-doctor-output.txt`; prices moved a little in between.
 
 | market | tick | doctor's px() shows | chain has | spread in ticks |
 |---|---|---|---|---|
@@ -42,7 +43,7 @@ Our script at 2026-10-29 16:00 UTC, block 36,364,039, applies the doctor's own `
 
 The other 10 print fine, because their tick fits the format: ticks of 0.01 and 0.1 (BTC, ETH, SOL, HYPE) and the markets under 1 where 4 significant digits are enough (SUI, ADA, WLD, XLM, DOGE, PUMP).
 
-The doctor's own XRP line in the same minute was `mark=1.31 ... book[bid=1.31 ask=1.31] ... tick=0.0001`. On 2026-10-22 NEAR, ZRO and AVAX looked like that too (`bid=5.00 ask=5.00` and so on), so it depends on where the price sits, not on one market.
+The doctor's own XRP line from that run was `mark=1.31 ... book[bid=1.31 ask=1.31] ... tick=0.0001`. On 2026-10-22 NEAR, ZRO and AVAX looked like that too (`bid=5.00 ask=5.00` and so on), so it depends on where the price sits, not on one market.
 
 And this is the script the kit says to run first. A flat book reads as "locked market, no spread" and a mark that looks equal to bid and ask hides where the mark really is. You can't use it to check a quote or the tick-alignment of a price you're about to send.
 
@@ -56,11 +57,11 @@ const px = (v: number, tickSize: bigint) => {
 };
 ```
 
-and call it as `px(bid, BigInt(m.info.tickSize))` (same for ask and mark). For 1000PEPE that gives 7 decimals, for BTC 1.
+and call it as `px(bid, BigInt(m.info.tickSize))` (same for ask and mark). `tickSize` is in quote units and USDso, the quote token, has 18 decimals. For 1000PEPE that gives 7 decimals, for BTC 1.
 
 ## Evidence
 - [`evidence/2910/doctor-001.json`](../evidence/2910/doctor-001.json): block, time, all 21 rows.
-- [`evidence/2910/perp-doctor-output.txt`](../evidence/2910/perp-doctor-output.txt): the doctor's own output from the same minute, no wallet.
+- [`evidence/2910/perp-doctor-output.txt`](../evidence/2910/perp-doctor-output.txt): the doctor's own output from the run just before the script, no wallet.
 
 ## Environment
 dreamdex-bot-kit 2579866 (still the latest commit on 2026-10-29), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383), no wallet.

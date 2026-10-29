@@ -1,5 +1,6 @@
 # Docs say the per-account position cap is "a tenth" of the open interest cap on most markets; it is a tenth on 1 of 21
 Severity: normal
+
 Area: docs
 
 ## Steps to reproduce
@@ -21,7 +22,7 @@ So `maxPositionSize / maxOpenInterest` should be about 0.1 on most markets.
 ## Actual
 It is 0.1 on TAO only. Fresh run 2026-10-29 15:46 UTC, block 36,355,794 (same result as 2026-10-22):
 
-| `maxPositionSize` / `maxOpenInterest` | markets | how far "a tenth" overstates the cap |
+| `maxPositionSize` / `maxOpenInterest` | markets | how far off "a tenth" is |
 |---|---|---|
 | 0.025 (1/40) | ZRO, LIT, VVV, 1000PEPE, PUMP, WLD (6) | 4x |
 | 0.05 (1/20) | XRP, NEAR, SUI, AVAX, BNB, DOGE, LINK, ADA, XLM, HYPE, SOL, ETH (12) | 2x |
@@ -55,16 +56,18 @@ All 21 markets:
 | BTC-PERP | 100 | 493.6309 | 0.2026 | no |
 | ZEC-PERP | 420 | 1,680 | 0.25 | no |
 
-A builder who sizes orders from "a tenth of OI" overshoots the real cap 2x on 12 markets and 4x on the 6 newest ones, and gets `MaxPositionSizeExceeded()` (0x714b36d6) instead of a fill. On BTC and ZEC the same rule makes a bot cap itself well below what the pool allows.
+A builder who sizes orders from "a tenth of OI" overshoots the real cap 2x on 12 markets and 4x on the 6 at 1/40, and gets `MaxPositionSizeExceeded()` (0x714b36d6) instead of a fill. On BTC and ZEC the same rule makes a bot cap itself well below what the pool allows.
 
-The rule also cannot be checked against the docs' own table, because the table's "Open interest cap" column is itself 2x or 4x below the chain on 20 of 21 markets (report 011). Measured against that column instead, the ratio is 0.1 on 10 markets and 0.2 on 9, my guess is that's where "a tenth" came from.
+The rule also cannot be checked against the docs' own table, because the table's "Open interest cap" column is itself 2x or 4x below the chain on 20 of 21 markets (report 011). Against that docs column the ratio is 0.1 on 10 markets and 0.2 on 9. That may be where "a tenth" came from (my guess, not confirmed).
 
-**Why other reports from 19-20 Oct show different ratios** (for example ZEC 1.0, BTC 0.405): they divide by the docs column or by older on-chain values. The on-chain ratios above were the same on 2026-10-22 and on 2026-10-29.
+**If you see other ratios elsewhere** (for example ZEC 1.0, BTC 0.405 in reports from 19-20 Oct): those divide by the docs column or by older on-chain values. The on-chain ratios above were the same on 2026-10-22 and on 2026-10-29.
+
+How this differs from report 011: this one is the per-account cap sentence, 011 is the market-wide "Open interest cap" column. Same script, different numbers, different fix.
 
 ## Suggested fix
 Replace both sentences with the number that is enforced:
 
-> Each account has a position cap per market. Read it with `getMaxPerpOrderSize(...)` (`maxPositionSize`) or `getPerpRiskParams(pool).maxPositionSize`; it is currently 1/20 of the open interest cap on most markets, 1/40 on the newest ones, and set per market for BTC, TAO and ZEC.
+> Each account has a position cap per market. Read it with `getMaxPerpOrderSize(...)` (`maxPositionSize`) or `getPerpRiskParams(pool).maxPositionSize`; it is currently 1/20 of the open interest cap on most markets, 1/40 on ZRO, LIT, VVV, 1000PEPE, PUMP and WLD, and set per market for BTC, TAO and ZEC.
 
 Or add a "Position cap" column to the market table, generated from `maxPositionSize` like the other columns.
 

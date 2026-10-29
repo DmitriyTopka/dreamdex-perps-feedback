@@ -2,21 +2,21 @@
 
 Bug and documentation reports for the [dreamDEX Perps Builder Bounty](https://dorahacks.io/hackathon/dreamdex-perps-bounty/detail) on Somnia Tokyo testnet (Hideki, chain 50383).
 
-One issue per file in [`feedback/`](feedback), in the format the bounty asks for: title, severity, area, steps to reproduce, expected, actual, evidence, environment.
+One issue per file in [`feedback/`](feedback), in the format the bounty asks for: title, severity, area, steps to reproduce, expected, actual, evidence, environment. Most reports also have a suggested fix before the evidence.
 
 | # | Title | Severity | Area |
 |---|---|---|---|
-| 001 | [perp:doctor rounds every price above 1 to 2 decimals, so on XRP a 43-tick spread prints as bid=1.31 ask=1.31](feedback/001-perp-doctor-rounds-prices-to-2-decimals.md) | normal | bot kit |
-| 002 | [Cancelling a filled or cancelled perp order reverts IncorrectSender and names another trader as the owner. Docs say it should be OrderIdMismatch, which the perp pool can't even return](feedback/002-stale-cancel-reverts-incorrectsender-with-another-traders-address.md) | normal | contracts |
+| 001 | [perp:doctor prints every price of 1 or more with 2 decimals, so on XRP a 43-tick spread shows as bid=1.31 ask=1.31](feedback/001-perp-doctor-rounds-prices-to-2-decimals.md) | normal | bot kit |
+| 002 | [Cancelling a finished perp order reverts IncorrectSender with another trader's address instead of the documented OrderIdMismatch](feedback/002-stale-cancel-reverts-incorrectsender-with-another-traders-address.md) | normal | contracts |
 | 003 | [Out-of-range orderType or selfMatchingOption reverts with no error data](feedback/003-out-of-range-ordertype-reverts-without-reason.md) | normal | SDK |
-| 004 | [Perps dev docs say a perp tx costs 0.0003-0.003 STT, but their own 1.56M gas figure already costs 0.0094 STT. Our PostOnly placements cost up to 0.014 STT](feedback/004-docs-understate-perp-order-gas-and-stt-cost.md) | normal | docs |
+| 004 | [Perps developer docs put a perp tx at 0.0003-0.003 STT, but their own 1.56M gas figure costs 0.0094 STT and our placements cost up to 0.014 STT](feedback/004-docs-understate-perp-order-gas-and-stt-cost.md) | normal | docs |
 | 005 | [Funding docs say shorts pay when the perp is below the index; in 3,405 of 3,662 recent settlements with mark below index, longs paid](feedback/005-funding-docs-omit-interest-component-longs-pay-below-index.md) | major | docs |
 | 006 | [Mark price sits below the oracle on 19 of 21 markets; mark formula undocumented](feedback/006-mark-price-sits-below-oracle-on-19-of-21-markets.md) | major | contracts |
 | 007 | [perp-starter sets TP/SL from the mark, not the entry price](feedback/007-perp-starter-sets-tp-sl-from-mark-not-entry.md) | normal | SDK |
 | 008 | [perp-guard silently skips the reduce stage on small positions](feedback/008-perp-guard-silently-skips-reduce-on-small-positions.md) | normal | SDK |
 | 009 | [Docs say the per-account position cap is "a tenth" of the open interest cap on most markets; it is a tenth on 1 of 21](feedback/009-docs-position-cap-tenth-of-oi-holds-on-1-of-21-markets.md) | normal | docs |
-| 011 | [Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; on XRP the real cap is 98% full while the docs show it 3.9x over](feedback/011-docs-oi-cap-column-is-quarter-of-onchain-cap.md) | normal | docs |
-| 012 | [The perps dev page sends you to the Errors page for "the full list of order errors", but that page has no perp errors. 120 errors the perp contracts can revert with are not named anywhere in the docs](feedback/012-errors-page-has-no-perp-errors.md) | major | docs |
+| 011 | [Perps market table: "Open interest cap" is 1/4 of the on-chain cap on 16 markets and 1/2 on 4; XRP shows 392% of the docs cap but is at 98% of the real one](feedback/011-docs-oi-cap-column-is-quarter-of-onchain-cap.md) | normal | docs |
+| 012 | [The Errors page has no perp errors, though the perps developer page sends you there; 120 perp contract errors are named nowhere in the docs](feedback/012-errors-page-has-no-perp-errors.md) | major | docs |
 | 013 | [SDK type docs say LiquidationFee "is not in the deployed implementation" and no rows exist; the indexer returns 968 rows emitted by the live LiquidationEngine](feedback/013-sdk-says-no-liquidationfee-rows-but-968-exist.md) | normal | SDK |
 | 014 | [Perps market table lists min size but not lot size; e.g. 125 DOGE is above the documented minimum and still reverts InvalidQuantity](feedback/014-market-table-omits-lot-size.md) | normal | docs |
 | 015 | [Perp TP/SL from the SDK throws NotConfiguredError with every bundled preset, though each pool tells you the registry address](feedback/015-perp-stop-order-throws-without-operator-registry.md) | major | SDK |

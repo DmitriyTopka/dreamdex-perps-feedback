@@ -1,5 +1,6 @@
-# The perps dev page sends you to the Errors page for "the full list of order errors", but that page has no perp errors. 120 errors the perp contracts can revert with are not named anywhere in the docs
+# The Errors page has no perp errors, though the perps developer page sends you there; 120 perp contract errors are named nowhere in the docs
 Severity: major
+
 Area: docs
 
 ## Steps to reproduce
@@ -29,12 +30,12 @@ Run on 2026-10-29 15:55 UTC, block 36,361,271:
 | | count |
 |---|---|
 | errors in the SDK table | 546 |
-| of them, selector present in the perp bytecode | **156** (PerpPool 59, MarginBank 71, PerpStopOrderRegistry 51, some shared) |
+| of them, selector present in the perp bytecode | **156** (by contract: PerpPool 59, MarginBank 71, PerpStopOrderRegistry 51; errors shared between contracts count under each, so these add up to more than 156) |
 | of the 156, listed on the Errors page | 34, all in the spot sections: 26 under "SpotPool errors", 8 under "SpotStopOrderRegistry errors" (shared ones like `IncorrectSender`, `InvalidPrice`, `TriggerTooCloseToEma`) |
 | of the 156, named somewhere else in the docs | 2 (`InsufficientCollateral`, `IsolatedMarketBlocked`, both mentioned in passing on the "Perps on Testnet for Developers" page) |
-| of the 156, **not named anywhere in the docs** | **120** (MarginBank 68, PerpPool 36, stop registry 32) |
+| of the 156, **not named anywhere in the docs** | **120** (by contract: MarginBank 68, PerpPool 36, PerpStopOrderRegistry 32; shared ones count under each) |
 
-156 is a floor. `MaxPositionSizeExceeded()` (0x714b36d6), `OpenInterestCapExceeded()` (0xd8ca61d6) and `InsufficientMarginForOrder()` (0x7ea61260) are in the SDK table but their selectors are not in these three bytecodes, so they are raised by some other contract the pool calls. The first one is mentioned on the dev page, the other two nowhere.
+156 is a floor. `MaxPositionSizeExceeded()` (0x714b36d6), `OpenInterestCapExceeded()` (0xd8ca61d6) and `InsufficientMarginForOrder()` (0x7ea61260) are in the SDK table but their selectors are not in these three bytecodes, so they are raised by some other contract the pool calls. The first one is mentioned on the "Perps on Testnet for Developers" page, the other two nowhere.
 
 A lot of the 120 are admin or init errors a trader will never see (`InvalidInitialization`, `OwnableInvalidOwner`...). Those can stay out. But these ones a trader or a bot can hit, and none of them is in the docs:
 
@@ -56,9 +57,9 @@ A lot of the 120 are admin or init errors a trader will never see (`InvalidIniti
 
 Full list of all 156 with selector, contract and docs status is in the evidence file.
 
-One I hit myself: `NoReducingPositionAtCreation()` (0xd156c90a) from the stop registry, when a reduce-only TP/SL is created with no position (report 018). It is in the SDK table and nowhere in the docs, so the bot just gets an unexplained revert.
+One I hit myself: `NoReducingPositionAtCreation()` (0xd156c90a) from PerpStopOrderRegistry, when a reduce-only TP/SL is created with no position (report 018). It is in the SDK table and nowhere in the docs, so the bot just gets an unexplained revert.
 
-**One small live thing.** I simulated a BTC-PERP `placeOrder` from our own test account (eth_call only, nothing sent) at 1x, 1,000x, 10,000x, 100,000x and 1,000,000x min size. Up to 1,000x it passes. From 10,000x it reverts with a plain string, `Error("ERC20: insufficient allowance")`. The dev page says the owner's own `placeOrder` fails with "ERC20: transfer amount exceeds balance" in that case. Close, but if you grep your logs for the docs string you won't find it.
+**One small live thing.** I simulated a BTC-PERP `placeOrder` from our own test account (eth_call only, nothing sent) at 1x, 1,000x, 10,000x, 100,000x and 1,000,000x min size. Up to 1,000x it passes. From 10,000x it reverts with a plain string, `Error("ERC20: insufficient allowance")`. The "Perps on Testnet for Developers" page says the owner's own `placeOrder` fails with "ERC20: transfer amount exceeds balance" in that case. The chain names a different cause (allowance, not balance), and a bot that greps its logs for the docs string won't find it.
 
 ## Suggested fix
 Add a "Perps errors" part to the Errors page, three tables in the same format as the spot ones. A start:
@@ -66,6 +67,7 @@ Add a "Perps errors" part to the Errors page, three tables in the same format as
 ```md
 ## PerpPool errors
 | Selector | Error | Meaning / fix |
+|---|---|---|
 | `0x50e929ad` | `MarketSettled()` | ... |
 | `0xe114c921` | `SettlementWindowOpen()` | ... |
 | `0x08b9f95b` | `OraclePriceStale()` | ... |
@@ -74,13 +76,17 @@ Add a "Perps errors" part to the Errors page, three tables in the same format as
 | `0x714b36d6` | `MaxPositionSizeExceeded()` | Order takes the account past maxPositionSize, see getMaxPerpOrderSize |
 
 ## MarginBank errors
+| Selector | Error | Meaning / fix |
+|---|---|---|
 | `0x3a23d825` | `InsufficientCollateral()` | ... |
 | `0x7ea61260` | `InsufficientMarginForOrder()` | ... |
 | `0x649b887d` | `VoucherMarketNotAllowed()` | Paper USDso can't open this market |
-| ... |
+| ... | ... | ... |
 
 ## PerpStopOrderRegistry errors
-| `0x28e0a7ba` | `RegistryNotApprovedByOwner()` | Owner has not granted the stop registry, see Link a bot |
+| Selector | Error | Meaning / fix |
+|---|---|---|
+| `0x28e0a7ba` | `RegistryNotApprovedByOwner()` | Owner has not granted PerpStopOrderRegistry, see Link a bot |
 | `0x806109d7` | `InsufficientMarginAtCreation()` | ... |
 | `0xaa4fc774` | `IsolatedMarketBlocked()` | Isolated account, other market |
 ```
@@ -89,7 +95,7 @@ The SDK already has the source for it. Its generated header says perp errors com
 
 ## Evidence
 - [`evidence/2910/errors-012.json`](../evidence/2910/errors-012.json): block, time, implementation addresses (PerpPool `0x81F9EB88C95a52B4D3eA47A73ac394b8A547d443`, PerpStopOrderRegistry `0x8d7FcDfC6D043B0296Ccf84D82f9dbe2c701096E`, MarginBank `0x78c989c9c5cd2ed68b4486373c0e4b118c8f1d5c`), all 156 errors, the live eth_call results.
-- The selectors the spot part of the Errors page lists are fine. I recomputed all 49 of them plus the 7 admin ones and the retired `AmendReplacementFailed` with keccak back on 2026-10-22, all match. The problem is only the missing perp part.
+- The spot selectors on the Errors page are fine (this is a separate check from the 34 above). I recomputed all 49 spot selectors plus the 7 admin ones and the retired `AmendReplacementFailed` with keccak back on 2026-10-22, all match. The problem is only the missing perp part.
 - About 546 vs 538: both are right. `contractErrorsAbi` has 546 entries and 538 unique names, because 8 entries are overloads of a name already in the list (for example `QuantityBelowMinimum()` 0x84c3adbe and `QuantityBelowMinimum(uint256,uint256)` 0xeaa68ceb). Some other reports use 538, we count entries.
 
 ## Environment

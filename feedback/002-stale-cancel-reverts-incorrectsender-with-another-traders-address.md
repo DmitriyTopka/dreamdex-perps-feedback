@@ -1,5 +1,6 @@
-# Cancelling a filled or cancelled perp order reverts IncorrectSender and names another trader as the owner. Docs say it should be OrderIdMismatch, which the perp pool can't even return
+# Cancelling a finished perp order reverts IncorrectSender with another trader's address instead of the documented OrderIdMismatch
 Severity: normal
+
 Area: contracts
 
 ## Steps to reproduce
@@ -38,17 +39,17 @@ Simulated 2026-10-29 16:06 UTC, block 36,367,582. **All 34 finished orders, all 
 | `reduceOrderFor` from the bot key | same 27 / 7 |
 | id 999999999, both calls | `IncorrectSender(our account, 0x0)` |
 
-`OrderIdMismatch` came back zero times. And I don't think it can: its selector 0x71fa8de6 is not in the PerpPool implementation bytecode at all (`0x81F9EB88C95a52B4D3eA47A73ac394b8A547d443`, checked for report 012), while `IncorrectSender` and `IncorrectOrder` are.
+What seems to happen: the high bits of the id (`id >> 64`) are a storage slot, the low bits a sequence. When our order finishes, someone else's new order takes the slot. The pool checks the slot's owner first, so we get "you are not the owner, 0x2e5e... is". Back on 2026-10-22 one of our ZRO slots was re-taken by our own next order and the stale cancel then gave `IncorrectOrder()`. Today those ZRO slots belong to other traders, so it's `IncorrectSender` there too. Either way the stale id can't touch the wrong order. No funds at risk, the problem is the error.
 
-The 27 "expected" addresses are 10 different accounts, none of them ours, for example `0x2e5e7F9Bd71aa5F51e25D7aa3bB42c1693951EEe` and `0xD511cAA0C74a3BF36E2dd205184f5BBa07D7Bf2A`. `getOrderOnchain` returns null for all 34, so the SDK itself knows these orders are gone.
+`OrderIdMismatch` came back zero times. And I doubt the pool can return it: its selector 0x71fa8de6 does not appear in the PerpPool implementation bytecode (`0x81F9EB88C95a52B4D3eA47A73ac394b8A547d443`, checked for report 012), while the selectors of `IncorrectSender` and `IncorrectOrder` do.
+
+In the 27 cases the second argument of the revert (the owner the pool expected) is one of 10 different accounts, none of them ours, for example `0x2e5e7F9Bd71aa5F51e25D7aa3bB42c1693951EEe` and `0xD511cAA0C74a3BF36E2dd205184f5BBa07D7Bf2A`. `getOrderOnchain` returns null for all 34, so the SDK itself knows these orders are gone.
 
 Example, BTC-PERP, Filled order `0x338000000000077312c` (placed in tx `0x7d2a45db9a04fa22992459665e5110232e40b8fdf66d4bb5743813bd9d897f48`): the owner's own `cancelOrder` reverts `IncorrectSender(0x8432...BF21, 0x2e5e...1EEe)`.
 
-How it looks like it works: the high bits of the id (`id >> 64`) are a storage slot, the low bits a sequence. When our order finishes, someone else's new order takes the slot. The pool checks the slot's owner first, so we get "you are not the owner, 0x2e5e... is". Back on 2026-10-22 one of our ZRO slots was re-taken by our own next order and the stale cancel then gave `IncorrectOrder()`. Today those ZRO slots belong to other traders, so it's `IncorrectSender` there too. Either way the stale id can't touch the wrong order. No funds at risk, the problem is the error.
-
 Why it matters:
-- A bot that retries a cancel after a fill gets "your operator link is broken" and a stranger's address. The obvious reaction is to re-link the bot or stop, not "order is done, move on".
-- The owner gets the same error from its own wallet, so "Caller is not the order owner" is just wrong for them.
+- A bot that retries a cancel after a fill gets an error that reads like a broken operator link, plus a stranger's address. The obvious reaction is to re-link the bot or stop, not "order is done, move on".
+- The owner gets the same error from its own wallet, so the documented meaning ("the caller does not own the order") is just wrong for them.
 - It leaks which account now has an order in that slot. Not secret on a public chain, but weird to show in an error.
 - The kit's `cancelQuietly` swallows it, so you only see this calling the pool or the SDK directly.
 
