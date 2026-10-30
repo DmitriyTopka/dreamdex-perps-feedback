@@ -1,0 +1,143 @@
+{
+  "block": 36901484,
+  "time": "2026-10-30T06:56:12.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "simulatedAtBlock": 36901348,
+  "market": "ETH-PERP",
+  "pool": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+  "owner": "0x84326A92162Ece92ed257A31073fDd3a6599BF21",
+  "bot": "0x13f05c8e15cC0d7d3abff02C144fb74778018a55",
+  "order": {
+    "isBid": true,
+    "price": "2020770000000000000000",
+    "quantity": "4000000000000000",
+    "note": "resting bid 10% under the mark"
+  },
+  "placeOrderForSelector": "0x80054449",
+  "enumRows": [
+    {
+      "label": "orderType 0",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "passes",
+      "botPlaceOrderFor": "passes"
+    },
+    {
+      "label": "orderType 1",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "FillOrKillNotFillable()",
+      "botPlaceOrderFor": "FillOrKillNotFillable()"
+    },
+    {
+      "label": "orderType 2",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "ImmediateOrCancelNoFill()",
+      "botPlaceOrderFor": "ImmediateOrCancelNoFill()"
+    },
+    {
+      "label": "orderType 3",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "passes",
+      "botPlaceOrderFor": "passes"
+    },
+    {
+      "label": "orderType 4",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "orderType 5",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "orderType 9",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "orderType 255",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "selfMatchingOption 0",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "passes",
+      "botPlaceOrderFor": "passes"
+    },
+    {
+      "label": "selfMatchingOption 1",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "passes",
+      "botPlaceOrderFor": "passes"
+    },
+    {
+      "label": "selfMatchingOption 2",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "selfMatchingOption 3",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    },
+    {
+      "label": "selfMatchingOption 9",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "reverted, EMPTY revert data",
+      "botPlaceOrderFor": "reverted, EMPTY revert data"
+    }
+  ],
+  "otherRows": [
+    {
+      "label": "quantity below minQuantity",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "InvalidQuantity(3999999999999999, 100000000000000)",
+      "botPlaceOrderFor": "InvalidQuantity(3999999999999999, 100000000000000)"
+    },
+    {
+      "label": "price off tick",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "InvalidPrice(2020770000000000000001, 10000000000000000)",
+      "botPlaceOrderFor": "InvalidPrice(2020770000000000000001, 10000000000000000)"
+    },
+    {
+      "label": "expiry in the past",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "OrderAlreadyExpired()",
+      "botPlaceOrderFor": "OrderAlreadyExpired()"
+    },
+    {
+      "label": "builder not approved",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "BuilderFeeExceedsApproval()",
+      "botPlaceOrderFor": "BuilderFeeExceedsApproval()"
+    },
+    {
+      "label": "builder fee far above cap",
+      "sdkBuildPlacePerpOrder": "builds, no SDK error",
+      "ownerPlaceOrder": "BuilderFeeExceedsCap()",
+      "botPlaceOrderFor": "BuilderFeeExceedsCap()"
+    },
+    {
+      "label": "price 0",
+      "sdkBuildPlacePerpOrder": "InvalidInputError: @somnia-chain/markets-sdk: price and quantity must be > 0",
+      "ownerPlaceOrder": "not built",
+      "botPlaceOrderFor": "InvalidPrice(0, 10000000000000000)"
+    },
+    {
+      "label": "quantity 0",
+      "sdkBuildPlacePerpOrder": "InvalidInputError: @somnia-chain/markets-sdk: price and quantity must be > 0",
+      "ownerPlaceOrder": "not built",
+      "botPlaceOrderFor": "QuantityBelowMinimum(0, 4000000000000000)"
+    }
+  ],
+  "sdkDecodeRevertForOrderType4": "@somnia-chain/markets-sdk: placeOrder reverted: for an unknown reason."
+}

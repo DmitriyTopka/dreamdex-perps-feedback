@@ -1,0 +1,239 @@
+{
+  "block": 36902191,
+  "time": "2026-10-30T06:57:23.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "owner": "0x84326A92162Ece92ed257A31073fDd3a6599BF21",
+  "btcRegistry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+  "ourCase": {
+    "placeTx": "0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e",
+    "limitOrder": {
+      "id": "7692292278736890052724",
+      "side": "buy",
+      "price": 80000,
+      "quantityBtc": 0.00018,
+      "filledBtc": 0,
+      "indexerStatus": "Cancelled"
+    },
+    "stopsCreatedInSameTx": [
+      {
+        "id": "5331109037302060423273",
+        "kind": "TP",
+        "trigger": 90000,
+        "quantityBtc": 0.00018
+      },
+      {
+        "id": "3431094397709976606826",
+        "kind": "SL",
+        "trigger": 70000,
+        "quantityBtc": 0.00018
+      }
+    ],
+    "steps": [
+      {
+        "label": "block before placement",
+        "block": 30395380,
+        "time": "2026-10-22T17:52:42.000Z",
+        "limitOrderLive": false,
+        "positionBtc": 0,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": false
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": false
+          }
+        ],
+        "ownerStt": 14.85,
+        "unclaimedStt": 0
+      },
+      {
+        "label": "placement block",
+        "block": 30395381,
+        "time": "2026-10-22T17:52:42.000Z",
+        "limitOrderLive": true,
+        "positionBtc": 0,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 90000,
+            "sibling": "3431094397709976606826",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 70000,
+            "sibling": "5331109037302060423273",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          }
+        ],
+        "ownerStt": 14.55,
+        "unclaimedStt": 0
+      },
+      {
+        "label": "first block without the limit order (cancelled in the app)",
+        "block": 30396575,
+        "time": "2026-10-22T17:54:42.000Z",
+        "limitOrderLive": false,
+        "positionBtc": 0,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 90000,
+            "sibling": "3431094397709976606826",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 70000,
+            "sibling": "5331109037302060423273",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          }
+        ],
+        "ownerStt": 14.55,
+        "unclaimedStt": 0
+      },
+      {
+        "label": "new long opened without TP/SL",
+        "block": 30396968,
+        "time": "2026-10-22T17:55:21.000Z",
+        "limitOrderLive": false,
+        "positionBtc": 0.13818,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 90000,
+            "sibling": "3431094397709976606826",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 70000,
+            "sibling": "5331109037302060423273",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          }
+        ],
+        "ownerStt": 14.55,
+        "unclaimedStt": 0,
+        "tx": "0x80bfd2d31c5264ed9aeec4c37a24245b791b6a82741a0238d409b08c11cdea22"
+      },
+      {
+        "label": "long closed",
+        "block": 30397276,
+        "time": "2026-10-22T17:55:52.000Z",
+        "limitOrderLive": false,
+        "positionBtc": 0,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 90000,
+            "sibling": "3431094397709976606826",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": true,
+            "quantityBtc": 0.00018,
+            "trigger": 70000,
+            "sibling": "5331109037302060423273",
+            "intent": "reduceOnly",
+            "sttPaid": 0.15
+          }
+        ],
+        "ownerStt": 14.55,
+        "unclaimedStt": 0,
+        "tx": "0xc9a3f95a482403be3b9560051d494499c7a3b0bb8e4c46a38ff518c2dc1d6986"
+      },
+      {
+        "label": "first block without the stops (cancelled in the app)",
+        "block": 30397294,
+        "time": "2026-10-22T17:55:54.000Z",
+        "limitOrderLive": false,
+        "positionBtc": 0,
+        "legs": [
+          {
+            "id": "5331109037302060423273",
+            "kind": "TP",
+            "live": false
+          },
+          {
+            "id": "3431094397709976606826",
+            "kind": "SL",
+            "live": false
+          }
+        ],
+        "ownerStt": 14.85,
+        "unclaimedStt": 0
+      }
+    ],
+    "feePerStopTodaySTT": 0.15
+  },
+  "scan": {
+    "pendingReduceOnlyLive": 632,
+    "owners": 384,
+    "placedInSameTxAsAnOrder": 289,
+    "parentOrderStatus": {
+      "Filled": 287,
+      "Cancelled": 1,
+      "Closed": 1
+    },
+    "outlivedCancelledParent": 1,
+    "accounts": 1,
+    "onNoPosition": 0,
+    "onAnOpenPosition": 1,
+    "sttHeld": 0.15,
+    "leftovers": [
+      {
+        "owner": "0xa48b5936b0fa0c62f20dfe541a8fa4117d190623",
+        "market": "BTC-PERP",
+        "stopId": "4113623928437230019813",
+        "kind": "TP",
+        "trigger": 82000,
+        "txHash": "0x011a26ab23a408e04c1416970b7d15d4d5eab596e8104aae0173e38beb7b00e4",
+        "createdAt": "2026-10-29T18:16:36.000Z",
+        "parentOrderId": "21767158006977279660171",
+        "parentSide": "buy",
+        "parentPrice": 78000,
+        "parentQuantity": 0.1923,
+        "stopQuantity": 0.1923,
+        "sttHeld": 0.15,
+        "positionWhenArmed": -0.12417,
+        "positionNow": 0.12785,
+        "sitsOn": "an open position the cancelled order never filled into"
+      }
+    ]
+  }
+}

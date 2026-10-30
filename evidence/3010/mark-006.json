@@ -1,0 +1,2467 @@
+{
+  "start": {
+    "block": 36908180,
+    "time": "2026-10-30T07:07:22.000Z",
+    "sdk": "0.32.1",
+    "chainId": 50383
+  },
+  "end": {
+    "block": 36910262,
+    "time": "2026-10-30T07:10:50.000Z",
+    "sdk": "0.32.1",
+    "chainId": 50383
+  },
+  "samples": 6,
+  "gapMs": 20000,
+  "summary": {
+    "markets": 21,
+    "markBelowIndexInEveryRound": "17/21",
+    "marketsNotBelowInEveryRound": [
+      "ZRO-PERP 0/6 avg 0.1375%",
+      "VVV-PERP 0/6 avg 0.0559%",
+      "1000PEPE-PERP 0/6 avg 0.0829%",
+      "HYPE-PERP 0/6 avg 0.0274%"
+    ],
+    "markBelowIndexWhileBookMidAboveIndex": [
+      "LIT-PERP mark -0.0222% mid 0.0272%",
+      "ZEC-PERP mark -0.0118% mid 0.1364%",
+      "TAO-PERP mark -0.0472% mid 0.0225%",
+      "AVAX-PERP mark -0.0558% mid 0.1244%",
+      "LINK-PERP mark -0.0505% mid 9.8654%",
+      "SUI-PERP mark -0.0407% mid 0.0868%",
+      "BNB-PERP mark -0.0187% mid 0.0238%",
+      "BTC-PERP mark -0.0374% mid 0.133%"
+    ],
+    "roundsIndexFell": 62,
+    "roundsIndexFellMarkStillBelow": 50,
+    "historySettlements": 4200,
+    "historyMarkBelowIndex": 3632,
+    "historyMarkAboveIndex": 564,
+    "historySettlementsIndexFell": 2255,
+    "historyIndexFellMarkStillBelow": 1970
+  },
+  "oracleSource": {
+    "block": 36910496,
+    "poolMarkEqualsOracleGetMarkPrice": "21/21",
+    "poolIndexEqualsOracleGetPrice": "21/21",
+    "rows": [
+      {
+        "market": "ZRO-PERP",
+        "oracle": "0x505Ac3BC3A2638c06224AF75e4135871929b9Bc0",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": 0.1439
+      },
+      {
+        "market": "LIT-PERP",
+        "oracle": "0x789159d8df1C5f801c951F7C73884E2a60bC6E7A",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0206
+      },
+      {
+        "market": "VVV-PERP",
+        "oracle": "0xf39EDB16d0fB51a2E1d5ec0DEc40D31A0e3459fE",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": 0.0483
+      },
+      {
+        "market": "1000PEPE-PERP",
+        "oracle": "0x458541DA4D9284889470e5D915eA77d830Cc0dDA",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": 0.1116
+      },
+      {
+        "market": "PUMP-PERP",
+        "oracle": "0x1f8a8Ae2230AAabB4e0eD091B15ED7AcACd9E8AF",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0954
+      },
+      {
+        "market": "ZEC-PERP",
+        "oracle": "0x9EbCB0ADccC1b4533dc0442dd97E2CDE936aa434",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0067
+      },
+      {
+        "market": "TAO-PERP",
+        "oracle": "0xc4EC017f1224a09eD583654cB4B945473e222C49",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0564
+      },
+      {
+        "market": "WLD-PERP",
+        "oracle": "0x5e05E512D0F1bB31Df27115a4aC3B5b075981C4f",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0791
+      },
+      {
+        "market": "NEAR-PERP",
+        "oracle": "0x96c3ec2aC2Ea6B46b95e2EAE211E2fD4d3b2577F",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0786
+      },
+      {
+        "market": "XLM-PERP",
+        "oracle": "0x5DABA7b53e212D260df204f8636769d196b4B4C2",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0134
+      },
+      {
+        "market": "AVAX-PERP",
+        "oracle": "0xc25CD6A89CA6325219f0DF6CC38540C1f15b6AEc",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0358
+      },
+      {
+        "market": "LINK-PERP",
+        "oracle": "0xa458416a2e489Df8ACe680d25747b46ab9BE892D",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0639
+      },
+      {
+        "market": "SUI-PERP",
+        "oracle": "0xeF407c6EfFeAb372347bD20ceFb0c1444a67fAa2",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.042
+      },
+      {
+        "market": "ADA-PERP",
+        "oracle": "0x775acf4141E5813C195018E22D983F985de4a46D",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0451
+      },
+      {
+        "market": "BNB-PERP",
+        "oracle": "0x7c7244AD4aA7611708C89887f19c82381954Be2b",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0239
+      },
+      {
+        "market": "DOGE-PERP",
+        "oracle": "0x11907502B2749C96042AFc0ffF6C584E74bEf047",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0524
+      },
+      {
+        "market": "XRP-PERP",
+        "oracle": "0xcD2f2a0c0249Dd5cc9b34D9A9650A1DE0e40d97E",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0465
+      },
+      {
+        "market": "HYPE-PERP",
+        "oracle": "0x7808Fe321423055C3c212cC87B70689F0a5CA84e",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": 0.0149
+      },
+      {
+        "market": "SOL-PERP",
+        "oracle": "0x4f24Db974aB9AC50581B521f9b149B4d7AE7734d",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0442
+      },
+      {
+        "market": "ETH-PERP",
+        "oracle": "0x267f6eB7f7751e883Fe8716Fe6e2EDCa9Cbc585D",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0568
+      },
+      {
+        "market": "BTC-PERP",
+        "oracle": "0x20C790C53BFF771C2E93425EA24C11577CD9c8A0",
+        "poolMarkEqualsOracleGetMarkPrice": true,
+        "poolIndexEqualsOracleGetPrice": true,
+        "oracleMarkVsPricePct": -0.0438
+      }
+    ]
+  },
+  "trades": [
+    {
+      "tx": "0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b",
+      "block": 30210002,
+      "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+      "fillPrice": 81835.90000000001,
+      "fillVsIndexPct": 0.1853,
+      "reads": [
+        {
+          "block": 30210002,
+          "time": "2026-10-22T12:43:30.000Z",
+          "mark": 81647.79943706813,
+          "index": 81684.53626960302,
+          "mid": 81835.85,
+          "markVsIndexPct": -0.045,
+          "unrealizedVsFillPct": -0.2299,
+          "roiAt20xPct": -4.597
+        },
+        {
+          "block": 30210102,
+          "time": "2026-10-22T12:43:40.000Z",
+          "mark": 81632.70667705695,
+          "index": 81670.17675856147,
+          "mid": 81835.85,
+          "markVsIndexPct": -0.0459,
+          "unrealizedVsFillPct": -0.2483,
+          "roiAt20xPct": -4.9659
+        },
+        {
+          "block": 30210282,
+          "time": "2026-10-22T12:43:58.000Z",
+          "mark": 81616.57176073224,
+          "index": 81655.55935528154,
+          "mid": 81808.55,
+          "markVsIndexPct": -0.0477,
+          "unrealizedVsFillPct": -0.268,
+          "roiAt20xPct": -5.3602
+        }
+      ]
+    },
+    {
+      "tx": "0xca85b2868fa314e1b2d1d69662eff9f242b9e014bcd1ed726b4db315e011d3ef",
+      "block": 30212508,
+      "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+      "fillPrice": 81865.1,
+      "fillVsIndexPct": 0.1921,
+      "reads": [
+        {
+          "block": 30212508,
+          "time": "2026-10-22T12:47:41.000Z",
+          "mark": 81676.04471837175,
+          "index": 81708.10740087487,
+          "mid": 81865.15000000001,
+          "markVsIndexPct": -0.0392,
+          "unrealizedVsFillPct": -0.2309,
+          "roiAt20xPct": -4.6187
+        },
+        {
+          "block": 30212608,
+          "time": "2026-10-22T12:47:51.000Z",
+          "mark": 81677.94471837176,
+          "index": 81709.98287314779,
+          "mid": 81871.75,
+          "markVsIndexPct": -0.0392,
+          "unrealizedVsFillPct": -0.2286,
+          "roiAt20xPct": -4.5723
+        },
+        {
+          "block": 30212788,
+          "time": "2026-10-22T12:48:09.000Z",
+          "mark": 81684.89061967834,
+          "index": 81714.47852873575,
+          "mid": 81872.25,
+          "markVsIndexPct": -0.0362,
+          "unrealizedVsFillPct": -0.2201,
+          "roiAt20xPct": -4.4026
+        }
+      ]
+    }
+  ],
+  "live": [
+    {
+      "market": "ZRO-PERP",
+      "pool": "0x2a1822b02039ddf0e293f3f7243673fc03eaf16c",
+      "avgMarkVsIndexPct": 0.1375,
+      "avgMidVsIndexPct": -0.0186,
+      "avgMarkVsMidPct": 0.1562,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "0/6",
+      "roundsMidAboveIndex": "4/6",
+      "roundsMarkBelowMid": "0/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 0
+    },
+    {
+      "market": "LIT-PERP",
+      "pool": "0xdcb0ad226727b2ce92857f0af5751389d42b2a3f",
+      "avgMarkVsIndexPct": -0.0222,
+      "avgMidVsIndexPct": 0.0272,
+      "avgMarkVsMidPct": -0.0494,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "4/6",
+      "roundsMarkBelowMid": "4/6",
+      "indexFell": 5,
+      "indexFellMarkStillBelow": 5
+    },
+    {
+      "market": "VVV-PERP",
+      "pool": "0x352636ab146039851ef06d6367a106d5fb4e6409",
+      "avgMarkVsIndexPct": 0.0559,
+      "avgMidVsIndexPct": 0.0973,
+      "avgMarkVsMidPct": -0.0413,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "0/6",
+      "roundsMidAboveIndex": "5/6",
+      "roundsMarkBelowMid": "4/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 0
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "pool": "0xfa9b9e50cc1745113d57893991af200a74c86b6f",
+      "avgMarkVsIndexPct": 0.0829,
+      "avgMidVsIndexPct": 0.187,
+      "avgMarkVsMidPct": -0.1038,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "0/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "4/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 0
+    },
+    {
+      "market": "PUMP-PERP",
+      "pool": "0x76c981a52530cdf9497559140aafcd8cd16836e7",
+      "avgMarkVsIndexPct": -0.0837,
+      "avgMidVsIndexPct": -0.0776,
+      "avgMarkVsMidPct": -0.0061,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "1/6",
+      "roundsMarkBelowMid": "3/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "ZEC-PERP",
+      "pool": "0x2a73129f26917124bd2a47a9b355c395c537f050",
+      "avgMarkVsIndexPct": -0.0118,
+      "avgMidVsIndexPct": 0.1364,
+      "avgMarkVsMidPct": -0.148,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "TAO-PERP",
+      "pool": "0xd9b6a347a3ae9fd6ba21179d3343f2c8a922f697",
+      "avgMarkVsIndexPct": -0.0472,
+      "avgMidVsIndexPct": 0.0225,
+      "avgMarkVsMidPct": -0.0696,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "4/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 4,
+      "indexFellMarkStillBelow": 4
+    },
+    {
+      "market": "WLD-PERP",
+      "pool": "0x0f464d57c1fd839e4d87a408bbccdab8f77e6394",
+      "avgMarkVsIndexPct": -0.0733,
+      "avgMidVsIndexPct": -0.054,
+      "avgMarkVsMidPct": -0.0193,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "2/6",
+      "roundsMarkBelowMid": "3/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "NEAR-PERP",
+      "pool": "0x1cd15ae8bff0fe0a7f49233be8b90734775ba454",
+      "avgMarkVsIndexPct": -0.0766,
+      "avgMidVsIndexPct": -0.1874,
+      "avgMarkVsMidPct": 0.1111,
+      "avgLastObservedPremiumPct": -0.0542,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "0/6",
+      "roundsMarkBelowMid": "0/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "XLM-PERP",
+      "pool": "0x74b05b9b8c8f180b53b7891018f3b254b3e658c9",
+      "avgMarkVsIndexPct": -0.0392,
+      "avgMidVsIndexPct": -0.0075,
+      "avgMarkVsMidPct": -0.0316,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "2/6",
+      "roundsMarkBelowMid": "3/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "AVAX-PERP",
+      "pool": "0xde9762b6b441133d1314c68864ae4e63a6ee45c7",
+      "avgMarkVsIndexPct": -0.0558,
+      "avgMidVsIndexPct": 0.1244,
+      "avgMarkVsMidPct": -0.18,
+      "avgLastObservedPremiumPct": 0.0008,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "LINK-PERP",
+      "pool": "0xf71b619450bafe953f47b9b556416a3a67b443b5",
+      "avgMarkVsIndexPct": -0.0505,
+      "avgMidVsIndexPct": 9.8654,
+      "avgMarkVsMidPct": -9.0255,
+      "avgLastObservedPremiumPct": 1.0242,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "SUI-PERP",
+      "pool": "0x1be21287cfb865a7c462ff3c4f275e70bcccefe4",
+      "avgMarkVsIndexPct": -0.0407,
+      "avgMidVsIndexPct": 0.0868,
+      "avgMarkVsMidPct": -0.1274,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "ADA-PERP",
+      "pool": "0x34fa62909f77699a7a6278d992f72ff31c7a619d",
+      "avgMarkVsIndexPct": -0.0477,
+      "avgMidVsIndexPct": -0.0067,
+      "avgMarkVsMidPct": -0.041,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "1/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "BNB-PERP",
+      "pool": "0x3d2a99fe1e2bdeaa25024515a2d2202daf9531ad",
+      "avgMarkVsIndexPct": -0.0187,
+      "avgMidVsIndexPct": 0.0238,
+      "avgMarkVsMidPct": -0.0424,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 4,
+      "indexFellMarkStillBelow": 4
+    },
+    {
+      "market": "DOGE-PERP",
+      "pool": "0xc410012e39765cd5f772e84bacb19554aec040df",
+      "avgMarkVsIndexPct": -0.0434,
+      "avgMidVsIndexPct": -0.0243,
+      "avgMarkVsMidPct": -0.0192,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "1/6",
+      "roundsMarkBelowMid": "4/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "XRP-PERP",
+      "pool": "0x7058579f3248559963f79adb937c6de9f953e060",
+      "avgMarkVsIndexPct": -0.059,
+      "avgMidVsIndexPct": -0.0682,
+      "avgMarkVsMidPct": 0.0093,
+      "avgLastObservedPremiumPct": -0.0009,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "0/6",
+      "roundsMarkBelowMid": "2/6",
+      "indexFell": 2,
+      "indexFellMarkStillBelow": 2
+    },
+    {
+      "market": "HYPE-PERP",
+      "pool": "0x63b47ed4a7de0fde659b0d82441dd74828b7297a",
+      "avgMarkVsIndexPct": 0.0274,
+      "avgMidVsIndexPct": 4.1723,
+      "avgMarkVsMidPct": -3.9789,
+      "avgLastObservedPremiumPct": 0.8106,
+      "roundsMarkBelowIndex": "0/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 4,
+      "indexFellMarkStillBelow": 0
+    },
+    {
+      "market": "SOL-PERP",
+      "pool": "0xb483ec1fb34996638677c20ab087b16f1896fa53",
+      "avgMarkVsIndexPct": -0.0428,
+      "avgMidVsIndexPct": -0.0002,
+      "avgMarkVsMidPct": -0.0426,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "3/6",
+      "roundsMarkBelowMid": "5/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "ETH-PERP",
+      "pool": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+      "avgMarkVsIndexPct": -0.05,
+      "avgMidVsIndexPct": -0.006,
+      "avgMarkVsMidPct": -0.0439,
+      "avgLastObservedPremiumPct": 0,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "3/6",
+      "roundsMarkBelowMid": "5/6",
+      "indexFell": 3,
+      "indexFellMarkStillBelow": 3
+    },
+    {
+      "market": "BTC-PERP",
+      "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+      "avgMarkVsIndexPct": -0.0374,
+      "avgMidVsIndexPct": 0.133,
+      "avgMarkVsMidPct": -0.17,
+      "avgLastObservedPremiumPct": 0.1392,
+      "roundsMarkBelowIndex": "6/6",
+      "roundsMidAboveIndex": "6/6",
+      "roundsMarkBelowMid": "6/6",
+      "indexFell": 4,
+      "indexFellMarkStillBelow": 4
+    }
+  ],
+  "history": [
+    {
+      "market": "ZRO-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:23.000Z",
+      "to": "2026-10-30T06:56:41.000Z",
+      "markBelowIndex": 16,
+      "markAboveIndex": 184,
+      "meanMarkVsIndexPct": 0.0388,
+      "medianMarkVsIndexPct": 0.034,
+      "indexFirst": 1.948439676084,
+      "indexLast": 1.69065606034,
+      "settlementsIndexFell": 112,
+      "settlementsIndexFellMarkStillBelow": 9
+    },
+    {
+      "market": "LIT-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:21.000Z",
+      "to": "2026-10-30T06:57:20.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0982,
+      "medianMarkVsIndexPct": -0.0992,
+      "indexFirst": 3.7877777229159997,
+      "indexLast": 2.965058078524,
+      "settlementsIndexFell": 113,
+      "settlementsIndexFellMarkStillBelow": 113
+    },
+    {
+      "market": "VVV-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:21.000Z",
+      "to": "2026-10-30T06:56:35.000Z",
+      "markBelowIndex": 120,
+      "markAboveIndex": 80,
+      "meanMarkVsIndexPct": -0.0051,
+      "medianMarkVsIndexPct": -0.0098,
+      "indexFirst": 26.745513666312,
+      "indexLast": 23.357349362075002,
+      "settlementsIndexFell": 105,
+      "settlementsIndexFellMarkStillBelow": 66
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:21.000Z",
+      "to": "2026-10-30T06:56:08.000Z",
+      "markBelowIndex": 180,
+      "markAboveIndex": 17,
+      "meanMarkVsIndexPct": -0.0364,
+      "medianMarkVsIndexPct": -0.0401,
+      "indexFirst": 0.004630885733,
+      "indexLast": 0.004972790684,
+      "settlementsIndexFell": 103,
+      "settlementsIndexFellMarkStillBelow": 95
+    },
+    {
+      "market": "PUMP-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:21.000Z",
+      "to": "2026-10-30T06:56:47.000Z",
+      "markBelowIndex": 188,
+      "markAboveIndex": 12,
+      "meanMarkVsIndexPct": -0.0426,
+      "medianMarkVsIndexPct": -0.0425,
+      "indexFirst": 0.005092075174,
+      "indexLast": 0.004119499907,
+      "settlementsIndexFell": 103,
+      "settlementsIndexFellMarkStillBelow": 94
+    },
+    {
+      "market": "ZEC-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:55:26.000Z",
+      "to": "2026-10-30T06:57:29.000Z",
+      "markBelowIndex": 94,
+      "markAboveIndex": 105,
+      "meanMarkVsIndexPct": -0.0004,
+      "medianMarkVsIndexPct": 0.0002,
+      "indexFirst": 1311.464041621255,
+      "indexLast": 1275.804279117227,
+      "settlementsIndexFell": 102,
+      "settlementsIndexFellMarkStillBelow": 58
+    },
+    {
+      "market": "TAO-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:44.000Z",
+      "to": "2026-10-30T06:14:43.000Z",
+      "markBelowIndex": 164,
+      "markAboveIndex": 36,
+      "meanMarkVsIndexPct": -0.0344,
+      "medianMarkVsIndexPct": -0.0378,
+      "indexFirst": 272.5072296279855,
+      "indexLast": 237.44043093048901,
+      "settlementsIndexFell": 104,
+      "settlementsIndexFellMarkStillBelow": 84
+    },
+    {
+      "market": "WLD-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:42.000Z",
+      "to": "2026-10-30T06:14:42.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.077,
+      "medianMarkVsIndexPct": -0.0778,
+      "indexFirst": 0.5808700636735,
+      "indexLast": 0.39710596293550005,
+      "settlementsIndexFell": 120,
+      "settlementsIndexFellMarkStillBelow": 120
+    },
+    {
+      "market": "NEAR-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:43.000Z",
+      "to": "2026-10-30T06:14:43.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0617,
+      "medianMarkVsIndexPct": -0.0628,
+      "indexFirst": 5.29793250023425,
+      "indexLast": 4.244408685467,
+      "settlementsIndexFell": 117,
+      "settlementsIndexFellMarkStillBelow": 117
+    },
+    {
+      "market": "XLM-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:44.000Z",
+      "to": "2026-10-30T06:14:43.000Z",
+      "markBelowIndex": 198,
+      "markAboveIndex": 2,
+      "meanMarkVsIndexPct": -0.0603,
+      "medianMarkVsIndexPct": -0.061,
+      "indexFirst": 0.1843301972105,
+      "indexLast": 0.166797482079,
+      "settlementsIndexFell": 110,
+      "settlementsIndexFellMarkStillBelow": 109
+    },
+    {
+      "market": "AVAX-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:42.000Z",
+      "to": "2026-10-30T06:14:42.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0648,
+      "medianMarkVsIndexPct": -0.0653,
+      "indexFirst": 9.708034203858,
+      "indexLast": 8.597158658548501,
+      "settlementsIndexFell": 106,
+      "settlementsIndexFellMarkStillBelow": 106
+    },
+    {
+      "market": "LINK-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:42.000Z",
+      "to": "2026-10-30T06:14:43.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0607,
+      "medianMarkVsIndexPct": -0.0593,
+      "indexFirst": 12.5557747677615,
+      "indexLast": 11.1021970038285,
+      "settlementsIndexFell": 102,
+      "settlementsIndexFellMarkStillBelow": 102
+    },
+    {
+      "market": "SUI-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:43.000Z",
+      "to": "2026-10-30T06:14:44.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0646,
+      "medianMarkVsIndexPct": -0.0643,
+      "indexFirst": 1.033257730977,
+      "indexLast": 0.89236103834,
+      "settlementsIndexFell": 118,
+      "settlementsIndexFellMarkStillBelow": 118
+    },
+    {
+      "market": "ADA-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:15:51.000Z",
+      "to": "2026-10-30T06:15:51.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0741,
+      "medianMarkVsIndexPct": -0.0735,
+      "indexFirst": 0.226250025253,
+      "indexLast": 0.1935515456535,
+      "settlementsIndexFell": 105,
+      "settlementsIndexFellMarkStillBelow": 105
+    },
+    {
+      "market": "BNB-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:43.000Z",
+      "to": "2026-10-30T06:14:48.000Z",
+      "markBelowIndex": 85,
+      "markAboveIndex": 115,
+      "meanMarkVsIndexPct": -0.0025,
+      "medianMarkVsIndexPct": 0.0027,
+      "indexFirst": 747.4186681242445,
+      "indexLast": 716.1414226317664,
+      "settlementsIndexFell": 101,
+      "settlementsIndexFellMarkStillBelow": 46
+    },
+    {
+      "market": "DOGE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:42.000Z",
+      "to": "2026-10-30T06:14:43.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0556,
+      "medianMarkVsIndexPct": -0.0565,
+      "indexFirst": 0.0820878074965,
+      "indexLast": 0.076286105263,
+      "settlementsIndexFell": 96,
+      "settlementsIndexFellMarkStillBelow": 96
+    },
+    {
+      "market": "XRP-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:42.000Z",
+      "to": "2026-10-30T06:14:42.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0445,
+      "medianMarkVsIndexPct": -0.0448,
+      "indexFirst": 1.369502618167,
+      "indexLast": 1.2594215204969998,
+      "settlementsIndexFell": 117,
+      "settlementsIndexFellMarkStillBelow": 117
+    },
+    {
+      "market": "HYPE-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:14:48.000Z",
+      "to": "2026-10-30T06:14:44.000Z",
+      "markBelowIndex": 189,
+      "markAboveIndex": 11,
+      "meanMarkVsIndexPct": -0.0415,
+      "medianMarkVsIndexPct": -0.0472,
+      "indexFirst": 81.029485366009,
+      "indexLast": 93.1334346043765,
+      "settlementsIndexFell": 92,
+      "settlementsIndexFellMarkStillBelow": 87
+    },
+    {
+      "market": "SOL-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:54:13.000Z",
+      "to": "2026-10-30T06:54:13.000Z",
+      "markBelowIndex": 199,
+      "markAboveIndex": 1,
+      "meanMarkVsIndexPct": -0.0452,
+      "medianMarkVsIndexPct": -0.0447,
+      "indexFirst": 106.83907403990099,
+      "indexLast": 98.08288483889,
+      "settlementsIndexFell": 103,
+      "settlementsIndexFellMarkStillBelow": 102
+    },
+    {
+      "market": "ETH-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:19:19.000Z",
+      "to": "2026-10-30T06:19:19.000Z",
+      "markBelowIndex": 199,
+      "markAboveIndex": 1,
+      "meanMarkVsIndexPct": -0.0419,
+      "medianMarkVsIndexPct": -0.0427,
+      "indexFirst": 2477.2348032179025,
+      "indexLast": 2246.542117371893,
+      "settlementsIndexFell": 108,
+      "settlementsIndexFellMarkStillBelow": 108
+    },
+    {
+      "market": "BTC-PERP",
+      "settlements": 200,
+      "from": "2026-10-21T23:11:44.000Z",
+      "to": "2026-10-30T06:11:44.000Z",
+      "markBelowIndex": 200,
+      "markAboveIndex": 0,
+      "meanMarkVsIndexPct": -0.0392,
+      "medianMarkVsIndexPct": -0.04,
+      "indexFirst": 84275.77994937371,
+      "indexLast": 78495.70967195733,
+      "settlementsIndexFell": 118,
+      "settlementsIndexFellMarkStillBelow": 118
+    }
+  ],
+  "rawSamples": [
+    {
+      "market": "ZRO-PERP",
+      "samples": [
+        {
+          "market": "ZRO-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 1.692555709493,
+          "index": 1.690297980819,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1336,
+          "midVsIndexPct": 0.0504,
+          "markVsMidPct": 0.0831,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZRO-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 1.692426269028,
+          "index": 1.689902774897,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1493,
+          "midVsIndexPct": 0.0738,
+          "markVsMidPct": 0.0755,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZRO-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 1.6946781542609999,
+          "index": 1.692673884912,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1184,
+          "midVsIndexPct": -0.09,
+          "markVsMidPct": 0.2086,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZRO-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 1.692752187792,
+          "index": 1.690526898774,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1316,
+          "midVsIndexPct": 0.0369,
+          "markVsMidPct": 0.0947,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZRO-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 1.69381429864,
+          "index": 1.69105964729,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1629,
+          "midVsIndexPct": 0.0053,
+          "markVsMidPct": 0.1575,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZRO-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 1.696524846272,
+          "index": 1.6943342886350001,
+          "mid": 1.69115,
+          "markVsIndexPct": 0.1293,
+          "midVsIndexPct": -0.1879,
+          "markVsMidPct": 0.3178,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "LIT-PERP",
+      "samples": [
+        {
+          "market": "LIT-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 2.927383302035,
+          "index": 2.927822684044,
+          "mid": 2.929,
+          "markVsIndexPct": -0.015,
+          "midVsIndexPct": 0.0402,
+          "markVsMidPct": -0.0552,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "LIT-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 2.923895539968,
+          "index": 2.925193717633,
+          "mid": 2.929,
+          "markVsIndexPct": -0.0444,
+          "midVsIndexPct": 0.1301,
+          "markVsMidPct": -0.1743,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "LIT-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 2.9179039507469997,
+          "index": 2.918528074624,
+          "mid": 2.9202,
+          "markVsIndexPct": -0.0214,
+          "midVsIndexPct": 0.0573,
+          "markVsMidPct": -0.0786,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "LIT-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 2.911912361525,
+          "index": 2.91295361779,
+          "mid": 2.9115,
+          "markVsIndexPct": -0.0357,
+          "midVsIndexPct": -0.0499,
+          "markVsMidPct": 0.0142,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "LIT-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 2.910782198921,
+          "index": 2.911217542826,
+          "mid": 2.9115,
+          "markVsIndexPct": -0.015,
+          "midVsIndexPct": 0.0097,
+          "markVsMidPct": -0.0247,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "LIT-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 2.903396138087,
+          "index": 2.903446068372,
+          "mid": 2.90275,
+          "markVsIndexPct": -0.0017,
+          "midVsIndexPct": -0.024,
+          "markVsMidPct": 0.0223,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "VVV-PERP",
+      "samples": [
+        {
+          "market": "VVV-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 23.381119779585998,
+          "index": 23.365112653081002,
+          "mid": 23.3715,
+          "markVsIndexPct": 0.0685,
+          "midVsIndexPct": 0.0273,
+          "markVsMidPct": 0.0412,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "VVV-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 23.355714083522,
+          "index": 23.342123830958,
+          "mid": 23.3715,
+          "markVsIndexPct": 0.0582,
+          "midVsIndexPct": 0.1259,
+          "markVsMidPct": -0.0675,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "VVV-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 23.356712681725003,
+          "index": 23.343231605977003,
+          "mid": 23.3715,
+          "markVsIndexPct": 0.0578,
+          "midVsIndexPct": 0.1211,
+          "markVsMidPct": -0.0633,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "VVV-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 23.332688077505,
+          "index": 23.317580742107,
+          "mid": 23.3715,
+          "markVsIndexPct": 0.0648,
+          "midVsIndexPct": 0.2312,
+          "markVsMidPct": -0.1661,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "VVV-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 23.286927452795,
+          "index": 23.281155761767,
+          "mid": 23.3015,
+          "markVsIndexPct": 0.0248,
+          "midVsIndexPct": 0.0874,
+          "markVsMidPct": -0.0625,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "VVV-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 23.317942362692,
+          "index": 23.303628415758,
+          "mid": 23.3015,
+          "markVsIndexPct": 0.0614,
+          "midVsIndexPct": -0.0091,
+          "markVsMidPct": 0.0706,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "samples": [
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.00495520663,
+          "index": 0.004950388406,
+          "mid": 0.0049628,
+          "markVsIndexPct": 0.0973,
+          "midVsIndexPct": 0.2507,
+          "markVsMidPct": -0.153,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.004954470092,
+          "index": 0.004950550594,
+          "mid": 0.0049628,
+          "markVsIndexPct": 0.0792,
+          "midVsIndexPct": 0.2474,
+          "markVsMidPct": -0.1678,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.004954619881,
+          "index": 0.00495254779,
+          "mid": 0.0049628,
+          "markVsIndexPct": 0.0418,
+          "midVsIndexPct": 0.207,
+          "markVsMidPct": -0.1648,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.004951536831,
+          "index": 0.004948041746,
+          "mid": 0.0049628,
+          "markVsIndexPct": 0.0706,
+          "midVsIndexPct": 0.2983,
+          "markVsMidPct": -0.227,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.00495032574,
+          "index": 0.004945532445,
+          "mid": 0.004948,
+          "markVsIndexPct": 0.0969,
+          "midVsIndexPct": 0.0499,
+          "markVsMidPct": 0.047,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "1000PEPE-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.004950113412,
+          "index": 0.004944596116,
+          "mid": 0.004948,
+          "markVsIndexPct": 0.1116,
+          "midVsIndexPct": 0.0688,
+          "markVsMidPct": 0.0427,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "PUMP-PERP",
+      "samples": [
+        {
+          "market": "PUMP-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.004104727635,
+          "index": 0.004108247325,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0857,
+          "midVsIndexPct": -0.1277,
+          "markVsMidPct": 0.0421,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "PUMP-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.004098746326,
+          "index": 0.004101650627,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0708,
+          "midVsIndexPct": 0.0329,
+          "markVsMidPct": -0.1037,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "PUMP-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.004104737915,
+          "index": 0.004107972711,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0787,
+          "midVsIndexPct": -0.1211,
+          "markVsMidPct": 0.0424,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "PUMP-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.004105736513,
+          "index": 0.004108697152,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0721,
+          "midVsIndexPct": -0.1387,
+          "markVsMidPct": 0.0667,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "PUMP-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.004099775695,
+          "index": 0.004103759758,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0971,
+          "midVsIndexPct": -0.0185,
+          "markVsMidPct": -0.0786,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "PUMP-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.004102781754,
+          "index": 0.004106793524,
+          "mid": 0.004103,
+          "markVsIndexPct": -0.0977,
+          "midVsIndexPct": -0.0924,
+          "markVsMidPct": -0.0053,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "ZEC-PERP",
+      "samples": [
+        {
+          "market": "ZEC-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 1269.8276871429591,
+          "index": 1269.9141549372312,
+          "mid": 1270.798,
+          "markVsIndexPct": -0.0068,
+          "midVsIndexPct": 0.0696,
+          "markVsMidPct": -0.0764,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZEC-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 1268.369008928691,
+          "index": 1268.404160011638,
+          "mid": 1270.798,
+          "markVsIndexPct": -0.0028,
+          "midVsIndexPct": 0.1887,
+          "markVsMidPct": -0.1911,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZEC-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 1268.734039040296,
+          "index": 1268.749264736645,
+          "mid": 1270.798,
+          "markVsIndexPct": -0.0012,
+          "midVsIndexPct": 0.1615,
+          "markVsMidPct": -0.1624,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZEC-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 1265.642713465552,
+          "index": 1265.868019727922,
+          "mid": 1266.997,
+          "markVsIndexPct": -0.0178,
+          "midVsIndexPct": 0.0892,
+          "markVsMidPct": -0.1069,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZEC-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 1264.559072522834,
+          "index": 1264.799174876757,
+          "mid": 1266.997,
+          "markVsIndexPct": -0.019,
+          "midVsIndexPct": 0.1738,
+          "markVsMidPct": -0.1924,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ZEC-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 1264.987411691747,
+          "index": 1265.2790193796868,
+          "mid": 1266.997,
+          "markVsIndexPct": -0.023,
+          "midVsIndexPct": 0.1358,
+          "markVsMidPct": -0.1586,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "TAO-PERP",
+      "samples": [
+        {
+          "market": "TAO-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 237.2797695195435,
+          "index": 237.3717720121185,
+          "mid": 237.393,
+          "markVsIndexPct": -0.0388,
+          "midVsIndexPct": 0.0089,
+          "markVsMidPct": -0.0477,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "TAO-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 237.118937363631,
+          "index": 237.2272008104785,
+          "mid": 237.405,
+          "markVsIndexPct": -0.0456,
+          "midVsIndexPct": 0.0749,
+          "markVsMidPct": -0.1205,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "TAO-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 237.0142259130335,
+          "index": 237.1822498733545,
+          "mid": 237.31449999999998,
+          "markVsIndexPct": -0.0708,
+          "midVsIndexPct": 0.0558,
+          "markVsMidPct": -0.1265,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "TAO-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 237.03375044447148,
+          "index": 237.126010386828,
+          "mid": 237.06750000000002,
+          "markVsIndexPct": -0.0389,
+          "midVsIndexPct": -0.0247,
+          "markVsMidPct": -0.0142,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "TAO-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 236.8183863285665,
+          "index": 236.92206089772498,
+          "mid": 236.9875,
+          "markVsIndexPct": -0.0438,
+          "midVsIndexPct": 0.0276,
+          "markVsMidPct": -0.0714,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "TAO-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 236.93885521593802,
+          "index": 237.04603014345452,
+          "mid": 237.0275,
+          "markVsIndexPct": -0.0452,
+          "midVsIndexPct": -0.0078,
+          "markVsMidPct": -0.0374,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "WLD-PERP",
+      "samples": [
+        {
+          "market": "WLD-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.39484737039449996,
+          "index": 0.3950221948575,
+          "mid": 0.39445,
+          "markVsIndexPct": -0.0443,
+          "midVsIndexPct": -0.1449,
+          "markVsMidPct": 0.1007,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "WLD-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.3945730751095,
+          "index": 0.394872829795,
+          "mid": 0.39445,
+          "markVsIndexPct": -0.0759,
+          "midVsIndexPct": -0.1071,
+          "markVsMidPct": 0.0312,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "WLD-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.394398215289,
+          "index": 0.3946729349295,
+          "mid": 0.3943,
+          "markVsIndexPct": -0.0696,
+          "midVsIndexPct": -0.0945,
+          "markVsMidPct": 0.0249,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "WLD-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.394448180244,
+          "index": 0.3946979349295,
+          "mid": 0.39475,
+          "markVsIndexPct": -0.0633,
+          "midVsIndexPct": 0.0132,
+          "markVsMidPct": -0.0765,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "WLD-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.3943746951675,
+          "index": 0.394774486022,
+          "mid": 0.3947,
+          "markVsIndexPct": -0.1013,
+          "midVsIndexPct": -0.0189,
+          "markVsMidPct": -0.0824,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "WLD-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.39425025698649996,
+          "index": 0.39458753081750003,
+          "mid": 0.3947,
+          "markVsIndexPct": -0.0855,
+          "midVsIndexPct": 0.0285,
+          "markVsMidPct": -0.1139,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "NEAR-PERP",
+      "samples": [
+        {
+          "market": "NEAR-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 4.3027005294815,
+          "index": 4.3060633686125,
+          "mid": 4.2956,
+          "markVsIndexPct": -0.0781,
+          "midVsIndexPct": -0.243,
+          "markVsMidPct": 0.1653,
+          "lastObservedPremiumPct": -0.0677
+        },
+        {
+          "market": "NEAR-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 4.2942364880624995,
+          "index": 4.297109560592,
+          "mid": 4.291,
+          "markVsIndexPct": -0.0669,
+          "midVsIndexPct": -0.1422,
+          "markVsMidPct": 0.0754,
+          "lastObservedPremiumPct": -0.0543
+        },
+        {
+          "market": "NEAR-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 4.295984735817,
+          "index": 4.299482983571,
+          "mid": 4.2927,
+          "markVsIndexPct": -0.0814,
+          "midVsIndexPct": -0.1578,
+          "markVsMidPct": 0.0765,
+          "lastObservedPremiumPct": -0.067
+        },
+        {
+          "market": "NEAR-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 4.290988590757,
+          "index": 4.2947368385115,
+          "mid": 4.28615,
+          "markVsIndexPct": -0.0873,
+          "midVsIndexPct": -0.1999,
+          "markVsMidPct": 0.1129,
+          "lastObservedPremiumPct": -0.0515
+        },
+        {
+          "market": "NEAR-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 4.28325492359,
+          "index": 4.286840153799,
+          "mid": 4.2786,
+          "markVsIndexPct": -0.0836,
+          "midVsIndexPct": -0.1922,
+          "markVsMidPct": 0.1088,
+          "lastObservedPremiumPct": -0.0445
+        },
+        {
+          "market": "NEAR-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 4.2876248263085,
+          "index": 4.290285743126,
+          "mid": 4.28215,
+          "markVsIndexPct": -0.062,
+          "midVsIndexPct": -0.1896,
+          "markVsMidPct": 0.1279,
+          "lastObservedPremiumPct": -0.0402
+        }
+      ]
+    },
+    {
+      "market": "XLM-PERP",
+      "samples": [
+        {
+          "market": "XLM-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.166906368287,
+          "index": 0.1670102927395,
+          "mid": 0.1669,
+          "markVsIndexPct": -0.0622,
+          "midVsIndexPct": -0.066,
+          "markVsMidPct": 0.0038,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XLM-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.166812897428,
+          "index": 0.166886589604,
+          "mid": 0.1669,
+          "markVsIndexPct": -0.0442,
+          "midVsIndexPct": 0.008,
+          "markVsMidPct": -0.0522,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XLM-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.166862855374,
+          "index": 0.166971540541,
+          "mid": 0.16695,
+          "markVsIndexPct": -0.0651,
+          "midVsIndexPct": -0.0129,
+          "markVsMidPct": -0.0522,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XLM-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.1669940300275,
+          "index": 0.167073966947,
+          "mid": 0.16715,
+          "markVsIndexPct": -0.0478,
+          "midVsIndexPct": 0.0455,
+          "markVsMidPct": -0.0933,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XLM-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.166905804811,
+          "index": 0.166924490209,
+          "mid": 0.1669,
+          "markVsIndexPct": -0.0112,
+          "midVsIndexPct": -0.0147,
+          "markVsMidPct": 0.0035,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XLM-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.167051113487,
+          "index": 0.167058575212,
+          "mid": 0.16705,
+          "markVsIndexPct": -0.0045,
+          "midVsIndexPct": -0.0051,
+          "markVsMidPct": 0.0007,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "AVAX-PERP",
+      "samples": [
+        {
+          "market": "AVAX-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 8.586093125756001,
+          "index": 8.591464793519501,
+          "mid": 8.599,
+          "markVsIndexPct": -0.0625,
+          "midVsIndexPct": 0.0877,
+          "markVsMidPct": -0.1501,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "AVAX-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 8.5762310364545,
+          "index": 8.5801032328615,
+          "mid": 8.596,
+          "markVsIndexPct": -0.0451,
+          "midVsIndexPct": 0.1853,
+          "markVsMidPct": -0.23,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "AVAX-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 8.5818520062895,
+          "index": 8.587597625676,
+          "mid": 8.5955,
+          "markVsIndexPct": -0.0669,
+          "midVsIndexPct": 0.092,
+          "markVsMidPct": -0.1588,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "AVAX-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 8.5812275319635,
+          "index": 8.586598677023,
+          "mid": 8.5985,
+          "markVsIndexPct": -0.0626,
+          "midVsIndexPct": 0.1386,
+          "markVsMidPct": -0.2009,
+          "lastObservedPremiumPct": 0.0047
+        },
+        {
+          "market": "AVAX-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 8.575752863207999,
+          "index": 8.5793754188175,
+          "mid": 8.59,
+          "markVsIndexPct": -0.0422,
+          "midVsIndexPct": 0.1238,
+          "markVsMidPct": -0.1659,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "AVAX-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 8.581020094444,
+          "index": 8.5857666149225,
+          "mid": 8.596,
+          "markVsIndexPct": -0.0553,
+          "midVsIndexPct": 0.1192,
+          "markVsMidPct": -0.1743,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "LINK-PERP",
+      "samples": [
+        {
+          "market": "LINK-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 11.0927085294925,
+          "index": 11.0987416449705,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0544,
+          "midVsIndexPct": 9.8007,
+          "markVsMidPct": -8.9754,
+          "lastObservedPremiumPct": 1.008
+        },
+        {
+          "market": "LINK-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 11.082223183695,
+          "index": 11.0885925765095,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0574,
+          "midVsIndexPct": 9.9012,
+          "markVsMidPct": -9.0615,
+          "lastObservedPremiumPct": 1.0233
+        },
+        {
+          "market": "LINK-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 11.091466174713,
+          "index": 11.096186829144001,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0425,
+          "midVsIndexPct": 9.826,
+          "markVsMidPct": -8.9856,
+          "lastObservedPremiumPct": 1.0243
+        },
+        {
+          "market": "LINK-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 11.093215123365502,
+          "index": 11.0985488209925,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0481,
+          "midVsIndexPct": 9.8026,
+          "markVsMidPct": -8.9713,
+          "lastObservedPremiumPct": 1.0257
+        },
+        {
+          "market": "LINK-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 11.079253029013,
+          "index": 11.084735168814,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0495,
+          "midVsIndexPct": 9.9395,
+          "markVsMidPct": -9.0858,
+          "lastObservedPremiumPct": 1.0378
+        },
+        {
+          "market": "LINK-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 11.080779637817,
+          "index": 11.086450689724,
+          "mid": 12.1865,
+          "markVsIndexPct": -0.0512,
+          "midVsIndexPct": 9.9225,
+          "markVsMidPct": -9.0733,
+          "lastObservedPremiumPct": 1.026
+        }
+      ]
+    },
+    {
+      "market": "SUI-PERP",
+      "samples": [
+        {
+          "market": "SUI-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.892273712387,
+          "index": 0.8928233619375,
+          "mid": 0.893,
+          "markVsIndexPct": -0.0616,
+          "midVsIndexPct": 0.0198,
+          "markVsMidPct": -0.0813,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SUI-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.8907123863915001,
+          "index": 0.8911245534644999,
+          "mid": 0.89265,
+          "markVsIndexPct": -0.0463,
+          "midVsIndexPct": 0.1712,
+          "markVsMidPct": -0.2171,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SUI-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.8915118256729999,
+          "index": 0.8917161465910001,
+          "mid": 0.89285,
+          "markVsIndexPct": -0.0229,
+          "midVsIndexPct": 0.1272,
+          "markVsMidPct": -0.1499,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SUI-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.8913369658525,
+          "index": 0.891711632926,
+          "mid": 0.8924,
+          "markVsIndexPct": -0.042,
+          "midVsIndexPct": 0.0772,
+          "markVsMidPct": -0.1191,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SUI-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.8904398614325,
+          "index": 0.8907770296935,
+          "mid": 0.89125,
+          "markVsIndexPct": -0.0379,
+          "midVsIndexPct": 0.0531,
+          "markVsMidPct": -0.0909,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SUI-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.8906044969404999,
+          "index": 0.8909041489885,
+          "mid": 0.89155,
+          "markVsIndexPct": -0.0336,
+          "midVsIndexPct": 0.0725,
+          "markVsMidPct": -0.1061,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "ADA-PERP",
+      "samples": [
+        {
+          "market": "ADA-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.1937015783105,
+          "index": 0.1937889906985,
+          "mid": 0.19375,
+          "markVsIndexPct": -0.0451,
+          "midVsIndexPct": -0.0201,
+          "markVsMidPct": -0.025,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ADA-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.193589165923,
+          "index": 0.193681527168,
+          "mid": 0.19375,
+          "markVsIndexPct": -0.0477,
+          "midVsIndexPct": 0.0354,
+          "markVsMidPct": -0.083,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ADA-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.193789025743,
+          "index": 0.1938639206085,
+          "mid": 0.19385,
+          "markVsIndexPct": -0.0386,
+          "midVsIndexPct": -0.0072,
+          "markVsMidPct": -0.0315,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ADA-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.193789025743,
+          "index": 0.1938889206085,
+          "mid": 0.19385,
+          "markVsIndexPct": -0.0515,
+          "midVsIndexPct": -0.0201,
+          "markVsMidPct": -0.0315,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ADA-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.193764787611,
+          "index": 0.193877148181,
+          "mid": 0.19385,
+          "markVsIndexPct": -0.058,
+          "midVsIndexPct": -0.014,
+          "markVsMidPct": -0.044,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ADA-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.1937899945675,
+          "index": 0.193877390182,
+          "mid": 0.19385,
+          "markVsIndexPct": -0.0451,
+          "midVsIndexPct": -0.0141,
+          "markVsMidPct": -0.031,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "BNB-PERP",
+      "samples": [
+        {
+          "market": "BNB-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 714.19394537824,
+          "index": 714.401096681371,
+          "mid": 714.4325,
+          "markVsIndexPct": -0.029,
+          "midVsIndexPct": 0.0044,
+          "markVsMidPct": -0.0334,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "BNB-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 714.1514839276425,
+          "index": 714.296170275685,
+          "mid": 714.4209999999999,
+          "markVsIndexPct": -0.0203,
+          "midVsIndexPct": 0.0175,
+          "markVsMidPct": -0.0377,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "BNB-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 714.1315049545894,
+          "index": 714.291166771194,
+          "mid": 714.536,
+          "markVsIndexPct": -0.0224,
+          "midVsIndexPct": 0.0343,
+          "markVsMidPct": -0.0566,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "BNB-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 714.3013928108726,
+          "index": 714.3873519381075,
+          "mid": 714.5234999999999,
+          "markVsIndexPct": -0.012,
+          "midVsIndexPct": 0.0191,
+          "markVsMidPct": -0.0311,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "BNB-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 714.2016522416079,
+          "index": 714.3275484376011,
+          "mid": 714.471,
+          "markVsIndexPct": -0.0176,
+          "midVsIndexPct": 0.0201,
+          "markVsMidPct": -0.0377,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "BNB-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 714.220011941845,
+          "index": 714.298471401804,
+          "mid": 714.636,
+          "markVsIndexPct": -0.011,
+          "midVsIndexPct": 0.0473,
+          "markVsMidPct": -0.0582,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "DOGE-PERP",
+      "samples": [
+        {
+          "market": "DOGE-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 0.0761765389875,
+          "index": 0.076213840175,
+          "mid": 0.0762,
+          "markVsIndexPct": -0.0489,
+          "midVsIndexPct": -0.0182,
+          "markVsMidPct": -0.0308,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "DOGE-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 0.076126574032,
+          "index": 0.0761640389875,
+          "mid": 0.07619,
+          "markVsIndexPct": -0.0492,
+          "midVsIndexPct": 0.0341,
+          "markVsMidPct": -0.0832,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "DOGE-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 0.076164049501,
+          "index": 0.0761915249695,
+          "mid": 0.076185,
+          "markVsIndexPct": -0.0361,
+          "midVsIndexPct": -0.0086,
+          "markVsMidPct": -0.0275,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "DOGE-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 0.0762015249695,
+          "index": 0.0762339899245,
+          "mid": 0.076195,
+          "markVsIndexPct": -0.0426,
+          "midVsIndexPct": -0.0511,
+          "markVsMidPct": 0.0086,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "DOGE-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 0.0761443492265,
+          "index": 0.0761768178545,
+          "mid": 0.076145,
+          "markVsIndexPct": -0.0426,
+          "midVsIndexPct": -0.0418,
+          "markVsMidPct": -0.0009,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "DOGE-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 0.0761744233795,
+          "index": 0.076205642064,
+          "mid": 0.07616,
+          "markVsIndexPct": -0.041,
+          "midVsIndexPct": -0.0599,
+          "markVsMidPct": 0.0189,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "XRP-PERP",
+      "samples": [
+        {
+          "market": "XRP-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 1.261647044753,
+          "index": 1.262288994548,
+          "mid": 1.2608,
+          "markVsIndexPct": -0.0509,
+          "midVsIndexPct": -0.118,
+          "markVsMidPct": 0.0672,
+          "lastObservedPremiumPct": -0.0011
+        },
+        {
+          "market": "XRP-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 1.260617787705,
+          "index": 1.2614333490725,
+          "mid": 1.2606,
+          "markVsIndexPct": -0.0647,
+          "midVsIndexPct": -0.0661,
+          "markVsMidPct": 0.0014,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XRP-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 1.2608126545345002,
+          "index": 1.261614502699,
+          "mid": 1.2607,
+          "markVsIndexPct": -0.0636,
+          "midVsIndexPct": -0.0725,
+          "markVsMidPct": 0.0089,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XRP-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 1.2613648005809999,
+          "index": 1.262151617205,
+          "mid": 1.26105,
+          "markVsIndexPct": -0.0623,
+          "midVsIndexPct": -0.0873,
+          "markVsMidPct": 0.025,
+          "lastObservedPremiumPct": -0.004
+        },
+        {
+          "market": "XRP-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 1.260189423539,
+          "index": 1.2609562711325,
+          "mid": 1.2606,
+          "markVsIndexPct": -0.0608,
+          "midVsIndexPct": -0.0283,
+          "markVsMidPct": -0.0326,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "XRP-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 1.2605716644015,
+          "index": 1.2612210554849999,
+          "mid": 1.26075,
+          "markVsIndexPct": -0.0515,
+          "midVsIndexPct": -0.0373,
+          "markVsMidPct": -0.0141,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "HYPE-PERP",
+      "samples": [
+        {
+          "market": "HYPE-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 93.62681777557299,
+          "index": 93.613151896666,
+          "mid": 97.345,
+          "markVsIndexPct": 0.0146,
+          "midVsIndexPct": 3.9865,
+          "markVsMidPct": -3.8196,
+          "lastObservedPremiumPct": 0.7563
+        },
+        {
+          "market": "HYPE-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 93.45813330761301,
+          "index": 93.44127881083051,
+          "mid": 97.345,
+          "markVsIndexPct": 0.018,
+          "midVsIndexPct": 4.1777,
+          "markVsMidPct": -3.9929,
+          "lastObservedPremiumPct": 0.8188
+        },
+        {
+          "market": "HYPE-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 93.39935976457599,
+          "index": 93.35911135485651,
+          "mid": 97.345,
+          "markVsIndexPct": 0.0431,
+          "midVsIndexPct": 4.2694,
+          "markVsMidPct": -4.0533,
+          "lastObservedPremiumPct": 0.827
+        },
+        {
+          "market": "HYPE-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 93.480683073332,
+          "index": 93.4404295688405,
+          "mid": 97.345,
+          "markVsIndexPct": 0.0431,
+          "midVsIndexPct": 4.1787,
+          "markVsMidPct": -3.9697,
+          "lastObservedPremiumPct": 0.8127
+        },
+        {
+          "market": "HYPE-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 93.419920455146,
+          "index": 93.41370989684751,
+          "mid": 97.345,
+          "markVsIndexPct": 0.0066,
+          "midVsIndexPct": 4.2085,
+          "markVsMidPct": -4.0321,
+          "lastObservedPremiumPct": 0.8355
+        },
+        {
+          "market": "HYPE-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 93.4456732063135,
+          "index": 93.409455005219,
+          "mid": 97.345,
+          "markVsIndexPct": 0.0388,
+          "midVsIndexPct": 4.2132,
+          "markVsMidPct": -4.0057,
+          "lastObservedPremiumPct": 0.8131
+        }
+      ]
+    },
+    {
+      "market": "SOL-PERP",
+      "samples": [
+        {
+          "market": "SOL-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 97.9712453881845,
+          "index": 98.01370333429051,
+          "mid": 97.97,
+          "markVsIndexPct": -0.0433,
+          "midVsIndexPct": -0.0446,
+          "markVsMidPct": 0.0013,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SOL-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 97.92377692860451,
+          "index": 97.971234874711,
+          "mid": 98,
+          "markVsIndexPct": -0.0484,
+          "midVsIndexPct": 0.0294,
+          "markVsMidPct": -0.0778,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SOL-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 97.916287442078,
+          "index": 97.9587453881845,
+          "mid": 97.955,
+          "markVsIndexPct": -0.0433,
+          "midVsIndexPct": -0.0038,
+          "markVsMidPct": -0.0395,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SOL-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 97.9262734241135,
+          "index": 97.97373137022,
+          "mid": 97.97,
+          "markVsIndexPct": -0.0484,
+          "midVsIndexPct": -0.0038,
+          "markVsMidPct": -0.0446,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SOL-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 97.85719365388451,
+          "index": 97.8900055146305,
+          "mid": 97.895,
+          "markVsIndexPct": -0.0335,
+          "midVsIndexPct": 0.0051,
+          "markVsMidPct": -0.0386,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "SOL-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 97.899911591707,
+          "index": 97.93886565535351,
+          "mid": 97.955,
+          "markVsIndexPct": -0.0398,
+          "midVsIndexPct": 0.0165,
+          "markVsMidPct": -0.0562,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "ETH-PERP",
+      "samples": [
+        {
+          "market": "ETH-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 2249.2762057112745,
+          "index": 2250.565189668978,
+          "mid": 2249.905,
+          "markVsIndexPct": -0.0573,
+          "midVsIndexPct": -0.0293,
+          "markVsMidPct": -0.0279,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ETH-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 2247.365107507733,
+          "index": 2248.5019353405905,
+          "mid": 2249.205,
+          "markVsIndexPct": -0.0506,
+          "midVsIndexPct": 0.0313,
+          "markVsMidPct": -0.0818,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ETH-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 2246.8354859927767,
+          "index": 2247.981977260941,
+          "mid": 2249.275,
+          "markVsIndexPct": -0.051,
+          "midVsIndexPct": 0.0575,
+          "markVsMidPct": -0.1085,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ETH-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 2248.619441654415,
+          "index": 2249.521673966179,
+          "mid": 2248.845,
+          "markVsIndexPct": -0.0401,
+          "midVsIndexPct": -0.0301,
+          "markVsMidPct": -0.01,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ETH-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 2249.062843139942,
+          "index": 2250.1969019023854,
+          "mid": 2248.4700000000003,
+          "markVsIndexPct": -0.0504,
+          "midVsIndexPct": -0.0767,
+          "markVsMidPct": 0.0264,
+          "lastObservedPremiumPct": 0
+        },
+        {
+          "market": "ETH-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 2248.318174972729,
+          "index": 2249.459811264692,
+          "mid": 2249.71,
+          "markVsIndexPct": -0.0508,
+          "midVsIndexPct": 0.0111,
+          "markVsMidPct": -0.0619,
+          "lastObservedPremiumPct": 0
+        }
+      ]
+    },
+    {
+      "market": "BTC-PERP",
+      "samples": [
+        {
+          "market": "BTC-PERP",
+          "block": 36908194,
+          "markOk": true,
+          "mark": 78394.9289633165,
+          "index": 78426.85681512693,
+          "mid": 78500.15,
+          "markVsIndexPct": -0.0407,
+          "midVsIndexPct": 0.0935,
+          "markVsMidPct": -0.134,
+          "lastObservedPremiumPct": 0.0933
+        },
+        {
+          "market": "BTC-PERP",
+          "block": 36908577,
+          "markOk": true,
+          "mark": 78388.53218744836,
+          "index": 78419.05982879484,
+          "mid": 78500.15,
+          "markVsIndexPct": -0.0389,
+          "midVsIndexPct": 0.1034,
+          "markVsMidPct": -0.1422,
+          "lastObservedPremiumPct": 0.1256
+        },
+        {
+          "market": "BTC-PERP",
+          "block": 36908957,
+          "markOk": true,
+          "mark": 78388.63232762802,
+          "index": 78417.33691987272,
+          "mid": 78500.15,
+          "markVsIndexPct": -0.0366,
+          "midVsIndexPct": 0.1056,
+          "markVsMidPct": -0.1421,
+          "lastObservedPremiumPct": 0.1055
+        },
+        {
+          "market": "BTC-PERP",
+          "block": 36909331,
+          "markOk": true,
+          "mark": 78380.74942954481,
+          "index": 78400.662951152,
+          "mid": 78550.45000000001,
+          "markVsIndexPct": -0.0254,
+          "midVsIndexPct": 0.1911,
+          "markVsMidPct": -0.216,
+          "lastObservedPremiumPct": 0.1547
+        },
+        {
+          "market": "BTC-PERP",
+          "block": 36909706,
+          "markOk": true,
+          "mark": 78374.28341935991,
+          "index": 78403.5151867741,
+          "mid": 78500.15,
+          "markVsIndexPct": -0.0373,
+          "midVsIndexPct": 0.1233,
+          "markVsMidPct": -0.1603,
+          "lastObservedPremiumPct": 0.1756
+        },
+        {
+          "market": "BTC-PERP",
+          "block": 36910081,
+          "markOk": true,
+          "mark": 78364.04012874943,
+          "index": 78399.43830689453,
+          "mid": 78541.25,
+          "markVsIndexPct": -0.0452,
+          "midVsIndexPct": 0.1809,
+          "markVsMidPct": -0.2256,
+          "lastObservedPremiumPct": 0.1803
+        }
+      ]
+    }
+  ]
+}

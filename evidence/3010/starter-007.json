@@ -1,0 +1,497 @@
+{
+  "block": 36895966,
+  "time": "2026-10-30T06:47:00.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "kit": "dreamdex-bot-kit 2579866, strategies/perp-starter/src/index.ts:173-177",
+  "defaults": {
+    "NOTIONAL": 50,
+    "TAKE_PROFIT_PCT": 2,
+    "STOP_LOSS_PCT": 1,
+    "SLIP_BPS": 20
+  },
+  "reportFill": {
+    "txHash": "0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b",
+    "block": 30210002,
+    "time": "2026-10-22T12:43:30.000Z",
+    "taker": "0x84326a92162ece92ed257a31073fdd3a6599bf21",
+    "takerIsBid": true,
+    "quantityBtc": 0.00013,
+    "fillPrice": 81835.90000000001,
+    "limitPrice": 82057.40000000001,
+    "markAtAndAfterFill": [
+      {
+        "block": 30210002,
+        "time": "2026-10-22T12:43:30.000Z",
+        "markOk": true,
+        "mark": 81647.8,
+        "stopLoss": 80831.3,
+        "stopLossFromEntryPct": -1.228,
+        "takeProfit": 83280.8,
+        "takeProfitFromEntryPct": 1.766
+      },
+      {
+        "block": 30210032,
+        "time": "2026-10-22T12:43:33.000Z",
+        "markOk": true,
+        "mark": 81633.11,
+        "stopLoss": 80816.8,
+        "stopLossFromEntryPct": -1.245,
+        "takeProfit": 83265.8,
+        "takeProfitFromEntryPct": 1.747
+      },
+      {
+        "block": 30210102,
+        "time": "2026-10-22T12:43:40.000Z",
+        "markOk": true,
+        "mark": 81632.71,
+        "stopLoss": 80816.4,
+        "stopLossFromEntryPct": -1.246,
+        "takeProfit": 83265.4,
+        "takeProfitFromEntryPct": 1.747
+      },
+      {
+        "block": 30210202,
+        "time": "2026-10-22T12:43:50.000Z",
+        "markOk": true,
+        "mark": 81620.52,
+        "stopLoss": 80804.3,
+        "stopLossFromEntryPct": -1.261,
+        "takeProfit": 83252.9,
+        "takeProfitFromEntryPct": 1.732
+      }
+    ]
+  },
+  "summary": {
+    "marketsPriced": 21,
+    "bookMoreThan1pctFromMark": [
+      "LINK-PERP book 1017.1 bps from mark",
+      "BNB-PERP book 449.9 bps from mark"
+    ],
+    "long": {
+      "markets": 19,
+      "stopLossWiderThanConfigured": 19,
+      "stopLossFromEntryPctRange": [
+        -1.465,
+        -1.085
+      ],
+      "takeProfitFromEntryPctRange": [
+        1.521,
+        1.912
+      ]
+    },
+    "short": {
+      "markets": 19,
+      "configured": {
+        "takeProfitPct": 2,
+        "stopLossPct": 1
+      },
+      "stopLossFromEntryPctRange": [
+        1.99,
+        2.287
+      ],
+      "takeProfitFromEntryPctRange": [
+        -1.009,
+        -0.721
+      ]
+    },
+    "btc": {
+      "market": "BTC-PERP",
+      "mark": 78348.04708813732,
+      "long": {
+        "entry": 78415.6,
+        "entryVsMarkBps": 8.6,
+        "filledOfWantedPct": 31.3,
+        "stopLossFromEntryPct": -1.085,
+        "takeProfitFromEntryPct": 1.912
+      },
+      "short": {
+        "entry": 78345.1,
+        "entryVsMarkBps": 0.4,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.004,
+        "takeProfitFromEntryPct": -0.996
+      }
+    }
+  },
+  "today": [
+    {
+      "market": "ZRO-PERP",
+      "mark": 1.673200139263,
+      "long": {
+        "entry": 1.6811,
+        "entryVsMarkBps": 47.2,
+        "filledOfWantedPct": 46.8,
+        "stopLossFromEntryPct": -1.465,
+        "takeProfitFromEntryPct": 1.521
+      },
+      "short": {
+        "entry": 1.6709,
+        "entryVsMarkBps": 13.7,
+        "filledOfWantedPct": 46.8,
+        "stopLossFromEntryPct": 2.14,
+        "takeProfitFromEntryPct": -0.864
+      }
+    },
+    {
+      "market": "LIT-PERP",
+      "mark": 2.9442455767389997,
+      "long": {
+        "entry": 2.9555,
+        "entryVsMarkBps": 38.2,
+        "filledOfWantedPct": 45.3,
+        "stopLossFromEntryPct": -1.377,
+        "takeProfitFromEntryPct": 1.612
+      },
+      "short": {
+        "entry": 2.9377,
+        "entryVsMarkBps": 22.2,
+        "filledOfWantedPct": 45.3,
+        "stopLossFromEntryPct": 2.227,
+        "takeProfitFromEntryPct": -0.779
+      }
+    },
+    {
+      "market": "VVV-PERP",
+      "mark": 23.157038171062002,
+      "long": {
+        "entry": 23.232,
+        "entryVsMarkBps": 32.4,
+        "filledOfWantedPct": 56.5,
+        "stopLossFromEntryPct": -1.319,
+        "takeProfitFromEntryPct": 1.671
+      },
+      "short": {
+        "entry": 23.092,
+        "entryVsMarkBps": 28.1,
+        "filledOfWantedPct": 56.5,
+        "stopLossFromEntryPct": 2.287,
+        "takeProfitFromEntryPct": -0.721
+      }
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "mark": 0.00495995788,
+      "long": {
+        "entry": 0.0049777,
+        "entryVsMarkBps": 35.8,
+        "filledOfWantedPct": 72.4,
+        "stopLossFromEntryPct": -1.353,
+        "takeProfitFromEntryPct": 1.636
+      },
+      "short": {
+        "entry": 0.0049479,
+        "entryVsMarkBps": 24.3,
+        "filledOfWantedPct": 72.4,
+        "stopLossFromEntryPct": 2.249,
+        "takeProfitFromEntryPct": -0.759
+      }
+    },
+    {
+      "market": "PUMP-PERP",
+      "mark": 0.004098577571,
+      "long": {
+        "entry": 0.004116,
+        "entryVsMarkBps": 42.5,
+        "filledOfWantedPct": 40.2,
+        "stopLossFromEntryPct": -1.419,
+        "takeProfitFromEntryPct": 1.568
+      },
+      "short": {
+        "entry": 0.00409,
+        "entryVsMarkBps": 20.9,
+        "filledOfWantedPct": 40.2,
+        "stopLossFromEntryPct": 2.214,
+        "takeProfitFromEntryPct": -0.792
+      }
+    },
+    {
+      "market": "ZEC-PERP",
+      "mark": 1264.970363588202,
+      "long": {
+        "entry": 1270.793,
+        "entryVsMarkBps": 46,
+        "filledOfWantedPct": 58.2,
+        "stopLossFromEntryPct": -1.454,
+        "takeProfitFromEntryPct": 1.533
+      },
+      "short": {
+        "entry": 1263.201,
+        "entryVsMarkBps": 14,
+        "filledOfWantedPct": 50.6,
+        "stopLossFromEntryPct": 2.143,
+        "takeProfitFromEntryPct": -0.861
+      }
+    },
+    {
+      "market": "TAO-PERP",
+      "mark": 237.0188707482825,
+      "long": {
+        "entry": 237.789,
+        "entryVsMarkBps": 32.5,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.321,
+        "takeProfitFromEntryPct": 1.67
+      },
+      "short": {
+        "entry": 236.64151,
+        "entryVsMarkBps": 15.9,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.163,
+        "takeProfitFromEntryPct": -0.842
+      }
+    },
+    {
+      "market": "WLD-PERP",
+      "mark": 0.39541430361,
+      "long": {
+        "entry": 0.3966,
+        "entryVsMarkBps": 30,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.296,
+        "takeProfitFromEntryPct": 1.695
+      },
+      "short": {
+        "entry": 0.3951,
+        "entryVsMarkBps": 7.9,
+        "filledOfWantedPct": 54.6,
+        "stopLossFromEntryPct": 2.081,
+        "takeProfitFromEntryPct": -0.921
+      }
+    },
+    {
+      "market": "NEAR-PERP",
+      "mark": 4.265856614341001,
+      "long": {
+        "entry": 4.2713,
+        "entryVsMarkBps": 12.8,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.126,
+        "takeProfitFromEntryPct": 1.87
+      },
+      "short": {
+        "entry": 4.2586,
+        "entryVsMarkBps": 17,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.174,
+        "takeProfitFromEntryPct": -0.831
+      }
+    },
+    {
+      "market": "XLM-PERP",
+      "mark": 0.166471014025,
+      "long": {
+        "entry": 0.1667,
+        "entryVsMarkBps": 13.8,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.136,
+        "takeProfitFromEntryPct": 1.86
+      },
+      "short": {
+        "entry": 0.1661,
+        "entryVsMarkBps": 22.3,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.228,
+        "takeProfitFromEntryPct": -0.779
+      }
+    },
+    {
+      "market": "AVAX-PERP",
+      "mark": 8.588545121714,
+      "long": {
+        "entry": 8.616,
+        "entryVsMarkBps": 32,
+        "filledOfWantedPct": 30.9,
+        "stopLossFromEntryPct": -1.315,
+        "takeProfitFromEntryPct": 1.675
+      },
+      "short": {
+        "entry": 8.587,
+        "entryVsMarkBps": 1.8,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.018,
+        "takeProfitFromEntryPct": -0.982
+      }
+    },
+    {
+      "market": "LINK-PERP",
+      "mark": 11.061884699641,
+      "long": {
+        "entry": 12.187,
+        "entryVsMarkBps": 1017.1,
+        "filledOfWantedPct": 31,
+        "stopLossFromEntryPct": -10.14,
+        "takeProfitFromEntryPct": -7.417
+      },
+      "short": {
+        "entry": 12.186,
+        "entryVsMarkBps": -1016.2,
+        "filledOfWantedPct": 50.9,
+        "stopLossFromEntryPct": -7.409,
+        "takeProfitFromEntryPct": -10.132
+      }
+    },
+    {
+      "market": "SUI-PERP",
+      "mark": 0.8912562091575,
+      "long": {
+        "entry": 0.89473333,
+        "entryVsMarkBps": 39,
+        "filledOfWantedPct": 90.9,
+        "stopLossFromEntryPct": -1.385,
+        "takeProfitFromEntryPct": 1.604
+      },
+      "short": {
+        "entry": 0.891,
+        "entryVsMarkBps": 2.9,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.029,
+        "takeProfitFromEntryPct": -0.972
+      }
+    },
+    {
+      "market": "ADA-PERP",
+      "mark": 0.1936851097725,
+      "long": {
+        "entry": 0.1941,
+        "entryVsMarkBps": 21.4,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.212,
+        "takeProfitFromEntryPct": 1.782
+      },
+      "short": {
+        "entry": 0.1934,
+        "entryVsMarkBps": 14.7,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.15,
+        "takeProfitFromEntryPct": -0.854
+      }
+    },
+    {
+      "market": "BNB-PERP",
+      "mark": 713.5072292459145,
+      "long": {
+        "entry": 745.605,
+        "entryVsMarkBps": 449.9,
+        "filledOfWantedPct": 30,
+        "stopLossFromEntryPct": -5.262,
+        "takeProfitFromEntryPct": -2.391
+      },
+      "short": {
+        "entry": 745.604,
+        "entryVsMarkBps": -449.8,
+        "filledOfWantedPct": 52.8,
+        "stopLossFromEntryPct": -2.391,
+        "takeProfitFromEntryPct": -5.262
+      }
+    },
+    {
+      "market": "DOGE-PERP",
+      "mark": 0.076157481801,
+      "long": {
+        "entry": 0.07628,
+        "entryVsMarkBps": 16.1,
+        "filledOfWantedPct": 30.5,
+        "stopLossFromEntryPct": -1.159,
+        "takeProfitFromEntryPct": 1.836
+      },
+      "short": {
+        "entry": 0.076118278,
+        "entryVsMarkBps": 5.1,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.053,
+        "takeProfitFromEntryPct": -0.949
+      }
+    },
+    {
+      "market": "XRP-PERP",
+      "mark": 1.261338837738,
+      "long": {
+        "entry": 1.2625,
+        "entryVsMarkBps": 9.2,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.091,
+        "takeProfitFromEntryPct": 1.906
+      },
+      "short": {
+        "entry": 1.259361,
+        "entryVsMarkBps": 15.7,
+        "filledOfWantedPct": 77.7,
+        "stopLossFromEntryPct": 2.16,
+        "takeProfitFromEntryPct": -0.845
+      }
+    },
+    {
+      "market": "HYPE-PERP",
+      "mark": 93.0012058668815,
+      "long": {
+        "entry": 93.293083,
+        "entryVsMarkBps": 31.4,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.31,
+        "takeProfitFromEntryPct": 1.681
+      },
+      "short": {
+        "entry": 93.01,
+        "entryVsMarkBps": -0.9,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 1.99,
+        "takeProfitFromEntryPct": -1.009
+      }
+    },
+    {
+      "market": "SOL-PERP",
+      "mark": 97.7242699349195,
+      "long": {
+        "entry": 97.81,
+        "entryVsMarkBps": 8.8,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": -1.087,
+        "takeProfitFromEntryPct": 1.911
+      },
+      "short": {
+        "entry": 97.64,
+        "entryVsMarkBps": 8.6,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.088,
+        "takeProfitFromEntryPct": -0.915
+      }
+    },
+    {
+      "market": "ETH-PERP",
+      "mark": 2241.940256582306,
+      "long": {
+        "entry": 2243.89,
+        "entryVsMarkBps": 8.7,
+        "filledOfWantedPct": 30,
+        "stopLossFromEntryPct": -1.086,
+        "takeProfitFromEntryPct": 1.911
+      },
+      "short": {
+        "entry": 2241.87,
+        "entryVsMarkBps": 0.3,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.003,
+        "takeProfitFromEntryPct": -0.997
+      }
+    },
+    {
+      "market": "BTC-PERP",
+      "mark": 78348.04708813732,
+      "long": {
+        "entry": 78415.6,
+        "entryVsMarkBps": 8.6,
+        "filledOfWantedPct": 31.3,
+        "stopLossFromEntryPct": -1.085,
+        "takeProfitFromEntryPct": 1.912
+      },
+      "short": {
+        "entry": 78345.1,
+        "entryVsMarkBps": 0.4,
+        "filledOfWantedPct": 100,
+        "stopLossFromEntryPct": 2.004,
+        "takeProfitFromEntryPct": -0.996
+      }
+    }
+  ]
+}

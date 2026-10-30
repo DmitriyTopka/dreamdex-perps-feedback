@@ -1,0 +1,143 @@
+{
+  "block": 36900227,
+  "time": "2026-10-30T06:54:06.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "owner": "0x84326A92162Ece92ed257A31073fDd3a6599BF21",
+  "grid": {
+    "lotSizeBtc": 0.00001,
+    "minQuantityBtc": 0.00013,
+    "baseDecimals": 8
+  },
+  "ourDialogMoments": [
+    {
+      "tx": "0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0e30a7",
+      "what": "16:36 Set TP/SL, Entire (dialog header said 0.0002 BTC)",
+      "block": 30349500,
+      "time": "2026-10-22T16:36:10.000Z",
+      "positionBtc": 0.00018,
+      "avgEntry": 81565.4,
+      "shownAt4Decimals": 0.0002,
+      "overstatementPct": 11.1,
+      "legs": [
+        {
+          "id": "1069911156275153999968",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityBtc": 0.00018
+        },
+        {
+          "id": "6161212520618990245985",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityBtc": 0.00018
+        }
+      ]
+    },
+    {
+      "tx": "0x60df5789f1132eb7c1a294bc168af6672a47b3aed962465d068626027be24851",
+      "what": "18:41 Set TP/SL, Partial, 0.0004 BTC typed (Max said 0.0004 BTC)",
+      "block": 30424678,
+      "time": "2026-10-22T18:41:33.000Z",
+      "positionBtc": 0.00036,
+      "avgEntry": 81348.68888888888,
+      "shownAt4Decimals": 0.0004,
+      "overstatementPct": 11.1,
+      "legs": [
+        {
+          "id": "3431094397709976606831",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityBtc": 0.00036
+        },
+        {
+          "id": "5331109037302060423280",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityBtc": 0.00036
+        }
+      ]
+    }
+  ],
+  "afterSecondBuy": {
+    "tx": "0xfacb0619579969a9781e5b70283ebc4017a7f3ceea58fbe7bebe3e394a44ee3a",
+    "block": 30350138,
+    "positionBtc": 0.00036,
+    "shownAt4Decimals": 0.0004
+  },
+  "ourPositionNow": {
+    "positionBtc": 0.00036,
+    "shownAt4Decimals": 0.0004
+  },
+  "openBtcPositions": {
+    "source": "indexer PerpPosition rows with size != 0; sample re-read with MarginBank.getPosition",
+    "total": 9659,
+    "offTheFourDecimalGrid": 9049,
+    "belowMinimumOrderSize": 40,
+    "ifNearest_misstatedByMoreThan1Pct": 3643,
+    "ifNearest_misstatedByMoreThan5Pct": 2739,
+    "ifNearest_worstPct": 100,
+    "sampleCheckedOnChain": [
+      {
+        "account": "0x0007d05ec7b3bd37d147f6fb7b4a3f04fc7db961",
+        "indexerSize": 0.02134,
+        "chainSize": 0.02134,
+        "shownAt4Decimals": 0.0213
+      },
+      {
+        "account": "0x000fe7f8f4171da60253ce4be7296153b1ecf9c7",
+        "indexerSize": 0.00013,
+        "chainSize": 0.00013,
+        "shownAt4Decimals": 0.0001
+      },
+      {
+        "account": "0x00106168521dc216ba44c1cea1aa708d07db8b66",
+        "indexerSize": 0.05956,
+        "chainSize": 0.05956,
+        "shownAt4Decimals": 0.0596
+      },
+      {
+        "account": "0x00148333ca4184627eee31f208e12bc53641b21b",
+        "indexerSize": 0.00013,
+        "chainSize": 0.00013,
+        "shownAt4Decimals": 0.0001
+      },
+      {
+        "account": "0x0016ceae3772a279513026e258f31cad40c356b0",
+        "indexerSize": 0.07429,
+        "chainSize": 0.07429,
+        "shownAt4Decimals": 0.0743
+      },
+      {
+        "account": "0x00216b24d4904c1d70f2d7c4729171302c19371c",
+        "indexerSize": 0.00019,
+        "chainSize": 0.00019,
+        "shownAt4Decimals": 0.0002
+      },
+      {
+        "account": "0x002956552afa1ea3f207b3f35dd63a6d759b4797",
+        "indexerSize": 0.00013,
+        "chainSize": 0.00013,
+        "shownAt4Decimals": 0.0001
+      },
+      {
+        "account": "0x002da234f2102e7c38360a3470c558780f986ab0",
+        "indexerSize": 0.08137,
+        "chainSize": 0.08137,
+        "shownAt4Decimals": 0.0814
+      },
+      {
+        "account": "0x003c99db2b71ed82127151bc404a57a533f28abd",
+        "indexerSize": 0.00026,
+        "chainSize": 0.00026,
+        "shownAt4Decimals": 0.0003
+      },
+      {
+        "account": "0x004e044812c247fa040e78f2e3b5c16020e84797",
+        "indexerSize": 0.02179,
+        "chainSize": 0.02179,
+        "shownAt4Decimals": 0.0218
+      }
+    ]
+  }
+}

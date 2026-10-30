@@ -1,0 +1,3316 @@
+{
+  "block": 36900024,
+  "time": "2026-10-30T06:53:46.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "linkedOrderCancelledTopic0": "0xd711b5964fdfd0005203a0cf332d75fad62f24e8fabcd3858b1af12a23a33478",
+  "ours": {
+    "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+    "takeProfit": {
+      "id": "5700043918776251455591",
+      "status": "TRIGGERED",
+      "cancelReason": null,
+      "triggerPrice": 81236
+    },
+    "stopLoss": {
+      "id": "3431094397709976606824",
+      "status": "CANCELLED",
+      "cancelReason": "LinkedFill",
+      "triggerPrice": 70000
+    },
+    "createTx": {
+      "hash": "0xb36312c539f02640cd48dabd1fb0bbcdf709f282cef01f570cd56718f64728d4",
+      "block": 30382388,
+      "walletSTT": 15,
+      "unclaimedSTT": 0,
+      "after": {
+        "block": 30382389,
+        "walletSTT": 14.7,
+        "unclaimedSTT": 0
+      }
+    },
+    "fireTx": {
+      "hash": "0xcdd7f80b0804f1f9822e29115687311b052e9282604c371f2a5631f9869d3fc2",
+      "time": "2026-10-22T17:31:10.000Z",
+      "event": {
+        "name": "LinkedOrderCancelled",
+        "cancelledOrderId": "3431094397709976606824",
+        "filledOrderId": "5700043918776251455591",
+        "owner": "0x84326A92162Ece92ed257A31073fDd3a6599BF21",
+        "amount": "150000000000000000",
+        "amountSTT": 0.15
+      },
+      "before": {
+        "block": 30382466,
+        "walletSTT": 14.7,
+        "unclaimedSTT": 0
+      },
+      "at": {
+        "block": 30382467,
+        "walletSTT": 14.7,
+        "unclaimedSTT": 0.15
+      }
+    },
+    "manualOwnerCancelEarlier": {
+      "hash": "0x8cd20d4d68a3ca5c3d26f10395bee54ba2e07c160371171b7d6892750a6fc6ab",
+      "time": "2026-10-22T16:37:55.000Z",
+      "status": "success",
+      "before": {
+        "block": 30350543,
+        "walletSTT": 14.7,
+        "unclaimedSTT": 0
+      },
+      "at": {
+        "block": 30350544,
+        "walletSTT": 14.85,
+        "unclaimedSTT": 0
+      }
+    },
+    "claim": {
+      "hash": "0x774205e0008fd2bc1ba6e406f0cfed20ba8a61e515ef4970a2830aa361afd15c",
+      "time": "2026-10-22T17:42:17.000Z",
+      "status": "success",
+      "before": {
+        "block": 30389134,
+        "walletSTT": 14.7,
+        "unclaimedSTT": 0.15
+      },
+      "at": {
+        "block": 30389135,
+        "walletSTT": 14.85,
+        "unclaimedSTT": 0
+      }
+    },
+    "unclaimedNow": 0.15,
+    "linkedFillRowsForThisAccount": 3
+  },
+  "network": {
+    "cancelledPerpStops": 20563,
+    "byCancelReason": {
+      "Owner": 16966,
+      "LinkedFill": 3597
+    },
+    "somiPaymentPerOrderSTT": {
+      "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef": 0.15,
+      "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055": 0.15,
+      "0xf3a51c26ead3f84c2221336484bb42b8cfca076e": 0.15,
+      "0x85a0879d19777c343eb317a890d5058ab92b8f5d": 0.15,
+      "0xb09cf2f2f91045f1ff1e4e824f9cf0fa29698757": 0.15,
+      "0x44bfa5b28684e8d2156d15b85902da18f02b3a34": 0.15,
+      "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89": 0.15,
+      "0x1667a20a7481d704b1f75e8932d42a6bbafbd539": 0.15,
+      "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f": 0.15,
+      "0x6243c81d782ca091f47923e049a9ddc1070cb57a": 0.15,
+      "0x1c3fabc41871ec838960f80329dcd920fec241c9": 0.15,
+      "0x3a76c35c1cc0a0dbde646ce51a30805b077d211b": 0.15,
+      "0xc33db2dab35c46295cb435730f14f91a3cfd0367": 0.15,
+      "0x450b968dc94e3a854c47e37f38e2f6af6e1650b7": 0.15,
+      "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921": 0.15,
+      "0x092ba74067cdd5400f38f8b4e91b1a4cf8f7716d": 0.15,
+      "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05": 0.15,
+      "0x9942cd840dbbc0a51589027fef271dd9be836f08": 0.15,
+      "0xe09c7550c2ef41a6ddabe368cbde83c8ba5259b6": 0.15,
+      "0xa1b615be784784420f7dd7ef4a2a5a392bdb7242": 0.15,
+      "0x6ba14290fc5067578020e649ad066df08915e5cf": 0.15
+    },
+    "ownerRegistryPairsWithLinkedFill": 1829,
+    "distinctOwners": 576,
+    "pairsHoldingUnclaimedNow": 354,
+    "unclaimedSTTHeldByThem": 59.025,
+    "eoaPairsWithoutInert": {
+      "pairs": 1,
+      "holdingNow": 1,
+      "unclaimedSTT": 0.15
+    },
+    "contractOwnerPairs": 1828,
+    "pairsWithInertToo": 0
+  },
+  "holders": [
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xeb380bac660f5e2d9acbbdc3022b28343e773ada",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.75
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xe72f3513ba767e6d116d9898ca4392a18476b90c",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.75
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xf67ef0507c1f09ee0da1108ac65277c04b3480cc",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.45
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xf40c0a560f2dd367ea83d999186a054d07afc7ff",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.45
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xeb380bac660f5e2d9acbbdc3022b28343e773ada",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.45
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xeb380bac660f5e2d9acbbdc3022b28343e773ada",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.45
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x82f9a0199429ef152d0c1ce8ea1a687f2463de43",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.45
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xf67ef0507c1f09ee0da1108ac65277c04b3480cc",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x73a521e101b5735a30359eeb85c2ef1570086aa9",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x74d389119b862656ce7f0ea2370de7b71089aff1",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x74d389119b862656ce7f0ea2370de7b71089aff1",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xf40c0a560f2dd367ea83d999186a054d07afc7ff",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x73a521e101b5735a30359eeb85c2ef1570086aa9",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xdcfde741d01e193fe11c01df6e25127c9643f029",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xdcfde741d01e193fe11c01df6e25127c9643f029",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x4258adef3cf3ea7da934820c7f26319a6b7b0d2d",
+      "linkedFills": 8,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xc879fc15d9e65dc93ada6968f09d72dd3be7cdf3",
+      "linkedFills": 7,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xc879fc15d9e65dc93ada6968f09d72dd3be7cdf3",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x964b340735aaa3b36e2f4268fec9526fec2c25a5",
+      "linkedFills": 8,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x964b340735aaa3b36e2f4268fec9526fec2c25a5",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xbec237c475bdda80821068bfd114fff8181eb792",
+      "linkedFills": 8,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xeb380bac660f5e2d9acbbdc3022b28343e773ada",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xbb9ea349be51daa5b3e035c135fa6a217ef9b875",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xd65c5acfb159905c1b17c12b36aa1cea47efef15",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0xb09cf2f2f91045f1ff1e4e824f9cf0fa29698757",
+      "owner": "0x9b3b343f816c53c3a826f339afae24f1321f9ece",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "DOGE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x14c057b258c8c0aaf1d059eb0feb26649b723c93",
+      "linkedFills": 7,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x3ccf05f2fcb41f5b814ca6f3d2442bea44db17bb",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x82f9a0199429ef152d0c1ce8ea1a687f2463de43",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x847541e1d5942096c7dc6ac955e351e8cbbb0d3b",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.3
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x85aa90edf490d83bc3313a371c414e2dc0b723db",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x33e268a557a64b57528a917018358a59e39ededc",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x1667a20a7481d704b1f75e8932d42a6bbafbd539",
+      "owner": "0x4f3ccf965973c780f9fbacc43f333efbad9af12c",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ZRO-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xddb446387b64902a360bedb2884ec41a78af07c3",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0xddb446387b64902a360bedb2884ec41a78af07c3",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x68f8f6227b18b44f0cd2d48b3051e36380e483ed",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x74d389119b862656ce7f0ea2370de7b71089aff1",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x73a521e101b5735a30359eeb85c2ef1570086aa9",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xdcfde741d01e193fe11c01df6e25127c9643f029",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x4258adef3cf3ea7da934820c7f26319a6b7b0d2d",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x4258adef3cf3ea7da934820c7f26319a6b7b0d2d",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xc879fc15d9e65dc93ada6968f09d72dd3be7cdf3",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x964b340735aaa3b36e2f4268fec9526fec2c25a5",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xbec237c475bdda80821068bfd114fff8181eb792",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xbec237c475bdda80821068bfd114fff8181eb792",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xbec237c475bdda80821068bfd114fff8181eb792",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x0fa0d94c6afbf0cdad0a254daafb25b4891e3017",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x0fa0d94c6afbf0cdad0a254daafb25b4891e3017",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x59262d57a0e9b710cdef0b356def866d84a2046a",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x164c1a744bf7963da92a671c70ef2e6d038e6ffc",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x450b968dc94e3a854c47e37f38e2f6af6e1650b7",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "TAO-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x3a76c35c1cc0a0dbde646ce51a30805b077d211b",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ADA-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x1c3fabc41871ec838960f80329dcd920fec241c9",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "LINK-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xc33db2dab35c46295cb435730f14f91a3cfd0367",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "AVAX-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x092ba74067cdd5400f38f8b4e91b1a4cf8f7716d",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "WLD-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xecfd544333910c4180a66008267b574d2f88c3b9",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xd8544151232c5faba9ef46c28a71d9c2c8417371",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x60ea347a72a85ceb39d7aa65416e4718042fa38f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xbbaa2f6f6fdd8df3287255c8aafba51007c4c5ae",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x47e004f852718d67fb9d5071925985d85e5e6272",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb7af9ac50645f89ad6099012f61d848e4fa4008a",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xe4f7fb4e983cf97d3609193c90598679d93a0006",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xd43d13ef5a15ef913e4fb6c3cfa11b0cb1346090",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xab0bd06cb6300d086f3e60ca11fbdf79f7c86d52",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x51fefc7514079dbe0c417345115cbc3d70f05ecf",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x0c499d587da90ed3285e3e66ff5b1069fd41a813",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x0e42f5e7b727a96b8753deeac06e5b88cc243b93",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xbf718e1a2076a78c5d6e92496dd619bfc314ce67",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x63b475cc488840035dd0d62e5e3e756c677d5871",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x63b475cc488840035dd0d62e5e3e756c677d5871",
+      "linkedFills": 11,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xc16902a0b0048e16b626260bb73340ae492a8773",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xc16902a0b0048e16b626260bb73340ae492a8773",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xc16902a0b0048e16b626260bb73340ae492a8773",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xc16902a0b0048e16b626260bb73340ae492a8773",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xc16902a0b0048e16b626260bb73340ae492a8773",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xb09cf2f2f91045f1ff1e4e824f9cf0fa29698757",
+      "owner": "0x5d807404131454374b51713c430d91a8e6305f9e",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "DOGE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x5d807404131454374b51713c430d91a8e6305f9e",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x5d807404131454374b51713c430d91a8e6305f9e",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x5d807404131454374b51713c430d91a8e6305f9e",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xfa1f30650a189975286ab3a9b2d7052ccc766e8d",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xfa1f30650a189975286ab3a9b2d7052ccc766e8d",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xfa1f30650a189975286ab3a9b2d7052ccc766e8d",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xfa1f30650a189975286ab3a9b2d7052ccc766e8d",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x26ba6f2a9aa8449fe6e2ba0bb12136a5756d558d",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x26ba6f2a9aa8449fe6e2ba0bb12136a5756d558d",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x26ba6f2a9aa8449fe6e2ba0bb12136a5756d558d",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x26ba6f2a9aa8449fe6e2ba0bb12136a5756d558d",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xb09cf2f2f91045f1ff1e4e824f9cf0fa29698757",
+      "owner": "0x26ba6f2a9aa8449fe6e2ba0bb12136a5756d558d",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "DOGE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x71309900b8288d77ac5d0977e176b5f06afe11f3",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x71309900b8288d77ac5d0977e176b5f06afe11f3",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x71309900b8288d77ac5d0977e176b5f06afe11f3",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x71309900b8288d77ac5d0977e176b5f06afe11f3",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x71309900b8288d77ac5d0977e176b5f06afe11f3",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xc194d2c50c5024588c9ec2bb9cb972daa7b0bb55",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xc194d2c50c5024588c9ec2bb9cb972daa7b0bb55",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xc194d2c50c5024588c9ec2bb9cb972daa7b0bb55",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xc194d2c50c5024588c9ec2bb9cb972daa7b0bb55",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xc194d2c50c5024588c9ec2bb9cb972daa7b0bb55",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x6243c81d782ca091f47923e049a9ddc1070cb57a",
+      "owner": "0x8ff712fabad6ee1b47437a675bf8b2054aa610b4",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "LIT-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x8ff712fabad6ee1b47437a675bf8b2054aa610b4",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x8ff712fabad6ee1b47437a675bf8b2054aa610b4",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x8ff712fabad6ee1b47437a675bf8b2054aa610b4",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x8ff712fabad6ee1b47437a675bf8b2054aa610b4",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x6243c81d782ca091f47923e049a9ddc1070cb57a",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "LIT-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xcf53afb8f233ce214cfafac2d6c5327dd1b1bf67",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x5d9972f20c5a3755fbac50c64b2bb05756fdf589",
+      "linkedFills": 8,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xc25fc5ed270eefd9d274a837b6de072f52390750",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x271def42ea6999b5c4d954fac661ab7dff56e4c8",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x271def42ea6999b5c4d954fac661ab7dff56e4c8",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x271def42ea6999b5c4d954fac661ab7dff56e4c8",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xc25fc5ed270eefd9d274a837b6de072f52390750",
+      "linkedFills": 20,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x312a294af73d2628a067ca9dcf3b4eecc20efaff",
+      "linkedFills": 26,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x312a294af73d2628a067ca9dcf3b4eecc20efaff",
+      "linkedFills": 23,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x1efeb89733e5ae6c6e7950f2cf1f64abb54a8bcc",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x26b85b75bd1696de101460c75cc28e6f0857142e",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x39f7798057e649e0dfc16e6608c0bd6fe5d59be6",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xb03f356f0cc0072d79a96b259c4eb1610c6d329d",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x24e8f3c258bad199cb67f92d7f7ef7c336c1b2db",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xa1721ca10fd8cc1f7d0b2ec3db8ec2388ee734a4",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xa1721ca10fd8cc1f7d0b2ec3db8ec2388ee734a4",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb03f356f0cc0072d79a96b259c4eb1610c6d329d",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x24e8f3c258bad199cb67f92d7f7ef7c336c1b2db",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x1efeb89733e5ae6c6e7950f2cf1f64abb54a8bcc",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x26b85b75bd1696de101460c75cc28e6f0857142e",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x39f7798057e649e0dfc16e6608c0bd6fe5d59be6",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xb03f356f0cc0072d79a96b259c4eb1610c6d329d",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x39f7798057e649e0dfc16e6608c0bd6fe5d59be6",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xa1721ca10fd8cc1f7d0b2ec3db8ec2388ee734a4",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x26b85b75bd1696de101460c75cc28e6f0857142e",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x24e8f3c258bad199cb67f92d7f7ef7c336c1b2db",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x1efeb89733e5ae6c6e7950f2cf1f64abb54a8bcc",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x24e8f3c258bad199cb67f92d7f7ef7c336c1b2db",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xa1721ca10fd8cc1f7d0b2ec3db8ec2388ee734a4",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x39f7798057e649e0dfc16e6608c0bd6fe5d59be6",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x1efeb89733e5ae6c6e7950f2cf1f64abb54a8bcc",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xb03f356f0cc0072d79a96b259c4eb1610c6d329d",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x26b85b75bd1696de101460c75cc28e6f0857142e",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x018a8f1f507a683eade07a38bdfdb533b596f6e2",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x73ccff6100793023b878663856c7e02994f753c0",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xf8615322d1496e95afb2108c7bef7fe849b9f2c2",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x6747949689b5bb050ff9ffe3dfcf66f59980e22f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xb8e0f4c1dde41e2c1ac0c4653f62855b48d6e974",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x75ab3fcba7351e8fa9bd2bbe54414fab595b3f51",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x75ab3fcba7351e8fa9bd2bbe54414fab595b3f51",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x6747949689b5bb050ff9ffe3dfcf66f59980e22f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb8e0f4c1dde41e2c1ac0c4653f62855b48d6e974",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x73ccff6100793023b878663856c7e02994f753c0",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x018a8f1f507a683eade07a38bdfdb533b596f6e2",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x73ccff6100793023b878663856c7e02994f753c0",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb8e0f4c1dde41e2c1ac0c4653f62855b48d6e974",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x018a8f1f507a683eade07a38bdfdb533b596f6e2",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x75ab3fcba7351e8fa9bd2bbe54414fab595b3f51",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xf8615322d1496e95afb2108c7bef7fe849b9f2c2",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x6747949689b5bb050ff9ffe3dfcf66f59980e22f",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xf8615322d1496e95afb2108c7bef7fe849b9f2c2",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x6747949689b5bb050ff9ffe3dfcf66f59980e22f",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xb8e0f4c1dde41e2c1ac0c4653f62855b48d6e974",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x73ccff6100793023b878663856c7e02994f753c0",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x75ab3fcba7351e8fa9bd2bbe54414fab595b3f51",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x018a8f1f507a683eade07a38bdfdb533b596f6e2",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x75ab3fcba7351e8fa9bd2bbe54414fab595b3f51",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0xb8e0f4c1dde41e2c1ac0c4653f62855b48d6e974",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x018a8f1f507a683eade07a38bdfdb533b596f6e2",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x73ccff6100793023b878663856c7e02994f753c0",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0xf8615322d1496e95afb2108c7bef7fe849b9f2c2",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xfdcfb2f985049cad3ac27472b6ae80c7a53ede89",
+      "owner": "0x6747949689b5bb050ff9ffe3dfcf66f59980e22f",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "SUI-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x66e7b60c51c8e62dd17611b3c1274dff22f49658",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x6f66149cd65762ff51cb1661c212ed4426a92bc6",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xd54053a0b1698b37b85119adbad42a3b627f6307",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x074bebcee31c81c6cffb1a1a9f22ecba62e4d9f6",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xd8387fb6197304f03b7e4f1feb9b8dcb0d41c279",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x7466fd183ee1688172c229c7fc16d608ee35e059",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xd54053a0b1698b37b85119adbad42a3b627f6307",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x6f66149cd65762ff51cb1661c212ed4426a92bc6",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x074bebcee31c81c6cffb1a1a9f22ecba62e4d9f6",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xd8387fb6197304f03b7e4f1feb9b8dcb0d41c279",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x66e7b60c51c8e62dd17611b3c1274dff22f49658",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x7466fd183ee1688172c229c7fc16d608ee35e059",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xd8387fb6197304f03b7e4f1feb9b8dcb0d41c279",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x7466fd183ee1688172c229c7fc16d608ee35e059",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x66e7b60c51c8e62dd17611b3c1274dff22f49658",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x074bebcee31c81c6cffb1a1a9f22ecba62e4d9f6",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0x6f66149cd65762ff51cb1661c212ed4426a92bc6",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x487fd1e8bcedf4334a2e83aa86b426fd70e4e921",
+      "owner": "0xd54053a0b1698b37b85119adbad42a3b627f6307",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BNB-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xd8387fb6197304f03b7e4f1feb9b8dcb0d41c279",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x6f66149cd65762ff51cb1661c212ed4426a92bc6",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x7466fd183ee1688172c229c7fc16d608ee35e059",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xd54053a0b1698b37b85119adbad42a3b627f6307",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x074bebcee31c81c6cffb1a1a9f22ecba62e4d9f6",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x66e7b60c51c8e62dd17611b3c1274dff22f49658",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xdffc375f47ecd2021e8b63e9d2eb2ef229d7f611",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x96bba30dfd80efb0b22adc6b6ef64bc87d0657bb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xabe24e379d34b41331d4215180c2745e2b11e1cb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x22c8e54b8f06579ce2c08f6d048d8b02659c00f4",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xb2dbd8a57ea6d0352c71f66e671cfab2123f97f1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xe251752756d120e60085ffcf1236c0ac297c3270",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xb2dbd8a57ea6d0352c71f66e671cfab2123f97f1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x22c8e54b8f06579ce2c08f6d048d8b02659c00f4",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xdffc375f47ecd2021e8b63e9d2eb2ef229d7f611",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xe251752756d120e60085ffcf1236c0ac297c3270",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x96bba30dfd80efb0b22adc6b6ef64bc87d0657bb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xabe24e379d34b41331d4215180c2745e2b11e1cb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xabe24e379d34b41331d4215180c2745e2b11e1cb",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x96bba30dfd80efb0b22adc6b6ef64bc87d0657bb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb2dbd8a57ea6d0352c71f66e671cfab2123f97f1",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xdffc375f47ecd2021e8b63e9d2eb2ef229d7f611",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x22c8e54b8f06579ce2c08f6d048d8b02659c00f4",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xe251752756d120e60085ffcf1236c0ac297c3270",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x96bba30dfd80efb0b22adc6b6ef64bc87d0657bb",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xb2dbd8a57ea6d0352c71f66e671cfab2123f97f1",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xabe24e379d34b41331d4215180c2745e2b11e1cb",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xe251752756d120e60085ffcf1236c0ac297c3270",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xdffc375f47ecd2021e8b63e9d2eb2ef229d7f611",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x22c8e54b8f06579ce2c08f6d048d8b02659c00f4",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xb5ff118a0c9571365a49dff1ce5c08d6e6913cb5",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xa9d3f49f97acffc011e965c99d9731f398824366",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x928bec2ab5bb3cb77a38c7461b317bab16f3e7d1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x8039c2a7ce097aa7374ab78920a2be2bb482c9f3",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xb5ff118a0c9571365a49dff1ce5c08d6e6913cb5",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xb960e0f7e77b11421034c3cfcb4d61bce9161d26",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x8039c2a7ce097aa7374ab78920a2be2bb482c9f3",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb960e0f7e77b11421034c3cfcb4d61bce9161d26",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb5ff118a0c9571365a49dff1ce5c08d6e6913cb5",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x928bec2ab5bb3cb77a38c7461b317bab16f3e7d1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xa9d3f49f97acffc011e965c99d9731f398824366",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x081e8f59d85d9e926a8c246927788a2f8cb970ed",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x081e8f59d85d9e926a8c246927788a2f8cb970ed",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xa9d3f49f97acffc011e965c99d9731f398824366",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xb960e0f7e77b11421034c3cfcb4d61bce9161d26",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x928bec2ab5bb3cb77a38c7461b317bab16f3e7d1",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x8039c2a7ce097aa7374ab78920a2be2bb482c9f3",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xa9d3f49f97acffc011e965c99d9731f398824366",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x081e8f59d85d9e926a8c246927788a2f8cb970ed",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x8039c2a7ce097aa7374ab78920a2be2bb482c9f3",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb960e0f7e77b11421034c3cfcb4d61bce9161d26",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x928bec2ab5bb3cb77a38c7461b317bab16f3e7d1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb5ff118a0c9571365a49dff1ce5c08d6e6913cb5",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xc33db2dab35c46295cb435730f14f91a3cfd0367",
+      "owner": "0xb5ff118a0c9571365a49dff1ce5c08d6e6913cb5",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "AVAX-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x8039c2a7ce097aa7374ab78920a2be2bb482c9f3",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x928bec2ab5bb3cb77a38c7461b317bab16f3e7d1",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x081e8f59d85d9e926a8c246927788a2f8cb970ed",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xb960e0f7e77b11421034c3cfcb4d61bce9161d26",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xa9d3f49f97acffc011e965c99d9731f398824366",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xf1a114c1604a272ec6a1da07803fc68a786480e7",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xaab3cf30b426c825e885ef5d7c9bb58631240d93",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xf40c0a560f2dd367ea83d999186a054d07afc7ff",
+      "linkedFills": 5,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x73a521e101b5735a30359eeb85c2ef1570086aa9",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xdcfde741d01e193fe11c01df6e25127c9643f029",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x4258adef3cf3ea7da934820c7f26319a6b7b0d2d",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xc879fc15d9e65dc93ada6968f09d72dd3be7cdf3",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xbec237c475bdda80821068bfd114fff8181eb792",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x59262d57a0e9b710cdef0b356def866d84a2046a",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xe72f3513ba767e6d116d9898ca4392a18476b90c",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x8d4a4e4484e0fc2c24dd4622dda314d0538d5df8",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb8762fae54d7987814d733fff755b308bfab1e85",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xd67a30474b6acab9f5e08a5ce8041dc747380745",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xecd55b541a1ea8c6b60318e801a9c872bd4d66d7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb0fabcd5ea02c701c314c189ead3606cb48f7568",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb0fabcd5ea02c701c314c189ead3606cb48f7568",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xf1a114c1604a272ec6a1da07803fc68a786480e7",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xf1a114c1604a272ec6a1da07803fc68a786480e7",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xf6123d8ba7880619273162049ac50255abe970b4",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x4258adef3cf3ea7da934820c7f26319a6b7b0d2d",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x964b340735aaa3b36e2f4268fec9526fec2c25a5",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x964b340735aaa3b36e2f4268fec9526fec2c25a5",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x90b7921b342ade633833a48f3dd506e94ad0def7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x90b7921b342ade633833a48f3dd506e94ad0def7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x90b7921b342ade633833a48f3dd506e94ad0def7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x90b7921b342ade633833a48f3dd506e94ad0def7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0xa48b5936b0fa0c62f20dfe541a8fa4117d190623",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0xf67ef0507c1f09ee0da1108ac65277c04b3480cc",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x74d389119b862656ce7f0ea2370de7b71089aff1",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x73a521e101b5735a30359eeb85c2ef1570086aa9",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x3a76c35c1cc0a0dbde646ce51a30805b077d211b",
+      "owner": "0xdcfde741d01e193fe11c01df6e25127c9643f029",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "ADA-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0xeb380bac660f5e2d9acbbdc3022b28343e773ada",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xecfee10fa631cb997e18e72b1610e124eb355a43",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0xcb5607b11b016a722b732afdbdeaf257721e4994",
+      "linkedFills": 4,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xcb5607b11b016a722b732afdbdeaf257721e4994",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x84326a92162ece92ed257a31073fdd3a6599bf21",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x1667a20a7481d704b1f75e8932d42a6bbafbd539",
+      "owner": "0x9d10ddabfd01e5da0d897d3e43caae7981456f44",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZRO-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x092ba74067cdd5400f38f8b4e91b1a4cf8f7716d",
+      "owner": "0x9eace4bde5d9be72de2f04ce2019106670042b47",
+      "linkedFills": 3,
+      "inert": false,
+      "market": "WLD-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xc33db2dab35c46295cb435730f14f91a3cfd0367",
+      "owner": "0xce2f436208911a5c98e71cf5997391c0950287cf",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "AVAX-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x655e89a7e52490a421ad4c04fb6a7dd295cf1a5f",
+      "owner": "0x76d94d31b1be71cc28f8e40006cd96094b191f7d",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "XRP-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x6243c81d782ca091f47923e049a9ddc1070cb57a",
+      "owner": "0xa8c70e814ccd3a9f9af2241d2c5bff00faa1ad0f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "LIT-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x629d7a9402b65c561603756b587180def9040074",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x8c03b11b9b1342714180f0157426b75f32c583a3",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x440e03bb3aadbe65d5bf2ad7f84a64c509ff438b",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": true,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x6988e88e9c1dad5eb6bb568ebc98272674076193",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x8166826e830a5fbb29bb856eb40b80ebc74a3c3a",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb050ca57fc4b0f5d95baef6d67a59ce08609e880",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb99cf7e7d2ce1df7bc2492d9d9c9679f9ddc5368",
+      "linkedFills": 6,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x05917bb4cd785c342857e1107654ea63f4f8097c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x7115e070a3e366162f30af0c4cf24b15e90b22fd",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x7115e070a3e366162f30af0c4cf24b15e90b22fd",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x7115e070a3e366162f30af0c4cf24b15e90b22fd",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x6c4f2d7fa9eed35bc3657c23a69316c6230d8089",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x84202877cd5af5cd85202d63e0b121f6c924a8bf",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x9942cd840dbbc0a51589027fef271dd9be836f08",
+      "owner": "0x70c58f26eaf89b6df9968d150bb8462730b278d8",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "1000PEPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x09f09c2b09ee2398af4fb19f086dddfb2e46a36c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x731db667b7a213864950bdded96d42cba5b58f1a",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x04d8f04eccdeadec3676f56bfdca9e05c482ef4b",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x6c56325a35be8cd161e0dec491f1f72c9dfeb46c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x524f8c98b7ee03dfb3b1b7cb476a2f3127e2d351",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xb09cf2f2f91045f1ff1e4e824f9cf0fa29698757",
+      "owner": "0xd65c5acfb159905c1b17c12b36aa1cea47efef15",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "DOGE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x9b3b343f816c53c3a826f339afae24f1321f9ece",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x1c3fabc41871ec838960f80329dcd920fec241c9",
+      "owner": "0x9b3b343f816c53c3a826f339afae24f1321f9ece",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "LINK-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xc33db2dab35c46295cb435730f14f91a3cfd0367",
+      "owner": "0x9b3b343f816c53c3a826f339afae24f1321f9ece",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "AVAX-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x9b3b343f816c53c3a826f339afae24f1321f9ece",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x7a8f843ac189e55e4689f18ef3f5b97ed310e8bc",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x1ab021749dfad5c7341ca32f0261939d0cc44c60",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x8fd6df6490d019c6eefd168421c8e8b7430d2755",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xd65c5acfb159905c1b17c12b36aa1cea47efef15",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xd65c5acfb159905c1b17c12b36aa1cea47efef15",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x3ccf05f2fcb41f5b814ca6f3d2442bea44db17bb",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0x82f9a0199429ef152d0c1ce8ea1a687f2463de43",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x1fc0b672677b394301b141ecaf4a1be359743385",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xc6467c8e05a5462a5e9597a3e379bddf9fba6254",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x2ea67f52869c49cc51600e0501241a08d75d5486",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0xe8f817a57e907830fab5e6401ed709b032bd4a9c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x646310d04b1f2872d445b93d8fb294bce3c6a26f",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x288d6a442abc503301eb4cc85e85db39442fa0ef",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x704860974ecf2fbd596285a04a5996fc85e1e473",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+      "owner": "0x650702f55e7d9961504dedaf8113ff441a905d5f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ETH-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xadfea24feb925e5317c62e769cd287c2974fe146",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x19dc0a80fa18d591dc963972deb88e3b394c5a9e",
+      "linkedFills": 2,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x39a2aba968633e63d825d0de34483e260eeb6a25",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+      "owner": "0xb3d1e822a6cd96ddf6cce141df56c6ead5f61e28",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "SOL-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x72b2ab540931f8dd3fc4b392cfb5adbe7dff4ed0",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xb3d1e822a6cd96ddf6cce141df56c6ead5f61e28",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x646310d04b1f2872d445b93d8fb294bce3c6a26f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xbd404ff2076f623a88ac3c281e038fc527bf4202",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x99a5246e55a6876d9b670182f8ca943159b4cb9c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x0aea1acec394662e0c522f8ea24cbac762c62424",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x44c24cd26cf41037c6ebf337948a6c9bbc0ee055",
+      "owner": "0x6c56325a35be8cd161e0dec491f1f72c9dfeb46c",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "HYPE-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xf3a51c26ead3f84c2221336484bb42b8cfca076e",
+      "owner": "0x680b906a5db203d5017f5176733290f6c0ff7bc5",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "NEAR-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0xe2ce6488091393c30b42f12a0f75667f2a36efb7",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "owner": "0x5b655a87cbbe18b4ba02fb605e8dc18c99e1a93f",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "BTC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.15
+    },
+    {
+      "registry": "0xbfe6f500627a0344270c72a61c4f9f9f31db9a05",
+      "owner": "0x59262d57a0e9b710cdef0b356def866d84a2046a",
+      "linkedFills": 1,
+      "inert": false,
+      "market": "ZEC-PERP",
+      "eoa": false,
+      "unclaimedSTT": 0.075
+    }
+  ]
+}

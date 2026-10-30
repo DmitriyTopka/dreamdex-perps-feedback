@@ -1,0 +1,1005 @@
+{
+  "block": 36902598,
+  "time": "2026-10-30T06:58:03.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "owner": "0x84326A92162Ece92ed257A31073fDd3a6599BF21",
+  "btcRegistry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+  "live": {
+    "market": "BTC-PERP",
+    "positionBtc": 0.00036,
+    "avgEntry": 80021.2,
+    "stops": [
+      {
+        "id": "7876759719473978547959",
+        "kind": "SL (fires at or below)",
+        "trigger": 70000,
+        "chainStatus": "present",
+        "storedQuantityRaw": "18000",
+        "storedQuantityBtc": 0.00018,
+        "wholePosition": false,
+        "linkedTo": "6013638568029313834742",
+        "intent": "reduceOnly",
+        "sttHeld": 0.15,
+        "createdAt": "2026-10-26T06:29:23.000Z",
+        "txHash": "0x52dc623b27779f9866991e688bf30fb2581378072da2a13734ce6bb35cac28f1"
+      },
+      {
+        "id": "6013638568029313834742",
+        "kind": "TP (fires at or above)",
+        "trigger": 90000,
+        "chainStatus": "present",
+        "storedQuantityRaw": "18000",
+        "storedQuantityBtc": 0.00018,
+        "wholePosition": false,
+        "linkedTo": "7876759719473978547959",
+        "intent": "reduceOnly",
+        "sttHeld": 0.15,
+        "createdAt": "2026-10-26T06:29:23.000Z",
+        "txHash": "0x52dc623b27779f9866991e688bf30fb2581378072da2a13734ce6bb35cac28f1"
+      }
+    ]
+  },
+  "liveSummary": {
+    "slCoversBtc": 0.00018,
+    "uncoveredBtc": 0.00018,
+    "slCoversPct": 50
+  },
+  "ownPairs": [
+    {
+      "tx": "0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0e30a7",
+      "block": 30349500,
+      "createdAt": "2026-10-22T16:36:10.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "1069911156275153999968",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T16:37:55.000Z"
+        },
+        {
+          "id": "6161212520618990245985",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T16:38:31.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0xb36312c539f02640cd48dabd1fb0bbcdf709f282cef01f570cd56718f64728d4",
+      "block": 30382389,
+      "createdAt": "2026-10-22T17:31:02.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00018,
+      "legs": [
+        {
+          "id": "5700043918776251455591",
+          "kind": "TP",
+          "trigger": 81236,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "TRIGGERED",
+          "cancelReason": null,
+          "endedAt": "2026-10-22T17:31:10.000Z"
+        },
+        {
+          "id": "3431094397709976606824",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "LinkedFill",
+          "endedAt": "2026-10-22T17:31:10.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e",
+      "block": 30395381,
+      "createdAt": "2026-10-22T17:52:42.000Z",
+      "positionAtCreationBtc": 0,
+      "largestPositionWhileArmedBtc": 0.13818,
+      "legs": [
+        {
+          "id": "5331109037302060423273",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T17:55:54.000Z"
+        },
+        {
+          "id": "3431094397709976606826",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T17:55:54.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0x60df5789f1132eb7c1a294bc168af6672a47b3aed962465d068626027be24851",
+      "block": 30424678,
+      "createdAt": "2026-10-22T18:41:33.000Z",
+      "positionAtCreationBtc": 0.00036,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "3431094397709976606831",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "36000",
+          "storedQuantityBtc": 0.00036,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T18:42:37.000Z"
+        },
+        {
+          "id": "5331109037302060423280",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "36000",
+          "storedQuantityBtc": 0.00036,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T18:42:37.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0xcc8862c5194db6b1e68ad4e3071ad358f60ed07a4bfc3cb84e9454617a2cfd69",
+      "block": 30447386,
+      "createdAt": "2026-10-22T19:19:26.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "3431094397709976606833",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T19:31:45.000Z"
+        },
+        {
+          "id": "5331109037302060423282",
+          "kind": "SL",
+          "trigger": 81260,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T19:31:45.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0x735325d3031bb43af498fe4fa72f00d6774a9644a21cb6d9ad4f9b20f6808432",
+      "block": 30454781,
+      "createdAt": "2026-10-22T19:31:45.000Z",
+      "positionAtCreationBtc": 0.00036,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "3431094397709976606835",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "LinkedFill",
+          "endedAt": "2026-10-22T19:34:35.000Z"
+        },
+        {
+          "id": "5331109037302060423284",
+          "kind": "SL",
+          "trigger": 81385,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "TRIGGERED",
+          "cancelReason": null,
+          "endedAt": "2026-10-22T19:34:35.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0x0f12ff91d91e665bfc7671ccd313e4ede43fb154443c2005d2eea98b2b493d0f",
+      "block": 30482236,
+      "createdAt": "2026-10-22T20:17:32.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "3431094397709976606838",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T20:19:29.000Z"
+        },
+        {
+          "id": "5331109037302060423287",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "Owner",
+          "endedAt": "2026-10-22T20:19:29.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0x04f151862f4943a39e879989ee50f7608d97e9f97e9d07b8161934cafe8f7fce",
+      "block": 33433394,
+      "createdAt": "2026-10-26T06:18:07.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "6013638568029313834738",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "CANCELLED",
+          "cancelReason": "LinkedFill",
+          "endedAt": "2026-10-26T06:27:00.000Z"
+        },
+        {
+          "id": "7876759719473978547955",
+          "kind": "SL",
+          "trigger": 79900,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "TRIGGERED",
+          "cancelReason": null,
+          "endedAt": "2026-10-26T06:27:00.000Z"
+        }
+      ]
+    },
+    {
+      "tx": "0x52dc623b27779f9866991e688bf30fb2581378072da2a13734ce6bb35cac28f1",
+      "block": 33440149,
+      "createdAt": "2026-10-26T06:29:23.000Z",
+      "positionAtCreationBtc": 0.00018,
+      "largestPositionWhileArmedBtc": 0.00036,
+      "legs": [
+        {
+          "id": "6013638568029313834742",
+          "kind": "TP",
+          "trigger": 90000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "PENDING",
+          "cancelReason": null,
+          "endedAt": null
+        },
+        {
+          "id": "7876759719473978547959",
+          "kind": "SL",
+          "trigger": 70000,
+          "storedQuantityRaw": "18000",
+          "storedQuantityBtc": 0.00018,
+          "status": "PENDING",
+          "cancelReason": null,
+          "endedAt": null
+        }
+      ]
+    }
+  ],
+  "ownTimeline": [
+    {
+      "tx": "0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b",
+      "block": 30210002,
+      "time": "2026-10-22T12:43:30.000Z",
+      "positionAfterBtc": 0.00013,
+      "avgEntryAfter": 81835.90000000001
+    },
+    {
+      "tx": "0xca85b2868fa314e1b2d1d69662eff9f242b9e014bcd1ed726b4db315e011d3ef",
+      "block": 30212508,
+      "time": "2026-10-22T12:47:41.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0xdc208dc964dc9c94b57a928a20700a727ff5f33ca77702bd1950f343caf681f2",
+      "block": 30349092,
+      "time": "2026-10-22T16:35:29.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 81565.4
+    },
+    {
+      "tx": "0xfacb0619579969a9781e5b70283ebc4017a7f3ceea58fbe7bebe3e394a44ee3a",
+      "block": 30350138,
+      "time": "2026-10-22T16:37:14.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 81596.1
+    },
+    {
+      "tx": "0xba97e1faede450b499addf555e0b462add9ca41f1916f779f9d0c972c480d776",
+      "block": 30350890,
+      "time": "2026-10-22T16:38:29.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0x12e664bc7262d4722119d86ce31fe85f532e02e03f733fcf0940f95b9ed815a7",
+      "block": 30382099,
+      "time": "2026-10-22T17:30:33.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 81433.90000000001
+    },
+    {
+      "tx": "0xcdd7f80b0804f1f9822e29115687311b052e9282604c371f2a5631f9869d3fc2",
+      "block": 30382467,
+      "time": "2026-10-22T17:31:10.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0x80bfd2d31c5264ed9aeec4c37a24245b791b6a82741a0238d409b08c11cdea22",
+      "block": 30396968,
+      "time": "2026-10-22T17:55:21.000Z",
+      "positionAfterBtc": 0.13818,
+      "avgEntryAfter": 81422.22088580113
+    },
+    {
+      "tx": "0xc9a3f95a482403be3b9560051d494499c7a3b0bb8e4c46a38ff518c2dc1d6986",
+      "block": 30397276,
+      "time": "2026-10-22T17:55:52.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0x2d9fd66bdf5adb412801eb52e8e6d1b2ef81fff58ef4d6137bac2ceadfb5a6e0",
+      "block": 30424186,
+      "time": "2026-10-22T18:40:44.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 81348.68888888888
+    },
+    {
+      "tx": "0x7520e2f3e40032d7a04c76be9731343ec259c48340263910ca984e8d9fbbe79e",
+      "block": 30425297,
+      "time": "2026-10-22T18:42:35.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0xfb3f20ae55c32a67a7402112893a4f82ee9f4bb61e61ac2883097ef618955ac3",
+      "block": 30447098,
+      "time": "2026-10-22T19:18:57.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 81467.3
+    },
+    {
+      "tx": "0xda18d4a5b124ad3858ddf5ec39a81064b1fa327532045eb5b31b0001d562e8d9",
+      "block": 30448536,
+      "time": "2026-10-22T19:21:21.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 81489.6
+    },
+    {
+      "tx": "0x2db1fbb610bcc905796b47326246ea95e5b055c011ca4b907fb9b3f043825178",
+      "block": 30456471,
+      "time": "2026-10-22T19:34:35.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 81489.6
+    },
+    {
+      "tx": "0x8524c1fb944ecc7ceacfcd08087aa940e0acfc5d77f75a1dad7cbff8dc67abc2",
+      "block": 30456509,
+      "time": "2026-10-22T19:34:38.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0x7866a3d1ad45601d1dd47845c5094a2a14a5e204d7f49d9b04d14808952060ec",
+      "block": 30482019,
+      "time": "2026-10-22T20:17:11.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 81456.8
+    },
+    {
+      "tx": "0xbd6225e20355aa2ea8d59a4f3d20e432ec48c5b84485d0b6abf6af5438280b8f",
+      "block": 30482498,
+      "time": "2026-10-22T20:17:59.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 81454.05
+    },
+    {
+      "tx": "0xd2f07c863f4ca8518c2fd36f9b1c93fe717e2221d264dee46664d1397cd05fdb",
+      "block": 30483384,
+      "time": "2026-10-22T20:19:27.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0xed50ea6153c924f13587abe4ccecf3d8b83c2382353583418553d8ca95ccc7f3",
+      "block": 33432911,
+      "time": "2026-10-26T06:17:18.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 80200.2
+    },
+    {
+      "tx": "0x905f1043f9dcdcb58b6492a6076a9a10af6cfcc557666450e93e66cb2ba3127d",
+      "block": 33433675,
+      "time": "2026-10-26T06:18:35.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 80219.04999999999
+    },
+    {
+      "tx": "0x9b13ce9e6fb4175ce030494444014a0afed12984188bf21d8531c4d92eda2aee",
+      "block": 33438719,
+      "time": "2026-10-26T06:27:00.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 80219.04999999999
+    },
+    {
+      "tx": "0x01a5d298b7453fab8e22fe9689f99264ca7af821942c1eb2703c78b2eccbcc12",
+      "block": 33438872,
+      "time": "2026-10-26T06:27:15.000Z",
+      "positionAfterBtc": 0,
+      "avgEntryAfter": null
+    },
+    {
+      "tx": "0xb169e528e57467ef522a432fbd9b9c273d074989df41c847eedea2a68efc0cc2",
+      "block": 33439821,
+      "time": "2026-10-26T06:28:50.000Z",
+      "positionAfterBtc": 0.00018,
+      "avgEntryAfter": 80026.3
+    },
+    {
+      "tx": "0x7d2a45db9a04fa22992459665e5110232e40b8fdf66d4bb5743813bd9d897f48",
+      "block": 33440463,
+      "time": "2026-10-26T06:29:54.000Z",
+      "positionAfterBtc": 0.00036,
+      "avgEntryAfter": 80021.2
+    }
+  ],
+  "cleanupOf22Oct1636": {
+    "pair": "0xb8b4a55485f97dc130838dee3c7ce20236c018a5ea9f12e48df1954bcc0e30a7",
+    "block": 30350962,
+    "time": "2026-10-22T16:38:36.000Z",
+    "positionBtc": 0,
+    "ownerSttBeforeTest": 15,
+    "ownerStt": 15,
+    "unclaimedStt": 0
+  },
+  "fires": [
+    {
+      "tx": "0x2db1fbb610bcc905796b47326246ea95e5b055c011ca4b907fb9b3f043825178",
+      "what": "22 Oct, the account's own stop loss at 81,385 fires",
+      "block": 30456471,
+      "time": "2026-10-22T19:34:35.000Z",
+      "from": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "status": "success",
+      "positionBeforeBtc": 0.00036,
+      "positionAfterBtc": 0.00018
+    },
+    {
+      "tx": "0x8524c1fb944ecc7ceacfcd08087aa940e0acfc5d77f75a1dad7cbff8dc67abc2",
+      "what": "22 Oct, our keeper closes the uncovered rest",
+      "block": 30456509,
+      "time": "2026-10-22T19:34:38.000Z",
+      "from": "0x13f05c8e15cc0d7d3abff02c144fb74778018a55",
+      "status": "success",
+      "positionBeforeBtc": 0.00018,
+      "positionAfterBtc": 0
+    },
+    {
+      "tx": "0x9b13ce9e6fb4175ce030494444014a0afed12984188bf21d8531c4d92eda2aee",
+      "what": "26 Oct, the account's own stop loss at 79,900 fires",
+      "block": 33438719,
+      "time": "2026-10-26T06:27:00.000Z",
+      "from": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "status": "success",
+      "positionBeforeBtc": 0.00036,
+      "positionAfterBtc": 0.00018
+    },
+    {
+      "tx": "0x01a5d298b7453fab8e22fe9689f99264ca7af821942c1eb2703c78b2eccbcc12",
+      "what": "26 Oct, our keeper closes the uncovered rest",
+      "block": 33438872,
+      "time": "2026-10-26T06:27:15.000Z",
+      "from": "0x13f05c8e15cc0d7d3abff02c144fb74778018a55",
+      "status": "success",
+      "positionBeforeBtc": 0.00018,
+      "positionAfterBtc": 0
+    }
+  ],
+  "scan": {
+    "pendingRows": 659,
+    "liveOnChain": 659,
+    "fixedSize": 636,
+    "wholePosition": 23,
+    "createdSince2026_10_23": {
+      "total": 376,
+      "fixedSize": 353,
+      "wholePosition": 23
+    },
+    "owners": 398,
+    "wholePositionStops": [
+      {
+        "id": "5958298335808185181553",
+        "owner": "0x6e8eb6c75b2c146b8290ffaec79f07ba2cce907c",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:56:12.000Z",
+        "tx": "0xb1f4091c643d8cc043a6ccfc6f6a5cf0bceed2ad9e1275e6898520aaacb91c5d",
+        "txTo": "0x6e8eb6c75b2c146b8290ffaec79f07ba2cce907c",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "73786976294838216046",
+        "owner": "0x8d8b02b7441c8ad6e75fba9bde4be83044ce36a2",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:46:05.000Z",
+        "tx": "0xcf78938e7bef1d2df7dab159abfaea2f5c97ef2c7b9afbdef7e601dfeb2a0248",
+        "txTo": "0x8d8b02b7441c8ad6e75fba9bde4be83044ce36a2",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "4408771833616582845805",
+        "owner": "0x1aa0113b61235320ece01a181f6b46b2231b0b53",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:56.000Z",
+        "tx": "0xc1f377ea807f8fe956c9fcd527b3ffa0674c35488b51b8293dea040a7fa981a9",
+        "txTo": "0x1aa0113b61235320ece01a181f6b46b2231b0b53",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "5607810198407703700844",
+        "owner": "0xcc3cb8667fd793a8b2307a7ea1daf42b9c626f3a",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:52.000Z",
+        "tx": "0x51917fd54bd0cf0ed0afeeec9ba3241267e01d8eec55de222625da052ece591b",
+        "txTo": "0xcc3cb8667fd793a8b2307a7ea1daf42b9c626f3a",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "7655398790589463930219",
+        "owner": "0x50bd36bcf88b753af95ecba3257c6ab59f24083a",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:44.000Z",
+        "tx": "0xb2ef771bd40c9d12869164699aee330cafdc2c0f2c3a1c7f505b7f0478a90dcb",
+        "txTo": "0x50bd36bcf88b753af95ecba3257c6ab59f24083a",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "5663150430628832355690",
+        "owner": "0xb9425886f142a21b5fb206b7b4c273e150ac5f9a",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:39.000Z",
+        "tx": "0xe623efc503841e006ab11656851376c7561f446a51773e0780a5f6347e44bb6b",
+        "txTo": "0xb9425886f142a21b5fb206b7b4c273e150ac5f9a",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3707795558815619884393",
+        "owner": "0xd54899be21be2cd650e3dfe80c26dc900bb04141",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:29.000Z",
+        "tx": "0x5362850195acf5e4b4f8082a0524cdca47100f48135a7ced2829d3eef0d7c80d",
+        "txTo": "0xd54899be21be2cd650e3dfe80c26dc900bb04141",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "1014570924054025348456",
+        "owner": "0x74974dc791d93c0122d08db4c90268242dc0a022",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:45:28.000Z",
+        "tx": "0x31b1b3af80d6d8ac84d5d5bf73346581d4a18b92bf243e9db67fe5f431bd8efc",
+        "txTo": "0x74974dc791d93c0122d08db4c90268242dc0a022",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "1125251388496282658151",
+        "owner": "0x200107ffcfe9a23c1fdd3d11643399de170a0c20",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:53.000Z",
+        "tx": "0x17b02f8b8e159a7cbf6966322db249e7c1b6dcdb1473f2442ba707b0de73d5c6",
+        "txTo": "0x200107ffcfe9a23c1fdd3d11643399de170a0c20",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "5091301364343836255590",
+        "owner": "0x8a9ae84dab75cda50f44720ba2bc6de3b95a227f",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:43.000Z",
+        "tx": "0xc64b6b6119840809db5fa067f393e35f2e79fc27bcc1d3cd4c70ded68257dbbc",
+        "txTo": "0x8a9ae84dab75cda50f44720ba2bc6de3b95a227f",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "5995191823955604284773",
+        "owner": "0x9499b7418bd485c02d529f8faeca16877da77091",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:24.000Z",
+        "tx": "0xd1adbb0391bcd72a857a0d62d073ef9d9580ee4a97c69577b09d096814e661f8",
+        "txTo": "0x9499b7418bd485c02d529f8faeca16877da77091",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3504881374004814816612",
+        "owner": "0x1ff91339d57d9618d2ae80504a1e3b9fc9db8d93",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:21.000Z",
+        "tx": "0x4783a36622f3f4d40affb150c9f639c304279d2c9ac147575cc873491c5780e8",
+        "txTo": "0x1ff91339d57d9618d2ae80504a1e3b9fc9db8d93",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "1346612317380797277539",
+        "owner": "0xf7348c01c70bace8613d695876c06839dcdf0a7c",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:18.000Z",
+        "tx": "0xc04bcb75528d482b4a182302c3756b2b3c133ea9c5b26f058eb166c92b56a583",
+        "txTo": "0xf7348c01c70bace8613d695876c06839dcdf0a7c",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3412647653636267058530",
+        "owner": "0x6bfe70f889c7602aad49369a6e7c21d6f59fce49",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:43:17.000Z",
+        "tx": "0x3482180a6266e65a185b6f2b1d86f86948cb865b3c5b1d882b71e6b24cf020bd",
+        "txTo": "0x6bfe70f889c7602aad49369a6e7c21d6f59fce49",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "1088357900348863554913",
+        "owner": "0x9f805c87b12bda1026c1ee8bdb3e3b781911cc13",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:41:38.000Z",
+        "tx": "0x6faa76234f821172dafa770031fdd47bbca295fc379253d043207e044bdd0a26",
+        "txTo": "0x9f805c87b12bda1026c1ee8bdb3e3b781911cc13",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "7268017165041563346272",
+        "owner": "0xd36f27137b220b61edb567d8ad32d998a5a1e7b7",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:41:33.000Z",
+        "tx": "0x875a0a11dbaf73abac7b3578d0ab2e5ab5566ce51660aa059427689d4077ed37",
+        "txTo": "0xd36f27137b220b61edb567d8ad32d998a5a1e7b7",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3246626956972881093983",
+        "owner": "0x98606284e96a13a3f6ef5d17012ab20aefd0123b",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:41:17.000Z",
+        "tx": "0x57743bfda75adca36185f171038dd9199d374c516fea08679cb8f95c2633f2da",
+        "txTo": "0x98606284e96a13a3f6ef5d17012ab20aefd0123b",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3486434629931105264989",
+        "owner": "0x84df400f2248cfa1ca730a7ea6889998d02b8210",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:39:10.000Z",
+        "tx": "0x5d48ed685a6e5f02daa990aec8d6340d6edc0af1124d6f5fcdd4561f25521133",
+        "txTo": "0x84df400f2248cfa1ca730a7ea6889998d02b8210",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "7065102980230758278489",
+        "owner": "0x5f47834ad2773f1330f1c467192187a0c22077e2",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T06:08:43.000Z",
+        "tx": "0x52db4f9bfd3fc350980bcec36d0944adb25dca22644cd32045d802d730e87d77",
+        "txTo": "0x5f47834ad2773f1330f1c467192187a0c22077e2",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "2232056032918855755094",
+        "owner": "0x778f452eec0421ddaf327da7625d54c27da3ad9e",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T05:59:15.000Z",
+        "tx": "0x69068c12ba60709029f81669a10d8569e458645966f423a11b2cfc7c5aebae55",
+        "txTo": "0x778f452eec0421ddaf327da7625d54c27da3ad9e",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "6290339729134957110613",
+        "owner": "0x675a6c9240478291115004db5cf60a1ad29e2cde",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T05:57:33.000Z",
+        "tx": "0x54a83d5f8bd7eb62bdcea777efa2e5629c4da1aa9e9d0c7132a734ae57dfaed3",
+        "txTo": "0x675a6c9240478291115004db5cf60a1ad29e2cde",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "3597115094373362574652",
+        "owner": "0xa30cf2578da21573f9ac49a9a84b03ef47ca6a60",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T05:40:44.000Z",
+        "tx": "0x258f150c035712538165d1066f0914c71f08523a2334758de1b2158740f636be",
+        "txTo": "0xa30cf2578da21573f9ac49a9a84b03ef47ca6a60",
+        "selector": "0x6a761202"
+      },
+      {
+        "id": "1918461383665793377578",
+        "owner": "0x8e1319fb0544cd124348e42d7df53902478da93a",
+        "market": "BTC-PERP",
+        "createdAt": "2026-10-30T05:38:45.000Z",
+        "tx": "0x106eae00326704b4ac79b0aa34c14454505446193d2c5eb853bf48053ce4b0d2",
+        "txTo": "0x8e1319fb0544cd124348e42d7df53902478da93a",
+        "selector": "0x6a761202"
+      }
+    ],
+    "positionsWithStopLoss": 94,
+    "stopLossCoversOnlyPart": 12,
+    "uncoveredUsdTotal": 279793.49,
+    "underCovered": [
+      {
+        "owner": "0x435b8f475d822a4d20d34066cc694acf2f9b5def",
+        "market": "BTC-PERP",
+        "side": "short",
+        "position": 3.93011,
+        "stopLossCovers": 0.64528,
+        "uncovered": 3.28483,
+        "uncoveredUsd": 257756.8,
+        "coveredPct": 16.41
+      },
+      {
+        "owner": "0x57c16ee0cba799e2635d5497c1a06613da18d08d",
+        "market": "SOL-PERP",
+        "side": "long",
+        "position": 136.89,
+        "stopLossCovers": 28.95,
+        "uncovered": 107.94,
+        "uncoveredUsd": 10582.89,
+        "coveredPct": 21.14
+      },
+      {
+        "owner": "0x94f4e47676cf0a4024da12d3f515dc3cd87cbc30",
+        "market": "LIT-PERP",
+        "side": "long",
+        "position": 1478.2,
+        "stopLossCovers": 100,
+        "uncovered": 1378.2,
+        "uncoveredUsd": 4023.66,
+        "coveredPct": 6.76
+      },
+      {
+        "owner": "0x94f4e47676cf0a4024da12d3f515dc3cd87cbc30",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.06767,
+        "stopLossCovers": 0.02,
+        "uncovered": 0.04767,
+        "uncoveredUsd": 3740.61,
+        "coveredPct": 29.55
+      },
+      {
+        "owner": "0x87821c01a1f707de2c45ce97cdabe4d34db973c7",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.02465,
+        "stopLossCovers": 0.00678,
+        "uncovered": 0.01787,
+        "uncoveredUsd": 1402.24,
+        "coveredPct": 27.5
+      },
+      {
+        "owner": "0x646310d04b1f2872d445b93d8fb294bce3c6a26f",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.02309,
+        "stopLossCovers": 0.01152,
+        "uncovered": 0.01157,
+        "uncoveredUsd": 907.88,
+        "coveredPct": 49.89
+      },
+      {
+        "owner": "0xad68145f6fa22359eeb3bc48169378bfc5eabf66",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.00902,
+        "stopLossCovers": 0.0008,
+        "uncovered": 0.00822,
+        "uncoveredUsd": 645.01,
+        "coveredPct": 8.86
+      },
+      {
+        "owner": "0xfc9fac7c75759448e9074a0a749519daa4955f90",
+        "market": "XRP-PERP",
+        "side": "long",
+        "position": 1153.7,
+        "stopLossCovers": 908.1,
+        "uncovered": 245.6,
+        "uncoveredUsd": 309.14,
+        "coveredPct": 78.71
+      },
+      {
+        "owner": "0xe72f3513ba767e6d116d9898ca4392a18476b90c",
+        "market": "BTC-PERP",
+        "side": "short",
+        "position": 0.01005,
+        "stopLossCovers": 0.00758,
+        "uncovered": 0.00247,
+        "uncoveredUsd": 193.82,
+        "coveredPct": 75.42
+      },
+      {
+        "owner": "0x140a64126b4e5c3a5c8b80a26dd223ff9d762f0e",
+        "market": "TAO-PERP",
+        "side": "long",
+        "position": 2.107,
+        "stopLossCovers": 1.393,
+        "uncovered": 0.714,
+        "uncoveredUsd": 169.45,
+        "coveredPct": 66.11
+      },
+      {
+        "owner": "0x2c5b30e51e020c4954358d97c34710c811980719",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.00122,
+        "stopLossCovers": 0.00061,
+        "uncovered": 0.00061,
+        "uncoveredUsd": 47.87,
+        "coveredPct": 50
+      },
+      {
+        "owner": "0x84326a92162ece92ed257a31073fdd3a6599bf21",
+        "market": "BTC-PERP",
+        "side": "long",
+        "position": 0.00036,
+        "stopLossCovers": 0.00018,
+        "uncovered": 0.00018,
+        "uncoveredUsd": 14.12,
+        "coveredPct": 50
+      }
+    ]
+  },
+  "wholePositionControl": {
+    "sampled": 12,
+    "closedWholePosition": 12,
+    "positionHadGrownSinceCreation": 0,
+    "fires": [
+      {
+        "owner": "0x778f452eec0421ddaf327da7625d54c27da3ad9e",
+        "market": "BTC-PERP",
+        "created": "0x89b8ccdd5ada5374a3f4ec5790c436ec0e4e3674496c4b427f04f3f7308ff5c9",
+        "fired": "0x97d135ac4bff4959ad8d5249b436329e23d0a9b113eb98899f3e5ac135f0f134",
+        "positionAtCreation": -0.02476,
+        "positionBeforeFire": -0.02476,
+        "positionAfterFire": 0,
+        "filled": 0.02476
+      },
+      {
+        "owner": "0x675a6c9240478291115004db5cf60a1ad29e2cde",
+        "market": "BTC-PERP",
+        "created": "0x7ff4d887cf27ea5f92601fc0c957c5a2372c4144c3f79aea31125ed1d0b20537",
+        "fired": "0x455cc9e67e5bf3506b1b5b3397226d26de685366cfe39da803da44bf3ab2f27b",
+        "positionAtCreation": -0.02479,
+        "positionBeforeFire": -0.02479,
+        "positionAfterFire": 0,
+        "filled": 0.02479
+      },
+      {
+        "owner": "0x6e8eb6c75b2c146b8290ffaec79f07ba2cce907c",
+        "market": "BTC-PERP",
+        "created": "0xd313d7ec4f2eb1591ffa6e51b142bde414b24d52c0d3bd4ec6659edd0d9c26f6",
+        "fired": "0x6cfd73456cc69bc6273c5e0ea9806267b0e77c753931d5e90186992b4885ec24",
+        "positionAtCreation": -0.01122,
+        "positionBeforeFire": -0.01122,
+        "positionAfterFire": 0,
+        "filled": 0.01122
+      },
+      {
+        "owner": "0xd36f27137b220b61edb567d8ad32d998a5a1e7b7",
+        "market": "BTC-PERP",
+        "created": "0xe128dfc502e1df1a6cfe827c104a3c38590be0afbe71a3ff787d7087ad54772f",
+        "fired": "0xd6dec7aa647a1e24b8d56bb3983a2420b7ca6628e9c41802f38c79ae6f340d78",
+        "positionAtCreation": -0.02499,
+        "positionBeforeFire": -0.02499,
+        "positionAfterFire": 0,
+        "filled": 0.02499
+      },
+      {
+        "owner": "0xd54899be21be2cd650e3dfe80c26dc900bb04141",
+        "market": "BTC-PERP",
+        "created": "0xfc83e6bc05c439396915c5a01be0e7288a45371529deb9bfa99f34df50617432",
+        "fired": "0x675d552ad0fab9efac8979f6c43c358e795663f1ce4efcf8ef4f46fe8d9c0820",
+        "positionAtCreation": -0.025,
+        "positionBeforeFire": -0.025,
+        "positionAfterFire": 0,
+        "filled": 0.025
+      },
+      {
+        "owner": "0x8d8b02b7441c8ad6e75fba9bde4be83044ce36a2",
+        "market": "BTC-PERP",
+        "created": "0xe2f4a5d6adbc6ef05f10be33398803e372c4c5b2460fc473799dacc6e7cbeb4f",
+        "fired": "0x675d552ad0fab9efac8979f6c43c358e795663f1ce4efcf8ef4f46fe8d9c0820",
+        "positionAtCreation": -0.025,
+        "positionBeforeFire": -0.025,
+        "positionAfterFire": 0,
+        "filled": 0.025
+      },
+      {
+        "owner": "0xcc7c140f296d25bfb068b1ade94d1fa812140bb8",
+        "market": "BTC-PERP",
+        "created": "0x6e1aa80e302a384f471ea04ddbf51e62b6ce977e0292130cc8058f538db34bdb",
+        "fired": "0x675d552ad0fab9efac8979f6c43c358e795663f1ce4efcf8ef4f46fe8d9c0820",
+        "positionAtCreation": -0.025,
+        "positionBeforeFire": -0.025,
+        "positionAfterFire": 0,
+        "filled": 0.025
+      },
+      {
+        "owner": "0x75ba27464afe2c3c1a904ee9d6e5d5ccb3e52e8f",
+        "market": "BTC-PERP",
+        "created": "0x209e6302f73b885d6f6614943087aca3007d8539b370b8894b1bb43c23b3ba0c",
+        "fired": "0xd6dec7aa647a1e24b8d56bb3983a2420b7ca6628e9c41802f38c79ae6f340d78",
+        "positionAtCreation": -0.02499,
+        "positionBeforeFire": -0.02499,
+        "positionAfterFire": 0,
+        "filled": 0.02499
+      },
+      {
+        "owner": "0x8aad2703b2fbc2eb42da7e4f9b3ba21732c18e1b",
+        "market": "BTC-PERP",
+        "created": "0x288b5a22fff9a98c1c952a1140349fab34271327b0dc51554adb523c6173f62f",
+        "fired": "0x675d552ad0fab9efac8979f6c43c358e795663f1ce4efcf8ef4f46fe8d9c0820",
+        "positionAtCreation": -0.025,
+        "positionBeforeFire": -0.025,
+        "positionAfterFire": 0,
+        "filled": 0.025
+      },
+      {
+        "owner": "0xf7348c01c70bace8613d695876c06839dcdf0a7c",
+        "market": "BTC-PERP",
+        "created": "0x87a8e68ebbb6329278ab968de2e794a122c02542db4324cd5223a7a4c35102ad",
+        "fired": "0xd6dec7aa647a1e24b8d56bb3983a2420b7ca6628e9c41802f38c79ae6f340d78",
+        "positionAtCreation": -0.02499,
+        "positionBeforeFire": -0.02499,
+        "positionAfterFire": 0,
+        "filled": 0.02499
+      },
+      {
+        "owner": "0x1ff91339d57d9618d2ae80504a1e3b9fc9db8d93",
+        "market": "BTC-PERP",
+        "created": "0x3b03fa27cf2278e1e9bc16fc7f2b36d911ee0b0c11baeef0bf5e5154448b8266",
+        "fired": "0xd6dec7aa647a1e24b8d56bb3983a2420b7ca6628e9c41802f38c79ae6f340d78",
+        "positionAtCreation": -0.02499,
+        "positionBeforeFire": -0.02499,
+        "positionAfterFire": 0,
+        "filled": 0.02499
+      },
+      {
+        "owner": "0x98606284e96a13a3f6ef5d17012ab20aefd0123b",
+        "market": "BTC-PERP",
+        "created": "0x8d5cb77cb0de87fd308cb8bb5fe75107218b634496782965d73b31bc91af356c",
+        "fired": "0xd6dec7aa647a1e24b8d56bb3983a2420b7ca6628e9c41802f38c79ae6f340d78",
+        "positionAtCreation": -0.02498,
+        "positionBeforeFire": -0.02498,
+        "positionAfterFire": 0,
+        "filled": 0.02498
+      }
+    ]
+  }
+}

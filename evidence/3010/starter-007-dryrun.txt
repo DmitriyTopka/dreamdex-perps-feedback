@@ -1,0 +1,11 @@
+# dreamdex-bot-kit 2579866, perp-starter, no key, DRY_RUN=true, NETWORK=hideki. Started 2026-10-30T06:47:50Z
+$ PRIVATE_KEY= OWNER_ADDRESS= DRY_RUN=true PERP_SIDE=long npx tsx strategies/perp-starter/src/index.ts
+perp-starter on BTC-PERP (BTC/USDso:USDso) | long 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run true
+read-only: no PRIVATE_KEY, so nothing will be sent. Set one to trade.
+[dry-run] would place open long 0.00063 BTC @ 78499.5
+[dry-run] would arm a long bracket on BTC-PERP: take-profit 79847.30, stop-loss 77498.80, whole position, 0.30 SOMI locked
+$ PRIVATE_KEY= OWNER_ADDRESS= DRY_RUN=true PERP_SIDE=short npx tsx strategies/perp-starter/src/index.ts
+perp-starter on BTC-PERP (BTC/USDso:USDso) | short 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run true
+read-only: no PRIVATE_KEY, so nothing will be sent. Set one to trade.
+[dry-run] would place open short 0.00063 BTC @ 78118.7
+[dry-run] would arm a short bracket on BTC-PERP: take-profit 77500.30, stop-loss 79848.80, whole position, 0.30 SOMI locked

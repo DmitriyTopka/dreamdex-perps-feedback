@@ -1,39 +1,70 @@
-# perp-starter sets take-profit and stop-loss from the mark after the fill, not from the entry price
-Severity: normal
+# perp-starter swaps take-profit and stop-loss on a short, and measures both from the mark instead of the entry
+Severity: major
 
-Area: SDK
+Area: bot kit
 
 ## Steps to reproduce
-1. dreamdex-bot-kit at commit 2579866, `strategies/perp-starter/src/index.ts`.
-2. Run perp-starter long with the defaults (`PERP_TAKE_PROFIT_PCT=2`, `PERP_STOP_LOSS_PCT=1`) on BTC-PERP, or read lines 170-177:
+No key, nothing is sent. From the bot kit at commit 2579866:
+
+```bash
+PRIVATE_KEY= OWNER_ADDRESS= DRY_RUN=true PERP_SIDE=short npx tsx strategies/perp-starter/src/index.ts
+```
+
+Compare the two numbers in the last line with the banner on the first line. For the entry-price part, our read-only script runs the kit's level code on every market against the live book ([`scripts/starter-007.ts`](../scripts/starter-007.ts)):
+
+```bash
+cd scripts && npm install && npx tsx starter-007.ts > out.json
+```
+
+## Expected
+`PERP_TAKE_PROFIT_PCT=2` and `PERP_STOP_LOSS_PCT=1` (the defaults, `strategies/perp-starter/src/index.ts:60-61`) mean the same thing on both sides: take profit 2% in my favour, stop out 1% against me. The banner says so: `take-profit 2% stop-loss 1%`. And the percentages are measured from what I paid, the position's entry price, which the kit already has as `entryPrice` on the position `positionIn()` returns.
+
+## Actual
+`strategies/perp-starter/src/index.ts:173-177`:
 
 ```ts
 const mark = (await liveMark(ctx.exchange, market)) ?? markOf(market.info);
 const up = BigInt(Math.round(mark * (1 + TAKE_PROFIT_PCT / 100) * 1e18));
 const down = BigInt(Math.round(mark * (1 - STOP_LOSS_PCT / 100) * 1e18));
+const takeProfit = SIDE === "long" ? up : down;
+const stopLoss = SIDE === "long" ? down : up;
 ```
 
-3. Compare the levels with the position's `avgEntryPrice`.
+`up` is built from the take-profit percentage and `down` from the stop-loss one. On a short the code then uses `down` as the take-profit and `up` as the stop-loss, so the short gets a 1% target and a 2% stop. The kit's own dry run on 2026-10-30 06:47 UTC shows it ([`evidence/3010/starter-007-dryrun.txt`](../evidence/3010/starter-007-dryrun.txt)):
 
-## Expected
-"Stop-loss 1%" and "take-profit 2%" are measured from what the trader paid, the position's average entry price, as on most perp venues and bots. The entry is already available from `getPerpPosition` / `fetchPositions`.
+```
+perp-starter on BTC-PERP (BTC/USDso:USDso) | short 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run true
+[dry-run] would arm a short bracket on BTC-PERP: take-profit 77500.30, stop-loss 79848.80, whole position, 0.30 SOMI locked
+```
 
-## Actual
-The levels are measured from the mark read after the open. The open is an IOC that crosses the book with 20 bps of slippage, so on a long the fill sits above the mark, and the mark on Hideki also sits under the oracle (see report 006). Both push the stop further away and the target closer.
+Both levels come from a mark of 78,283.1: 77,500.3 is 1% under it and 79,848.8 is 2% over it. So every default short risks twice what it aims to make. On the default 50 USDso that is about 1.00 USDso lost at the stop and 0.50 USDso won at the target, the reverse of what the trader set. The long side is the right way round.
 
-Real numbers from a 0.00013 BTC long on Hideki:
-- fill (avgEntryPrice) 81,835.9, tx 0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b
-- on-chain mark right after: 81,615.8 (the app showed the same mark and -5.4% ROI)
-- with the defaults the bot would arm stop-loss 80,799.6 = **-1.27%** from entry instead of -1%, and take-profit 83,248.1 = **+1.73%** instead of +2%
+The second problem is the reference price. The open is an IOC that takes the ask (up to 20 bps past it, `packages/perp-core/src/orders.ts:154`), and the bracket is then priced off the mark. On a long the ask sits above the mark, so the stop ends up further than 1% from the entry and the target closer than 2%.
 
-At the default 2x that is a 2.54% margin loss on a "1%" stop; at 20x it is 25% of margin instead of 20%.
+Our fill from 2026-10-22, read back on 2026-10-30: 0.00013 BTC long at **81,835.9**, tx `0x8980ab89c2710f5e77eba65ebf79ed05226bffebf0bf16fc7d311481ededa30b`, block 30,210,002 (12:43:30 UTC). The pool's mark read at that block was 81,647.8 and stayed between 81,620.5 and 81,647.8 for the next 20 s, which is when perp-starter reads it. With the defaults that puts the stop **1.23% to 1.26%** under the entry and the target **1.73% to 1.77%** over it. At the default 2x a "1%" stop costs about 2.5% of margin; at 20x it is about 25% instead of 20%.
 
-The same lines also run on the "already long, managing it instead of opening another" path (lines 121-124), where the mark can be anywhere relative to the original entry, so the bracket is placed around today's price rather than the trader's position.
+It is not only that fill. On 2026-10-30 at 06:47 UTC the script priced a default 50 USDso open on the live book of every market. On the 19 markets whose book sits within 1% of the mark, the long's stop lands 1.09% to 1.47% from the entry (BTC 1.09%) and the target 1.52% to 1.91%. LINK and BNB had their books 10% and 4.5% above the mark at that moment (06:47 UTC; thin books move, and BNB's was back near the index by 07:07), and there a default long's "take-profit" sits 2.4% (BNB) and 7.4% (LINK) under its own entry.
 
-Suggested fix: read `avgEntryPrice` from the position after the fill (or from the existing position) and derive both levels from it, falling back to the mark only when no position is found.
+Both problems also hit the "already long, managing it instead of opening another" path (lines 121-124). There the bracket is placed around the current mark, wherever that is relative to the original entry. And the code uses `SIDE` from the env, not `existing.side`, so an existing short run with the default `PERP_SIDE=long` gets a long bracket. I found that one by reading the code and have not run it.
+
+## Suggested fix
+Price both levels from the position itself, after the open or from the existing position, and pick the direction per side:
+
+```ts
+const position = me ? await positionIn(ctx.exchange, market) : undefined;
+const side: Side = position?.side ?? SIDE;
+const ref = position?.entryPrice ?? (await liveMark(ctx.exchange, market)) ?? markOf(market.info);
+const sign = side === "long" ? 1 : -1;
+const takeProfit = BigInt(Math.round(ref * (1 + (sign * TAKE_PROFIT_PCT) / 100) * 1e18));
+const stopLoss = BigInt(Math.round(ref * (1 - (sign * STOP_LOSS_PCT) / 100) * 1e18));
+```
+
+and pass `side` (not `SIDE`) to `armBracket` and to the watched-exit checks on lines 224-225. The mark stays as the fallback for a dry run with no position.
 
 ## Evidence
-Source lines above, the fill tx, and the mark read with `getPerpState` right after the fill. Calculation: 81,615.8 x 0.99 = 80,799.6; 80,799.6 / 81,835.9 - 1 = -1.27%; 81,615.8 x 1.02 = 83,248.1; 83,248.1 / 81,835.9 - 1 = +1.73%.
+- [`evidence/3010/starter-007-dryrun.txt`](../evidence/3010/starter-007-dryrun.txt): the kit's own dry run, long and short, no key.
+- [`evidence/3010/starter-007.json`](../evidence/3010/starter-007.json): the 2026-10-22 fill with the mark at its block and the 20 s after, then all 21 markets at 2026-10-30 06:47 UTC, block 36,895,966.
+- Re-run: `cd scripts && npx tsx starter-007.ts > ../evidence/3010/starter-007.json`.
 
 ## Environment
-dreamdex-bot-kit 2579866, @somnia-chain/markets-sdk 0.32.1, Hideki testnet (chain 50383), owner 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.
+dreamdex-bot-kit 2579866 (still the latest commit on 2026-10-30), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383). Fill from our test account 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.

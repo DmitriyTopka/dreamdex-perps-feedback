@@ -1,0 +1,502 @@
+{
+  "block": 36902182,
+  "time": "2026-10-30T06:57:22.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "docs": {
+    "tableUrl": "https://app.testnet.dreamdex.io/docs/trading/perps-testnet/README.md",
+    "tableHeader": "| Market | Max leverage | Initial / maintenance margin | Price tick | Min size | Open interest cap | Paper USDso |",
+    "tableHasLotColumn": false,
+    "lotMentionsOnPerpsTradingPages": {
+      "README.md": [],
+      "orders.md": [],
+      "margin-and-liquidations.md": [],
+      "funding.md": []
+    },
+    "lotRuleStatedElsewhere": [
+      "Prices are raw quote units per whole base asset and quantities are raw base units, so convert with each market's own decimals: they differ per market. A price must sit on the market's `tickSize` and a quantity on its `lotSize`, at least `minQuantity`.",
+      "Each market has a **`lotSize`**, the increment order sizes must be a multiple of, and a **`tickSize`**, the same for price. If your size or price is not a whole multiple of those, the order is rejected."
+    ]
+  },
+  "summary": {
+    "markets": 21,
+    "docsMinMatchesChain": "21/21",
+    "lotSizeByMarket": {
+      "ZRO-PERP": 0.1,
+      "LIT-PERP": 0.1,
+      "VVV-PERP": 0.01,
+      "1000PEPE-PERP": 100,
+      "PUMP-PERP": 100,
+      "ZEC-PERP": 0.001,
+      "TAO-PERP": 0.001,
+      "WLD-PERP": 1,
+      "NEAR-PERP": 0.09999999999999999,
+      "XLM-PERP": 1,
+      "AVAX-PERP": 0.1,
+      "LINK-PERP": 0.1,
+      "SUI-PERP": 1,
+      "ADA-PERP": 1,
+      "BNB-PERP": 0.001,
+      "DOGE-PERP": 10,
+      "XRP-PERP": 0.1,
+      "HYPE-PERP": 0.01,
+      "SOL-PERP": 0.01,
+      "ETH-PERP": 0.0001,
+      "BTC-PERP": 0.00001
+    },
+    "lotAtLeast5PctOfMin": [
+      "PUMP-PERP lot 100 min 1800 (5.56%)",
+      "ZEC-PERP lot 0.001 min 0.009 (11.11%)",
+      "AVAX-PERP lot 0.1 min 1.4 (7.14%)",
+      "LINK-PERP lot 0.1 min 0.9 (11.11%)",
+      "SUI-PERP lot 1 min 13 (7.69%)",
+      "BNB-PERP lot 0.001 min 0.014 (7.14%)",
+      "DOGE-PERP lot 10 min 120 (8.33%)",
+      "HYPE-PERP lot 0.01 min 0.12 (8.33%)",
+      "SOL-PERP lot 0.01 min 0.1 (10%)",
+      "BTC-PERP lot 0.00001 min 0.00013 (7.69%)"
+    ]
+  },
+  "simulations": [
+    {
+      "market": "DOGE-PERP",
+      "lotSize": 10,
+      "minQuantity": 120,
+      "results": [
+        {
+          "size": 120,
+          "price": 0.061,
+          "result": "passes"
+        },
+        {
+          "size": 125,
+          "price": 0.061,
+          "result": "reverts",
+          "error": "InvalidQuantity",
+          "args": [
+            "12500000000",
+            "1000000000"
+          ]
+        },
+        {
+          "size": 130,
+          "price": 0.061,
+          "result": "passes"
+        }
+      ]
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "lotSize": 100,
+      "minQuantity": 2700,
+      "results": [
+        {
+          "size": 2700,
+          "price": 0.0039819,
+          "result": "passes"
+        },
+        {
+          "size": 2750,
+          "price": 0.0039819,
+          "result": "reverts",
+          "error": "InvalidQuantity",
+          "args": [
+            "2750000000000000000000",
+            "100000000000000000000"
+          ]
+        },
+        {
+          "size": 2800,
+          "price": 0.0039819,
+          "result": "passes"
+        }
+      ]
+    },
+    {
+      "market": "PUMP-PERP",
+      "lotSize": 100,
+      "minQuantity": 1800,
+      "results": [
+        {
+          "size": 1800,
+          "price": 0.003293,
+          "result": "passes"
+        },
+        {
+          "size": 1850,
+          "price": 0.003293,
+          "result": "reverts",
+          "error": "InvalidQuantity",
+          "args": [
+            "1850000000",
+            "100000000"
+          ]
+        },
+        {
+          "size": 1900,
+          "price": 0.003293,
+          "result": "passes"
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "market": "ZRO-PERP",
+      "pool": "0x2a1822b02039ddf0e293f3f7243673fc03eaf16c",
+      "baseDecimals": 18,
+      "lotSize": 0.1,
+      "minQuantity": 5.1,
+      "docsMinSize": 5.1,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 1.96,
+      "firstRejectedSizeAboveMin": 5.15,
+      "raw": {
+        "lotSize": "100000000000000000",
+        "minQuantity": "5100000000000000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "LIT-PERP",
+      "pool": "0xdcb0ad226727b2ce92857f0af5751389d42b2a3f",
+      "baseDecimals": 18,
+      "lotSize": 0.1,
+      "minQuantity": 2.8,
+      "docsMinSize": 2.8,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 3.57,
+      "firstRejectedSizeAboveMin": 2.85,
+      "raw": {
+        "lotSize": "100000000000000000",
+        "minQuantity": "2800000000000000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "VVV-PERP",
+      "pool": "0x352636ab146039851ef06d6367a106d5fb4e6409",
+      "baseDecimals": 18,
+      "lotSize": 0.01,
+      "minQuantity": 0.44,
+      "docsMinSize": 0.44,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 2.27,
+      "firstRejectedSizeAboveMin": 0.445,
+      "raw": {
+        "lotSize": "10000000000000000",
+        "minQuantity": "440000000000000000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "pool": "0xfa9b9e50cc1745113d57893991af200a74c86b6f",
+      "baseDecimals": 18,
+      "lotSize": 100,
+      "minQuantity": 2700,
+      "docsMinSize": 2700,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 3.7,
+      "firstRejectedSizeAboveMin": 2750,
+      "raw": {
+        "lotSize": "100000000000000000000",
+        "minQuantity": "2700000000000000000000",
+        "tickSize": "100000000000"
+      }
+    },
+    {
+      "market": "PUMP-PERP",
+      "pool": "0x76c981a52530cdf9497559140aafcd8cd16836e7",
+      "baseDecimals": 6,
+      "lotSize": 100,
+      "minQuantity": 1800,
+      "docsMinSize": 1800,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 5.56,
+      "firstRejectedSizeAboveMin": 1850,
+      "raw": {
+        "lotSize": "100000000",
+        "minQuantity": "1800000000",
+        "tickSize": "1000000000000"
+      }
+    },
+    {
+      "market": "ZEC-PERP",
+      "pool": "0x2a73129f26917124bd2a47a9b355c395c537f050",
+      "baseDecimals": 8,
+      "lotSize": 0.001,
+      "minQuantity": 0.009,
+      "docsMinSize": 0.009,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 11.11,
+      "firstRejectedSizeAboveMin": 0.0095,
+      "raw": {
+        "lotSize": "100000",
+        "minQuantity": "900000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "TAO-PERP",
+      "pool": "0xd9b6a347a3ae9fd6ba21179d3343f2c8a922f697",
+      "baseDecimals": 9,
+      "lotSize": 0.001,
+      "minQuantity": 0.044,
+      "docsMinSize": 0.044,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 2.27,
+      "firstRejectedSizeAboveMin": 0.0445,
+      "raw": {
+        "lotSize": "1000000",
+        "minQuantity": "44000000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "WLD-PERP",
+      "pool": "0x0f464d57c1fd839e4d87a408bbccdab8f77e6394",
+      "baseDecimals": 18,
+      "lotSize": 1,
+      "minQuantity": 26,
+      "docsMinSize": 26,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 3.85,
+      "firstRejectedSizeAboveMin": 26.5,
+      "raw": {
+        "lotSize": "1000000000000000000",
+        "minQuantity": "26000000000000000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "NEAR-PERP",
+      "pool": "0x1cd15ae8bff0fe0a7f49233be8b90734775ba454",
+      "baseDecimals": 24,
+      "lotSize": 0.09999999999999999,
+      "minQuantity": 5.1,
+      "docsMinSize": 5.1,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 1.96,
+      "firstRejectedSizeAboveMin": 5.15,
+      "raw": {
+        "lotSize": "100000000000000000000000",
+        "minQuantity": "5100000000000000000000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "XLM-PERP",
+      "pool": "0x74b05b9b8c8f180b53b7891018f3b254b3e658c9",
+      "baseDecimals": 7,
+      "lotSize": 1,
+      "minQuantity": 54,
+      "docsMinSize": 54,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 1.85,
+      "firstRejectedSizeAboveMin": 54.5,
+      "raw": {
+        "lotSize": "10000000",
+        "minQuantity": "540000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "AVAX-PERP",
+      "pool": "0xde9762b6b441133d1314c68864ae4e63a6ee45c7",
+      "baseDecimals": 18,
+      "lotSize": 0.1,
+      "minQuantity": 1.4,
+      "docsMinSize": 1.4,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 7.14,
+      "firstRejectedSizeAboveMin": 1.45,
+      "raw": {
+        "lotSize": "100000000000000000",
+        "minQuantity": "1400000000000000000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "LINK-PERP",
+      "pool": "0xf71b619450bafe953f47b9b556416a3a67b443b5",
+      "baseDecimals": 18,
+      "lotSize": 0.1,
+      "minQuantity": 0.9,
+      "docsMinSize": 0.9,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 11.11,
+      "firstRejectedSizeAboveMin": 0.95,
+      "raw": {
+        "lotSize": "100000000000000000",
+        "minQuantity": "900000000000000000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "SUI-PERP",
+      "pool": "0x1be21287cfb865a7c462ff3c4f275e70bcccefe4",
+      "baseDecimals": 9,
+      "lotSize": 1,
+      "minQuantity": 13,
+      "docsMinSize": 13,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 7.69,
+      "firstRejectedSizeAboveMin": 13.5,
+      "raw": {
+        "lotSize": "1000000000",
+        "minQuantity": "13000000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "ADA-PERP",
+      "pool": "0x34fa62909f77699a7a6278d992f72ff31c7a619d",
+      "baseDecimals": 6,
+      "lotSize": 1,
+      "minQuantity": 46,
+      "docsMinSize": 46,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 2.17,
+      "firstRejectedSizeAboveMin": 46.5,
+      "raw": {
+        "lotSize": "1000000",
+        "minQuantity": "46000000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "BNB-PERP",
+      "pool": "0x3d2a99fe1e2bdeaa25024515a2d2202daf9531ad",
+      "baseDecimals": 18,
+      "lotSize": 0.001,
+      "minQuantity": 0.014,
+      "docsMinSize": 0.014,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 7.14,
+      "firstRejectedSizeAboveMin": 0.0145,
+      "raw": {
+        "lotSize": "1000000000000000",
+        "minQuantity": "14000000000000000",
+        "tickSize": "1000000000000000"
+      }
+    },
+    {
+      "market": "DOGE-PERP",
+      "pool": "0xc410012e39765cd5f772e84bacb19554aec040df",
+      "baseDecimals": 8,
+      "lotSize": 10,
+      "minQuantity": 120,
+      "docsMinSize": 120,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 8.33,
+      "firstRejectedSizeAboveMin": 125,
+      "raw": {
+        "lotSize": "1000000000",
+        "minQuantity": "12000000000",
+        "tickSize": "10000000000000"
+      }
+    },
+    {
+      "market": "XRP-PERP",
+      "pool": "0x7058579f3248559963f79adb937c6de9f953e060",
+      "baseDecimals": 6,
+      "lotSize": 0.1,
+      "minQuantity": 6.9,
+      "docsMinSize": 6.9,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 1.45,
+      "firstRejectedSizeAboveMin": 6.95,
+      "raw": {
+        "lotSize": "100000",
+        "minQuantity": "6900000",
+        "tickSize": "100000000000000"
+      }
+    },
+    {
+      "market": "HYPE-PERP",
+      "pool": "0x63b47ed4a7de0fde659b0d82441dd74828b7297a",
+      "baseDecimals": 6,
+      "lotSize": 0.01,
+      "minQuantity": 0.12,
+      "docsMinSize": 0.12,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 8.33,
+      "firstRejectedSizeAboveMin": 0.125,
+      "raw": {
+        "lotSize": "10000",
+        "minQuantity": "120000",
+        "tickSize": "10000000000000000"
+      }
+    },
+    {
+      "market": "SOL-PERP",
+      "pool": "0xb483ec1fb34996638677c20ab087b16f1896fa53",
+      "baseDecimals": 9,
+      "lotSize": 0.01,
+      "minQuantity": 0.1,
+      "docsMinSize": 0.1,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 10,
+      "firstRejectedSizeAboveMin": 0.105,
+      "raw": {
+        "lotSize": "10000000",
+        "minQuantity": "100000000",
+        "tickSize": "10000000000000000"
+      }
+    },
+    {
+      "market": "ETH-PERP",
+      "pool": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+      "baseDecimals": 18,
+      "lotSize": 0.0001,
+      "minQuantity": 0.004,
+      "docsMinSize": 0.004,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 2.5,
+      "firstRejectedSizeAboveMin": 0.00405,
+      "raw": {
+        "lotSize": "100000000000000",
+        "minQuantity": "4000000000000000",
+        "tickSize": "10000000000000000"
+      }
+    },
+    {
+      "market": "BTC-PERP",
+      "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+      "baseDecimals": 8,
+      "lotSize": 0.00001,
+      "minQuantity": 0.00013,
+      "docsMinSize": 0.00013,
+      "docsMinMatchesChain": true,
+      "poolParamsMatchRow": true,
+      "lotOverMinPct": 7.69,
+      "firstRejectedSizeAboveMin": 0.000135,
+      "raw": {
+        "lotSize": "1000",
+        "minQuantity": "13000",
+        "tickSize": "100000000000000000"
+      }
+    }
+  ]
+}

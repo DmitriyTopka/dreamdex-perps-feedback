@@ -1,0 +1,94 @@
+{
+  "block": 36898933,
+  "time": "2026-10-30T06:51:57.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "market": "BTC-PERP",
+  "pool": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+  "stopRegistry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+  "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+  "sentOn20261022": {
+    "grant": {
+      "hash": "0x927e366abb65fbbf7827023e23e84a2cf76a3b47ffdaf530034776bffa7f9fce",
+      "block": 30342069,
+      "time": "2026-10-22T16:23:46.000Z",
+      "from": "0x13f05c8e15cc0d7d3abff02c144fb74778018a55",
+      "to": "0x6b2fbfed328ff5f20c0be7d3c3437613affe8d3a",
+      "status": "success",
+      "function": "setOperatorApprovalGlobal",
+      "valueSTT": 0,
+      "gasUsed": 283347,
+      "feeSTT": 0.001700082
+    },
+    "failedCreate": {
+      "hash": "0xf591fcd80f5736b32a75d84ab5a439ac22d5735670b12eb782b36775f7f68043",
+      "block": 30342074,
+      "time": "2026-10-22T16:23:47.000Z",
+      "from": "0x13f05c8e15cc0d7d3abff02c144fb74778018a55",
+      "to": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+      "status": "reverted",
+      "function": "createLinkedPendingOrders",
+      "valueSTT": 0.3,
+      "gasUsed": 213653,
+      "feeSTT": 0.001281918,
+      "legs": [
+        {
+          "owner": "0x13f05c8e15cC0d7d3abff02C144fb74778018a55",
+          "isBid": false,
+          "quantity": "0",
+          "triggerPrice": 150000,
+          "triggerOperator": 0,
+          "orderType": 1
+        },
+        {
+          "owner": "0x13f05c8e15cC0d7d3abff02C144fb74778018a55",
+          "isBid": false,
+          "quantity": "0",
+          "triggerPrice": 40000,
+          "triggerOperator": 1,
+          "orderType": 1
+        }
+      ]
+    },
+    "botSTT": {
+      "beforeGrant": 4.899472166,
+      "afterGrant": 4.897772084,
+      "afterFailedCreate": 4.896490166
+    },
+    "isOperatorAuthorized": {
+      "beforeGrant": false,
+      "afterGrant": true,
+      "today": true
+    }
+  },
+  "replayOfFailedCreate": {
+    "atBlockBefore": {
+      "block": 30342073,
+      "botPosition": "0",
+      "result": "NoReducingPositionAtCreation()",
+      "selector": "0xd156c90a"
+    },
+    "atHead": {
+      "botPosition": "0",
+      "result": "NoReducingPositionAtCreation()",
+      "selector": "0xd156c90a"
+    }
+  },
+  "controlOwnerWithPosition": {
+    "ownerPosition": "36000",
+    "sellLegsThatReduceIt": {
+      "result": "passes"
+    },
+    "buyLegsThatWouldGrowIt": {
+      "result": "NoReducingPositionAtCreation()",
+      "selector": "0xd156c90a"
+    }
+  },
+  "appLimitPlusTpSlTx": {
+    "hash": "0xa116fb7e1de0b510d0c7bb949a579c37ce207242dd58eafef42c7c03432d3e1e",
+    "block": 30395381,
+    "status": "success",
+    "ownerPositionBefore": "0",
+    "ownerPositionAfter": "0"
+  }
+}
