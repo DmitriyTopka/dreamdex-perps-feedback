@@ -1,5 +1,6 @@
 # perp-guard silently does nothing between its two thresholds when 25% of the position is below minQuantity
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

@@ -1,5 +1,6 @@
 # The TP/SL dialog rounds the position size to 4 decimals: 0.00018 BTC shows as 0.0002, 0.00036 as 0.0004
 Severity: normal
+
 Area: app
 
 ## Steps to reproduce

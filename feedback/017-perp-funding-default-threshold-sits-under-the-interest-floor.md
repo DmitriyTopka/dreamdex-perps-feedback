@@ -1,5 +1,6 @@
 # perp-funding's default entry threshold (10% APR) sits under the protocol's fixed interest floor (10.95% APR), so it opens on 20 of 21 markets and its exit can never fire on 17 of them
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

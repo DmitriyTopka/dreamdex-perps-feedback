@@ -1,5 +1,6 @@
 # Mark price sits below the oracle on 19 of 21 markets, even where the book trades above it, and the mark formula is not documented
 Severity: major
+
 Area: contracts
 
 ## Steps to reproduce

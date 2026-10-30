@@ -1,5 +1,6 @@
 # Cancelling a limit order leaves its attached TP/SL armed; the stops keep 0.30 STT locked and later act on an unrelated new position
 Severity: normal
+
 Area: app
 
 ## Steps to reproduce

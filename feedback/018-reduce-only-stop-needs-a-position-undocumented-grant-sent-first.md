@@ -1,5 +1,6 @@
 # A reduce-only perp stop reverts NoReducingPositionAtCreation when the owner has no position; no doc says so, and placePerpStopOrder has already sent the operator grant by then
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

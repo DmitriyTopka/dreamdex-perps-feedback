@@ -1,5 +1,6 @@
 # When one leg of a linked TP/SL fills, the other leg's 0.15 STT is only credited to unclaimedSomi; the SDK's pair docs and the bot kit say it is refunded, and the kit never claims it
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

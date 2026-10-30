@@ -1,5 +1,6 @@
 # Perps market table lists min size but not lot size; e.g. 125 DOGE is above the documented minimum and still reverts InvalidQuantity
 Severity: normal
+
 Area: docs
 
 ## Steps to reproduce

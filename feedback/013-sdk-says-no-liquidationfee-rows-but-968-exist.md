@@ -1,5 +1,6 @@
 # SDK type docs say LiquidationFee "is not in the deployed implementation" and no rows exist; the indexer returns 968 rows emitted by the live LiquidationEngine
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

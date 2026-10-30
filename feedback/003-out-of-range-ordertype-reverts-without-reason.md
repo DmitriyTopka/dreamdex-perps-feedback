@@ -1,5 +1,6 @@
 # Out-of-range orderType or selfMatchingOption reverts with no error data, and the SDK does not check the range
 Severity: normal
+
 Area: SDK
 
 ## Steps to reproduce

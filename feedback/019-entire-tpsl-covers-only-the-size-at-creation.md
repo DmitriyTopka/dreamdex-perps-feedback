@@ -1,5 +1,6 @@
 # TP/SL set as "Entire" stores a fixed size; after adding to the position the app still says "Entire", but the stop-loss would close only the original part and the shown loss is understated
 Severity: major
+
 Area: app
 
 ## Steps to reproduce
