@@ -69,6 +69,9 @@ In general: with the mark 0.04% to 0.10% under the oracle, every long shows less
 
 **Docs.** The perps trading pages and the developer Perps page never say how the mark is computed, or even that margin and liquidation use it. The only mark definition in the docs is the spot stop-order trigger feed. If the offset is intended (for example a haircut), saying so would close this report.
 
+## Why major
+The mark is the price margin and liquidation use. A long marked 0.04% to 0.10% below fair loses that much of its notional in equity on paper: at 20x that is 0.8% to 2% of its margin, all the time, on 10 of 21 markets. So longs reach maintenance and get liquidated earlier than a fair mark would allow, and shorts get the same amount of slack. It is not "just how an EMA behaves": the SDK itself calls the value an "EMA-smoothed oracle mark price" (`dist/perp/state.d.ts:13`), and an EMA of the oracle cannot sit below that oracle for 200 settlements in a row while the oracle is falling.
+
 ## Suggested fix
 1. Find which leg of the aggregator produces the offset and make the perp mark an EMA of the same series the index uses, so `mark - index` averages to zero over a day. The check is one line of the script: `historyMarkBelowIndex` should land near half of `historySettlements`.
 2. Document the perp mark on Margin & Liquidations: inputs, smoothing (alpha, cadence), that unrealized PnL, margin and liquidation use it, and that `tryGetMarkPrice()` / `getPerpState().markPrice` is the value to read.

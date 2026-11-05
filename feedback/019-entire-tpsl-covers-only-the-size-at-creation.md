@@ -3,7 +3,9 @@ Severity: major
 
 Area: app
 
-Short version: "Entire" in the TP/SL dialog writes the position size of that moment into both legs. Add to the position and the stop loss still closes only the old size. Our test account carries this right now: a 0.00036 BTC long whose "Entire" stop loss covers 0.00018.
+Short version: "Entire" in the TP/SL dialog writes the position size of that moment into both legs. Add to the position and the stop loss still closes only the old size. Our test account carries this right now: a 0.00036 BTC long whose "Entire" stop loss covers 0.00018. We let it fire twice on chain (22 and 26 Oct): each time it closed half and left the other half open with no stop, while the app still said "Entire". On the network, 636 of 659 pending perp stops store a fixed size like this (scan below).
+
+A later public report on a different TP/SL problem (26 Oct) lists this one as distinct from it; we know of no earlier report on "Entire".
 
 ## Steps to reproduce
 In the app (app.testnet.dreamdex.io, Perps):
