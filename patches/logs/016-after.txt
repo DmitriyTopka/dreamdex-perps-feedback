@@ -1,0 +1,53 @@
+# AFTER: upstream 2579866 with the whole patch
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply 016-perp-maker-retry-missing-leg.patch
+applied
+ M strategies/perp-maker/src/index.ts
+?? packages/perp-core/tests/perp-maker-requote.test.ts
+
+$ npx vitest run --root packages/perp-core tests/perp-maker-requote.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ✓ tests/perp-maker-requote.test.ts (2 tests) 264ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  11:21:53
+   Duration  590ms (transform 74ms, setup 0ms, collect 26ms, tests 264ms, environment 0ms, prepare 43ms)
+
+exit code: 0
+
+$ npm test -w @dreamdex-bot-kit/perp-core   (whole perp-core suite)
+ ✓ tests/perp-maker-requote.test.ts (2 tests) 263ms
+ ✓ tests/trading-key.test.ts (12 tests) 30ms
+
+ Test Files  3 passed (3)
+      Tests  33 passed (33)
+   Start at  11:21:54
+   Duration  604ms (transform 144ms, setup 0ms, collect 612ms, tests 296ms, environment 0ms, prepare 192ms)
+
+exit code: 0
+
+$ npm run check
+> node scripts/checks.mjs
+
+railway-allowed  PASS  19 strategies
+npm-scripts      PASS  17 defined
+env-documented   PASS  46 ec knobs
+market-status    PASS  ok
+no-taker-limit   PASS  ok
+headroom-gate    PASS  5 placers
+ec-addresses     PASS  6 match
+sdk-floor        PASS  ^0.30.0
+shared-knobs     PASS  ok
+strategy-docs    PASS  19 strategies
+
+10 passed, 0 failed
+exit code: 0
+
+$ npm run typecheck -w perp-maker
+
+> perp-maker@0.1.0 typecheck
+> tsc --noEmit
+
+exit code: 0

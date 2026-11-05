@@ -54,25 +54,28 @@ On BNB the mark never drifted more than 1.5 bps from the first sample in the 85 
 What it does to someone running it: the bot shows as "quoting" but rests only a bid, far under the market, earns no spread and gets no fills. If that bid does fill on a dip, the bot is long with no ask to work the position back, and the inventory skew cannot help because the ask is the leg that keeps getting refused.
 
 ## Suggested fix
-1. Only treat a quote as resting when every leg that was meant to be placed has an order id, so the next cycle retries the missing one. Set `intended[side] = false` where a side is held back at the cap (line 156), `true` otherwise, then replace line 186 with:
+1. **Retry a leg the pool refused as crossing.** When `placePerp` reports that a post-only leg was refused (the case that logs "Re-quotes next cycle"), store the quote with `atMark: 0`, so the next cycle's drift check lets it through:
 
 ```ts
-const missing = (["long", "short"] as const).some((s) => intended[s] && (s === "long" ? next.bid : next.ask) === undefined);
-resting = missing ? { ...next, atMark: 0 } : next;
+resting = refused ? { ...next, atMark: 0 } : next;
 ```
 
-With `atMark: 0` the drift on the next cycle is `Infinity` and the bot re-quotes. A per-leg version that keeps the resting leg's queue position is nicer, but this is the smallest change that makes the log line true.
+   Only that case: a leg held back for margin or at the cap should not make the bot cancel and re-place the other leg every 15 s, and a dry run never gets an order id, so "no order id" is the wrong test.
 
-2. Keep a quote on the maker side of the touch, as the docs suggest for this error ("Re-price further from the touch", Contract errors page). `bidPx` and `askPx` become `let`:
+2. **Keep each quote on the maker side of the touch**, as the docs suggest for this error ("Re-price further from the touch", Contract errors page). `bidPx` and `askPx` become `let`:
 
 ```ts
 const book = await ctx.exchange.fetchOrderBook(fresh.symbol, 1);
 const tick = BigInt(fresh.info.tickSize);
-const bestBid = book.bids[0] ? BigInt(Math.round(book.bids[0][0] * 1e18)) : undefined;
-const bestAsk = book.asks[0] ? BigInt(Math.round(book.asks[0][0] * 1e18)) : undefined;
+const bestBid = book.bids[0] ? toRaw(Number(book.bids[0][0]), 18) : undefined;
+const bestAsk = book.asks[0] ? toRaw(Number(book.asks[0][0]), 18) : undefined;
 if (bestBid !== undefined && askPx <= bestBid) askPx = bestBid + tick;
 if (bestAsk !== undefined && bidPx >= bestAsk) bidPx = bestAsk - tick;
 ```
+
+   `toRaw` (from perp-core) keeps the touch exactly on the price grid. Plain `BigInt(Math.round(px * 1e18))` can land a few wei below it, and after rounding to the grid the ask would sit on the best bid and be refused again.
+
+**Ready patch with tests:** [`patches/016-perp-maker-retry-missing-leg.patch`](../patches/016-perp-maker-retry-missing-leg.patch). Its two tests fail on 2579866 (the ask is tried once; the ask is quoted at 100.15 under a best bid of 100.20) and pass with the patch. How to apply and run it: [`patches/README.md`](../patches/README.md).
 
 ## Evidence
 - [`evidence/3010/maker-016.json`](../evidence/3010/maker-016.json): the 2026-10-22 order read back with the mark and book at its block, then 5 samples x 21 markets with quotes, crossings and the replayed gate.
@@ -80,4 +83,4 @@ if (bestAsk !== undefined && bidPx >= bestAsk) bidPx = bestAsk - tick;
 - Re-run: `cd scripts && npx tsx maker-016.ts > ../evidence/3010/maker-016.json`.
 
 ## Environment
-dreamdex-bot-kit 2579866, @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383).
+dreamdex-bot-kit 2579866, @somnia-chain/markets-sdk 0.31.0 inside the kit (its lockfile pins it for perp-core) and 0.32.1 in our `scripts/`, Node 24.14.1, Hideki testnet (chain 50383).

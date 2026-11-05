@@ -1,0 +1,50 @@
+$ git -C dreamdex-bot-kit checkout 4e75896 && git apply --check 016-perp-maker-retry-missing-leg.patch
+apply --check on main 4e75896: OK
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply --check 016-perp-maker-retry-missing-leg.patch
+apply --check on 2579866: OK
+
+# BEFORE: upstream 2579866 with only the new test file from the patch
+$ git apply --include='packages/perp-core/tests/perp-maker-requote.test.ts' 016-perp-maker-retry-missing-leg.patch
+?? packages/perp-core/tests/perp-maker-requote.test.ts
+$ npx vitest run --root packages/perp-core tests/perp-maker-requote.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ❯ tests/perp-maker-requote.test.ts (2 tests | 2 failed) 314ms
+   × perp-maker re-quotes a refused leg > tries the ask again next cycle after the touch moved between the read and the send 309ms
+     → expected 1 to be greater than 1
+   × perp-maker re-quotes a refused leg > keeps the ask on the maker side when the whole book sits above the mark 5ms
+     → expected 100.15 to be close to 100.21, received difference is 0.05999999999998806, but expected 5e-7
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/perp-maker-requote.test.ts > perp-maker re-quotes a refused leg > tries the ask again next cycle after the touch moved between the read and the send
+AssertionError: expected 1 to be greater than 1
+ ❯ tests/perp-maker-requote.test.ts:102:27
+    100|     await runMaker();
+    101| 
+    102|     expect(asks().length).toBeGreaterThan(1);
+       |                           ^
+    103|     expect(asks().at(-1)!.orderId).toBeDefined();
+    104|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/perp-maker-requote.test.ts > perp-maker re-quotes a refused leg > keeps the ask on the maker side when the whole book sits above the mark
+AssertionError: expected 100.15 to be close to 100.21, received difference is 0.05999999999998806, but expected 5e-7
+ ❯ tests/perp-maker-requote.test.ts:113:37
+    111| 
+    112|     // One tick over the best bid, instead of 100.15 under it.
+    113|     expect(human(asks()[0]!.price)).toBeCloseTo(100.21, 6);
+       |                                     ^
+    114|     expect(asks()[0]!.orderId).toBeDefined();
+    115|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  11:21:51
+   Duration  665ms (transform 85ms, setup 0ms, collect 27ms, tests 314ms, environment 0ms, prepare 53ms)
+
+exit code: 1

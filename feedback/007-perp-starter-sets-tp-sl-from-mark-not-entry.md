@@ -67,6 +67,8 @@ const stopLoss = BigInt(Math.round(ref * (1 - (sign * STOP_LOSS_PCT) / 100) * 1e
 
 and pass `side` (not `SIDE`) to `armBracket` and to the watched-exit checks on lines 224-225. The mark stays as the fallback for a dry run with no position.
 
+**Ready patch with tests:** [`patches/007-perp-starter-bracket-from-entry.patch`](../patches/007-perp-starter-bracket-from-entry.patch) fixes all three parts in one change. Its three tests fail on 2579866 (take-profit 99,495 instead of 98,000; an existing short armed as long; a short in profit closed as a stop-loss) and pass with the patch. How to apply and run it: [`patches/README.md`](../patches/README.md).
+
 ## Evidence
 - [`evidence/3010/starter-007.json`](../evidence/3010/starter-007.json): the 2026-10-22 fill with the mark at its block and the 20 s after, then all 21 markets at 2026-10-30 06:47 UTC, block 36,895,966.
 - [`evidence/3010/starter-007-dryrun.txt`](../evidence/3010/starter-007-dryrun.txt): the kit's own dry run, long and short, no key.
@@ -74,4 +76,4 @@ and pass `side` (not `SIDE`) to `armBracket` and to the watched-exit checks on l
 - Re-run: `cd scripts && npx tsx starter-007.ts > ../evidence/3010/starter-007.json`.
 
 ## Environment
-dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383). Fill from our test account 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.
+dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.31.0 inside the kit (its lockfile pins it for perp-core) and 0.32.1 in our `scripts/`, Node 24.14.1, Hideki testnet (chain 50383). Fill from our test account 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.

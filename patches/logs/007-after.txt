@@ -1,0 +1,53 @@
+# AFTER: upstream 2579866 with the whole patch
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply 007-perp-starter-bracket-from-entry.patch
+applied
+ M strategies/perp-starter/src/index.ts
+?? packages/perp-core/tests/perp-starter-bracket.test.ts
+
+$ npx vitest run --root packages/perp-core tests/perp-starter-bracket.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ✓ tests/perp-starter-bracket.test.ts (3 tests) 263ms
+
+ Test Files  1 passed (1)
+      Tests  3 passed (3)
+   Start at  11:21:46
+   Duration  626ms (transform 79ms, setup 0ms, collect 29ms, tests 263ms, environment 0ms, prepare 44ms)
+
+exit code: 0
+
+$ npm test -w @dreamdex-bot-kit/perp-core   (whole perp-core suite)
+ ✓ tests/perp-starter-bracket.test.ts (3 tests) 257ms
+ ✓ tests/trading-key.test.ts (12 tests) 31ms
+
+ Test Files  3 passed (3)
+      Tests  34 passed (34)
+   Start at  11:21:47
+   Duration  585ms (transform 141ms, setup 0ms, collect 590ms, tests 291ms, environment 0ms, prepare 136ms)
+
+exit code: 0
+
+$ npm run check
+> node scripts/checks.mjs
+
+railway-allowed  PASS  19 strategies
+npm-scripts      PASS  17 defined
+env-documented   PASS  46 ec knobs
+market-status    PASS  ok
+no-taker-limit   PASS  ok
+headroom-gate    PASS  5 placers
+ec-addresses     PASS  6 match
+sdk-floor        PASS  ^0.30.0
+shared-knobs     PASS  ok
+strategy-docs    PASS  19 strategies
+
+10 passed, 0 failed
+exit code: 0
+
+$ npm run typecheck -w perp-starter
+
+> perp-starter@0.1.0 typecheck
+> tsc --noEmit
+
+exit code: 0

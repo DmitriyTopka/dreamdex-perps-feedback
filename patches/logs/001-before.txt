@@ -1,0 +1,40 @@
+$ git -C dreamdex-bot-kit checkout 4e75896 && git apply --check 001-perp-doctor-tick-precision.patch
+apply --check on main 4e75896: OK
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply --check 001-perp-doctor-tick-precision.patch
+apply --check on 2579866: OK
+
+# BEFORE: upstream 2579866 with only the new test file from the patch
+$ git apply --include='packages/perp-core/tests/perp-doctor-prices.test.ts' 001-perp-doctor-tick-precision.patch
+?? packages/perp-core/tests/perp-doctor-prices.test.ts
+$ npx vitest run --root packages/perp-core tests/perp-doctor-prices.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ❯ tests/perp-doctor-prices.test.ts (1 test | 1 failed) 199ms
+   × perp:doctor price format > prints mark, bid and ask with as many decimals as the tick has 198ms
+     → expected 'XRP-PERP   mark=1.31 · funding unread…' to contain 'book[bid=1.3090 ask=1.3133]'
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/perp-doctor-prices.test.ts > perp:doctor price format > prints mark, bid and ask with as many decimals as the tick has
+AssertionError: expected 'XRP-PERP   mark=1.31 · funding unread…' to contain 'book[bid=1.3090 ask=1.3133]'
+
+Expected: "book[bid=1.3090 ask=1.3133]"
+Received: "XRP-PERP   mark=1.31 · funding unreadable · book[bid=1.31 ask=1.31] · tick=0.0001 lot=0.000000000000000001 minQty=0.000000000000000001 IM=1000bps"
+
+ ❯ tests/perp-doctor-prices.test.ts:75:30
+     73| 
+     74|     const line = (name: string) => h.lines.find((l) => l.startsWith(na…
+     75|     expect(line("XRP-PERP")).toContain("book[bid=1.3090 ask=1.3133]");
+       |                              ^
+     76|     expect(line("XRP-PERP")).toContain("mark=1.3111 ");
+     77|     expect(line("1000PEPE-PERP")).toContain("book[bid=0.0047164 ask=0.…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+ Test Files  1 failed (1)
+      Tests  1 failed (1)
+   Start at  11:21:37
+   Duration  535ms (transform 44ms, setup 0ms, collect 29ms, tests 199ms, environment 0ms, prepare 66ms)
+
+exit code: 1

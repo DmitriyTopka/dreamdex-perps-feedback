@@ -48,20 +48,20 @@ The doctor's own XRP line from that run was `mark=1.31 ... book[bid=1.31 ask=1.3
 And this is the script the kit says to run first. A flat book reads as "locked market, no spread" and a mark that looks equal to bid and ask hides where the mark really is. You can't use it to check a quote or the tick-alignment of a price you're about to send.
 
 ## Suggested fix
-Use the market's tick:
+Print each price with as many decimals as the market's tick has. Count them from the tick itself, which also works for ticks that are not a power of ten (0.25, 5):
 
 ```ts
-const px = (v: number, tickSize: bigint) => {
-  const dp = Math.max(0, -Math.floor(Math.log10(Number(formatUnits(tickSize, 18)))));
-  return v.toFixed(dp);
-};
+const tickDecimals = (tickSize: string) => (formatUnits(BigInt(tickSize), 18).split(".")[1] ?? "").length;
+const px = (v: number, m: PerpMarket) => v.toFixed(tickDecimals(m.info.tickSize));
 ```
 
-and call it as `px(bid, BigInt(m.info.tickSize))` (same for ask and mark). `tickSize` is in quote units and USDso, the quote token, has 18 decimals. For 1000PEPE that gives 7 decimals, for BTC 1.
+and pass the market for the mark, the bid and the ask (also the `px(markOf(m.info))` call for a row that cannot be priced). Prices in the kit are always 18-decimal values. That gives 4 decimals on XRP, 7 on 1000PEPE and 1 on BTC.
+
+**Ready patch with a test:** [`patches/001-perp-doctor-tick-precision.patch`](../patches/001-perp-doctor-tick-precision.patch). The test fails on 2579866 (`book[bid=1.31 ask=1.31]`) and passes with the patch; the kit's own suite stays green. How to apply and run it: [`patches/README.md`](../patches/README.md).
 
 ## Evidence
 - [`evidence/2910/doctor-001.json`](../evidence/2910/doctor-001.json): block, time, all 21 rows.
 - [`evidence/2910/perp-doctor-output.txt`](../evidence/2910/perp-doctor-output.txt): the doctor's own output from the run just before the script, no wallet.
 
 ## Environment
-dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383), no wallet.
+dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.31.0 inside the kit (its lockfile pins it for perp-core) and 0.32.1 in our `scripts/`, Node 24.14.1, Hideki testnet (chain 50383), no wallet.

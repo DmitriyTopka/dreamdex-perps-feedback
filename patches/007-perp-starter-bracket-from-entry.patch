@@ -1,0 +1,189 @@
+diff --git a/packages/perp-core/tests/perp-starter-bracket.test.ts b/packages/perp-core/tests/perp-starter-bracket.test.ts
+new file mode 100644
+index 0000000..6211a9b
+--- /dev/null
++++ b/packages/perp-core/tests/perp-starter-bracket.test.ts
+@@ -0,0 +1,122 @@
++/**
++ * @license
++ * Copyright DreamDEX S.A.
++ *
++ * Use of this source code is governed by an MIT-style license that can be
++ * found in the LICENSE file at https://github.com/somnia-chain/dreamdex-bot-kit/blob/main/LICENSE
++ */
++
++// strategies/perp-starter: where the bracket goes. Runs the real strategy with
++// the default 2% take-profit and 1% stop-loss against stubbed perp-core calls,
++// so nothing touches the network.
++
++import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
++
++type Pos = { symbol: string; side: "long" | "short"; contracts: number; entryPrice: number };
++
++const h = vi.hoisted(() => ({
++  done: () => {},
++  owner: undefined as string | undefined,
++  positions: [] as (Pos | undefined)[], // successive positionIn() answers, the last one repeats
++  marks: { start: 0, watch: 0 }, // liveMark() before the watch loop, and inside it
++  armBracket: undefined as unknown as ReturnType<typeof vi.fn>,
++  closePosition: undefined as unknown as ReturnType<typeof vi.fn>,
++  cycles: 0,
++}));
++
++const SYMBOL = "BTC/USDso:USDso";
++const human = (v: bigint) => Number(v) / 1e18;
++
++vi.mock("@dreamdex-bot-kit/perp-core", async (importOriginal) => {
++  const real = await importOriginal<typeof import("../src/index.js")>();
++  const next = <T>(list: T[]) => (list.length > 1 ? list.shift()! : list[0]!);
++  const market = {
++    symbol: SYMBOL,
++    display: "BTC-PERP",
++    info: { tickSize: "10000000000000000", baseSymbol: "BTC", baseDecimals: 8, markPrice: "0" },
++  };
++  return {
++    ...real,
++    loadEnv: () => {},
++    createExchange: () => ({
++      exchange: {
++        walletAddress: "0x00000000000000000000000000000000000000aa",
++        fetchOrderBook: async () => ({ bids: [[99_990, 1]], asks: [[100_010, 1]] }),
++      },
++      config: { dryRun: false, owner: h.owner, symbol: "BTC-PERP" },
++    }),
++    onStop: () => () => h.cycles >= 1,
++    sleep: async () => void h.cycles++,
++    requireMarket: async () => market,
++    tradingKeyCheck: async () => ({ ok: true }),
++    preflight: async () => ({ ok: true, message: "preflight ok" }),
++    somiPerStop: async () => 0n,
++    ensureLeverage: async () => ({ dryRun: false, changed: false, to: 2 }),
++    positionIn: async () => next(h.positions),
++    liveMark: async () => (h.cycles === 0 ? h.marks.start : h.marks.watch),
++    sizeForNotional: () => 50_000n,
++    sizeOrder: async () => ({ ok: true, quantity: 50_000n }),
++    placePerp: async () => ({ sent: true, orderId: 1n, filled: 50_000n }),
++    pendingStops: async () => [],
++    cancelStops: async () => {},
++    armBracket: (h.armBracket = vi.fn(async () => ({ sent: true }))),
++    closePosition: (h.closePosition = vi.fn(async () => ({ sent: true, filled: 50_000n }))),
++    shutdown: async () => h.done(),
++  };
++});
++
++async function runStarter(env: Record<string, string>): Promise<void> {
++  for (const [k, v] of Object.entries(env)) vi.stubEnv(k, v);
++  const finished = new Promise<void>((r) => (h.done = r));
++  vi.resetModules();
++  await import("../../../strategies/perp-starter/src/index.ts");
++  await finished;
++}
++
++beforeEach(() => {
++  h.cycles = 0;
++  h.owner = undefined;
++  vi.spyOn(process, "exit").mockImplementation((() => undefined) as never);
++  vi.spyOn(console, "log").mockImplementation(() => {});
++});
++
++afterEach(() => {
++  vi.unstubAllEnvs();
++  vi.restoreAllMocks();
++});
++
++describe("perp-starter bracket", () => {
++  it("opens a short and arms take-profit 2% under and stop-loss 1% over the entry price", async () => {
++    // No position before the open; the short fills at 100,000 while the mark reads 100,500.
++    h.positions = [undefined, { symbol: SYMBOL, side: "short", contracts: 0.0005, entryPrice: 100_000 }];
++    h.marks = { start: 100_500, watch: 100_500 };
++    await runStarter({ DRY_RUN: "false", PERP_SIDE: "short" });
++
++    const args = h.armBracket.mock.calls[0]![0];
++    expect(args.position).toBe("short");
++    expect(human(args.takeProfit)).toBeCloseTo(98_000, 2);
++    expect(human(args.stopLoss)).toBeCloseTo(101_000, 2);
++  });
++
++  it("manages an existing short as a short even when PERP_SIDE says long", async () => {
++    h.positions = [{ symbol: SYMBOL, side: "short", contracts: 0.0005, entryPrice: 100_000 }];
++    h.marks = { start: 100_500, watch: 100_500 };
++    await runStarter({ DRY_RUN: "false", PERP_SIDE: "long" });
++
++    const args = h.armBracket.mock.calls[0]![0];
++    expect(args.position).toBe("short");
++    expect(human(args.takeProfit)).toBeCloseTo(98_000, 2);
++    expect(human(args.stopLoss)).toBeCloseTo(101_000, 2);
++  });
++
++  it("with a trading key, closes an existing short in profit as a take-profit", async () => {
++    h.owner = "0x00000000000000000000000000000000000000bb";
++    h.positions = [{ symbol: SYMBOL, side: "short", contracts: 0.0005, entryPrice: 100_000 }];
++    h.marks = { start: 100_500, watch: 97_900 }; // the mark then falls 2.1% under the entry
++    await runStarter({ DRY_RUN: "false", PERP_SIDE: "long" });
++
++    expect(h.armBracket).not.toHaveBeenCalled();
++    expect(h.closePosition).toHaveBeenCalledTimes(1);
++    expect(h.closePosition.mock.calls[0]![3]).toEqual({ label: "take-profit" });
++  });
++});
+diff --git a/strategies/perp-starter/src/index.ts b/strategies/perp-starter/src/index.ts
+index 79ea482..8b51e63 100644
+--- a/strategies/perp-starter/src/index.ts
++++ b/strategies/perp-starter/src/index.ts
+@@ -119,6 +119,9 @@ async function main(): Promise<void> {
+   }
+ 
+   const existing = me ? await positionIn(ctx.exchange, market) : undefined;
++  // The side this run manages. A position that is already open keeps its own
++  // side whatever PERP_SIDE says: a long bracket on a short closes nothing.
++  const side: Side = existing?.side ?? SIDE;
+   if (existing) {
+     console.log(`already ${existing.side} ${existing.contracts} ${market.info.baseSymbol}, managing it instead of opening another`);
+   } else {
+@@ -167,14 +170,18 @@ async function main(): Promise<void> {
+     console.log(`${armedAlready.length} stop(s) already armed on ${market.display}, leaving them alone`);
+   }
+ 
+-  // Set the levels against the mark the POOL acts on, not the market row's.
+-  // The row lags by tens of minutes, so triggers derived from it sit at prices
+-  // the pool never had.
+-  const mark = (await liveMark(ctx.exchange, market)) ?? markOf(market.info);
+-  const up = BigInt(Math.round(mark * (1 + TAKE_PROFIT_PCT / 100) * 1e18));
+-  const down = BigInt(Math.round(mark * (1 - STOP_LOSS_PCT / 100) * 1e18));
+-  const takeProfit = SIDE === "long" ? up : down;
+-  const stopLoss = SIDE === "long" ? down : up;
++  // Measure both levels from the position's entry price. The open crosses the
++  // touch, so on a long the entry sits above the mark, and levels set off the
++  // mark put the stop further than STOP_LOSS_PCT from what was paid. With no
++  // position to read (a dry run) fall back to the mark the POOL acts on, not
++  // the market row's, which lags by tens of minutes.
++  const held = me ? (existing ?? (await positionIn(ctx.exchange, market))) : undefined;
++  const ref = held && held.entryPrice > 0 ? held.entryPrice : ((await liveMark(ctx.exchange, market)) ?? markOf(market.info));
++  // Each level keeps its own percentage on both sides: a long takes profit
++  // above the entry and stops out below it, a short is the mirror.
++  const sign = side === "long" ? 1 : -1;
++  const takeProfit = BigInt(Math.round(ref * (1 + (sign * TAKE_PROFIT_PCT) / 100) * 1e18));
++  const stopLoss = BigInt(Math.round(ref * (1 - (sign * STOP_LOSS_PCT) / 100) * 1e18));
+   const px = (v: bigint) => (Number(v) / 1e18).toFixed(2);
+ 
+   let bracket: { sent: boolean };
+@@ -184,7 +191,7 @@ async function main(): Promise<void> {
+   } else if (armedAlready.length > 0) {
+     bracket = { sent: false };
+   } else {
+-    bracket = await armBracket({ ctx, market, position: SIDE, takeProfit, stopLoss });
++    bracket = await armBracket({ ctx, market, position: side, takeProfit, stopLoss });
+   }
+ 
+   if (ctx.config.dryRun || !me) {
+@@ -221,8 +228,8 @@ async function main(): Promise<void> {
+     // mark reaches either level. An un-priceable mark acts on nothing.
+     if (watchedExits && live !== undefined) {
+       const liveRaw = BigInt(Math.round(live * 1e18));
+-      const hitTakeProfit = SIDE === "long" ? liveRaw >= takeProfit : liveRaw <= takeProfit;
+-      const hitStopLoss = SIDE === "long" ? liveRaw <= stopLoss : liveRaw >= stopLoss;
++      const hitTakeProfit = side === "long" ? liveRaw >= takeProfit : liveRaw <= takeProfit;
++      const hitStopLoss = side === "long" ? liveRaw <= stopLoss : liveRaw >= stopLoss;
+       if (hitTakeProfit || hitStopLoss) {
+         await closePosition(ctx, fresh, me, { label: hitTakeProfit ? "take-profit" : "stop-loss" });
+         exited = true;

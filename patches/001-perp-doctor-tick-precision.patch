@@ -1,0 +1,119 @@
+diff --git a/packages/perp-core/tests/perp-doctor-prices.test.ts b/packages/perp-core/tests/perp-doctor-prices.test.ts
+new file mode 100644
+index 0000000..943bef9
+--- /dev/null
++++ b/packages/perp-core/tests/perp-doctor-prices.test.ts
+@@ -0,0 +1,80 @@
++/**
++ * @license
++ * Copyright DreamDEX S.A.
++ *
++ * Use of this source code is governed by an MIT-style license that can be
++ * found in the LICENSE file at https://github.com/somnia-chain/dreamdex-bot-kit/blob/main/LICENSE
++ */
++
++// scripts/perp-doctor.ts prints prices at the market's tick precision. Runs the
++// real script against a stubbed exchange: no network, no key.
++
++import { afterEach, describe, expect, it, vi } from "vitest";
++
++const h = vi.hoisted(() => ({ lines: [] as string[], done: () => {} }));
++
++const market = (display: string, tickSize: string, bid: number, ask: number, mark: number) => ({
++  display,
++  symbol: `${display}/USDso:USDso`,
++  bid,
++  ask,
++  mark,
++  info: {
++    tickSize,
++    lotSize: "1",
++    minQuantity: "1",
++    baseDecimals: 18,
++    quoteDecimals: 18,
++    initialMarginBps: 1000,
++    markPrice: "0",
++    quoteToken: "0x0000000000000000000000000000000000000001",
++  },
++});
++
++// Top of book as the chain had it on 2026-10-29 (report 001).
++const MARKETS = [
++  market("XRP-PERP", "100000000000000", 1.309, 1.3133, 1.3111), // tick 0.0001
++  market("1000PEPE-PERP", "100000000000", 0.0047164, 0.0047448, 0.0047301), // tick 0.0000001
++  market("BTC-PERP", "100000000000000000", 78283.1, 78290.4, 78286.7), // tick 0.1
++];
++
++vi.mock("@dreamdex-bot-kit/perp-core", () => {
++  const find = (symbol: string) => MARKETS.find((m) => m.symbol === symbol)!;
++  return {
++    loadConfig: () => ({ network: "hideki", chainId: 50383, indexerUrl: "stub" }),
++    createExchange: () => ({
++      exchange: {
++        walletAddress: undefined,
++        fetchOrderBook: async (symbol: string) => ({ bids: [[find(symbol).bid, 1]], asks: [[find(symbol).ask, 1]] }),
++      },
++    }),
++    shutdown: async () => h.done(),
++    perpMarkets: async () => MARKETS,
++    liveMark: async (_: unknown, m: (typeof MARKETS)[number]) => m.mark,
++    markOf: () => 0,
++    liveFunding: async () => ({ known: false }),
++    pendingStops: async () => [],
++    requireMarket: vi.fn(),
++    marginSnapshot: vi.fn(),
++    healthRatio: vi.fn(),
++    linkCoverage: vi.fn(),
++  };
++});
++
++afterEach(() => vi.restoreAllMocks());
++
++describe("perp:doctor price format", () => {
++  it("prints mark, bid and ask with as many decimals as the tick has", async () => {
++    vi.spyOn(process, "exit").mockImplementation((() => undefined) as never);
++    vi.spyOn(console, "log").mockImplementation((...a: unknown[]) => void h.lines.push(a.join(" ")));
++    const finished = new Promise<void>((r) => (h.done = r));
++    await import("../../../scripts/perp-doctor.ts");
++    await finished;
++
++    const line = (name: string) => h.lines.find((l) => l.startsWith(name)) ?? "";
++    expect(line("XRP-PERP")).toContain("book[bid=1.3090 ask=1.3133]");
++    expect(line("XRP-PERP")).toContain("mark=1.3111 ");
++    expect(line("1000PEPE-PERP")).toContain("book[bid=0.0047164 ask=0.0047448]");
++    expect(line("BTC-PERP")).toContain("book[bid=78283.1 ask=78290.4]");
++  });
++});
+diff --git a/scripts/perp-doctor.ts b/scripts/perp-doctor.ts
+index afd5316..c8632e0 100644
+--- a/scripts/perp-doctor.ts
++++ b/scripts/perp-doctor.ts
+@@ -40,8 +40,12 @@ import {
+ 
+ const ERC20 = parseAbi(["function balanceOf(address) view returns (uint256)"]);
+ 
+-/** A price with enough digits to read, whether it is 83,000 or 0.0058. */
+-const px = (v: number) => (Math.abs(v) >= 1 ? v.toFixed(2) : v.toPrecision(4));
++/**
++ * A price at the market's own tick precision: 1.3090 on a 0.0001 tick, 0.0047164
++ * on a 0.0000001 one, 78283.1 on a 0.1 one. A fixed 2 decimals printed XRP's
++ * 43-tick spread as bid=1.31 ask=1.31. Prices are always 18dp.
++ */
++const px = (v: number, m: PerpMarket) => v.toFixed(formatUnits(BigInt(m.info.tickSize), 18).split(".")[1]?.length ?? 0);
+ 
+ async function main(): Promise<void> {
+   const cfg = loadConfig();
+@@ -121,11 +125,11 @@ async function main(): Promise<void> {
+       const book = await ctx.exchange.fetchOrderBook(m.symbol, 1);
+       const bid = book.bids[0]?.[0];
+       const ask = book.asks[0]?.[0];
+-      const markStr = live !== undefined ? px(live) : `un-priceable (row ${px(markOf(m.info))})`;
++      const markStr = live !== undefined ? px(live, m) : `un-priceable (row ${px(markOf(m.info), m)})`;
+       const stops = me ? (await pendingStops(ctx.exchange, m, me)).length : 0;
+       console.log(
+         `${m.display.padEnd(10)} mark=${markStr} · funding ${funding.known ? `${(funding.apr * 100).toFixed(3)}% (pays ${funding.paidSide}s)` : "unreadable"} · ` +
+-          `book[bid=${bid === undefined ? "none" : px(bid)} ask=${ask === undefined ? "none" : px(ask)}] · ` +
++          `book[bid=${bid === undefined ? "none" : px(bid, m)} ask=${ask === undefined ? "none" : px(ask, m)}] · ` +
+           // Raw units here are unreadable on a 24-decimal market, and reading
+           // them wrong is the mistake this script exists to prevent: prices are
+           // always 18dp, sizes use the market's own baseDecimals.

@@ -1,0 +1,61 @@
+# AFTER: upstream 2579866 with the whole patch
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply 001-perp-doctor-tick-precision.patch
+applied
+ M scripts/perp-doctor.ts
+?? packages/perp-core/tests/perp-doctor-prices.test.ts
+
+$ npx vitest run --root packages/perp-core tests/perp-doctor-prices.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ✓ tests/perp-doctor-prices.test.ts (1 test) 167ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+   Start at  11:21:38
+   Duration  527ms (transform 74ms, setup 0ms, collect 60ms, tests 167ms, environment 0ms, prepare 42ms)
+
+exit code: 0
+
+$ npm test -w @dreamdex-bot-kit/perp-core   (whole perp-core suite)
+ ✓ tests/units.test.ts (19 tests) 4ms
+ ✓ tests/trading-key.test.ts (12 tests) 31ms
+
+ Test Files  3 passed (3)
+      Tests  32 passed (32)
+   Start at  11:21:39
+   Duration  680ms (transform 126ms, setup 0ms, collect 644ms, tests 179ms, environment 0ms, prepare 188ms)
+
+exit code: 0
+
+$ npm run check
+> node scripts/checks.mjs
+
+railway-allowed  PASS  19 strategies
+npm-scripts      PASS  17 defined
+env-documented   PASS  46 ec knobs
+market-status    PASS  ok
+no-taker-limit   PASS  ok
+headroom-gate    PASS  5 placers
+ec-addresses     PASS  6 match
+sdk-floor        PASS  ^0.30.0
+shared-knobs     PASS  ok
+strategy-docs    PASS  19 strategies
+
+10 passed, 0 failed
+exit code: 0
+
+$ npx tsc --noEmit --target ES2022 --module ESNext --moduleResolution Bundler --lib ES2022 --types node --strict --noUncheckedIndexedAccess --esModuleInterop --skipLibCheck scripts/perp-doctor.ts
+scripts/perp-doctor.ts(69,22): error TS2532: Object is possibly 'undefined'.
+scripts/perp-doctor.ts(70,19): error TS2532: Object is possibly 'undefined'.
+scripts/perp-doctor.ts(95,53): error TS2345: Argument of type 'PerpMarket | undefined' is not assignable to parameter of type 'PerpMarket'.
+  Type 'undefined' is not assignable to type 'PerpMarket'.
+exit code: 2
+
+# The same command on upstream 2579866 without the patch, for comparison: the 3 errors above are already there (scripts/ is not covered by any tsconfig in the kit, so npm run typecheck never sees them). The patch adds none.
+$ git checkout -- . && npx tsc --noEmit ... scripts/perp-doctor.ts
+scripts/perp-doctor.ts(65,22): error TS2532: Object is possibly 'undefined'.
+scripts/perp-doctor.ts(66,19): error TS2532: Object is possibly 'undefined'.
+scripts/perp-doctor.ts(91,53): error TS2345: Argument of type 'PerpMarket | undefined' is not assignable to parameter of type 'PerpMarket'.
+  Type 'undefined' is not assignable to type 'PerpMarket'.
+exit code: 2

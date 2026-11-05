@@ -1,0 +1,180 @@
+diff --git a/packages/perp-core/tests/perp-maker-requote.test.ts b/packages/perp-core/tests/perp-maker-requote.test.ts
+new file mode 100644
+index 0000000..e32a0d0
+--- /dev/null
++++ b/packages/perp-core/tests/perp-maker-requote.test.ts
+@@ -0,0 +1,116 @@
++/**
++ * @license
++ * Copyright DreamDEX S.A.
++ *
++ * Use of this source code is governed by an MIT-style license that can be
++ * found in the LICENSE file at https://github.com/somnia-chain/dreamdex-bot-kit/blob/main/LICENSE
++ */
++
++// strategies/perp-maker: a POST_ONLY leg the pool refuses is quoted again. Runs
++// the real strategy for a few cycles against stubbed perp-core calls; the stub
++// pool refuses any quote that would cross its own touch, the way the chain
++// reverts PostOnlyWouldCross. Nothing touches the network.
++
++import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
++
++const h = vi.hoisted(() => ({
++  done: () => {},
++  cycles: 0,
++  maxCycles: 4,
++  shown: { bid: 0, ask: 0 }, // the book fetchOrderBook() returns
++  pool: [] as { bid: number; ask: number }[], // the touch the pool checks, per cycle; the last one repeats
++  placed: [] as { side: string; price: bigint; orderId?: bigint }[],
++  nextId: 1n,
++}));
++
++const MARK = 100;
++const human = (v: bigint) => Number(v) / 1e18;
++
++vi.mock("@dreamdex-bot-kit/perp-core", async (importOriginal) => {
++  const real = await importOriginal<typeof import("../src/index.js")>();
++  const market = {
++    symbol: "BTC/USDso:USDso",
++    display: "BTC-PERP",
++    info: { tickSize: "10000000000000000", baseSymbol: "BTC", baseDecimals: 8, markPrice: "0" }, // tick 0.01
++  };
++  return {
++    ...real,
++    loadEnv: () => {},
++    createExchange: () => ({
++      exchange: {
++        walletAddress: "0x00000000000000000000000000000000000000aa",
++        fetchOrderBook: async () => ({ bids: [[h.shown.bid, 1]], asks: [[h.shown.ask, 1]] }),
++      },
++      config: { dryRun: false, symbol: "BTC-PERP" },
++    }),
++    onStop: () => () => h.cycles >= h.maxCycles,
++    sleep: async () => void h.cycles++,
++    requireMarket: async () => market,
++    tradingKeyCheck: async () => ({ ok: true }),
++    preflight: async () => ({ ok: true, message: "preflight ok" }),
++    ensureLeverage: async () => ({}),
++    positionIn: async () => undefined,
++    liveMark: async () => MARK, // a quiet mark: it never drifts past the 8 bps re-quote trigger
++    sizeForNotional: () => 25_000n,
++    sizeOrder: async () => ({ ok: true, quantity: 25_000n }),
++    placePerp: async ({ side, price }: { side: "long" | "short"; price: bigint }) => {
++      const touch = h.pool[Math.min(h.cycles, h.pool.length - 1)]!;
++      const px = real.alignPrice(price, market.info as never);
++      const crosses = side === "short" ? px <= real.toRaw(touch.bid, 18) : px >= real.toRaw(touch.ask, 18);
++      if (crosses) {
++        h.placed.push({ side, price: px });
++        return { sent: false, filled: 0n, noFill: true }; // what placePerp returns on PostOnlyWouldCross
++      }
++      const orderId = h.nextId++;
++      h.placed.push({ side, price: px, orderId });
++      return { sent: true, orderId, filled: 0n };
++    },
++    cancelQuietly: async () => {},
++    shutdown: async () => h.done(),
++  };
++});
++
++async function runMaker(): Promise<void> {
++  vi.stubEnv("DRY_RUN", "false");
++  const finished = new Promise<void>((r) => (h.done = r));
++  vi.resetModules();
++  await import("../../../strategies/perp-maker/src/index.ts");
++  await finished;
++}
++
++const asks = () => h.placed.filter((p) => p.side === "short");
++
++beforeEach(() => {
++  h.cycles = 0;
++  h.placed = [];
++  vi.spyOn(process, "exit").mockImplementation((() => undefined) as never);
++  vi.spyOn(console, "log").mockImplementation(() => {});
++});
++
++afterEach(() => {
++  vi.unstubAllEnvs();
++  vi.restoreAllMocks();
++});
++
++describe("perp-maker re-quotes a refused leg", () => {
++  it("tries the ask again next cycle after the touch moved between the read and the send", async () => {
++    h.shown = { bid: 99.9, ask: 100.1 };
++    // Cycle 0: the bid jumped above the planned ask (100.15) after the read. Then it is back.
++    h.pool = [{ bid: 100.2, ask: 100.3 }, { bid: 99.9, ask: 100.1 }];
++    await runMaker();
++
++    expect(asks().length).toBeGreaterThan(1);
++    expect(asks().at(-1)!.orderId).toBeDefined();
++  });
++
++  it("keeps the ask on the maker side when the whole book sits above the mark", async () => {
++    // The book stays 25 bps over the mark, more than the 15 bps half-spread.
++    h.shown = { bid: 100.2, ask: 100.3 };
++    h.pool = [{ bid: 100.2, ask: 100.3 }];
++    await runMaker();
++
++    // One tick over the best bid, instead of 100.15 under it.
++    expect(human(asks()[0]!.price)).toBeCloseTo(100.21, 6);
++    expect(asks()[0]!.orderId).toBeDefined();
++  });
++});
+diff --git a/strategies/perp-maker/src/index.ts b/strategies/perp-maker/src/index.ts
+index 56787b6..e6cba03 100644
+--- a/strategies/perp-maker/src/index.ts
++++ b/strategies/perp-maker/src/index.ts
+@@ -37,6 +37,7 @@ import {
+   sizeForNotional,
+   sizeOrder,
+   sleep,
++  toRaw,
+   tradingKeyCheck,
+   type PerpMarket,
+ } from "@dreamdex-bot-kit/perp-core";
+@@ -139,11 +140,23 @@ async function main(): Promise<void> {
+     const lean = MAX_POSITION > 0 ? Math.max(-1, Math.min(1, inventory / MAX_POSITION)) : 0;
+     const skew = (SKEW_BPS / 10_000) * lean;
+     const half = HALF_SPREAD_BPS / 10_000;
+-    const bidPx = BigInt(Math.round(mark * (1 - half - skew) * 1e18));
+-    const askPx = BigInt(Math.round(mark * (1 + half - skew) * 1e18));
++    let bidPx = BigInt(Math.round(mark * (1 - half - skew) * 1e18));
++    let askPx = BigInt(Math.round(mark * (1 + half - skew) * 1e18));
++    // Keep each quote on the maker side of the touch. Centred on the mark alone,
++    // a leg crosses whenever the book sits more than one half-spread away from
++    // the mark, and the pool refuses that POST_ONLY every cycle. toRaw keeps the
++    // touch exactly on the grid, so one tick past it survives alignPrice.
++    const book = await ctx.exchange.fetchOrderBook(fresh.symbol, 1);
++    const tick = BigInt(fresh.info.tickSize);
++    const bestBid = book.bids[0] ? toRaw(Number(book.bids[0][0]), 18) : undefined;
++    const bestAsk = book.asks[0] ? toRaw(Number(book.asks[0][0]), 18) : undefined;
++    if (bestBid !== undefined && askPx <= bestBid) askPx = bestBid + tick;
++    if (bestAsk !== undefined && bidPx >= bestAsk) bidPx = bestAsk - tick;
+ 
+     const wanted = sizeForNotional(NOTIONAL, fresh.info, mark);
+     const next: Quote = { atMark: mark };
++    // A leg the pool refused as crossing was told "Re-quotes next cycle".
++    let refused = false;
+ 
+     // If one leg throws after the other is already resting, pull the placed leg
+     // before the error propagates: a bot that exits here would otherwise leave a
+@@ -175,6 +188,7 @@ async function main(): Promise<void> {
+         });
+         if (side === "long") next.bid = placed.orderId;
+         else next.ask = placed.orderId;
++        if (placed.noFill) refused = true;
+       }
+     } catch (err) {
+       for (const id of [next.bid, next.ask]) {
+@@ -183,7 +197,10 @@ async function main(): Promise<void> {
+       throw err;
+     }
+ 
+-    resting = next;
++    // Keep that promise: with atMark 0 the drift gate lets the next cycle
++    // through even on a quiet mark, instead of leaving the bot one-sided until
++    // the mark moves REQUOTE_BPS.
++    resting = refused ? { ...next, atMark: 0 } : next;
+     await sleep(REFRESH_MS, stopped);
+   }
+ 

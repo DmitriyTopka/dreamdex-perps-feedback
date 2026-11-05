@@ -1,0 +1,77 @@
+$ git -C dreamdex-bot-kit checkout 4e75896 && git apply --check 007-perp-starter-bracket-from-entry.patch
+apply --check on main 4e75896: OK
+$ git -C dreamdex-bot-kit checkout 2579866 && git apply --check 007-perp-starter-bracket-from-entry.patch
+apply --check on 2579866: OK
+
+# BEFORE: upstream 2579866 with only the new test file from the patch
+$ git apply --include='packages/perp-core/tests/perp-starter-bracket.test.ts' 007-perp-starter-bracket-from-entry.patch
+?? packages/perp-core/tests/perp-starter-bracket.test.ts
+$ npx vitest run --root packages/perp-core tests/perp-starter-bracket.test.ts
+
+ RUN  v2.1.9 dreamdex-bot-kit/packages/perp-core
+
+ ❯ tests/perp-starter-bracket.test.ts (3 tests | 3 failed) 355ms
+   × perp-starter bracket > opens a short and arms take-profit 2% under and stop-loss 1% over the entry price 350ms
+     → expected 99495 to be close to 98000, received difference is 1495, but expected 0.005
+   × perp-starter bracket > manages an existing short as a short even when PERP_SIDE says long 3ms
+     → expected 'long' to be 'short' // Object.is equality
+   × perp-starter bracket > with a trading key, closes an existing short in profit as a take-profit 3ms
+     → expected { label: 'stop-loss' } to deeply equal { label: 'take-profit' }
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/perp-starter-bracket.test.ts > perp-starter bracket > opens a short and arms take-profit 2% under and stop-loss 1% over the entry price
+AssertionError: expected 99495 to be close to 98000, received difference is 1495, but expected 0.005
+ ❯ tests/perp-starter-bracket.test.ts:97:36
+     95|     const args = h.armBracket.mock.calls[0]![0];
+     96|     expect(args.position).toBe("short");
+     97|     expect(human(args.takeProfit)).toBeCloseTo(98_000, 2);
+       |                                    ^
+     98|     expect(human(args.stopLoss)).toBeCloseTo(101_000, 2);
+     99|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  tests/perp-starter-bracket.test.ts > perp-starter bracket > manages an existing short as a short even when PERP_SIDE says long
+AssertionError: expected 'long' to be 'short' // Object.is equality
+
+Expected: "short"
+Received: "long"
+
+ ❯ tests/perp-starter-bracket.test.ts:107:27
+    105| 
+    106|     const args = h.armBracket.mock.calls[0]![0];
+    107|     expect(args.position).toBe("short");
+       |                           ^
+    108|     expect(human(args.takeProfit)).toBeCloseTo(98_000, 2);
+    109|     expect(human(args.stopLoss)).toBeCloseTo(101_000, 2);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  tests/perp-starter-bracket.test.ts > perp-starter bracket > with a trading key, closes an existing short in profit as a take-profit
+AssertionError: expected { label: 'stop-loss' } to deeply equal { label: 'take-profit' }
+
+- Expected
++ Received
+
+  Object {
+-   "label": "take-profit",
++   "label": "stop-loss",
+  }
+
+ ❯ tests/perp-starter-bracket.test.ts:120:47
+    118|     expect(h.armBracket).not.toHaveBeenCalled();
+    119|     expect(h.closePosition).toHaveBeenCalledTimes(1);
+    120|     expect(h.closePosition.mock.calls[0]![3]).toEqual({ label: "take-p…
+       |                                               ^
+    121|   });
+    122| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+
+ Test Files  1 failed (1)
+      Tests  3 failed (3)
+   Start at  11:21:44
+   Duration  766ms (transform 135ms, setup 0ms, collect 27ms, tests 355ms, environment 0ms, prepare 49ms)
+
+exit code: 1
