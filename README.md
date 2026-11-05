@@ -32,6 +32,21 @@ Test account on Hideki: owner `0x84326A92162Ece92ed257A31073fDd3a6599BF21`, link
 
 Every transaction hash in the reports can be checked on the Hideki RPC or explorer.
 
+## Topics where someone reported first
+
+On 8 topics other participants filed a public report before ours (19-21 Oct; ours are from 22 Oct). We kept them in because the organizers said that when several people report the same improvement, the best report wins. This is what each of ours gives a reviewer, so you can compare quickly:
+
+| # | Topic | What this report adds |
+|---|---|---|
+| [001](feedback/001-perp-doctor-rounds-prices-to-2-decimals.md) | perp:doctor rounds prices | All 21 markets passed through the doctor's own `px()` next to the chain's top of book: 11 of 21 lose digits, with the spread in ticks (XRP: a 43-tick spread printed as bid=ask). A drop-in fix that derives decimals from `tickSize`. |
+| [002](feedback/002-stale-cancel-reverts-incorrectsender-with-another-traders-address.md) | stale cancel reverts IncorrectSender | Every finished order of one account (34: 26 Filled, 8 Cancelled) x three calls, including the owner's own `cancelOrder`; 10 different strangers' addresses come back. The documented `OrderIdMismatch` selector (0x71fa8de6) is not in the PerpPool implementation bytecode, so the pool cannot return it today. A bot-side guard (`getOrderOnchain` is null for all 34). |
+| [004](feedback/004-docs-understate-perp-order-gas-and-stt-cost.md) | docs understate gas and STT cost | PostOnly placements and cancels (the cheap end), 8 receipts with explorer links; fresh `eth_estimateGas` for resting and IOC orders; what it does to a bot budget (5 STT is about 355 orders, not 1,666); a replacement paragraph for the docs. |
+| [005](feedback/005-funding-docs-omit-interest-component-longs-pay-below-index.md) | funding docs omit the interest term | 4,200 settlements on all 21 pools over 8 days: mark below index in 3,662, longs still paid in 3,405. The formula reproduces the live `fundingRate` on 21/21 pools. Why the trader's mark can mislead twice (the premium is taken from the book, see 006). A replacement paragraph and a worked example. |
+| [009](feedback/009-docs-position-cap-tenth-of-oi-holds-on-1-of-21-markets.md) | position cap is not "a tenth" | The enforced ratio per market group (1/20, 1/40, set per market for BTC, TAO, ZEC), the same on 22 and 29 Oct. Why some reports show other numbers (ZEC 1.0, BTC 0.405): they divide by the docs column or by older values. |
+| [011](feedback/011-docs-oi-cap-column-is-quarter-of-onchain-cap.md) | OI cap column vs chain | XRP at 98% of its real cap while the docs show 392% of a cap that does not exist, so a bot reading the table cannot see that the next large XRP order may revert. Kept separate from 009 (different number, different fix). |
+| [012](feedback/012-errors-page-has-no-perp-errors.md) | Errors page has no perp errors | Errors filtered by what the deployed perp contracts can actually raise: 156 selectors found in the PerpPool, PerpStopOrderRegistry and MarginBank bytecode, 120 of them named nowhere in the docs. A live `eth_call` where the pool returns "ERC20: insufficient allowance" while the docs promise "transfer amount exceeds balance". Why 546 and 538 are both right. |
+| [015](feedback/015-perp-stop-order-throws-without-operator-registry.md) | no operator registry in SDK presets | The exact line that throws (`dist/perp/stops.js:490`, it never asks the pool). The bot kit hardcodes two different registry addresses for its two networks (`config.ts:81-82`), so the `SOMNIA_TESTNET_ADDRESSES` fix needs the second one. The `getOperatorPermissionsRegistry` JSDoc says "SpotPool", which hides that it works on perp pools. |
+
 ## Re-running the checks
 
 Every report except 010 (sent privately) comes with a read-only script in [`scripts/`](scripts). None of them needs a key or sends a transaction, they only read the chain, the indexer and the docs:
