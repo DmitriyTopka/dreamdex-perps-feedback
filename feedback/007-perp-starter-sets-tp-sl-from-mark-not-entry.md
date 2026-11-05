@@ -67,4 +67,4 @@ and pass `side` (not `SIDE`) to `armBracket` and to the watched-exit checks on l
 - Re-run: `cd scripts && npx tsx starter-007.ts > ../evidence/3010/starter-007.json`.
 
 ## Environment
-dreamdex-bot-kit 2579866 (still the latest commit on 2026-10-30), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383). Fill from our test account 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.
+dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383). Fill from our test account 0x84326A92162Ece92ed257A31073fDd3a6599BF21 via trading key 0x13f05c8e15cC0d7d3abff02C144fb74778018a55.

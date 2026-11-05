@@ -64,4 +64,4 @@ and call it as `px(bid, BigInt(m.info.tickSize))` (same for ask and mark). `tick
 - [`evidence/2910/perp-doctor-output.txt`](../evidence/2910/perp-doctor-output.txt): the doctor's own output from the run just before the script, no wallet.
 
 ## Environment
-dreamdex-bot-kit 2579866 (still the latest commit on 2026-10-29), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383), no wallet.
+dreamdex-bot-kit 2579866 (main moved on to 4e75896 on 2026-10-29, but only files in examples/ changed; strategies and perp-core are the same), @somnia-chain/markets-sdk 0.32.1, Node 24.14.1, Hideki testnet (chain 50383), no wallet.
