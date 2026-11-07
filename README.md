@@ -41,7 +41,7 @@ Every transaction hash in the reports can be checked on the Hideki RPC or explor
 
 ## Topics where someone reported first
 
-On 11 of our topics another participant filed a public report before us. Most of those reports are from 19-21 Oct and ours from 22 Oct. On 007 only one of its three parts is ours, see its row. We kept these reports in because the organizers said that when several people report the same improvement, the best report wins. This is what each of ours gives a reviewer, so you can compare quickly:
+On 11 of our topics another participant filed a public report before us. Most of those reports are from 19-21 Oct and ours from 22 Oct. On 007 only one of its three parts is ours, see its row. We kept these reports in because the organizers said that when several people report the same improvement, the best report wins. This is what each of ours gives a reviewer, so you can compare quickly. Reports on the same topics filed after ours (from 6 Nov on) are not listed here; our files are dated 22 Oct.
 
 | # | Topic | What this report adds |
 |---|---|---|
