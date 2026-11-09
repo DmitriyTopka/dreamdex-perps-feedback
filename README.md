@@ -70,3 +70,7 @@ npx tsx caps-009-011.ts   # each report's Re-run line names its script
 Each one prints JSON with the block number and time it ran at. Our own runs from 2026-10-29 are in [`evidence/2910/`](evidence/2910), so you can compare. The block is read when the script finishes. Prices, funding and order slots on the chain keep moving, so a fresh run gives slightly different counts. When we re-ran all seven scripts at 20:04 UTC, every conclusion held: for example 002 still got IncorrectSender on all 34 orders, now split 24/10 instead of 27/7. That run is in [`evidence/2910-rerun/`](evidence/2910-rerun).
 
 The other 13 reports (003, 006-008, 013, 014, 016-022) were re-checked against the chain on 2026-10-30; their script output is in [`evidence/3010/`](evidence/3010).
+
+## How this was built
+
+Found and written during the bounty (first commit 22 Oct) by one person with Claude Code (Anthropic) as the coding assistant: it helped read the SDK, contracts and bot kit, and wrote most of the scripts and report text. Every finding was re-checked against the chain or the code, and every number in a report comes from a script in [`scripts/`](scripts) with its output in [`evidence/`](evidence). Known limits: all checks ran on Somnia Tokyo testnet (Hideki); the app reports (019, 021, 022) were reproduced in the web app by hand, with tx hashes as evidence.
