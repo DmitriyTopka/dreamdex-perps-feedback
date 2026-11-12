@@ -3,6 +3,8 @@ Severity: normal
 
 Area: SDK
 
+Checked 2026-11-12, block 48,171,567: still reproduces. 4,174 LinkedFill cancels so far; 156 pairs still hold 31.425 STT unclaimed (354 and 59.025 on 30 Oct).
+
 The registry credits the cancelled leg's 0.15 STT to `unclaimedSomi` on purpose. The bug is in what everyone tells the trader: the SDK pair docs, PERPS.md, the app docs and the bot kit all say the fee is refunded, and the kit never claims it. Right now 354 account and market pairs hold 59.025 STT this way.
 
 ## Steps to reproduce

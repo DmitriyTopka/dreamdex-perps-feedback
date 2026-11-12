@@ -3,6 +3,8 @@ Severity: normal
 
 Area: bot kit
 
+Checked 2026-11-12, block 48,162,924: still reproduces. The same 11 markets lose digits; XRP now prints bid=1.04 ask=1.04 over an 8-tick spread. The network now lists 40 perp markets.
+
 ## Steps to reproduce
 1. dreamdex-bot-kit at commit 2579866, `npm ci`, then `NETWORK=hideki npm run perp:doctor` (no key needed).
 2. Compare its `book[bid= ask=]` with the real top of book. Our read-only script does that for all 21 markets ([`scripts/doctor-001.ts`](../scripts/doctor-001.ts)):

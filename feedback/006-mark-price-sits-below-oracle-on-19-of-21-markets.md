@@ -3,6 +3,8 @@ Severity: major
 
 Area: contracts
 
+Checked 2026-11-12, block 48,172,283: still reproduces. On the original 21 markets the mark was below the index in every round on 19; in history 3,831 of 4,709 settlements now have it below.
+
 The pool's mark (`tryGetMarkPrice`, the price margin and liquidation read) is below its own oracle index almost all the time. On 10 of 21 markets it was below in every one of the last 200 hourly settlements, typically by 0.04% to 0.10%. An EMA that lags the index cannot explain it: over the same 8 days the index fell on 19 of 21 markets, and a lagging EMA in a falling market sits above the index, not below. Longs are marked down and reach maintenance earlier than they should; shorts get the mirror benefit. None of the perps docs say what the mark is.
 
 ## Steps to reproduce

@@ -3,6 +3,8 @@ Severity: normal
 
 Area: SDK
 
+Checked 2026-11-12, block 48,169,434: still reproduces. Replaying the failed create at the head still gives NoReducingPositionAtCreation().
+
 ## Steps to reproduce
 Read-only, no key ([`scripts/stop-018.ts`](../scripts/stop-018.ts)):
 

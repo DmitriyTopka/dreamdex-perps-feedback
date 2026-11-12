@@ -71,6 +71,8 @@ Each one prints JSON with the block number and time it ran at. Our own runs from
 
 The other 13 reports (003, 006-008, 013, 014, 016-022) were re-checked against the chain on 2026-10-30; their script output is in [`evidence/3010/`](evidence/3010).
 
+Re-run on 12 Nov: 21 of 21 still reproduce; fixed: none. Output is in [`evidence/1211/`](evidence/1211), and each report now has a "Checked 2026-11-12" line under its header. The network lists 40 perp markets now instead of 21, so the reports' counts are compared on the original 21. Two scripts stop on the new markets ([`errors.txt`](evidence/1211/errors.txt)): 007 was checked with its patch test instead, which still fails on the kit ([`patch-tests-before-fix.txt`](evidence/1211/patch-tests-before-fix.txt)), and 008 against the kit source, which is unchanged at main 4e75896.
+
 ## How this was built
 
 Found and written during the bounty (first commit 22 Oct) by one person with Claude Code (Anthropic) as the coding assistant: it helped read the SDK, contracts and bot kit, and wrote most of the scripts and report text. Every finding was re-checked against the chain or the code, and every number in a report comes from a script in [`scripts/`](scripts) with its output in [`evidence/`](evidence). Known limits: all checks ran on Somnia Tokyo testnet (Hideki); the app reports (019, 021, 022) were reproduced in the web app by hand, with tx hashes as evidence.

@@ -1,0 +1,22 @@
+doctor-001 exit=0 sec=8
+cancel-002 exit=0 sec=56
+ordertype-003 exit=0 sec=15
+gas-004 exit=0 sec=13
+funding-005 exit=0 sec=39
+mark-006 exit=1 sec=253
+starter-007 exit=1 sec=11
+guard-008 exit=1 sec=4
+caps-009-011 exit=1 sec=16
+errors-012 exit=0 sec=15
+liqfee-013 exit=1 sec=12
+lot-014 exit=1 sec=21
+stops-015 exit=0 sec=20
+maker-016 exit=0 sec=131
+funding-017 exit=0 sec=40
+stop-018 exit=0 sec=11
+entire-019 exit=0 sec=147
+linkedfee-020 exit=0 sec=61
+size-021 exit=0 sec=17
+orphan-022 exit=0 sec=44
+DONE
+mark-006 second attempt exit=0

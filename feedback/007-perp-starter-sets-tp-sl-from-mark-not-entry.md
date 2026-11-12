@@ -3,6 +3,8 @@ Severity: major (a take-profit that can close at a loss)
 
 Area: bot kit
 
+Checked 2026-11-12: still reproduces. All 3 tests from patches/007 still fail on the kit (scripts/, strategies/, packages/ unchanged at main 4e75896). The script itself now stops on the new LOADTEST markets, see evidence/1211/errors.txt.
+
 In short: perp-starter opens with an IOC that takes the ask, then places the bracket around the mark. The trader asked for "2% profit, 1% loss" from what they paid. They get a stop further away than set, a target closer than set, and on a market whose book sits above the mark, a "take-profit" below the entry. The same lines also swap TP and SL on a short and ignore an existing position's side; those two parts were reported publicly before us (20-21 Oct) and are kept here only because one fix covers all three.
 
 ## Steps to reproduce

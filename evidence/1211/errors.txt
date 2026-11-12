@@ -1,0 +1,14 @@
+Script errors in the 2026-11-12 run. The scripts were not changed. Long dashes in the SDK messages are shown as "-".
+
+mark-006, first attempt (08:10 UTC): RPC timeout, the script was simply run again and finished (mark-006.json).
+  RpcError: @somnia-chain/markets-sdk: rpc readContract getTimeWeightedPremium failed: The request took too long to respond.
+
+starter-007: no output. The network now lists 40 perp markets, five of them named LOADTEST, and the order book lookup by symbol fails on the first one.
+  InvalidInputError: @somnia-chain/markets-sdk: unknown symbol LOADTEST/USDso:USDso - call loadMarkets() first
+  at scripts/starter-007.ts:76
+  Report 007 was checked instead with its patch test, see patch-tests-before-fix.txt.
+
+guard-008: no output. One of the new markets has no lotSize, so BigInt(m.lotSize) throws.
+  TypeError: Cannot convert null to a BigInt
+  at scripts/guard-008.ts:25
+  Report 008 was checked against the kit source: scripts/, strategies/ and packages/ are identical between 2579866 and main 4e75896.

@@ -3,6 +3,8 @@ Severity: normal
 
 Area: app
 
+Checked 2026-11-12, block 48,171,739: still reproduces. Our 0.00036 BTC still shows as 0.0004, and 9,211 of 9,910 open BTC positions are off the 4-decimal grid.
+
 Display bug only, separate from report 019: the stored sizes are right, the dialog shows them rounded.
 
 ## Steps to reproduce

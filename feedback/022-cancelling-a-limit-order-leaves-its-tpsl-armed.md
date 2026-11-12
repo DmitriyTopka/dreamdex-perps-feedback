@@ -3,6 +3,8 @@ Severity: normal
 
 Area: app
 
+Checked 2026-11-12, block 48,172,181: still reproduces. The same take profit from the order cancelled on 29 Oct is still armed; its account has no position right now.
+
 ## Steps to reproduce
 In the app (app.testnet.dreamdex.io, Perps):
 1. BTC-PERP, no position. Order panel: Limit, Long, limit price 80,000, size 15 USDso (0.00018 BTC), tick TP/SL, TP 90,000, SL 70,000. Submit.

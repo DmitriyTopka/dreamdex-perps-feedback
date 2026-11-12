@@ -3,6 +3,8 @@ Severity: normal
 
 Area: bot kit
 
+Checked 2026-11-12, block 48,167,702: still reproduces. The default quote crossed on 2 markets in this run (XRP, BTC; on 30 Oct it was LINK, BNB, HYPE), and both tests from patches/016 still fail on the kit.
+
 Two linked problems: a skipped leg is retried only after an 8 bps move of the mark, and the quotes are centred on the mark without a check against the book, so on markets where the book sits away from the mark the same leg crosses every cycle.
 
 ## Steps to reproduce

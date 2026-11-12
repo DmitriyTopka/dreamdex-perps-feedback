@@ -3,6 +3,8 @@ Severity: normal
 
 Area: docs
 
+Checked 2026-11-12, block 48,166,994: still reproduces. The docs OI cap still differs from the chain on 20 of the original 21 markets, in the same 1x/2x/4x groups. The 19 new markets are not in the docs table.
+
 ## Steps to reproduce
 One command, read-only, no key ([`scripts/caps-009-011.ts`](../scripts/caps-009-011.ts)):
 

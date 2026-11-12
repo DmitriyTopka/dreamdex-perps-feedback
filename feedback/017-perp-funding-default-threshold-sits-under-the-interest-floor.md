@@ -3,6 +3,8 @@ Severity: normal
 
 Area: bot kit
 
+Checked 2026-11-12, block 48,169,381: still reproduces. The bot still enters on every market (40/40), on 17 of the original 21 only because of the default interest rate (16 on 30 Oct).
+
 ## Steps to reproduce
 Read-only, no key ([`scripts/funding-017.ts`](../scripts/funding-017.ts)):
 

@@ -3,6 +3,8 @@ Severity: major
 
 Area: SDK
 
+Checked 2026-11-12, block 48,167,668: still reproduces. The Hideki preset still has no operatorPermissionsRegistry and placePerpStopOrder still throws NotConfiguredError.
+
 Short version: with the addresses the SDK ships, you can't place a perp TP/SL, can't even build one unsigned, and can't read a grant back. The address is one call away on the pool, the SDK just never asks.
 
 ## Steps to reproduce

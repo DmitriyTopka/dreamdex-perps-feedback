@@ -3,6 +3,8 @@ Severity: normal
 
 Area: docs
 
+Checked 2026-11-12, block 48,163,763: still reproduces. 5 of 6 placements cost more STT than the docs say, up to 2,342,262 gas (0.014054 STT).
+
 ## Steps to reproduce
 Read-only, no key ([`scripts/gas-004.ts`](../scripts/gas-004.ts)):
 

@@ -3,6 +3,8 @@ Severity: normal
 
 Area: SDK
 
+Checked 2026-11-12, block 48,163,635: still reproduces. orderType 4 still reverts with empty revert data and the SDK still decodes it as "for an unknown reason".
+
 ## Steps to reproduce
 Read-only, eth_call only, no key ([`scripts/ordertype-003.ts`](../scripts/ordertype-003.ts)):
 

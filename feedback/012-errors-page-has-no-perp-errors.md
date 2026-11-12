@@ -3,6 +3,8 @@ Severity: major
 
 Area: docs
 
+Checked 2026-11-12, block 48,167,143: still reproduces. 120 of 156 perp contract errors are still named nowhere in the docs.
+
 ## Steps to reproduce
 Read-only, no key ([`scripts/errors-012.ts`](../scripts/errors-012.ts)):
 

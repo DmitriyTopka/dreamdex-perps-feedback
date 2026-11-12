@@ -1,0 +1,179 @@
+{
+  "block": 48167264,
+  "time": "2026-11-12T08:08:57.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "sdkQuotes": {
+    "file": "node_modules/@somnia-chain/markets-sdk/dist/perp/history.d.ts",
+    "rowsComeOff": [
+      {
+        "line": 501,
+        "text": "*  These rows come off `MarginBank`, and `kind` says which rail within it."
+      }
+    ],
+    "routedToFund": [
+      {
+        "line": 523,
+        "text": "*    LiquidationFee stage-3 health-preserving liquidation fee, routed WHOLLY to an"
+      },
+      {
+        "line": 535,
+        "text": "*  `Fee` it is a split of a larger fee; on `LiquidationFee` it equals `amount`, because"
+      }
+    ],
+    "noRowsYet": [
+      {
+        "line": 526,
+        "text": "*  No `LiquidationFee` rows exist yet: the event is in the protocol ABI but not in the"
+      },
+      {
+        "line": 527,
+        "text": "*  deployed implementation, and the subscription is staged ahead of the upgrade that"
+      },
+      {
+        "line": 528,
+        "text": "*  brings it."
+      }
+    ],
+    "kindFilter": [
+      {
+        "line": 788,
+        "text": "* - `opts`: `kind` is `\"Fee\"` | `\"Rebate\"` | `\"BuilderFee\"`"
+      }
+    ]
+  },
+  "sdkAbiPlacement": {
+    "inLiquidationEngineEventsAbi": true,
+    "inMarginBankEventsAbi": false
+  },
+  "liquidationEngine": "0xa66d3c24ad4a389d863846905d8173e1017e9f4d",
+  "insuranceFund": "0x50826894d47c6d4f3bea38bfdc7dc5c5be171b80",
+  "insuranceFundEvents": {
+    "rows": 22,
+    "byKind": {
+      "BadDebtAuthorised": 6,
+      "TierFunded": 11,
+      "TierDebited": 4,
+      "TierWithdrawn": 1
+    },
+    "tierCredited": 0
+  },
+  "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+  "topic0": {
+    "signature": "LiquidationFeeCharged(address,address,uint256,uint256,uint256)",
+    "keccak": "0x7f65cfb17ffadd9ae9df22fa5fcf080b5a10e7371a02f623659a2c12ca299eee"
+  },
+  "rowsByKind": {
+    "LiquidationFee": 3279,
+    "Fee": 0,
+    "Rebate": 0,
+    "BuilderFee": 13
+  },
+  "liquidationFee": {
+    "rows": 3279,
+    "oldest": "2026-09-29T12:35:30.000Z",
+    "newest": "2026-11-12T05:19:23.000Z",
+    "rowsPerDay": {
+      "2026-11-12": 2,
+      "2026-11-11": 18,
+      "2026-11-10": 119,
+      "2026-11-09": 71,
+      "2026-11-08": 260,
+      "2026-11-07": 6,
+      "2026-11-06": 13,
+      "2026-11-05": 194,
+      "2026-11-04": 291,
+      "2026-11-03": 65,
+      "2026-11-02": 21,
+      "2026-10-31": 17,
+      "2026-10-30": 161,
+      "2026-10-29": 614,
+      "2026-10-28": 43,
+      "2026-10-27": 57,
+      "2026-10-26": 17,
+      "2026-10-25": 19,
+      "2026-10-24": 202,
+      "2026-10-23": 65,
+      "2026-10-22": 102,
+      "2026-10-21": 191,
+      "2026-10-20": 109,
+      "2026-10-19": 8,
+      "2026-10-18": 83,
+      "2026-10-17": 41,
+      "2026-10-16": 54,
+      "2026-10-15": 291,
+      "2026-10-14": 47,
+      "2026-10-13": 27,
+      "2026-10-12": 2,
+      "2026-10-09": 1,
+      "2026-10-08": 25,
+      "2026-10-07": 7,
+      "2026-10-05": 2,
+      "2026-10-04": 4,
+      "2026-10-02": 12,
+      "2026-10-01": 1,
+      "2026-09-30": 11,
+      "2026-09-29": 6
+    },
+    "distinctPools": 21,
+    "distinctAccounts": 1459,
+    "insurancePortionEqualsAmount": "0/3279",
+    "insurancePortionZero": "3279/3279",
+    "totalAmountUSDso": 565193.8151420646,
+    "ratePct": {
+      "min": 0.001,
+      "median": 1,
+      "max": 1,
+      "exactly1pct": 2809,
+      "above1pct": 0
+    }
+  },
+  "receiptChecks": [
+    {
+      "rowId": "0x6b503743de9af62c442852f608f5e83b589392463dc847189d79710e00f18ff7_10",
+      "rowInsurancePortion": "0",
+      "logsTouchingInsuranceFund": 0,
+      "rowTime": "2026-09-29T12:35:30.000Z",
+      "block": 10360563,
+      "status": "success",
+      "logIndex": 10,
+      "emitter": "0xa66d3c24ad4a389d863846905d8173e1017e9f4d",
+      "emitterIsLiquidationEngine": true,
+      "emitterIsMarginBank": false,
+      "topic0": "0x7f65cfb17ffadd9ae9df22fa5fcf080b5a10e7371a02f623659a2c12ca299eee",
+      "topic0IsLiquidationFeeCharged": true,
+      "decoded": {
+        "event": "LiquidationFeeCharged",
+        "account": "0x7006aa5a4F634C2c6f51211bB886541451a7B6f2",
+        "perpPool": "0x7058579F3248559963f79AdB937c6De9f953E060",
+        "tier": "2",
+        "fillNotional": "164270160000000000000",
+        "amount": "1642701600000000000"
+      },
+      "matchesRow": true
+    },
+    {
+      "rowId": "0xdcf53a99022faecf276d2f8847b10e1eab2757a58422dbb2753c8db400af9ce2_19",
+      "rowInsurancePortion": "0",
+      "logsTouchingInsuranceFund": 0,
+      "rowTime": "2026-11-12T05:19:23.000Z",
+      "block": 48065634,
+      "status": "success",
+      "logIndex": 19,
+      "emitter": "0xa66d3c24ad4a389d863846905d8173e1017e9f4d",
+      "emitterIsLiquidationEngine": true,
+      "emitterIsMarginBank": false,
+      "topic0": "0x7f65cfb17ffadd9ae9df22fa5fcf080b5a10e7371a02f623659a2c12ca299eee",
+      "topic0IsLiquidationFeeCharged": true,
+      "decoded": {
+        "event": "LiquidationFeeCharged",
+        "account": "0x91C3575FaA2F74067354d1b7d454D89eE2E1894d",
+        "perpPool": "0x1Be21287cfB865a7c462Ff3c4f275E70BcccefE4",
+        "tier": "2",
+        "fillNotional": "15490700000000000000",
+        "amount": "154907000000000000"
+      },
+      "matchesRow": true
+    }
+  ]
+}

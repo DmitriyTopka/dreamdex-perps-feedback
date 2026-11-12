@@ -3,6 +3,8 @@ Severity: normal
 
 Area: SDK
 
+Checked 2026-11-12, block 48,167,264: still reproduces. The SDK comment is unchanged and the indexer now returns 3,279 LiquidationFee rows (565,194 USDso). BuilderFee now has 13 rows, so LiquidationFee is no longer the only kind with rows.
+
 `PerpFeeRecord.kind` in `@somnia-chain/markets-sdk` 0.32.1 tells integrators that liquidation fee rows do not exist yet and that the event is not deployed. Both are wrong today. `listPerpFees({ kind: "LiquidationFee" })` returns 2,179 rows, the newest from this morning, every one backed by a `LiquidationFeeCharged` log from the LiquidationEngine proxy. It is the only perp fee kind with any rows at all. An integrator who trusts the comment drops 332,025 USDso of fees from their accounting.
 
 ## Steps to reproduce

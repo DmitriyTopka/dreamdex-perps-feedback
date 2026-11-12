@@ -1,0 +1,3976 @@
+{
+  "block": 48167702,
+  "time": "2026-11-12T08:09:41.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "end": {
+    "block": 48168983,
+    "time": "2026-11-12T08:11:49.000Z",
+    "sdk": "0.32.1",
+    "chainId": 50383
+  },
+  "kit": "dreamdex-bot-kit 2579866, strategies/perp-maker/src/index.ts:106-186",
+  "defaults": {
+    "HALF_SPREAD_BPS": 15,
+    "SKEW_BPS": 10,
+    "REQUOTE_BPS": 8,
+    "REFRESH_MS": 15000
+  },
+  "run22Oct": {
+    "order": {
+      "orderId": "8116567392432209725644",
+      "isBid": true,
+      "price": 81424,
+      "quantityBtc": 0.0003,
+      "filled": "0",
+      "status": "Cancelled",
+      "placedTxHash": "0xb92fb43f3abb9127ac848b2557444d4ee3f353cd83750cf251295b361c0e88d4",
+      "placedAtBlock": 30337534,
+      "placedAt": "2026-10-22T16:16:12.000Z",
+      "lastUpdatedAt": "2026-10-22T16:17:01.000Z"
+    },
+    "atPlacementBlock": {
+      "poolMark": 81542.92,
+      "bestBid": 81741.59999999999,
+      "bestAsk": 81748.09999999999
+    },
+    "botMarkFromBidPrice": 81546.32,
+    "askTried": 81668.6,
+    "askAtOrBelowBestBid": true,
+    "askUnderBestBidBps": 8.9
+  },
+  "summary": {
+    "markets": 36,
+    "samplesPerMarket": 5,
+    "marketsWithACrossingDefaultQuote": [
+      "XRP-PERP: bid crosses in 1/5 samples, re-quote cycles 2/5, book mid -20.7 to -16.5 bps vs mark",
+      "BTC-PERP: ask crosses in 4/5 samples, re-quote cycles 1/5, book mid 15.7 to 23.6 bps vs mark"
+    ]
+  },
+  "perMarket": [
+    {
+      "market": "LOADTEST-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 3763.9996,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3758.35,
+          "quoteAsk": 3769.64,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 3763.9996,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3758.35,
+          "quoteAsk": 3769.64,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 3763.9996,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3758.35,
+          "quoteAsk": 3769.64,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 3763.9996,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3758.35,
+          "quoteAsk": 3769.64,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 3763.9996,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3758.35,
+          "quoteAsk": 3769.64,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "WTI-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 3,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 9.69,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 3.34,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 7.22,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 9.51,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 86.143786,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 86.014,
+          "quoteAsk": 86.273,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 86.227245,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 86.097,
+          "quoteAsk": 86.356,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 86.198426,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 86.069,
+          "quoteAsk": 86.327,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 86.165007,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 86.035,
+          "quoteAsk": 86.294,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 86.145229,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 86.016,
+          "quoteAsk": 86.274,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "XAG-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 4.25,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 2.39,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 7.29,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 5.33,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 51.48215,
+          "bestBid": 51.428,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 51.404,
+          "quoteAsk": 51.559,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 51.460292,
+          "bestBid": 51.428,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 51.383,
+          "quoteAsk": 51.537,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 51.469837,
+          "bestBid": 51.446,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 51.392,
+          "quoteAsk": 51.547,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 51.444602,
+          "bestBid": 51.174,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 51.367,
+          "quoteAsk": 51.521,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 51.454687,
+          "bestBid": 51.414,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 51.377,
+          "quoteAsk": 51.531,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "XAU-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 3.85,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 3.29,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 6.12,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 4.75,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 3961.1152,
+          "bestBid": 3959.7,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3955.1,
+          "quoteAsk": 3967.0000000000005,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 3959.5919,
+          "bestBid": 3960.9,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3953.6,
+          "quoteAsk": 3965.5,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 3959.8103,
+          "bestBid": 3960.9,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3953.7999999999997,
+          "quoteAsk": 3965.7,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 3958.6917,
+          "bestBid": 3959.7,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3952.7000000000003,
+          "quoteAsk": 3964.6000000000004,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 3959.2335,
+          "bestBid": 3959.7,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3953.2,
+          "quoteAsk": 3965.1,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "GOOGL-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.13,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.15,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.45,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 1.02,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 294.68362,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 294.24,
+          "quoteAsk": 295.12,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 294.68737,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 294.24,
+          "quoteAsk": 295.12,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 294.67908,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 294.23,
+          "quoteAsk": 295.12,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 294.67049,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 294.22,
+          "quoteAsk": 295.11,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 294.65354,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 294.21,
+          "quoteAsk": 295.09,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "TSLA-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.49,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.78,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.46,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 0.4,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 387.26899,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 386.68,
+          "quoteAsk": 387.84,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 387.288,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 386.7,
+          "quoteAsk": 387.86,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 387.29923,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 386.71,
+          "quoteAsk": 387.88,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 387.28692,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 386.7,
+          "quoteAsk": 387.86,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 387.25351,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 386.67,
+          "quoteAsk": 387.83,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "HYNX-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 1.36,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.94,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 1.11,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 1.04,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 941.37237,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 939.9,
+          "quoteAsk": 942.7,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 941.50008,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 940,
+          "quoteAsk": 942.9,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 941.55543,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 940.1,
+          "quoteAsk": 942.9,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 941.47646,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 940,
+          "quoteAsk": 942.8,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 941.46998,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 940,
+          "quoteAsk": 942.8,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "MSTR-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.82,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.42,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.09,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 3.89,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 117.58315,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 117.4,
+          "quoteAsk": 117.75,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 117.59281,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 117.41,
+          "quoteAsk": 117.76,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 117.59989,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 117.42,
+          "quoteAsk": 117.77,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 117.58208,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 117.4,
+          "quoteAsk": 117.75,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 117.53738,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 117.36,
+          "quoteAsk": 117.71,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "MRVL-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 1.09,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.57,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 1.26,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 4.39,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 163.41908,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 163.17,
+          "quoteAsk": 163.66,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 163.43697,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 163.19,
+          "quoteAsk": 163.68,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 163.44469,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 163.19,
+          "quoteAsk": 163.68,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 163.43966,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 163.19,
+          "quoteAsk": 163.68,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 163.34736,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 163.1,
+          "quoteAsk": 163.59,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "LITE-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.31,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.3,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.87,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 3.02,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 624.75475,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 623.81,
+          "quoteAsk": 625.6899999999999,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 624.77381,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 623.83,
+          "quoteAsk": 625.71,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 624.77373,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 623.83,
+          "quoteAsk": 625.71,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 624.70031,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 623.76,
+          "quoteAsk": 625.6300000000001,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 624.56619,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 623.62,
+          "quoteAsk": 625.5,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "INTC-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.35,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.85,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.61,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 0.92,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 60.863642,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 60.77,
+          "quoteAsk": 60.95,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 60.8658,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 60.77,
+          "quoteAsk": 60.95,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 60.868811,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 60.77,
+          "quoteAsk": 60.96,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 60.867327,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 60.77,
+          "quoteAsk": 60.95,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 60.858057,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 60.76,
+          "quoteAsk": 60.94,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "HOOD-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.2,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.85,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.78,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 3.94,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 83.223404,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 83.09,
+          "quoteAsk": 83.34,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 83.225069,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 83.1,
+          "quoteAsk": 83.34,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 83.230481,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 83.1,
+          "quoteAsk": 83.35,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 83.216899,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 83.09,
+          "quoteAsk": 83.34,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 83.190608,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 83.06,
+          "quoteAsk": 83.31,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "COIN-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.3,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.66,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.52,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 1.88,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 133.34211,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 133.14,
+          "quoteAsk": 133.54,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 133.34617,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 133.14,
+          "quoteAsk": 133.54,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 133.35085,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 133.15,
+          "quoteAsk": 133.55,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 133.33515,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 133.13,
+          "quoteAsk": 133.53,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 133.31707,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 133.11,
+          "quoteAsk": 133.51,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "AMD-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        -132.1,
+        -127
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.71,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.08,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 1.04,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 4.38,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 569.48109,
+          "bestBid": 554.71,
+          "bestAsk": 569.29,
+          "bookMidVsMarkBps": -131.4,
+          "quoteBid": 568.62,
+          "quoteAsk": 570.33,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 569.52135,
+          "bestBid": 554.71,
+          "bestAsk": 569.29,
+          "bookMidVsMarkBps": -132.1,
+          "quoteBid": 568.66,
+          "quoteAsk": 570.37,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 569.47674,
+          "bestBid": 554.71,
+          "bestAsk": 569.29,
+          "bookMidVsMarkBps": -131.3,
+          "quoteBid": 568.62,
+          "quoteAsk": 570.33,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 569.42171,
+          "bestBid": 554.71,
+          "bestAsk": 569.29,
+          "bookMidVsMarkBps": -130.3,
+          "quoteBid": 568.56,
+          "quoteAsk": 570.27,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 569.23167,
+          "bestBid": 554.71,
+          "bestAsk": 569.29,
+          "bookMidVsMarkBps": -127,
+          "quoteBid": 568.37,
+          "quoteAsk": 570.08,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "ADLT-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        0,
+        0
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 3450,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3444.8199999999997,
+          "quoteAsk": 3455.17,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 3450,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3444.8199999999997,
+          "quoteAsk": 3455.17,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 3450,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3444.8199999999997,
+          "quoteAsk": 3455.17,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 3450,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3444.8199999999997,
+          "quoteAsk": 3455.17,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 3450,
+          "bestBid": null,
+          "bestAsk": null,
+          "bookMidVsMarkBps": null,
+          "quoteBid": 3444.8199999999997,
+          "quoteAsk": 3455.17,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "ZRO-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -11.9,
+        -6.7
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 4.39,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 6.45,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 3.53,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 14.47,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 1.5546949,
+          "bestBid": 1.5519,
+          "bestAsk": 1.5538,
+          "bookMidVsMarkBps": -11.9,
+          "quoteBid": 1.5523,
+          "quoteAsk": 1.557,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 1.5553773,
+          "bestBid": 1.5528,
+          "bestAsk": 1.5548,
+          "bookMidVsMarkBps": -10.1,
+          "quoteBid": 1.553,
+          "quoteAsk": 1.5577,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 1.5556984,
+          "bestBid": 1.5533,
+          "bestAsk": 1.5551,
+          "bookMidVsMarkBps": -9.6,
+          "quoteBid": 1.5533,
+          "quoteAsk": 1.558,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 1.5541465,
+          "bestBid": 1.5518,
+          "bestAsk": 1.5537,
+          "bookMidVsMarkBps": -9,
+          "quoteBid": 1.5518,
+          "quoteAsk": 1.5564,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 1.5524455,
+          "bestBid": 1.5504,
+          "bestAsk": 1.5524,
+          "bookMidVsMarkBps": -6.7,
+          "quoteBid": 1.5501,
+          "quoteAsk": 1.5547,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "LIT-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 4,
+      "bookMidVsMarkBpsRange": [
+        1.8,
+        10.5
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 22,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 9.83,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 0.34,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 11.07,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 3.2169924,
+          "bestBid": 3.2153,
+          "bestAsk": 3.2201,
+          "bookMidVsMarkBps": 2.2,
+          "quoteBid": 3.2121,
+          "quoteAsk": 3.2218,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 3.2099157,
+          "bestBid": 3.2112,
+          "bestAsk": 3.2154,
+          "bookMidVsMarkBps": 10.5,
+          "quoteBid": 3.2051,
+          "quoteAsk": 3.2147,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 3.2130706,
+          "bestBid": 3.2122,
+          "bestAsk": 3.2177,
+          "bookMidVsMarkBps": 5.8,
+          "quoteBid": 3.2082,
+          "quoteAsk": 3.2178,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 3.2129609,
+          "bestBid": 3.2106,
+          "bestAsk": 3.2165,
+          "bookMidVsMarkBps": 1.8,
+          "quoteBid": 3.2081,
+          "quoteAsk": 3.2177,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 3.2095144,
+          "bestBid": 3.2087,
+          "bestAsk": 3.2134,
+          "bookMidVsMarkBps": 4.8,
+          "quoteBid": 3.2047,
+          "quoteAsk": 3.2143,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "VVV-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -0.4,
+        7.3
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 2.74,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.09,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 9.17,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 0.76,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 19.728216,
+          "bestBid": 19.712,
+          "bestAsk": 19.746,
+          "bookMidVsMarkBps": 0.4,
+          "quoteBid": 19.698,
+          "quoteAsk": 19.757,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 19.72282,
+          "bestBid": 19.709,
+          "bestAsk": 19.738,
+          "bookMidVsMarkBps": 0.3,
+          "quoteBid": 19.693,
+          "quoteAsk": 19.752,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 19.730362,
+          "bestBid": 19.715,
+          "bestAsk": 19.744,
+          "bookMidVsMarkBps": -0.4,
+          "quoteBid": 19.7,
+          "quoteAsk": 19.759,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 19.71013,
+          "bestBid": 19.71,
+          "bestAsk": 19.739,
+          "bookMidVsMarkBps": 7.3,
+          "quoteBid": 19.68,
+          "quoteAsk": 19.739,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 19.708631,
+          "bestBid": 19.696,
+          "bestAsk": 19.726,
+          "bookMidVsMarkBps": 1.2,
+          "quoteBid": 19.679,
+          "quoteAsk": 19.738,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -2.5,
+        7.4
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 7.52,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 11.51,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 5.22,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 3.26,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.0044562932,
+          "bestBid": 0.0044524,
+          "bestAsk": 0.0044651,
+          "bookMidVsMarkBps": 5.5,
+          "quoteBid": 0.0044496,
+          "quoteAsk": 0.0044629,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.0044529439,
+          "bestBid": 0.0044474,
+          "bestAsk": 0.0044598,
+          "bookMidVsMarkBps": 1.5,
+          "quoteBid": 0.0044462,
+          "quoteAsk": 0.0044596,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.0044511654,
+          "bestBid": 0.004448,
+          "bestAsk": 0.0044609,
+          "bookMidVsMarkBps": 7.4,
+          "quoteBid": 0.0044444,
+          "quoteAsk": 0.0044578,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.00444884,
+          "bestBid": 0.0044455,
+          "bestAsk": 0.0044585,
+          "bookMidVsMarkBps": 7.1,
+          "quoteBid": 0.0044421,
+          "quoteAsk": 0.0044555,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.0044497141,
+          "bestBid": 0.0044423,
+          "bestAsk": 0.0044549,
+          "bookMidVsMarkBps": -2.5,
+          "quoteBid": 0.004443,
+          "quoteAsk": 0.0044563,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "PUMP-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        2.8,
+        5.9
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 2.85,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 2.75,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 14.32,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 5.82,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.0034399632,
+          "bestBid": 0.003438,
+          "bestAsk": 0.003445,
+          "bookMidVsMarkBps": 4.5,
+          "quoteBid": 0.003434,
+          "quoteAsk": 0.003445,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.0034389814,
+          "bestBid": 0.003437,
+          "bestAsk": 0.003445,
+          "bookMidVsMarkBps": 5.9,
+          "quoteBid": 0.003433,
+          "quoteAsk": 0.003444,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.0034390158,
+          "bestBid": 0.003435,
+          "bestAsk": 0.003445,
+          "bookMidVsMarkBps": 2.9,
+          "quoteBid": 0.003433,
+          "quoteAsk": 0.003444,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.0034350371,
+          "bestBid": 0.003432,
+          "bestAsk": 0.00344,
+          "bookMidVsMarkBps": 2.8,
+          "quoteBid": 0.003429,
+          "quoteAsk": 0.00344,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.0034330391,
+          "bestBid": 0.00343,
+          "bestAsk": 0.00344,
+          "bookMidVsMarkBps": 5.7,
+          "quoteBid": 0.003427,
+          "quoteAsk": 0.003438,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "ZEC-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -6.1,
+        -1.1
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 3.09,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.71,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 7.53,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 13.37,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 985.87958,
+          "bestBid": 985.4390000000001,
+          "bestAsk": 986.08,
+          "bookMidVsMarkBps": -1.2,
+          "quoteBid": 984.4,
+          "quoteAsk": 987.3580000000001,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 986.18458,
+          "bestBid": 985.508,
+          "bestAsk": 986.169,
+          "bookMidVsMarkBps": -3.5,
+          "quoteBid": 984.7049999999999,
+          "quoteAsk": 987.663,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 986.04847,
+          "bestBid": 985.635,
+          "bestAsk": 986.239,
+          "bookMidVsMarkBps": -1.1,
+          "quoteBid": 984.569,
+          "quoteAsk": 987.527,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 985.13692,
+          "bestBid": 984.248,
+          "bestAsk": 984.831,
+          "bookMidVsMarkBps": -6.1,
+          "quoteBid": 983.659,
+          "quoteAsk": 986.614,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 984.56177,
+          "bestBid": 984.125,
+          "bestAsk": 984.764,
+          "bookMidVsMarkBps": -1.2,
+          "quoteBid": 983.084,
+          "quoteAsk": 986.038,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "TAO-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -1.5,
+        4.5
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.4,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 6.15,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 10.95,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 3.1,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 215.21192,
+          "bestBid": 214.972,
+          "bestAsk": 215.536,
+          "bookMidVsMarkBps": 2,
+          "quoteBid": 214.889,
+          "quoteAsk": 215.534,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 215.20321,
+          "bestBid": 214.888,
+          "bestAsk": 215.455,
+          "bookMidVsMarkBps": -1.5,
+          "quoteBid": 214.88,
+          "quoteAsk": 215.526,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 215.07947,
+          "bestBid": 214.83,
+          "bestAsk": 215.417,
+          "bookMidVsMarkBps": 2,
+          "quoteBid": 214.756,
+          "quoteAsk": 215.402,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 214.97617,
+          "bestBid": 214.827,
+          "bestAsk": 215.32,
+          "bookMidVsMarkBps": 4.5,
+          "quoteBid": 214.653,
+          "quoteAsk": 215.298,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 214.90957,
+          "bestBid": 214.707,
+          "bestAsk": 215.269,
+          "bookMidVsMarkBps": 3.6,
+          "quoteBid": 214.587,
+          "quoteAsk": 215.231,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "WLD-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        9.2,
+        14.1
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 4.07,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 4.01,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 8.1,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 5.74,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.30486829,
+          "bestBid": 0.3048,
+          "bestAsk": 0.3055,
+          "bookMidVsMarkBps": 9.2,
+          "quoteBid": 0.3044,
+          "quoteAsk": 0.3053,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.3047441,
+          "bestBid": 0.3048,
+          "bestAsk": 0.3055,
+          "bookMidVsMarkBps": 13.3,
+          "quoteBid": 0.3042,
+          "quoteAsk": 0.3052,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.30474601,
+          "bestBid": 0.3047,
+          "bestAsk": 0.3054,
+          "bookMidVsMarkBps": 10,
+          "quoteBid": 0.3042,
+          "quoteAsk": 0.3052,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.30462149,
+          "bestBid": 0.3047,
+          "bestAsk": 0.3054,
+          "bookMidVsMarkBps": 14.1,
+          "quoteBid": 0.3041,
+          "quoteAsk": 0.305,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.30444654,
+          "bestBid": 0.3045,
+          "bestAsk": 0.3052,
+          "bookMidVsMarkBps": 13.3,
+          "quoteBid": 0.3039,
+          "quoteAsk": 0.3049,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "NEAR-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 3,
+      "bookMidVsMarkBpsRange": [
+        5.2,
+        11.1
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 7.57,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 2.95,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 8.48,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 11.66,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 3.4952033,
+          "bestBid": 3.4974,
+          "bestAsk": 3.5006,
+          "bookMidVsMarkBps": 10.9,
+          "quoteBid": 3.4899,
+          "quoteAsk": 3.5004,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 3.4978484,
+          "bestBid": 3.4984,
+          "bestAsk": 3.5017,
+          "bookMidVsMarkBps": 6.3,
+          "quoteBid": 3.4926,
+          "quoteAsk": 3.503,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 3.4962334,
+          "bestBid": 3.4973,
+          "bestAsk": 3.5008,
+          "bookMidVsMarkBps": 8.1,
+          "quoteBid": 3.4909,
+          "quoteAsk": 3.5014,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 3.4922398,
+          "bestBid": 3.4923,
+          "bestAsk": 3.4958,
+          "bookMidVsMarkBps": 5.2,
+          "quoteBid": 3.487,
+          "quoteAsk": 3.4974,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 3.4881669,
+          "bestBid": 3.4904,
+          "bestAsk": 3.4937,
+          "bookMidVsMarkBps": 11.1,
+          "quoteBid": 3.4829,
+          "quoteAsk": 3.4933,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "XLM-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -4.4,
+        1.6
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 2.2,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 2.74,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 5.39,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 12.85,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.14571386,
+          "bestBid": 0.1454,
+          "bestAsk": 0.1459,
+          "bookMidVsMarkBps": -4.4,
+          "quoteBid": 0.1454,
+          "quoteAsk": 0.1459,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.14568175,
+          "bestBid": 0.1454,
+          "bestAsk": 0.1459,
+          "bookMidVsMarkBps": -2.2,
+          "quoteBid": 0.1454,
+          "quoteAsk": 0.1459,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.14567389,
+          "bestBid": 0.1454,
+          "bestAsk": 0.1459,
+          "bookMidVsMarkBps": -1.6,
+          "quoteBid": 0.1454,
+          "quoteAsk": 0.1458,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.14563537,
+          "bestBid": 0.1454,
+          "bestAsk": 0.1459,
+          "bookMidVsMarkBps": 1,
+          "quoteBid": 0.1454,
+          "quoteAsk": 0.1458,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.14552667,
+          "bestBid": 0.1453,
+          "bestAsk": 0.1458,
+          "bookMidVsMarkBps": 1.6,
+          "quoteBid": 0.1453,
+          "quoteAsk": 0.1457,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "AVAX-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        3.9,
+        11.2
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 1.45,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.06,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 5.43,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 17.06,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 8.602099,
+          "bestBid": 8.604,
+          "bestAsk": 8.611,
+          "bookMidVsMarkBps": 6.3,
+          "quoteBid": 8.589,
+          "quoteAsk": 8.615,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 8.6008495,
+          "bestBid": 8.6,
+          "bestAsk": 8.612,
+          "bookMidVsMarkBps": 6,
+          "quoteBid": 8.587,
+          "quoteAsk": 8.613,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 8.6021529,
+          "bestBid": 8.601,
+          "bestAsk": 8.61,
+          "bookMidVsMarkBps": 3.9,
+          "quoteBid": 8.589,
+          "quoteAsk": 8.615,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 8.5974269,
+          "bestBid": 8.6,
+          "bestAsk": 8.61,
+          "bookMidVsMarkBps": 8.8,
+          "quoteBid": 8.584,
+          "quoteAsk": 8.61,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 8.5874209,
+          "bestBid": 8.593,
+          "bestAsk": 8.601,
+          "bookMidVsMarkBps": 11.2,
+          "quoteBid": 8.574,
+          "quoteAsk": 8.6,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "LINK-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        1.8,
+        6.5
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.19,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 4.86,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 9.82,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 10.098334,
+          "bestBid": 10.091,
+          "bestAsk": 10.111,
+          "bookMidVsMarkBps": 2.6,
+          "quoteBid": 10.083,
+          "quoteAsk": 10.113,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 10.098334,
+          "bestBid": 10.09,
+          "bestAsk": 10.111,
+          "bookMidVsMarkBps": 2.1,
+          "quoteBid": 10.083,
+          "quoteAsk": 10.113,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 10.098147,
+          "bestBid": 10.09,
+          "bestAsk": 10.11,
+          "bookMidVsMarkBps": 1.8,
+          "quoteBid": 10.082,
+          "quoteAsk": 10.113,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 10.093425,
+          "bestBid": 10.088,
+          "bestAsk": 10.112,
+          "bookMidVsMarkBps": 6.5,
+          "quoteBid": 10.078,
+          "quoteAsk": 10.108,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 10.088415,
+          "bestBid": 10.083,
+          "bestAsk": 10.104,
+          "bookMidVsMarkBps": 5,
+          "quoteBid": 10.073,
+          "quoteAsk": 10.103,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "SUI-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        9.7,
+        16.4
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.17,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 9.13,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 6.78,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.81305905,
+          "bestBid": 0.8134,
+          "bestAsk": 0.8147,
+          "bookMidVsMarkBps": 12.2,
+          "quoteBid": 0.8118,
+          "quoteAsk": 0.8142,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.81305905,
+          "bestBid": 0.8132,
+          "bestAsk": 0.8145,
+          "bookMidVsMarkBps": 9.7,
+          "quoteBid": 0.8118,
+          "quoteAsk": 0.8142,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.81296416,
+          "bestBid": 0.8132,
+          "bestAsk": 0.8145,
+          "bookMidVsMarkBps": 10.9,
+          "quoteBid": 0.8117,
+          "quoteAsk": 0.8141,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.81231658,
+          "bestBid": 0.813,
+          "bestAsk": 0.8143,
+          "bookMidVsMarkBps": 16.4,
+          "quoteBid": 0.811,
+          "quoteAsk": 0.8135,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.81176581,
+          "bestBid": 0.8124,
+          "bestAsk": 0.8138,
+          "bookMidVsMarkBps": 16.4,
+          "quoteBid": 0.8105,
+          "quoteAsk": 0.8129,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "ADA-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        -0.7,
+        3.6
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 1.39,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 1.36,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 7.16,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.17261171,
+          "bestBid": 0.1724,
+          "bestAsk": 0.1729,
+          "bookMidVsMarkBps": 2.2,
+          "quoteBid": 0.1723,
+          "quoteAsk": 0.1728,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.17261171,
+          "bestBid": 0.1723,
+          "bestAsk": 0.1729,
+          "bookMidVsMarkBps": -0.7,
+          "quoteBid": 0.1723,
+          "quoteAsk": 0.1728,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.17258779,
+          "bestBid": 0.1724,
+          "bestAsk": 0.1729,
+          "bookMidVsMarkBps": 3.6,
+          "quoteBid": 0.1723,
+          "quoteAsk": 0.1728,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.17258823,
+          "bestBid": 0.1724,
+          "bestAsk": 0.1729,
+          "bookMidVsMarkBps": 3.6,
+          "quoteBid": 0.1723,
+          "quoteAsk": 0.1728,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.17248806,
+          "bestBid": 0.1723,
+          "bestAsk": 0.1728,
+          "bookMidVsMarkBps": 3.6,
+          "quoteBid": 0.1722,
+          "quoteAsk": 0.1727,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "BNB-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        11.1,
+        14.3
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.6,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.31,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 3.14,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 8.12,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 673.803,
+          "bestBid": 674.264,
+          "bestAsk": 674.8380000000001,
+          "bookMidVsMarkBps": 11.1,
+          "quoteBid": 672.792,
+          "quoteAsk": 674.813,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 673.76267,
+          "bestBid": 674.4019999999999,
+          "bestAsk": 674.8,
+          "bookMidVsMarkBps": 12.4,
+          "quoteBid": 672.752,
+          "quoteAsk": 674.7729999999999,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 673.82386,
+          "bestBid": 674.34,
+          "bestAsk": 674.8969999999999,
+          "bookMidVsMarkBps": 11.8,
+          "quoteBid": 672.813,
+          "quoteAsk": 674.834,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 673.59151,
+          "bestBid": 674.172,
+          "bestAsk": 674.8940000000001,
+          "bookMidVsMarkBps": 14,
+          "quoteBid": 672.581,
+          "quoteAsk": 674.601,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 673.25597,
+          "bestBid": 673.986,
+          "bestAsk": 674.449,
+          "bookMidVsMarkBps": 14.3,
+          "quoteBid": 672.2460000000001,
+          "quoteAsk": 674.265,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "DOGE-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        5.8,
+        10.3
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.02,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 8.87,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 1.88,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 0.066930757,
+          "bestBid": 0.06693,
+          "bestAsk": 0.06704,
+          "bookMidVsMarkBps": 8.1,
+          "quoteBid": 0.06683,
+          "quoteAsk": 0.06703,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 0.066930757,
+          "bestBid": 0.06691,
+          "bestAsk": 0.06703,
+          "bookMidVsMarkBps": 5.9,
+          "quoteBid": 0.06683,
+          "quoteAsk": 0.06703,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 0.066930924,
+          "bestBid": 0.06691,
+          "bestAsk": 0.06703,
+          "bookMidVsMarkBps": 5.8,
+          "quoteBid": 0.06683,
+          "quoteAsk": 0.06703,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 0.066871373,
+          "bestBid": 0.06688,
+          "bestAsk": 0.067,
+          "bookMidVsMarkBps": 10.3,
+          "quoteBid": 0.06677,
+          "quoteAsk": 0.06697,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 0.066858797,
+          "bestBid": 0.06683,
+          "bestAsk": 0.06698,
+          "bookMidVsMarkBps": 6.9,
+          "quoteBid": 0.06675,
+          "quoteAsk": 0.06695,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "XRP-PERP",
+      "samplesWithACrossingLeg": 1,
+      "legThatCrosses": "bid",
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -20.7,
+        -16.5
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.41,
+          "requotes": false,
+          "bidCrosses": true,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 3.69,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 7.58,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 11.78,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 1.0432163,
+          "bestBid": 1.0411,
+          "bestAsk": 1.0419,
+          "bookMidVsMarkBps": -16.5,
+          "quoteBid": 1.0416,
+          "quoteAsk": 1.0447,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 1.0432588,
+          "bestBid": 1.0407,
+          "bestAsk": 1.0415,
+          "bookMidVsMarkBps": -20.7,
+          "quoteBid": 1.0416,
+          "quoteAsk": 1.0448,
+          "bidCrosses": true,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 1.0428316,
+          "bestBid": 1.0407,
+          "bestAsk": 1.0415,
+          "bookMidVsMarkBps": -16.6,
+          "quoteBid": 1.0412,
+          "quoteAsk": 1.0443,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 1.0424259,
+          "bestBid": 1.0403,
+          "bestAsk": 1.0409,
+          "bookMidVsMarkBps": -17.5,
+          "quoteBid": 1.0408,
+          "quoteAsk": 1.0439,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 1.0419873,
+          "bestBid": 1.0399,
+          "bestAsk": 1.0406,
+          "bookMidVsMarkBps": -16.7,
+          "quoteBid": 1.0404,
+          "quoteAsk": 1.0435,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "HYPE-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        0.4,
+        1.7
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 2.79,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 2.5,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 8.39,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 1.7,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 71.29478,
+          "bestBid": 71.28,
+          "bestAsk": 71.33,
+          "bookMidVsMarkBps": 1.4,
+          "quoteBid": 71.18,
+          "quoteAsk": 71.4,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 71.274914,
+          "bestBid": 71.26,
+          "bestAsk": 71.3,
+          "bookMidVsMarkBps": 0.7,
+          "quoteBid": 71.16,
+          "quoteAsk": 71.38,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 71.276968,
+          "bestBid": 71.26,
+          "bestAsk": 71.3,
+          "bookMidVsMarkBps": 0.4,
+          "quoteBid": 71.17,
+          "quoteAsk": 71.38,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 71.234934,
+          "bestBid": 71.22,
+          "bestAsk": 71.27,
+          "bookMidVsMarkBps": 1.4,
+          "quoteBid": 71.12,
+          "quoteAsk": 71.34,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 71.222853,
+          "bestBid": 71.21,
+          "bestAsk": 71.26,
+          "bookMidVsMarkBps": 1.7,
+          "quoteBid": 71.11,
+          "quoteAsk": 71.32,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "SOL-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        0.9,
+        3.2
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.63,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 4.74,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 9.58,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 82.85761,
+          "bestBid": 82.85,
+          "bestAsk": 82.9,
+          "bookMidVsMarkBps": 2.1,
+          "quoteBid": 82.73,
+          "quoteAsk": 82.98,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 82.85761,
+          "bestBid": 82.85,
+          "bestAsk": 82.88,
+          "bookMidVsMarkBps": 0.9,
+          "quoteBid": 82.73,
+          "quoteAsk": 82.98,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 82.862818,
+          "bestBid": 82.85,
+          "bestAsk": 82.89,
+          "bookMidVsMarkBps": 0.9,
+          "quoteBid": 82.73,
+          "quoteAsk": 82.98,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 82.818356,
+          "bestBid": 82.82,
+          "bestAsk": 82.85,
+          "bookMidVsMarkBps": 2,
+          "quoteBid": 82.69,
+          "quoteAsk": 82.94,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 82.778273,
+          "bestBid": 82.79,
+          "bestAsk": 82.82,
+          "bookMidVsMarkBps": 3.2,
+          "quoteBid": 82.65,
+          "quoteAsk": 82.9,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "ETH-PERP",
+      "samplesWithACrossingLeg": 0,
+      "legThatCrosses": null,
+      "cyclesThatRequote": 2,
+      "bookMidVsMarkBpsRange": [
+        -11.2,
+        -6.5
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "driftBps": 0.8,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.81,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "driftBps": 5.89,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "driftBps": 8.76,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 2048.7069,
+          "bestBid": 2046.12,
+          "bestAsk": 2046.72,
+          "bookMidVsMarkBps": -11.2,
+          "quoteBid": 2045.63,
+          "quoteAsk": 2051.77,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 2048.542,
+          "bestBid": 2046.44,
+          "bestAsk": 2046.95,
+          "bookMidVsMarkBps": -9,
+          "quoteBid": 2045.4599999999998,
+          "quoteAsk": 2051.61,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 2048.5409,
+          "bestBid": 2046.3500000000001,
+          "bestAsk": 2046.91,
+          "bookMidVsMarkBps": -9.3,
+          "quoteBid": 2045.4599999999998,
+          "quoteAsk": 2051.61,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 2047.5005,
+          "bestBid": 2045.8200000000002,
+          "bestAsk": 2046.32,
+          "bookMidVsMarkBps": -7,
+          "quoteBid": 2044.4199999999998,
+          "quoteAsk": 2050.5699999999997,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 2046.9132,
+          "bestBid": 2045.3,
+          "bestAsk": 2045.86,
+          "bookMidVsMarkBps": -6.5,
+          "quoteBid": 2043.84,
+          "quoteAsk": 2049.98,
+          "bidCrosses": false,
+          "askCrosses": false
+        }
+      ]
+    },
+    {
+      "market": "BTC-PERP",
+      "samplesWithACrossingLeg": 4,
+      "legThatCrosses": "ask",
+      "cyclesThatRequote": 1,
+      "bookMidVsMarkBpsRange": [
+        15.7,
+        23.6
+      ],
+      "cycles": [
+        {
+          "sample": 0,
+          "driftBps": null,
+          "requotes": true,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 1,
+          "driftBps": 4.93,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "driftBps": 0.11,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 3,
+          "driftBps": 3.54,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 4,
+          "driftBps": 5.09,
+          "requotes": false,
+          "bidCrosses": false,
+          "askCrosses": true
+        }
+      ],
+      "samples": [
+        {
+          "sample": 0,
+          "secondsFromStart": 3,
+          "mark": 73562.968,
+          "bestBid": 73702.4,
+          "bestAsk": 73721.4,
+          "bookMidVsMarkBps": 20.2,
+          "quoteBid": 73452.6,
+          "quoteAsk": 73673.3,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 1,
+          "secondsFromStart": 31,
+          "mark": 73599.243,
+          "bestBid": 73705.90000000001,
+          "bestAsk": 73723.7,
+          "bookMidVsMarkBps": 15.7,
+          "quoteBid": 73488.8,
+          "quoteAsk": 73709.6,
+          "bidCrosses": false,
+          "askCrosses": false
+        },
+        {
+          "sample": 2,
+          "secondsFromStart": 58,
+          "mark": 73562.152,
+          "bestBid": 73707.1,
+          "bestAsk": 73724.1,
+          "bookMidVsMarkBps": 20.9,
+          "quoteBid": 73451.8,
+          "quoteAsk": 73672.40000000001,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 3,
+          "secondsFromStart": 85,
+          "mark": 73536.9,
+          "bestBid": 73708.9,
+          "bestAsk": 73711.8,
+          "bookMidVsMarkBps": 23.6,
+          "quoteBid": 73426.5,
+          "quoteAsk": 73647.2,
+          "bidCrosses": false,
+          "askCrosses": true
+        },
+        {
+          "sample": 4,
+          "secondsFromStart": 113,
+          "mark": 73525.539,
+          "bestBid": 73682,
+          "bestAsk": 73699.7,
+          "bookMidVsMarkBps": 22.5,
+          "quoteBid": 73415.2,
+          "quoteAsk": 73635.8,
+          "bidCrosses": false,
+          "askCrosses": true
+        }
+      ]
+    }
+  ]
+}

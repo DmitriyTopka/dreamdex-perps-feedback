@@ -1,0 +1,884 @@
+{
+  "block": 48169381,
+  "time": "2026-11-12T08:12:29.000Z",
+  "sdk": "0.32.1",
+  "chainId": 50383,
+  "kit": "dreamdex-bot-kit 2579866, strategies/perp-funding/src/index.ts:50-51,116-119; packages/perp-core/src/funding.ts:48,53",
+  "defaults": {
+    "MIN_APR": 0.1,
+    "EXIT_APR": 0.03
+  },
+  "defaultInterestRateAprPct": 10.95,
+  "summary": {
+    "formulaMatchesLive": "40/40",
+    "entersOn": "40/40",
+    "entersOnlyBecauseOfDefaultInterestRate": [
+      "LOADTEST-PERP",
+      "LOADTEST-PERP",
+      "LOADTEST-PERP",
+      "LOADTEST-PERP",
+      "LOADTEST-PERP",
+      "WTI-PERP",
+      "XAG-PERP",
+      "XAU-PERP",
+      "GOOGL-PERP",
+      "TSLA-PERP",
+      "HYNX-PERP",
+      "MSTR-PERP",
+      "MRVL-PERP",
+      "LITE-PERP",
+      "INTC-PERP",
+      "HOOD-PERP",
+      "COIN-PERP",
+      "AMD-PERP",
+      "ADLT-PERP",
+      "ZRO-PERP",
+      "LIT-PERP",
+      "VVV-PERP",
+      "1000PEPE-PERP",
+      "PUMP-PERP",
+      "ZEC-PERP",
+      "TAO-PERP",
+      "WLD-PERP",
+      "NEAR-PERP",
+      "XLM-PERP",
+      "AVAX-PERP",
+      "LINK-PERP",
+      "SUI-PERP",
+      "ADA-PERP",
+      "DOGE-PERP",
+      "HYPE-PERP",
+      "SOL-PERP"
+    ],
+    "shortsWhilePerpBelowIndex": [
+      "WTI-PERP premium 0%",
+      "HYNX-PERP premium -0.0007%",
+      "AMD-PERP premium -0.0048%",
+      "ZRO-PERP premium -0.0049%",
+      "LIT-PERP premium -0.0011%",
+      "VVV-PERP premium -0.0007%",
+      "1000PEPE-PERP premium 0%",
+      "PUMP-PERP premium 0%",
+      "ZEC-PERP premium -0.0051%",
+      "TAO-PERP premium 0%",
+      "XLM-PERP premium 0%",
+      "AVAX-PERP premium 0%",
+      "LINK-PERP premium 0%",
+      "ADA-PERP premium 0%",
+      "DOGE-PERP premium 0%",
+      "HYPE-PERP premium -0.0065%",
+      "SOL-PERP premium -0.0195%"
+    ],
+    "noEntry": [],
+    "history": {
+      "settlements": 4709,
+      "atDefaultInterestRate": 3894,
+      "entryTestPasses": 4654,
+      "shortExitWouldFire": 132
+    }
+  },
+  "live": [
+    {
+      "market": "BTC-PERP",
+      "fundingRatePct": 0.1019,
+      "emaPremiumPct": 0.1519,
+      "formulaMatches": true,
+      "atDefaultInterestRate": false,
+      "aprPct": 111.62,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "BNB-PERP",
+      "fundingRatePct": 0.0161,
+      "emaPremiumPct": 0.0661,
+      "formulaMatches": true,
+      "atDefaultInterestRate": false,
+      "aprPct": 17.63,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "WTI-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "XAG-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0.0263,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "XAU-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0.0085,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "GOOGL-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "TSLA-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "HYNX-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0007,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "MSTR-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0.0363,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "MRVL-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "LITE-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "INTC-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "HOOD-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "COIN-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "AMD-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0048,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "ADLT-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "ZRO-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0049,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "LIT-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0011,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "VVV-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0007,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "PUMP-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "ZEC-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0051,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "TAO-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "WLD-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "NEAR-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "XLM-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "AVAX-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "LINK-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "SUI-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "ADA-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "DOGE-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": 0,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "HYPE-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0065,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "SOL-PERP",
+      "fundingRatePct": 0.01,
+      "emaPremiumPct": -0.0195,
+      "formulaMatches": true,
+      "atDefaultInterestRate": true,
+      "aprPct": 10.95,
+      "windowSec": 28800,
+      "defaultDecision": "short",
+      "shortWhilePerpBelowIndex": true
+    },
+    {
+      "market": "ETH-PERP",
+      "fundingRatePct": -0.0731,
+      "emaPremiumPct": -0.1231,
+      "formulaMatches": true,
+      "atDefaultInterestRate": false,
+      "aprPct": -80.04,
+      "windowSec": 28800,
+      "defaultDecision": "long",
+      "shortWhilePerpBelowIndex": false
+    },
+    {
+      "market": "XRP-PERP",
+      "fundingRatePct": -0.0924,
+      "emaPremiumPct": -0.1424,
+      "formulaMatches": true,
+      "atDefaultInterestRate": false,
+      "aprPct": -101.2,
+      "windowSec": 28800,
+      "defaultDecision": "long",
+      "shortWhilePerpBelowIndex": false
+    }
+  ],
+  "history": [
+    {
+      "market": "LOADTEST-PERP",
+      "settlements": 0,
+      "from": null,
+      "to": null,
+      "atDefaultInterestRate": 0,
+      "entryTestPasses": 0,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "settlements": 1,
+      "from": "2026-11-10T16:00:30.000Z",
+      "to": "2026-11-10T16:00:30.000Z",
+      "atDefaultInterestRate": 1,
+      "entryTestPasses": 1,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "settlements": 2,
+      "from": "2026-11-10T15:39:49.000Z",
+      "to": "2026-11-11T14:21:41.000Z",
+      "atDefaultInterestRate": 2,
+      "entryTestPasses": 2,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "settlements": 2,
+      "from": "2026-11-10T15:28:07.000Z",
+      "to": "2026-11-10T15:56:51.000Z",
+      "atDefaultInterestRate": 2,
+      "entryTestPasses": 2,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LOADTEST-PERP",
+      "settlements": 4,
+      "from": "2026-11-10T13:40:07.000Z",
+      "to": "2026-11-10T16:18:20.000Z",
+      "atDefaultInterestRate": 4,
+      "entryTestPasses": 4,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "WTI-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:46:10.000Z",
+      "to": "2026-11-12T07:46:19.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "XAG-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:43:59.000Z",
+      "to": "2026-11-12T07:43:50.000Z",
+      "atDefaultInterestRate": 27,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "XAU-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:44:51.000Z",
+      "to": "2026-11-12T07:45:06.000Z",
+      "atDefaultInterestRate": 28,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "GOOGL-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:44:24.000Z",
+      "to": "2026-11-12T07:44:47.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "TSLA-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:45:19.000Z",
+      "to": "2026-11-12T07:45:04.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "HYNX-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:43:59.000Z",
+      "to": "2026-11-12T07:44:05.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "MSTR-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:43:14.000Z",
+      "to": "2026-11-12T07:43:17.000Z",
+      "atDefaultInterestRate": 26,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "MRVL-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:52:07.000Z",
+      "to": "2026-11-12T07:51:57.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LITE-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:44:24.000Z",
+      "to": "2026-11-12T07:44:40.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "INTC-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:41:58.000Z",
+      "to": "2026-11-12T07:42:08.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "HOOD-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:42:55.000Z",
+      "to": "2026-11-12T07:42:50.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "COIN-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:43:07.000Z",
+      "to": "2026-11-12T07:43:43.000Z",
+      "atDefaultInterestRate": 38,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "AMD-PERP",
+      "settlements": 38,
+      "from": "2026-11-10T18:51:19.000Z",
+      "to": "2026-11-12T07:51:16.000Z",
+      "atDefaultInterestRate": 34,
+      "entryTestPasses": 38,
+      "shortExitWouldFire": 4
+    },
+    {
+      "market": "ADLT-PERP",
+      "settlements": 6,
+      "from": "2026-11-05T18:40:00.000Z",
+      "to": "2026-11-09T11:18:41.000Z",
+      "atDefaultInterestRate": 6,
+      "entryTestPasses": 6,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "ZRO-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:21.000Z",
+      "to": "2026-11-12T07:55:29.000Z",
+      "atDefaultInterestRate": 197,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LIT-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:22.000Z",
+      "to": "2026-11-12T07:55:22.000Z",
+      "atDefaultInterestRate": 152,
+      "entryTestPasses": 189,
+      "shortExitWouldFire": 42
+    },
+    {
+      "market": "VVV-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:23.000Z",
+      "to": "2026-11-12T07:55:24.000Z",
+      "atDefaultInterestRate": 187,
+      "entryTestPasses": 196,
+      "shortExitWouldFire": 11
+    },
+    {
+      "market": "1000PEPE-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:30.000Z",
+      "to": "2026-11-12T07:55:23.000Z",
+      "atDefaultInterestRate": 198,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "PUMP-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:23.000Z",
+      "to": "2026-11-12T07:55:26.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "ZEC-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:55:21.000Z",
+      "to": "2026-11-12T07:55:21.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "TAO-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:44.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "WLD-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:45.000Z",
+      "atDefaultInterestRate": 190,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "NEAR-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:42.000Z",
+      "atDefaultInterestRate": 184,
+      "entryTestPasses": 190,
+      "shortExitWouldFire": 6
+    },
+    {
+      "market": "XLM-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:43.000Z",
+      "to": "2026-11-12T07:14:42.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "AVAX-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:44.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "LINK-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:49.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "SUI-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:43.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "ADA-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:15:51.000Z",
+      "to": "2026-11-12T07:15:52.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "BNB-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:42.000Z",
+      "atDefaultInterestRate": 49,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "DOGE-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:44.000Z",
+      "atDefaultInterestRate": 200,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    },
+    {
+      "market": "XRP-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:44.000Z",
+      "atDefaultInterestRate": 159,
+      "entryTestPasses": 192,
+      "shortExitWouldFire": 33
+    },
+    {
+      "market": "HYPE-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:14:42.000Z",
+      "to": "2026-11-12T07:14:42.000Z",
+      "atDefaultInterestRate": 115,
+      "entryTestPasses": 196,
+      "shortExitWouldFire": 10
+    },
+    {
+      "market": "SOL-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:54:14.000Z",
+      "to": "2026-11-12T07:54:13.000Z",
+      "atDefaultInterestRate": 124,
+      "entryTestPasses": 196,
+      "shortExitWouldFire": 1
+    },
+    {
+      "market": "ETH-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T00:19:18.000Z",
+      "to": "2026-11-12T07:19:18.000Z",
+      "atDefaultInterestRate": 67,
+      "entryTestPasses": 186,
+      "shortExitWouldFire": 25
+    },
+    {
+      "market": "BTC-PERP",
+      "settlements": 200,
+      "from": "2026-11-04T01:11:43.000Z",
+      "to": "2026-11-12T08:11:44.000Z",
+      "atDefaultInterestRate": 0,
+      "entryTestPasses": 200,
+      "shortExitWouldFire": 0
+    }
+  ]
+}

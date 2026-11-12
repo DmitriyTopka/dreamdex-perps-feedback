@@ -3,6 +3,8 @@ Severity: normal
 
 Area: docs
 
+Checked 2026-11-12, block 48,167,467: still reproduces. The table still has no lot column, and the off-grid sizes on DOGE, 1000PEPE and PUMP still revert.
+
 The "Markets" table on Perps on Testnet gives each market's min size but not its lot size, and no perps trading page mentions that sizes must be a multiple of an increment. The increments are coarse on some markets: 10 DOGE, 100 1000PEPE, 100 PUMP. So 125 DOGE, 2,750 1000PEPE and 1,850 PUMP are all above the minimum the table shows, and all revert with `InvalidQuantity`. A trader reading the table has no way to know the valid sizes.
 
 ## Steps to reproduce

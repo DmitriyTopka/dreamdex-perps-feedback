@@ -3,6 +3,8 @@ Severity: normal
 
 Area: docs
 
+Checked 2026-11-12, block 48,166,994: still reproduces. On the original 21 markets the cap is a tenth of OI only on TAO-PERP. The 19 markets added since all follow the 1/10 rule and are not in the docs table. HYPE-PERP's position cap moved from 2,381.27 to 6,000.
+
 ## Steps to reproduce
 One command, read-only, no key ([`scripts/caps-009-011.ts`](../scripts/caps-009-011.ts), shared with report 011):
 

@@ -3,6 +3,8 @@ Severity: major
 
 Area: docs
 
+Checked 2026-11-12, block 48,164,154: still reproduces. The formula matches all 40 live markets; in 3,706 of 3,829 settlements with the mark below the index, longs still paid.
+
 ## Steps to reproduce
 One command, read-only, no key ([`scripts/funding-005.ts`](../scripts/funding-005.ts)):
 

@@ -3,6 +3,8 @@ Severity: normal
 
 Area: contracts
 
+Checked 2026-11-12, block 48,163,482: still reproduces. IncorrectSender on all 42 finished orders, 25 naming another address and 17 the zero address.
+
 ## Steps to reproduce
 Read-only, eth_call only, no key ([`scripts/cancel-002.ts`](../scripts/cancel-002.ts)):
 

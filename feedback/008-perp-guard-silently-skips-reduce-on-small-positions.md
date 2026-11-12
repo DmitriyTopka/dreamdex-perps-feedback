@@ -3,6 +3,8 @@ Severity: normal
 
 Area: bot kit
 
+Checked 2026-11-12: the kit code is unchanged at main 4e75896, so the skip is still there. The script now stops on a new market with no lot size, so the per-market amounts were not re-read (evidence/1211/errors.txt).
+
 ## Steps to reproduce
 1. dreamdex-bot-kit at commit 2579866, `strategies/perp-guard/src/index.ts` with its defaults: `PERP_GUARD_REDUCE_BELOW=1.5`, `PERP_GUARD_REDUCE_PCT=25`, `PERP_GUARD_FLATTEN_BELOW=1.15` (lines 51-53).
 2. Hold a position no bigger than about 4 x the market's `minQuantity`, for example 0.00051 BTC (about 40 USDso) or 0.0159 ETH (about 36 USDso).
